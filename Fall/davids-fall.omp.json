@@ -1,0 +1,278 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "background": "#D35400",  // Warm Orange
+            "foreground": "#FFFFFF",
+            "leading_diamond": "\u256d\u2500\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ .Name }} ",
+            "type": "shell"
+          },
+          {
+            "background": "#A04000",  // Darker Orange/Brown
+            "foreground": "#FFFB38",
+            "style": "diamond",
+            "template": "<parentBackground>🍂</> \uf292 ",
+            "type": "root"
+          },
+          {
+            "background": "#E67E22",  // Pumpkin Orange
+            "foreground": "#2d3436",
+            "powerline_symbol": "\ue0b0",
+            "properties": {
+              "folder_icon": " 💀 ",
+              "home_icon": " 🦴 ",
+              "style": "folder"
+            },
+            "style": "powerline",
+            "template": " 💀 {{ .Path }} ",
+            "type": "path"
+          },
+          {
+            "background": "#F1C40F",  // Mustard Yellow
+            "background_templates": [
+              "{{ if or (.Working.Changed) (.Staging.Changed) }}#f39c12{{ end }}",
+              "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f1c40f{{ end }}",
+              "{{ if gt .Ahead 0 }}#F39C12{{ end }}",
+              "{{ if gt .Behind 0 }}#F39C12{{ end }}"
+            ],
+            "foreground": "#011627",
+            "powerline_symbol": "\ue0b0",
+            "properties": {
+              "branch_icon": "🌰 ",
+              "fetch_status": true,
+              "fetch_upstream_icon": true
+            },
+            "style": "powerline",
+            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#A04000> 📂 {{ .Staging.String }}</>{{ end }} ",
+            "type": "git"
+          },
+          {
+            "background": "#523422",  // Pumpkin Brown
+            "foreground": "#ffffff",
+            "properties": {
+              "style": "roundrock",
+              "threshold": 0
+            },
+            "style": "diamond",
+            "template": " 🎃 {{ .FormattedMs }} ",
+            "trailing_diamond": "\ue0b4",
+            "type": "executiontime"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "background": "#8E44AD",  // Pumpkin Purple
+            "foreground": "#FFD700",  // Gold
+            "leading_diamond": "\ue0b6",
+            "properties": {
+              "fetch_package_manager": true,
+              "npm_icon": " 🥧 ",
+              "yarn_icon": " 🍁 "
+            },
+            "style": "diamond",
+            "template": "🎃 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "node"
+          },
+          {
+            "background": "#D35400",  // Warm Orange
+            "foreground": "#FFE873",  // Soft Yellow
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "python"
+          },
+          {
+            "background": "#E67E22",  // Pumpkin Orange
+            "foreground": "#ffffff",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "java"
+          },
+          {
+            "background": "#A04000",  // Darker Orange/Brown
+            "foreground": "#FFFFFF",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "dotnet"
+          },
+          {
+            "background": "#F39C12",  // Bright Orange
+            "foreground": "#2E4053",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "go"
+          },
+          {
+            "background": "#D35400",  // Warm Orange
+            "foreground": "#925837",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "rust"
+          },
+          {
+            "background": "#E67E22",  // Pumpkin Orange
+            "foreground": "#055b9c",
+            "leading_diamond": " \ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "dart"
+          },
+          {
+            "background": "#F1C40F",  // Mustard Yellow
+            "foreground": "#CE092F",
+            "leading_diamond": " \ue0b6",
+            "style": "diamond",
+            "template": "🎃 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "angular"
+          },
+          {
+            "background": "#A04000",  // Darker Orange/Brown
+            "foreground": "#FFFFFF",
+            "leading_diamond": " \ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "nx"
+          },
+          {
+            "background": "#8E44AD",  // Pumpkin Purple
+            "foreground": "#359a25",
+            "leading_diamond": " \ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "julia"
+          },
+          {
+            "background": "#F39C12",  // Bright Orange
+            "foreground": "#9c1006",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "ruby"
+          },
+          {
+            "background": "#F1C40F",  // Mustard Yellow
+            "foreground": "#5398c2",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "azfunc"
+          },
+          {
+            "background": "#A04000",  // Darker Orange/Brown
+            "foreground": "#faa029",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍂 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+            "trailing_diamond": "\ue0b4 ",
+            "type": "aws"
+          },
+          {
+            "background": "#D35400",  // Warm Orange
+            "foreground": "#ffffff",
+            "leading_diamond": "\ue0b6",
+            "style": "diamond",
+            "template": "🍁 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+            "trailing_diamond": "\ue0b4",
+            "type": "kubectl"
+          },
+          {
+            "background": "#8E44AD",  // Pumpkin Purple
+            "foreground": "#222222",
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "<transparent,background>\ue0b2</>",
+            "properties": {
+              "linux": "☠️",
+              "macos": "🍂",
+              "windows": "🎃"
+            },
+            "style": "diamond",
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+            "type": "os"
+          },
+          {
+            "background": "#D35400",  // Warm Orange
+            "background_templates": [
+              "{{if eq \"Charging\" .State.String}}#b8e994{{end}}",
+              "{{if eq \"Discharging\" .State.String}}#fff34e{{end}}",
+              "{{if eq \"Full\" .State.String}}#33DD2D{{end}}"
+            ],
+            "foreground": "#262626",
+            "invert_powerline": true,
+            "powerline_symbol": "\ue0b2",
+            "properties": {
+              "charged_icon": "🔋 ",
+              "charging_icon": "⚡️ ",
+              "discharging_icon": "🍂 "
+            },
+            "style": "powerline",
+            "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
+            "type": "battery"
+          },
+          {
+            "background": "#F1C40F",  // Mustard Yellow
+            "foreground": "#523422",
+            "invert_powerline": true,
+            "leading_diamond": "\ue0b2",
+            "properties": {
+              "time_format": "2006-01-02 3:04:05"
+            },
+            "style": "diamond",
+            "template": " 🕷️ {{ .CurrentDate | date .Format }} ",
+            "trailing_diamond": "\ue0b4",
+            "type": "time"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#D35400",  // Warm Orange
+            "style": "plain",
+            "template": "⌂──",
+            "type": "text"
+          },
+          {
+            "foreground": "#E0F8FF",
+            "foreground_templates": ["{{ if gt .Code 0 }}#A04000{{ end }}"],  // Darker Orange/Brown on error
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "template": "👻  ",
+            "type": "status"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "version": 2
+  }
+  

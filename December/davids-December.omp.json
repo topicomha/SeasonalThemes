@@ -30,7 +30,7 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": " 🎁 ",
-            "home_icon": " 🕯️ ",
+            "home_icon": " 🌟 ",
             "style": "folder"
           },
           "template": " 🎁 {{ .Path }} ",
@@ -67,9 +67,9 @@
             "threshold": 0
           },
           "trailing_diamond": "\ue0b4",
-          "template": " ⏱️ {{ .FormattedMs }} ",
+          "template": " 🕯️ {{ .FormattedMs }} ",
           "foreground": "#228B22",
-          "background": "#FFD700",
+          "background": "#FFFFFF",
           "type": "executiontime",
           "style": "diamond"
         }
@@ -292,7 +292,7 @@
           },
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b4",
-          "template": " ⏰ {{ .CurrentDate | date .Format }} ",
+          "template": " 🍪🥛 {{ .CurrentDate | date .Format }} ",
           "foreground": "#CC231E",
           "background": "#006400",
           "type": "time",
@@ -319,7 +319,7 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "🎅  ",
+          "template": "🧑‍🎄  ",
           "foreground": "#E0F8FF",
           "type": "status",
           "style": "plain",

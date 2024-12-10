@@ -30,7 +30,7 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": " 🎁 ",
-            "home_icon": " 🏠 ",
+            "home_icon": " 🕯️ ",
             "style": "folder"
           },
           "template": " 🎁 {{ .Path }} ",

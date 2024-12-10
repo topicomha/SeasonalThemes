@@ -68,8 +68,8 @@
           },
           "trailing_diamond": "\ue0b4",
           "template": " ⏱️ {{ .FormattedMs }} ",
-          "foreground": "#ffffff",
-          "background": "#8B4513",
+          "foreground": "#228B22",
+          "background": "#FFD700",
           "type": "executiontime",
           "style": "diamond"
         }
@@ -89,7 +89,7 @@
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4 ",
           "template": "🎄 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "foreground": "#FFD700",
+          "foreground": "#228B22",
           "background": "#8B0000",
           "type": "node",
           "style": "diamond"
@@ -149,7 +149,7 @@
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4 ",
           "template": "🎅 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#925837",
+          "foreground": "#FFD700",
           "background": "#CC231E",
           "type": "rust",
           "style": "diamond"
@@ -293,8 +293,8 @@
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b4",
           "template": " ⏰ {{ .CurrentDate | date .Format }} ",
-          "foreground": "#523422",
-          "background": "#FFD700",
+          "foreground": "#CC231E",
+          "background": "#006400",
           "type": "time",
           "style": "diamond",
           "invert_powerline": true

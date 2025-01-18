@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt", 
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": "💝 {{ .Name }} ",
+          "foreground": "#FFFFFF",
+          "background": "#FF69B4", 
+          "type": "shell",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<parentBackground>💘</> \uf292 ",
+          "foreground": "#FFFFFF",
+          "background": "#FF1493",
+          "type": "root", 
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "folder_icon": " 💕 ",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "🏠"
+          },
+          "template": " {{ .Path }} ",
+          "foreground": "#FFFFFF",
+          "background": "#DB7093",
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
+          "foreground": "#FFFFFF",
+          "background": "#C71585",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "charging_icon": "💖",
+            "discharging_icon": "💗"
+          },
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
+          "foreground": "#FFFFFF",
+          "background": "#FF69B4",
+          "type": "battery",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "time_format": "2006-01-02 3:04:05"
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "\ue0b4",
+          "template": " 💝 {{ .CurrentDate | date .Format }} ",
+          "foreground": "#FFFFFF",
+          "background": "#FF1493",
+          "type": "time",
+          "style": "diamond"
+        }
+      ]
+    }
+  ]
+}

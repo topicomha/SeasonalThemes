@@ -10,9 +10,9 @@
             "cache_duration": "none"
           },
           "leading_diamond": "\u256d\u2500\ue0b6",
-          "template": "💝 {{ .Name }} ",
+          "template": "🌹 {{ .Name }} ",
           "foreground": "#FFFFFF",
-          "background": "#FF1493",
+          "background": "#800020",
           "type": "shell",
           "style": "diamond"
         },
@@ -20,23 +20,23 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<parentBackground>💘</> \uf292 ",
+          "template": "<parentBackground>✨</> \uf292 ",
           "foreground": "#FFFFFF",
-          "background": "#FF69B4",
+          "background": "#FF007F",
           "type": "root",
           "style": "diamond"
         },
         {
           "properties": {
             "cache_duration": "none",
-            "folder_icon": " 💕 ",
-            "home_icon": " 💌 ",
+            "folder_icon": " 📝 ",
+            "home_icon": " 📮 ",
             "style": "folder"
           },
-          "template": " 💗 {{ .Path }} ",
+          "template": " 💮 {{ .Path }} ",
           "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
-          "background": "#FF1493",
+          "background": "#800020",
           "type": "path",
           "style": "powerline"
         },

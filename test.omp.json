@@ -1,0 +1,184 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "PrimaryTextColor": "#E4E4E4",     // Light grey for main text
+    "PrimaryBackground": "#2E3440",     // Dark grey background
+
+    "SecondaryTextColor": "#88C0D0",    // Arctic blue
+    "SecondaryBackground": "#4C566A",   // Darker blue-grey
+
+    "AlternateTextColor": "#EBCB8B",    // Warm yellow
+    "AlternateBackground": "#3B4252",   // Navy grey
+
+    "error": "#BF616A",                 // Soft red
+    "warning": "#EBCB8B",              // Warm yellow
+    "success": "#A3BE8C",              // Sage green
+    "info": "#81A1C1",                 // Steel blue
+    
+    "DividerColor": "#5E81AC",         // Deep blue
+    "LineColor": "#B48EAD"   
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "shell",
+          "style": "diamond",
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "powerline_symbol": "\ue0b3",
+          "template": "🛠️ [SHELL] {{ .Shell }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground",
+          "properties": {
+            "cache_duration": "none"
+          }
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": "👑 [ROOT] {{ if .Root }}Admin{{ else }}User{{ end }} ",
+          "foreground": "p:SecondaryTextColor",
+          "background": "p:SecondaryBackground"
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "powerline_symbol": "\ue0b0",
+          "template": "📁 [PATH] {{ .Path }} ",
+          "foreground": "p:AlternateTextColor",
+          "background": "p:AlternateBackground"
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "powerline_symbol": "\ue0b0",
+          "template": "🔄 [GIT] {{ if .RepoName }}{{ .HEAD }}{{ else }}No Git{{ end }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground",
+          "properties": {
+            "branch_icon": "🌿",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "node",
+          "style": "diamond",
+          "template": "⬡ [NODE] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground"
+        },
+        {
+          "type": "python",
+          "style": "diamond",
+          "template": "🐍 [PYTHON] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:SecondaryTextColor",
+          "background": "p:SecondaryBackground"
+        },
+        {
+          "type": "java",
+          "style": "diamond",
+          "template": "☕ [JAVA] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:AlternateTextColor",
+          "background": "p:AlternateBackground"
+        },
+        {
+          "type": "go",
+          "style": "diamond",
+          "template": "🐹 [GO] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground"
+        },
+        {
+          "type": "rust",
+          "style": "diamond",
+          "template": "🦀 [RUST] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:SecondaryTextColor",
+          "background": "p:SecondaryBackground"
+        },
+        {
+          "type": "dart",
+          "style": "diamond",
+          "template": "🎯 [DART] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:AlternateTextColor",
+          "background": "p:AlternateBackground"
+        },
+        {
+          "type": "angular",
+          "style": "diamond",
+          "template": "🅰️ [ANGULAR] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground"
+        },
+        {
+          "type": "aws",
+          "style": "diamond",
+          "template": "☁️ [AWS] {{ if .Profile }}{{ .Profile }}{{ else }}Not Configured{{ end }} ",
+          "foreground": "p:SecondaryTextColor",
+          "background": "p:SecondaryBackground"
+        },
+        {
+          "type": "kubectl",
+          "style": "diamond",
+          "template": "⎈ [K8s] {{ if .Error }}Not Installed{{ else }}{{ .Context }}{{ end }} ",
+          "foreground": "p:AlternateTextColor",
+          "background": "p:AlternateBackground"
+        },
+        {
+          "type": "time",
+          "style": "diamond",
+          "template": "🕒 [TIME] {{ .CurrentDate | date \"15:04:05\" }} ",
+          "foreground": "p:PrimaryTextColor",
+          "background": "p:PrimaryBackground"
+        },
+        {
+          "type": "battery",
+          "style": "diamond",
+          "template": "🔋 [BATTERY] {{ if .Error }}No Battery{{ else }}{{ .Percentage }}%{{ end }} ",
+          "foreground": "p:SecondaryTextColor",
+          "background": "p:SecondaryBackground"
+        },
+        {
+          "type": "memory",
+          "style": "diamond",
+          "template": "💾 [MEMORY] {{ if .Error }}Unavailable{{ else }}{{ .Used }}/{{ .Total }}{{ end }} ",
+          "foreground": "p:AlternateTextColor",
+          "background": "p:AlternateBackground"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "diamond",
+          "leading_diamond": "\u2570\u2500\ue0b6",
+          "template": "📊 [STATUS] {{ if eq .Code 0 }}✓{{ else }}✗ {{ .Code }}{{ end }}",
+          "foreground": "p:success"
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": "⏱️ [EXEC TIME] {{ .FormattedMs }}",
+          "foreground": "p:info"
+        }
+      ]
+    }
+  ],
+  "version": 3
+}

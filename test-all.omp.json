@@ -1,0 +1,155 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "shell",
+          "style": "diamond",
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": "[SHELL] {{ .Shell }} ",
+          "properties": {
+            "cache_duration": "none"
+          }
+        },
+        {
+          "type": "root",
+          "style": "powerline",
+          "template": "[ROOT] {{ if .Root }}Admin{{ else }}User{{ end }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "template": "[PATH] {{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "template": "[GIT] {{ if .RepoName }}{{ .HEAD }}{{ else }}No Git{{ end }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "angular",
+          "template": "[ANGULAR] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "az",
+          "template": "[AZURE] {{ if .Error }}Not Installed{{ else }}{{ .Name }}{{ end }} "
+        },
+        {
+          "type": "aws",
+          "template": "[AWS] {{ if .Profile }}{{ .Profile }}{{ else }}Not Configured{{ end }} "
+        },
+        {
+          "type": "crystal",
+          "template": "[CRYSTAL] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "dart",
+          "template": "[DART] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "docker",
+          "template": "[DOCKER] {{ if .Error }}Not Running{{ else }}Active{{ end }} "
+        },
+        {
+          "type": "dotnet",
+          "template": "[.NET] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "flutter",
+          "template": "[FLUTTER] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "go",
+          "template": "[GO] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "gradle",
+          "template": "[GRADLE] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "java",
+          "template": "[JAVA] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "julia",
+          "template": "[JULIA] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "node",
+          "template": "[NODE] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "npm",
+          "template": "[NPM] {{ if .Error }}Not Found{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "php",
+          "template": "[PHP] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "python",
+          "template": "[PYTHON] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "ruby",
+          "template": "[RUBY] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "rust",
+          "template": "[RUST] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "swift",
+          "template": "[SWIFT] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "terraform",
+          "template": "[TERRAFORM] {{ if .Error }}Not Installed{{ else }}{{ .Full }}{{ end }} "
+        },
+        {
+          "type": "time",
+          "template": "[TIME] {{ .CurrentDate | date \"15:04:05\" }} "
+        },
+        {
+          "type": "battery",
+          "template": "[BATTERY] {{ if .Error }}No Battery{{ else }}{{ .Percentage }}%{{ end }} "
+        },
+        {
+          "type": "memory",
+          "template": "[MEMORY] {{ if .Error }}Unavailable{{ else }}{{ .Used }}/{{ .Total }}{{ end }} "
+        },
+        {
+          "type": "spotify",
+          "template": "[SPOTIFY] {{ if .Error }}Not Running{{ else }}{{ .Status }}{{ end }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "[STATUS] {{ if eq .Code 0 }}✓{{ else }}✗ {{ .Code }}{{ end }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": " [EXEC TIME] {{ .FormattedMs }}"
+        }
+      ]
+    }
+  ],
+  "version": 3
+}

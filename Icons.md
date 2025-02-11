@@ -4,7 +4,7 @@
 ### January
 # ❄️☃️⛄🥶⛷️🏂🏻🍵🛷
 ### February
-# 💐❤️💕💞💝💘
+# 💐❤️💕💞💝💘💮📮
 ### March
 # 🍀
 ### April
@@ -37,7 +37,8 @@
 [Hearts](https://emojipedia.org/hearts)
 ## 😍💘❤️💓💔💕💖💗💙💚💛💜💝💞💟🏩🖤💒♥️🧡👩‍❤️‍💋‍👨👩‍❤️‍👨👩‍❤️‍👩👨‍❤️‍👨👩‍❤️‍💋‍👩👨‍❤️‍💋‍👨🤍🤎😻🥰💏💑💌🫀❣️😘♡❥❦☙❧🎔❤️‍🩹❤️‍🔥
 
-[Dalentines Day](https://emojipedia.org/valentines-day)
+
+[Valentines Day](https://emojipedia.org/valentines-day)
 ## 🎀🎁😍😘😚💋💘❤️💓💕💖💗💙💚💛💜💝💞💟💌🏩💐🌹♥️💍👩‍❤️‍👩👨‍❤️‍👨👩‍❤️‍💋‍👩👨‍❤️‍💋‍👨💏💑👫👬👭😻❣️🔥🍫🧡💔🖤🥀👩‍❤️‍💋‍👨👩‍❤️‍👨🥰🤍🧑‍🤝‍🧑🧸🤎🫀🤟❤️‍🩹❤️‍🔥
 
 [St Patricks Day](https://emojipedia.org/st-patricks-day)

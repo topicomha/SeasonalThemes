@@ -35,6 +35,7 @@
             "cache_duration": "none",
             "folder_icon": " 🍻 ",
             "home_icon": " 🤞 ",
+            "max_depth": 3,
             "style": "folder"
           },
           "template": " 🍻 {{ .Path }} ",
@@ -48,6 +49,9 @@
           // Git segment with branch status and icons
           "properties": {
             "branch_icon": "☘️ ",
+            "max_length": 15,
+            "display_status": true,
+            "display_upstream_icon": true,
             "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true

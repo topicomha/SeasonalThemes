@@ -12,7 +12,7 @@
             "cache_duration": "none"
           },
           "leading_diamond": "\u256d\u2500\ue0b6",
-          "template": "🌱 {{ .Name }} ",
+          "template": "🐰 {{ .Name }} ",
           "foreground": "#203C17",  // Deep Forest Green
           "background": "#B3E88F",  // Light Green
           "type": "shell",
@@ -335,24 +335,10 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "⌂──🌱",
+          "template": "⌂──🌱 ",
           "foreground": "#B3E88F",  // Light Green
           "type": "text",
           "style": "plain"
-        },
-        {
-          // Status segment with a rabbit icon (changed from four-leaf clover)
-          "properties": {
-            "always_enabled": true,
-            "cache_duration": "none"
-          },
-          "template": "🐰  ",  // Changed from 🍀 to 🐰
-          "foreground": "#B3E88F",  // Light Green
-          "type": "status",
-          "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#EC9288{{ end }}"  // Light Salmon for errors
-          ]
         }
       ],
       "newline": true

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": "🎆 {{ .Name }} ",
+          "foreground": "#FFFFFF",
+          "background": "#000080",
+          "type": "shell",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<parentBackground>🦅</> \uf292 ",
+          "foreground": "#FFFFFF",
+          "background": "#B22222",
+          "type": "root",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "folder_icon": " 🎇 ",
+            "home_icon": " 🏛️ ",
+            "style": "folder"
+          },
+          "template": " 🎇 {{ .Path }} ",
+          "foreground": "#FFFFFF",
+          "powerline_symbol": "\ue0b0",
+          "background": "#3C3B6E",
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "branch_icon": "🌟 ",
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#B22222> 📂 {{ .Staging.String }}</>{{ end }} ",
+          "background": "#B31942",
+          "foreground": "#FFFFFF",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "display_default": false
+          },
+          "foreground": "#000080",
+          "background": "#FFFFFF",
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "type": "python",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "thresholds": [
+              {
+                "foreground": "#FFFF00",
+                "value": 300
+              },
+              {
+                "foreground": "#FF0000",
+                "value": 1000
+              }
+            ]
+          },
+          "template": " \uf252 {{ .FormattedMs }}s ",
+          "foreground": "#FFFFFF",
+          "background": "#0A3161",
+          "type": "executiontime",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "trailing_diamond": "\ue0b4\u2500\u2500\u2500\u256e",
+          "template": " {{ if eq .Status \"Success\" }}🇺🇸{{ else }}🧨{{ end }} ",
+          "foreground": "#FFFFFF",
+          "background": "#B22222",
+          "type": "status",
+          "style": "diamond"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "\u2570\u2500\ue0b6 ",
+          "foreground": "#FFD700",
+          "type": "text",
+          "style": "plain"
+        }
+      ]
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

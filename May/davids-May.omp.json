@@ -11,7 +11,7 @@
               "cache_duration": "none"
             },
             "leading_diamond": "\u256d\u2500\ue0b6",
-            "template": "🌻 {{ .Name }} ",
+            "template": "🕊️ {{ .Name }} ",
             "foreground": "#50C878",
             "background": "#FCDC3B",
             "type": "shell",
@@ -33,7 +33,7 @@
             "properties": {
               "cache_duration": "none",
               "folder_icon": " 🎖️ ",
-              "home_icon": " 🏡 ",
+              "home_icon": " 🫡 ",
               "style": "folder"
             },
             "template": " 🎖️ {{ .Path }} ",
@@ -72,7 +72,7 @@
               "threshold": 0
             },
             "trailing_diamond": "\ue0b4",
-            "template": " ⏱️ {{ .FormattedMs }} ",
+            "template": " 🌞 {{ .FormattedMs }} ",
             "foreground": "#000080",
             "background": "#6495ED",
             "type": "executiontime",
@@ -314,7 +314,7 @@
             },
             "leading_diamond": "\ue0b2",
             "trailing_diamond": "\ue0b4",
-            "template": " 👨‍🍳 {{ .CurrentDate | date .Format }} ",
+            "template": " 🌭🍔🥩 {{ .CurrentDate | date .Format }} ",
             "foreground": "#000080",
             "background": "#6495ED",
             "type": "time",
@@ -332,7 +332,7 @@
             "properties": {
               "cache_duration": "none"
             },
-            "template": "⌂──🌻",
+            "template": "⌂──",
             "foreground": "#4CBB17",
             "type": "text",
             "style": "plain"
@@ -343,7 +343,7 @@
               "always_enabled": true,
               "cache_duration": "none"
             },
-            "template": "🐞  ",
+            "template": "🌻  ",
             "foreground": "#6495ED",
             "type": "status",
             "style": "plain",

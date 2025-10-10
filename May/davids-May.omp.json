@@ -1,0 +1,359 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            // Shell segment with a sunflower icon (adding as a spring flower)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\u256d\u2500\ue0b6",
+            "template": "🕊️ {{ .Name }} ",
+            "foreground": "#50C878",
+            "background": "#FCDC3B",
+            "type": "shell",
+            "style": "diamond"
+          },
+          {
+            // Root segment with a dove icon (Peace symbol for Memorial Day)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "template": "<parentBackground>🕊️</> \uf292 ",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "root",
+            "style": "diamond"
+          },
+          {
+            // Path segment with a medallion icon (Memorial Day honor)
+            "properties": {
+              "cache_duration": "none",
+              "folder_icon": " 🎖️ ",
+              "home_icon": " 🫡 ",
+              "style": "folder"
+            },
+            "template": " 🎖️ {{ .Path }} ",
+            "foreground": "#5D4037",
+            "powerline_symbol": "\ue0b0",
+            "background": "#4CBB17",
+            "type": "path",
+            "style": "powerline"
+          },
+          {
+            // Git segment with a sun icon (Spring sunshine)
+            "properties": {
+              "branch_icon": "☀️ ",
+              "cache_duration": "none",
+              "fetch_status": true,
+              "fetch_upstream_icon": true
+            },
+            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#FCDC3B> 📂 {{ .Staging.String }}</>{{ end }} ",
+            "foreground": "#5D4037",
+            "powerline_symbol": "\ue0b0",
+            "background": "#B57EDC",
+            "type": "git",
+            "style": "powerline",
+            "background_templates": [
+              "{{ if or (.Working.Changed) (.Staging.Changed) }}#B57EDC{{ end }}",
+              "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#B57EDC{{ end }}",
+              "{{ if gt .Ahead 0 }}#B57EDC{{ end }}",
+              "{{ if gt .Behind 0 }}#B57EDC{{ end }}"
+            ]
+          },
+          {
+            // Execution time segment with a clock icon
+            "properties": {
+              "cache_duration": "none",
+              "style": "roundrock",
+              "threshold": 0
+            },
+            "trailing_diamond": "\ue0b4",
+            "template": " 🌞 {{ .FormattedMs }} ",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "executiontime",
+            "style": "diamond"
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "right",
+        "segments": [
+          {
+            // Node.js segment with a bee icon (Spring pollinator)
+            "properties": {
+              "cache_duration": "none",
+              "fetch_package_manager": true,
+              "npm_icon": " 🐝 ",
+              "yarn_icon": " 🌈 "
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🐝 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+            "foreground": "#50C878",
+            "background": "#FCDC3B",
+            "type": "node",
+            "style": "diamond"
+          },
+          {
+            // Python segment with a butterfly icon (Spring insect)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🦋 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "python",
+            "style": "diamond"
+          },
+          {
+            // Java segment with a gift icon (Mother's Day present)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🎁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#5D4037",
+            "background": "#4CBB17",
+            "type": "java",
+            "style": "diamond"
+          },
+          {
+            // .NET segment with a ribbon icon (Awareness and honor)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🎀 {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#FCDC3B",
+            "background": "#50C878",
+            "type": "dotnet",
+            "style": "diamond"
+          },
+          {
+            // Go segment with a flag icon (Memorial Day)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🇺🇸 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#5D4037",
+            "background": "#B57EDC",
+            "type": "go",
+            "style": "diamond"
+          },
+          {
+            // Rust segment with a BBQ meat icon (Memorial Day cookout)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🍖 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#50C878",
+            "background": "#FCDC3B",
+            "type": "rust",
+            "style": "diamond"
+          },
+          {
+            // Dart segment with a heart icon (Mother's Day love)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "❤️ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "dart",
+            "style": "diamond"
+          },
+          {
+            // Angular segment with a hamburger icon (Memorial Day BBQ)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🍔 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#5D4037",
+            "background": "#4CBB17",
+            "type": "angular",
+            "style": "diamond"
+          },
+          {
+            // Nx segment with a sunflower icon (Spring flower)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🌻 {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
+            "foreground": "#FCDC3B",
+            "background": "#50C878",
+            "type": "nx",
+            "style": "diamond"
+          },
+          {
+            // Julia segment with a bouquet icon (Mother's Day flowers)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": " \ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "💐 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#5D4037",
+            "background": "#B57EDC",
+            "type": "julia",
+            "style": "diamond"
+          },
+          {
+            // Ruby segment with a fire icon (BBQ grill for Memorial Day)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🔥 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#50C878",
+            "background": "#FCDC3B",
+            "type": "ruby",
+            "style": "diamond"
+          },
+          {
+            // Azure Functions segment with a sparkles icon (Spring newness)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "✨ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "azfunc",
+            "style": "diamond"
+          },
+          {
+            // AWS segment with a hot dog icon (Memorial Day cookout)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4 ",
+            "template": "🌭 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+            "foreground": "#5D4037",
+            "background": "#4CBB17",
+            "type": "aws",
+            "style": "diamond"
+          },
+          {
+            // Kubernetes segment with a saluting figure (Memorial Day)
+            "properties": {
+              "cache_duration": "none"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "\ue0b4",
+            "template": "🫡 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+            "foreground": "#FCDC3B",
+            "background": "#50C878",
+            "type": "kubectl",
+            "style": "diamond"
+          },
+          {
+            // OS segment with themed icons
+            "properties": {
+              "cache_duration": "none",
+              "linux": "🐧",
+              "macos": "🍎",
+              "windows": "🪟"
+            },
+            "leading_diamond": "\ue0b6",
+            "trailing_diamond": "<transparent,background>\ue0b2</>",
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+            "foreground": "#5D4037",
+            "background": "#B57EDC",
+            "type": "os",
+            "style": "diamond"
+          },
+          {
+            // Battery segment with BBQ-themed icon
+            "properties": {
+              "cache_duration": "none",
+              "charged_icon": "🔋 ",
+              "charging_icon": "⚡️ ",
+              "discharging_icon": "🍢 "  // Changed to skewer
+            },
+            "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
+            "foreground": "#50C878",
+            "powerline_symbol": "\ue0b2",
+            "background": "#FCDC3B",
+            "type": "battery",
+            "style": "powerline",
+            "background_templates": [
+              "{{if eq \"Charging\" .State.String}}#6495ED{{end}}",
+              "{{if eq \"Discharging\" .State.String}}#B57EDC{{end}}",
+              "{{if eq \"Full\" .State.String}}#4CBB17{{end}}"
+            ],
+            "invert_powerline": true
+          },
+          {
+            // Time segment with a chef icon (Memorial Day cooking)
+            "properties": {
+              "cache_duration": "none",
+              "time_format": "1/2 3:04 PM"
+            },
+            "leading_diamond": "\ue0b2",
+            "trailing_diamond": "\ue0b4",
+            "template": " 🌭🍔🥩 {{ .CurrentDate | date .Format }} ",
+            "foreground": "#000080",
+            "background": "#6495ED",
+            "type": "time",
+            "style": "diamond",
+            "invert_powerline": true
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+          {
+            // Home segment with a house and sunflower
+            "properties": {
+              "cache_duration": "none"
+            },
+            "template": "⌂──",
+            "foreground": "#4CBB17",
+            "type": "text",
+            "style": "plain"
+          },
+          {
+            // Status segment with a ladybug icon (Spring insect)
+            "properties": {
+              "always_enabled": true,
+              "cache_duration": "none"
+            },
+            "template": "🌻  ",
+            "foreground": "#6495ED",
+            "type": "status",
+            "style": "plain",
+            "foreground_templates": [
+              "{{ if gt .Code 0 }}#B57EDC{{ end }}"
+            ]
+          }
+        ],
+        "newline": true
+      }
+    ],
+    "version": 3
+  }

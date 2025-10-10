@@ -1,0 +1,348 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      // Left-aligned prompt block
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          // Shell segment with a seedling icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\u256d\u2500\ue0b6",
+          "template": "🐰 {{ .Name }} ",
+          "foreground": "#203C17",  // Deep Forest Green
+          "background": "#B3E88F",  // Light Green
+          "type": "shell",
+          "style": "diamond"
+        },
+        {
+          // Root segment with herb icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<parentBackground>🌿</> \uf292 ",
+          "foreground": "#202A5B",  // Navy Blue
+          "background": "#B0FFFD",  // Light Cyan
+          "type": "root",
+          "style": "diamond"
+        },
+        {
+          // Path segment with sunflower icon
+          "properties": {
+            "cache_duration": "none",
+            "folder_icon": " 🌻 ",
+            "home_icon": " 🏡 ",
+            "style": "folder"
+          },
+          "template": " 🌻 {{ .Path }} ",
+          "foreground": "#4A241C",  // Mahogany
+          "powerline_symbol": "\ue0b0",
+          "background": "#EC9288",  // Light Salmon
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          // Git segment with sun icon
+          "properties": {
+            "branch_icon": "🌞 ",
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#B3E88F> 📂 {{ .Staging.String }}</>{{ end }} ",
+          "foreground": "#5C4B1D",  // Golden Brown
+          "powerline_symbol": "\ue0b0",
+          "background": "#FFE4A2",  // Light Yellow
+          "type": "git",
+          "style": "powerline",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFE4A2{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFE4A2{{ end }}",
+            "{{ if gt .Ahead 0 }}#FFE4A2{{ end }}",
+            "{{ if gt .Behind 0 }}#FFE4A2{{ end }}"
+          ]
+        },
+        {
+          // Execution time segment with a rainbow icon
+          "properties": {
+            "cache_duration": "none",
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "trailing_diamond": "\ue0b4",
+          "template": " 🌈 {{ .FormattedMs }} ",
+          "foreground": "#202A5B",  // Navy Blue
+          "background": "#B0FFFD",  // Light Cyan - Changed from #CDA0FF
+          "type": "executiontime",
+          "style": "diamond"
+        }
+      ]
+    },
+    {
+      // Right-aligned prompt block
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          // Node.js segment with a honeybee icon
+          "properties": {
+            "cache_duration": "none",
+            "fetch_package_manager": true,
+            "npm_icon": " 🐝 ",
+            "yarn_icon": " 🌈 "
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐝 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "foreground": "#203C17",  // Deep Forest Green
+          "background": "#B3E88F",  // Light Green
+          "type": "node",
+          "style": "diamond"
+        },
+        {
+          // Python segment with a butterfly icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🦋 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "foreground": "#202A5B",  // Navy Blue
+          "background": "#B0FFFD",  // Light Cyan
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          // Java segment with a snail icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐌 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#4A241C",  // Mahogany
+          "background": "#EC9288",  // Light Salmon
+          "type": "java",
+          "style": "diamond"
+        },
+        {
+          // .NET segment with a ladybug icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐞 {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#4A204E",  // Plum Purple
+          "background": "#CDA0FF",  // Light Purple
+          "type": "dotnet",
+          "style": "diamond"
+        },
+        {
+          // Go segment with an ant icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐜 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#5C4B1D",  // Golden Brown
+          "background": "#FFE4A2",  // Light Yellow
+          "type": "go",
+          "style": "diamond"
+        },
+        {
+          // Rust segment with a cricket icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🦗 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#203C17",  // Deep Forest Green
+          "background": "#B3E88F",  // Light Green
+          "type": "rust",
+          "style": "diamond"
+        },
+        {
+          // Dart segment with a spider icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🕷️ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#202A5B",  // Navy Blue
+          "background": "#B0FFFD",  // Light Cyan
+          "type": "dart",
+          "style": "diamond"
+        },
+        {
+          // Angular segment with a turtle icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐢 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#4A241C",  // Mahogany
+          "background": "#EC9288",  // Light Salmon
+          "type": "angular",
+          "style": "diamond"
+        },
+        {
+          // Nx segment with a caterpillar icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🐛 {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
+          "foreground": "#202A5B",  // Navy Blue - Changed foreground
+          "background": "#B0FFFD",  // Light Cyan - Changed from #CDA0FF
+          "type": "nx",
+          "style": "diamond"
+        },
+        {
+          // Julia segment with a blossom icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🌸 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#5C4B1D",  // Golden Brown
+          "background": "#FFE4A2",  // Light Yellow
+          "type": "julia",
+          "style": "diamond"
+        },
+        {
+          // Ruby segment with a flower icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "🌼 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#203C17",  // Deep Forest Green
+          "background": "#B3E88F",  // Light Green
+          "type": "ruby",
+          "style": "diamond"
+        },
+        {
+          // Azure Functions segment with an umbrella icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "☂️ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#202A5B",  // Navy Blue
+          "background": "#B0FFFD",  // Light Cyan
+          "type": "azfunc",
+          "style": "diamond"
+        },
+        {
+          // AWS segment with a sun behind cloud icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "⛅ {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "foreground": "#4A241C",  // Mahogany
+          "background": "#EC9288",  // Light Salmon
+          "type": "aws",
+          "style": "diamond"
+        },
+        {
+          // Kubernetes segment with a cloud with rain icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "🌧️ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+          "foreground": "#5C4B1D",  // Golden Brown - Changed foreground
+          "background": "#FFE4A2",  // Light Yellow - Changed from #CDA0FF
+          "type": "kubectl",
+          "style": "diamond"
+        },
+        {
+          // OS segment with sunrise icon for different OSes
+          "properties": {
+            "cache_duration": "none",
+            "linux": "🌅",
+            "macos": "🌅",
+            "windows": "🌅"
+          },
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "foreground": "#5C4B1D",  // Golden Brown
+          "background": "#FFE4A2",  // Light Yellow
+          "type": "os",
+          "style": "diamond"
+        },
+        {
+          // Battery segment with icons for different states
+          "properties": {
+            "cache_duration": "none",
+            "charged_icon": "🔋 ",
+            "charging_icon": "⚡️ ",
+            "discharging_icon": "📊 "
+          },
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
+          "foreground": "#203C17",  // Deep Forest Green
+          "powerline_symbol": "\ue0b2",
+          "background": "#B3E88F",  // Light Green
+          "type": "battery",
+          "style": "powerline",
+          "background_templates": [
+            "{{if eq \"Charging\" .State.String}}#B0FFFD{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#EC9288{{end}}",
+            "{{if eq \"Full\" .State.String}}#B3E88F{{end}}"
+          ],
+          "invert_powerline": true
+        },
+        {
+          // Time segment with mantelpiece clock icon
+          "properties": {
+            "cache_duration": "none",
+            "time_format": "1/2 3:04 PM"
+          },
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "\ue0b4",
+          "template": " 🕰️ {{ .CurrentDate | date .Format }} ",
+          "foreground": "#4A204E",  // Plum Purple
+          "background": "#CDA0FF",  // Light Purple
+          "type": "time",
+          "style": "diamond",
+          "invert_powerline": true
+        }
+      ]
+    },
+    {
+      // Left-aligned prompt block for additional information
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          // Home segment with a house icon
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "⌂──🌱 ",
+          "foreground": "#B3E88F",  // Light Green
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}

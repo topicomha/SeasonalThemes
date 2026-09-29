@@ -31,6 +31,13 @@ It brings the carefree feeling of summer vacation with cool sky and turquoise bl
 | `black` | Black | `#000000` |  |
 | `white` | White | `#FFFFFF` |  |
 | `coral` | Coral | `#FF6F61` | New: the old theme had no error colour |
+| `night_surf` | Night surf | `#0D1B2A` | Proposed: editor and terminal background |
+| `boardwalk` | Boardwalk | `#1B2E42` | Proposed: panels, borders, current line |
+| `sea_foam` | Sea foam | `#F1F5F9` | Proposed: editor text |
+| `driftwood` | Driftwood | `#93A8BD` | Proposed: comments, muted text |
+| `sand` | Warm sand | `#FFE08A` | Proposed: terminal yellow, numbers |
+| `orchid` | Orchid | `#C9A0DC` | Proposed: terminal magenta, types |
+| `lagoon` | Lagoon | `#2A6F97` | Proposed: selection |
 
 ## Colour roles
 
@@ -60,14 +67,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | black | `#000000` |  |
-| `background` | shallows | `#87CEFA` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | shallows | `#87CEFA` | *inherits* `ui.background` |
-| `line_highlight` | shallows | `#87CEFA` | *inherits* `ui.surface` |
-| `border` | shallows | `#87CEFA` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | turquoise | `#40E0D0` | *inherits* `brand.secondary` |
-| `cursor` | sky | `#87CEEB` | *inherits* `brand.primary` |
+| `background` | night_surf | `#0D1B2A` |  |
+| `foreground` | sea_foam | `#F1F5F9` |  |
+| `surface` | boardwalk | `#1B2E42` |  |
+| `line_highlight` | boardwalk | `#1B2E42` |  |
+| `border` | boardwalk | `#1B2E42` |  |
+| `muted` | driftwood | `#93A8BD` |  |
+| `selection` | lagoon | `#2A6F97` |  |
+| `cursor` | sky | `#87CEEB` |  |
 
 ### Status
 
@@ -77,8 +84,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | coral | `#FF6F61` |  |
 | `success` | mint | `#98FB98` |  |
-| `warning` | lemonade | `#FFFFE0` | *inherits* `brand.accent` |
-| `info` | flamingo | `#FFBCD9` | *inherits* `brand.highlight` |
+| `warning` | sand | `#FFE08A` |  |
+| `info` | sky | `#87CEEB` |  |
 
 ### Syntax
 
@@ -86,22 +93,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | sky | `#87CEEB` | *inherits* `brand.primary` |
-| `string` | lemonade | `#FFFFE0` | *inherits* `brand.accent` |
-| `number` | mint | `#98FB98` | *inherits* `brand.tertiary` |
-| `constant` | mint | `#98FB98` | *inherits* `syntax.number` |
-| `function` | towel | `#FFB6C1` | *inherits* `brand.accent_alt` |
-| `type` | flamingo | `#FFBCD9` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | sky | `#87CEEB` | *inherits* `syntax.keyword` |
-| `attribute` | towel | `#FFB6C1` | *inherits* `syntax.function` |
-| `regex` | lemonade | `#FFFFE0` | *inherits* `syntax.string` |
-| `invalid` | coral | `#FF6F61` | *inherits* `status.error` |
+| `comment` | driftwood | `#93A8BD` | italic |
+| `keyword` | flamingo | `#FFBCD9` |  |
+| `string` | mint | `#98FB98` |  |
+| `number` | sand | `#FFE08A` |  |
+| `constant` | sand | `#FFE08A` |  |
+| `function` | turquoise | `#40E0D0` |  |
+| `type` | sky | `#87CEEB` |  |
+| `variable` | sea_foam | `#F1F5F9` |  |
+| `parameter` | sea_foam | `#F1F5F9` | *inherits* `syntax.variable` |
+| `property` | sea_foam | `#F1F5F9` | *inherits* `syntax.variable` |
+| `operator` | sea_foam | `#F1F5F9` | *inherits* `ui.foreground` |
+| `punctuation` | sea_foam | `#F1F5F9` | *inherits* `ui.foreground` |
+| `tag` | flamingo | `#FFBCD9` | *inherits* `syntax.keyword` |
+| `attribute` | turquoise | `#40E0D0` | *inherits* `syntax.function` |
+| `regex` | mint | `#98FB98` | *inherits* `syntax.string` |
+| `invalid` | coral | `#FF6F61` |  |
 
 ### Terminal
 
@@ -109,26 +116,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | shallows | `#87CEFA` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
+| `background` | night_surf | `#0D1B2A` | *inherits* `ui.background` |
+| `foreground` | sea_foam | `#F1F5F9` | *inherits* `ui.foreground` |
 | `cursor` | sky | `#87CEEB` | *inherits* `ui.cursor` |
-| `selection` | turquoise | `#40E0D0` | *inherits* `ui.selection` |
-| `black` | shallows | `#87CEFA` | *inherits* `ui.background` |
-| `red` | coral | `#FF6F61` | *inherits* `status.error` |
-| `green` | mint | `#98FB98` | *inherits* `status.success` |
-| `yellow` | lemonade | `#FFFFE0` | *inherits* `status.warning` |
-| `blue` | flamingo | `#FFBCD9` | *inherits* `status.info` |
-| `magenta` | flamingo | `#FFBCD9` | *inherits* `brand.highlight` |
-| `cyan` | flamingo | `#FFBCD9` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | coral | `#FF6F61` | *inherits* `terminal.red` |
+| `selection` | lagoon | `#2A6F97` | *inherits* `ui.selection` |
+| `black` | boardwalk | `#1B2E42` |  |
+| `red` | coral | `#FF6F61` |  |
+| `green` | mint | `#98FB98` |  |
+| `yellow` | sand | `#FFE08A` |  |
+| `blue` | sky | `#87CEEB` |  |
+| `magenta` | orchid | `#C9A0DC` |  |
+| `cyan` | turquoise | `#40E0D0` |  |
+| `white` | sea_foam | `#F1F5F9` |  |
+| `bright_black` | driftwood | `#93A8BD` |  |
+| `bright_red` | towel | `#FFB6C1` |  |
 | `bright_green` | mint | `#98FB98` | *inherits* `terminal.green` |
-| `bright_yellow` | lemonade | `#FFFFE0` | *inherits* `terminal.yellow` |
-| `bright_blue` | flamingo | `#FFBCD9` | *inherits* `terminal.blue` |
-| `bright_magenta` | flamingo | `#FFBCD9` | *inherits* `terminal.magenta` |
-| `bright_cyan` | flamingo | `#FFBCD9` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_yellow` | lemonade | `#FFFFE0` |  |
+| `bright_blue` | shallows | `#87CEFA` |  |
+| `bright_magenta` | flamingo | `#FFBCD9` |  |
+| `bright_cyan` | turquoise | `#40E0D0` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

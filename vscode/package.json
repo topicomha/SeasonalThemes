@@ -63,9 +63,14 @@
         "path": "./themes/march-light.json"
       },
       {
-        "label": "Seasonal 04 · April — Spring Showers 🐰",
+        "label": "Seasonal 04 · April — Spring Showers · Dark 🐰",
         "uiTheme": "vs-dark",
         "path": "./themes/april-dark.json"
+      },
+      {
+        "label": "Seasonal 04 · April — Spring Showers · Light 🐰",
+        "uiTheme": "vs",
+        "path": "./themes/april-light.json"
       },
       {
         "label": "Seasonal 05 · May — May Flowers 🕊️",
@@ -193,7 +198,12 @@
     {
       "month": 4,
       "mode": "dark",
-      "label": "Seasonal 04 · April — Spring Showers 🐰"
+      "label": "Seasonal 04 · April — Spring Showers · Dark 🐰"
+    },
+    {
+      "month": 4,
+      "mode": "light",
+      "label": "Seasonal 04 · April — Spring Showers · Light 🐰"
     },
     {
       "month": 5,

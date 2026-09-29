@@ -185,13 +185,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🌼 ☔ 🐣 🥚 🐇 🌷 🌳 🍀 🍃 🦔 🦢 🐑 🧺 🐤 🥕
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#B3E88F` | `#44821B` spring_green_ink |
+| `ui.background` | `#1B2420` | `#FAFDF7` light_page |
+| `ui.foreground` | `#F4F1EA` | `#2D4722` light_ink |
+| `ui.surface` | `#27332D` | `#F5FCF0` light_panel |
+| `ui.line_highlight` | `#27332D` | `#F7FCF3` light_current_line |
+| `ui.border` | `#27332D` | `#EAF9E0` light_border |
+| `ui.muted` | `#9BAA9C` | `#697761` light_muted_text |
+| `ui.selection` | `#203C17` | `#9BA797` light_selection |
+| `ui.cursor` | `#FFE4A2` | `#44821B` spring_green_ink |
+| `ui.accent` | `#FFE4A2` | `#976B00` butter_ink |
+| `status.error` | `#E8505B` | `#E11F2D` tulip_ink |
+| `status.success` | `#B3E88F` | `#44821B` spring_green_ink |
+| `status.warning` | `#FFE4A2` | `#976B00` butter_ink |
+| `status.info` | `#9DB4FF` | `#3565FF` periwinkle_ink |
+| `syntax.comment` | `#9BAA9C` | `#697761` light_muted_text |
+| `syntax.keyword` | `#EC9288` | `#D83523` salmon_ink |
+| `syntax.string` | `#B3E88F` | `#44821B` spring_green_ink |
+| `syntax.number` | `#FFE4A2` | `#976B00` butter_ink |
+| `syntax.constant` | `#FFE4A2` | `#976B00` butter_ink |
+| `syntax.function` | `#7FD9C4` | `#26816C` mint_ink |
+| `syntax.type` | `#CDA0FF` | `#993CFF` lavender_ink |
+| `syntax.variable` | `#F4F1EA` | `#2D4722` light_ink |
+| `syntax.parameter` | `#F4F1EA` | `#2D4722` light_ink |
+| `syntax.property` | `#F4F1EA` | `#2D4722` light_ink |
+| `syntax.operator` | `#F4F1EA` | `#2D4722` light_ink |
+| `syntax.punctuation` | `#F4F1EA` | `#2D4722` light_ink |
+| `syntax.tag` | `#EC9288` | `#D83523` salmon_ink |
+| `syntax.attribute` | `#7FD9C4` | `#26816C` mint_ink |
+| `syntax.regex` | `#B3E88F` | `#44821B` spring_green_ink |
+| `syntax.invalid` | `#EC9288` | `#D83523` salmon_ink |
+| `terminal.background` | `#1B2420` | `#FAFDF7` light_page |
+| `terminal.foreground` | `#F4F1EA` | `#2D4722` light_ink |
+| `terminal.cursor` | `#FFE4A2` | `#44821B` spring_green_ink |
+| `terminal.selection` | `#203C17` | `#9BA797` light_selection |
+| `terminal.black` | `#27332D` | `#2D4722` light_ink |
+| `terminal.red` | `#EC9288` | `#D83523` salmon_ink |
+| `terminal.green` | `#B3E88F` | `#44821B` spring_green_ink |
+| `terminal.yellow` | `#FFE4A2` | `#976B00` butter_ink |
+| `terminal.blue` | `#9DB4FF` | `#3565FF` periwinkle_ink |
+| `terminal.magenta` | `#CDA0FF` | `#993CFF` lavender_ink |
+| `terminal.cyan` | `#B0FFFD` | `#00817E` rain_cyan_ink |
+| `terminal.white` | `#F4F1EA` | `#7E8B76` light_terminal_white |
+| `terminal.bright_black` | `#9BAA9C` | `#697761` light_muted_text |
+| `terminal.bright_red` | `#EC9288` | `#D83523` salmon_ink |
+| `terminal.bright_green` | `#7FD9C4` | `#26816C` mint_ink |
+| `terminal.bright_yellow` | `#FFE4A2` | `#976B00` butter_ink |
+| `terminal.bright_blue` | `#9DB4FF` | `#3565FF` periwinkle_ink |
+| `terminal.bright_magenta` | `#CDA0FF` | `#993CFF` lavender_ink |
+| `terminal.bright_cyan` | `#B0FFFD` | `#00817E` rain_cyan_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#8A9682` light_terminal_bright_white |
+
+![April light palette](palette-light.svg)
+
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 04 · April — Spring Showers](../vscode/themes/april-dark.json)
+- [Seasonal 04 · April — Spring Showers · Dark](../vscode/themes/april-dark.json)
+- [Seasonal 04 · April — Spring Showers · Light](../vscode/themes/april-light.json)
 
 ![April in VS Code, dark](vscode-preview-dark.svg)
+
+![April in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -209,5 +271,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-April.omp.json](davids-April.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/April/davids-April.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-April-light.omp.json](davids-April-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/april-light.json](../vscode/themes/april-light.json): vscode-theme, light mode.
 - [../vscode/themes/april-dark.json](../vscode/themes/april-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

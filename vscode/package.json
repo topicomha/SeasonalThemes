@@ -93,9 +93,14 @@
         "path": "./themes/july-dark.json"
       },
       {
-        "label": "Seasonal 08 · August — Late Summer ☀️",
+        "label": "Seasonal 08 · August — Late Summer · Dark ☀️",
         "uiTheme": "vs-dark",
         "path": "./themes/august-dark.json"
+      },
+      {
+        "label": "Seasonal 08 · August — Late Summer · Light ☀️",
+        "uiTheme": "vs",
+        "path": "./themes/august-light.json"
       },
       {
         "label": "Seasonal 09 · September — Back to School 🍎",
@@ -233,7 +238,12 @@
     {
       "month": 8,
       "mode": "dark",
-      "label": "Seasonal 08 · August — Late Summer ☀️"
+      "label": "Seasonal 08 · August — Late Summer · Dark ☀️"
+    },
+    {
+      "month": 8,
+      "mode": "light",
+      "label": "Seasonal 08 · August — Late Summer · Light ☀️"
     },
     {
       "month": 9,

@@ -1,0 +1,144 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "June",
+  "name": "Summer Vacation",
+  "tagline": "Beach colours, sunglasses and the carefree first days of summer",
+  "description": [
+    "June celebrates the beginning of summer with bright beach colours, vacation vibes and outdoor activity icons.",
+    "It brings the carefree feeling of summer vacation with cool sky and turquoise blues, mint, sunny pale yellow and beach-towel pinks."
+  ],
+  "mood": ["carefree", "sunny", "cool", "playful"],
+  "keywords": ["beach umbrella", "sunglasses", "surfing", "desert island", "watermelon", "ocean waves", "graduation caps"],
+  "holidays": [
+    { "name": "Father's Day", "date": "06-15", "note": "3rd Sunday" },
+    { "name": "Juneteenth", "date": "06-19" },
+    { "name": "Summer solstice", "date": "06-21", "note": "around the 21st" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Summer", "url": "https://emojipedia.org/summer" },
+    { "title": "Emojipedia: Graduation", "url": "https://emojipedia.org/graduation" }
+  ],
+  "ideas": [
+    "More summer activities: 🏊 swimming, ⛵ sailboat, 🏐 volleyball",
+    "Summer treats: 🍦 ice cream, 🍹 tropical drink",
+    "👙 bikini or 🩴 flip-flops for summer vacation items",
+    "🎓 graduation caps for a graduation-week variant",
+    "The old theme coloured execution time yellow over 300 ms and red over 1 s; the shared layout could bring that back for every month"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "sky":       { "hex": "#87CEEB", "name": "Sky blue" },
+    "turquoise": { "hex": "#40E0D0", "name": "Turquoise" },
+    "mint":      { "hex": "#98FB98", "name": "Mint green" },
+    "lemonade":  { "hex": "#FFFFE0", "name": "Lemonade yellow" },
+    "flamingo":  { "hex": "#FFBCD9", "name": "Flamingo pink" },
+    "towel":     { "hex": "#FFB6C1", "name": "Beach-towel pink" },
+    "shallows":  { "hex": "#87CEFA", "name": "Light blue shallows" },
+    "black":     { "hex": "#000000", "name": "Black" },
+    "white":     { "hex": "#FFFFFF", "name": "White" },
+    "coral":     { "hex": "#FF6F61", "name": "Coral", "note": "New: the old theme had no error colour" },
+    "night_surf": { "hex": "#0D1B2A", "name": "Night surf", "note": "Proposed: editor and terminal background" },
+    "boardwalk": { "hex": "#1B2E42", "name": "Boardwalk", "note": "Proposed: panels, borders, current line" },
+    "sea_foam":  { "hex": "#F1F5F9", "name": "Sea foam", "note": "Proposed: editor text" },
+    "driftwood": { "hex": "#93A8BD", "name": "Driftwood", "note": "Proposed: comments, muted text" },
+    "sand":      { "hex": "#FFE08A", "name": "Warm sand", "note": "Proposed: terminal yellow, numbers" },
+    "orchid":    { "hex": "#C9A0DC", "name": "Orchid", "note": "Proposed: terminal magenta, types" },
+    "lagoon":    { "hex": "#2A6F97", "name": "Lagoon", "note": "Proposed: selection" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "sky",
+      "secondary":   "turquoise",
+      "tertiary":    "mint",
+      "accent":      "lemonade",
+      "accent_alt":  "towel",
+      "highlight":   "flamingo",
+      "deep":        "shallows",
+      "text_accent": "black"
+    },
+    "ui": {
+      "text_light":     "white",
+      "text_dark":      "black",
+      "background":     "night_surf",
+      "foreground":     "sea_foam",
+      "surface":        "boardwalk",
+      "line_highlight": "boardwalk",
+      "border":         "boardwalk",
+      "muted":          "driftwood",
+      "selection":      "lagoon",
+      "cursor":         "sky"
+    },
+    "status": {
+      "success": "mint",
+      "warning": "sand",
+      "error":   "coral",
+      "info":    "sky"
+    },
+    "syntax": {
+      "comment":  { "color": "driftwood", "style": "italic" },
+      "keyword":  "flamingo",
+      "string":   "mint",
+      "number":   "sand",
+      "constant": "sand",
+      "function": "turquoise",
+      "type":     "sky",
+      "variable": "sea_foam",
+      "invalid":  "coral"
+    },
+    "terminal": {
+      "black":         "boardwalk",
+      "red":           "coral",
+      "green":         "mint",
+      "yellow":        "sand",
+      "blue":          "sky",
+      "magenta":       "orchid",
+      "cyan":          "turquoise",
+      "white":         "sea_foam",
+      "bright_black":  "driftwood",
+      "bright_red":    "towel",
+      "bright_yellow": "lemonade",
+      "bright_blue":   "shallows",
+      "bright_magenta": "flamingo",
+      "bright_white":  "white"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "😎",
+    "root":       "🏄",
+    "path":       "🕶️",
+    "folder":     "🏖️",
+    "home":       "🏝️",
+    "git":        "🌞",
+    "exec_time":  "🏊",
+    "clock":      "⛱️",
+    "battery":    "🥵",
+    "status_ok":  "🍉",
+    "status_err": "🌋",
+    "language":   "🌊",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🍦",
+      "yarn":    "🍹",
+      "java":    "🏐",
+      "go":      "🐚",
+      "rust":    "🦀",
+      "dart":    "🐬",
+      "ruby":    "🍓",
+      "kubectl": "⛵"
+    },
+    "os": {
+      "linux":   "🐚",
+      "macos":   "🍍",
+      "windows": "🏄"
+    },
+    "pool": ["🏊", "⛵", "🏐", "🍦", "🍹", "👙", "🩴", "🎓", "📜", "🐬", "🥥", "🌺", "🏖️", "🌊"]
+  }
+}

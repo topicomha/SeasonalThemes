@@ -50,6 +50,7 @@ $Targets = @(
         Name       = 'oh-my-posh'
         Template   = 'templates/oh-my-posh.omp.json'
         PerVariant = $true
+        Check      = { param($Season, $Text) Test-OmpContrast $Season $Text }
         Output     = { param($m, $v) if ($v) { "$m/davids-$m-$v.omp.json" } else { "$m/davids-$m.omp.json" } }
     }
     @{
@@ -373,6 +374,22 @@ function Invoke-Template($Season, $Target) {
     $output
 }
 
+# Warns about prompt segments whose text is hard to read on their own background.
+function Test-OmpContrast($Season, [string]$Text) {
+    $theme = $Text | ConvertFrom-Json -AsHashtable
+    foreach ($block in $theme.blocks) {
+        foreach ($segment in $block.segments) {
+            $fg = $segment['foreground']
+            $bg = $segment['background']
+            if ($fg -notmatch '^#[0-9A-Fa-f]{6}$' -or $bg -notmatch '^#[0-9A-Fa-f]{6}$') { continue }
+            $ratio = Get-ContrastRatio $fg $bg
+            if ($ratio -lt $MinContrast) {
+                Write-Warning ("{0}: Oh My Posh {1} segment text {2} is only {3:N1}:1 on {4}" -f $Season.Where, $segment.type, $fg, $ratio, $bg)
+            }
+        }
+    }
+}
+
 function Invoke-Renderer($Season, $Target, [hashtable]$Files) {
     & (Join-Path $PSScriptRoot $Target.Renderer) -Season $Season -Files $Files
 }
@@ -410,6 +427,7 @@ try {
 
                 $output = if ($target['Template']) { Invoke-Template $entry.Season $target }
                           else { Invoke-Renderer $entry.Season $target $files }
+                if ($target['Check']) { & $target.Check $entry.Season $output }
 
                 $relative = & $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null)
                 $outPath = Join-Path $PSScriptRoot $relative

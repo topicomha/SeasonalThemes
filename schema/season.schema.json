@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/topicomha/SeasonalThemes/schema/season.schema.json",
+  "title": "Seasonal theme definition",
+  "description": "Everything about one month's theme. Every program's theme is generated from this file by Generate-Themes.ps1.\n\nColour roles marked 'x-fallback' are optional: when left out they take the value of the role named there. Roles without a fallback are required.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["month", "name", "tagline", "appearance", "palette", "colors", "icons"],
+  "properties": {
+    "$schema": { "type": "string" },
+
+    "month": {
+      "description": "Full English month name. Must match the folder the file lives in.",
+      "enum": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    },
+    "name": { "description": "Short theme name, e.g. \"Halloween\".", "type": "string", "minLength": 1 },
+    "tagline": { "description": "One line that sums up the look.", "type": "string", "minLength": 1 },
+    "description": { "$ref": "#/definitions/prose", "description": "The story of the theme: what it should feel like and why. A string, or an array of paragraphs." },
+    "mood": { "description": "A few adjectives for the feel, e.g. [\"spooky\", \"cozy\"].", "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "keywords": { "description": "Imagery to look for: wallpaper searches, icon hunting, image prompts.", "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "holidays": {
+      "description": "Holidays and events the month celebrates.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "date"],
+        "properties": {
+          "name": { "type": "string" },
+          "date": { "$ref": "#/definitions/monthDay" },
+          "note": { "type": "string", "description": "e.g. \"4th Thursday\" for floating dates." }
+        }
+      }
+    },
+    "links": {
+      "description": "Inspiration and emoji sources.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": { "title": { "type": "string" }, "url": { "type": "string", "format": "uri" } }
+      }
+    },
+    "ideas": { "description": "Things to try next for this month.", "type": "array", "items": { "type": "string" } },
+
+    "appearance": {
+      "description": "Whether the base look is dark or light. Programs that have a single dark/light switch (VS Code, terminals) use this.",
+      "enum": ["dark", "light"]
+    },
+
+    "palette": { "$ref": "#/definitions/palette" },
+    "colors": { "$ref": "#/definitions/colors" },
+    "icons": { "$ref": "#/definitions/icons" },
+    "targets": { "$ref": "#/definitions/targets" },
+
+    "variants": {
+      "description": "Date ranges within the month that change part of the theme (e.g. New Year's Eve at the end of December). Anything set here is laid over the month's own values; everything else is inherited.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "from", "to"],
+        "properties": {
+          "id": { "description": "Lower-case, dash-separated. Used in file names, e.g. davids-December-new-years-eve.omp.json.", "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "name": { "type": "string" },
+          "from": { "$ref": "#/definitions/monthDay" },
+          "to": { "$ref": "#/definitions/monthDay" },
+          "tagline": { "type": "string" },
+          "description": { "$ref": "#/definitions/prose" },
+          "palette": { "$ref": "#/definitions/palette" },
+          "colors": { "$ref": "#/definitions/colors" },
+          "icons": { "$ref": "#/definitions/icons" },
+          "targets": { "$ref": "#/definitions/targets" }
+        }
+      }
+    }
+  },
+
+  "definitions": {
+    "prose": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
+    "monthDay": { "description": "MM-DD", "type": "string", "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$" },
+    "hex": { "type": "string", "format": "color-hex", "pattern": "^#[0-9A-Fa-f]{6}$" },
+
+    "palette": {
+      "description": "The month's named colours. This is the ONLY place hex codes should normally appear; every role below points at one of these names.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/definitions/hex" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["hex"],
+            "properties": {
+              "hex": { "$ref": "#/definitions/hex" },
+              "name": { "description": "Display name, e.g. \"Pumpkin orange\".", "type": "string" },
+              "note": { "description": "What it represents or where it is used.", "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+
+    "colorRef": {
+      "description": "A palette name (e.g. \"pumpkin\") or a literal #RRGGBB.",
+      "type": "string",
+      "pattern": "^(#[0-9A-Fa-f]{6}|[a-z][a-z0-9_]*)$"
+    },
+    "color": {
+      "oneOf": [
+        { "$ref": "#/definitions/colorRef" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["color"],
+          "properties": {
+            "color": { "$ref": "#/definitions/colorRef" },
+            "style": { "description": "Font style for programs that support it (VS Code syntax, some terminals).", "type": "string", "pattern": "^(normal|((italic|bold|underline|strikethrough)( (italic|bold|underline|strikethrough))*))$" }
+          }
+        }
+      ]
+    },
+
+    "colors": {
+      "description": "Colour roles, grouped by what uses them. Each value is a palette name, a #RRGGBB, or { color, style }.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "brand": {
+          "description": "The month's signature colours. Prompt segments, badges, status bars and accents.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "primary":     { "$ref": "#/definitions/color", "description": "The main colour of the month." },
+            "secondary":   { "$ref": "#/definitions/color", "description": "The second main colour." },
+            "accent":      { "$ref": "#/definitions/color", "description": "Bright highlight colour." },
+            "tertiary":    { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "A third supporting colour." },
+            "accent_alt":  { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Alternate accent, used for 'changed' states." },
+            "highlight":   { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "A contrasting pop colour that stands apart from the rest." },
+            "deep":        { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "A deep, dark shade of the brand colours." },
+            "text_accent": { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Decorative text colour." },
+            "line":        { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "Lines and connectors drawn straight on the terminal/window background (e.g. the prompt's ⌂── connector). Set it when primary is too dark to see there." }
+          }
+        },
+        "ui": {
+          "description": "Surfaces and text of an application window.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "text_light":     { "$ref": "#/definitions/color", "description": "Text used on dark backgrounds." },
+            "text_dark":      { "$ref": "#/definitions/color", "description": "Text used on light backgrounds." },
+            "background":     { "$ref": "#/definitions/color", "x-fallback": "brand.deep", "description": "Main window / editor background." },
+            "foreground":     { "$ref": "#/definitions/color", "x-fallback": "ui.text_light", "description": "Main text colour on the background. Set this explicitly for light themes." },
+            "surface":        { "$ref": "#/definitions/color", "x-fallback": "ui.background", "description": "Panels, sidebars, title bars." },
+            "line_highlight": { "$ref": "#/definitions/color", "x-fallback": "ui.surface", "description": "Current-line / hover background." },
+            "border":         { "$ref": "#/definitions/color", "x-fallback": "ui.surface", "description": "Dividers and outlines." },
+            "muted":          { "$ref": "#/definitions/color", "x-fallback": "ui.foreground", "description": "Secondary text: line numbers, hints, placeholders." },
+            "selection":      { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "Selected text background." },
+            "cursor":         { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "Text cursor." }
+          }
+        },
+        "status": {
+          "description": "Meaningful states.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "error":   { "$ref": "#/definitions/color", "description": "Failure / error." },
+            "success": { "$ref": "#/definitions/color", "x-fallback": "ui.foreground", "description": "Success / OK." },
+            "warning": { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Warning." },
+            "info":    { "$ref": "#/definitions/color", "x-fallback": "brand.highlight", "description": "Information / hint." }
+          }
+        },
+        "syntax": {
+          "description": "Code highlighting (editors, bat, delta...).",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "comment":     { "$ref": "#/definitions/color", "x-fallback": "ui.muted" },
+            "keyword":     { "$ref": "#/definitions/color", "x-fallback": "brand.primary" },
+            "string":      { "$ref": "#/definitions/color", "x-fallback": "brand.accent" },
+            "number":      { "$ref": "#/definitions/color", "x-fallback": "brand.tertiary" },
+            "constant":    { "$ref": "#/definitions/color", "x-fallback": "syntax.number" },
+            "function":    { "$ref": "#/definitions/color", "x-fallback": "brand.accent_alt" },
+            "type":        { "$ref": "#/definitions/color", "x-fallback": "brand.highlight" },
+            "variable":    { "$ref": "#/definitions/color", "x-fallback": "ui.foreground" },
+            "parameter":   { "$ref": "#/definitions/color", "x-fallback": "syntax.variable" },
+            "property":    { "$ref": "#/definitions/color", "x-fallback": "syntax.variable" },
+            "operator":    { "$ref": "#/definitions/color", "x-fallback": "ui.foreground" },
+            "punctuation": { "$ref": "#/definitions/color", "x-fallback": "ui.foreground" },
+            "tag":         { "$ref": "#/definitions/color", "x-fallback": "syntax.keyword" },
+            "attribute":   { "$ref": "#/definitions/color", "x-fallback": "syntax.function" },
+            "regex":       { "$ref": "#/definitions/color", "x-fallback": "syntax.string" },
+            "invalid":     { "$ref": "#/definitions/color", "x-fallback": "status.error" }
+          }
+        },
+        "terminal": {
+          "description": "The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every CLI tool that prints colour. Keep each hue recognisable (red should read as red).",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "background":     { "$ref": "#/definitions/color", "x-fallback": "ui.background" },
+            "foreground":     { "$ref": "#/definitions/color", "x-fallback": "ui.foreground" },
+            "cursor":         { "$ref": "#/definitions/color", "x-fallback": "ui.cursor" },
+            "selection":      { "$ref": "#/definitions/color", "x-fallback": "ui.selection" },
+            "black":          { "$ref": "#/definitions/color", "x-fallback": "ui.background" },
+            "red":            { "$ref": "#/definitions/color", "x-fallback": "status.error" },
+            "green":          { "$ref": "#/definitions/color", "x-fallback": "status.success" },
+            "yellow":         { "$ref": "#/definitions/color", "x-fallback": "status.warning" },
+            "blue":           { "$ref": "#/definitions/color", "x-fallback": "status.info" },
+            "magenta":        { "$ref": "#/definitions/color", "x-fallback": "brand.highlight" },
+            "cyan":           { "$ref": "#/definitions/color", "x-fallback": "status.info" },
+            "white":          { "$ref": "#/definitions/color", "x-fallback": "ui.foreground" },
+            "bright_black":   { "$ref": "#/definitions/color", "x-fallback": "ui.muted" },
+            "bright_red":     { "$ref": "#/definitions/color", "x-fallback": "terminal.red" },
+            "bright_green":   { "$ref": "#/definitions/color", "x-fallback": "terminal.green" },
+            "bright_yellow":  { "$ref": "#/definitions/color", "x-fallback": "terminal.yellow" },
+            "bright_blue":    { "$ref": "#/definitions/color", "x-fallback": "terminal.blue" },
+            "bright_magenta": { "$ref": "#/definitions/color", "x-fallback": "terminal.magenta" },
+            "bright_cyan":    { "$ref": "#/definitions/color", "x-fallback": "terminal.cyan" },
+            "bright_white":   { "$ref": "#/definitions/color", "x-fallback": "terminal.white" }
+          }
+        }
+      }
+    },
+
+    "icon": { "type": "string", "minLength": 1 },
+    "icons": {
+      "description": "Emoji by role. Roles without x-fallback / x-default are required.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "shell":      { "$ref": "#/definitions/icon", "description": "The month's signature icon; shown first." },
+        "path":       { "$ref": "#/definitions/icon", "description": "Current directory." },
+        "git":        { "$ref": "#/definitions/icon", "description": "Source control / branch." },
+        "exec_time":  { "$ref": "#/definitions/icon", "description": "How long the last command took." },
+        "clock":      { "$ref": "#/definitions/icon", "description": "Time and date." },
+        "status_ok":  { "$ref": "#/definitions/icon", "description": "Last command succeeded." },
+        "root":       { "$ref": "#/definitions/icon", "x-fallback": "shell", "description": "Running as admin/root." },
+        "folder":     { "$ref": "#/definitions/icon", "x-fallback": "path", "description": "A folder." },
+        "home":       { "$ref": "#/definitions/icon", "x-fallback": "folder", "description": "The home folder." },
+        "battery":    { "$ref": "#/definitions/icon", "x-fallback": "shell", "description": "Battery discharging." },
+        "status_err": { "$ref": "#/definitions/icon", "x-fallback": "status_ok", "description": "Last command failed." },
+        "language":   { "$ref": "#/definitions/icon", "x-fallback": "shell", "description": "Default icon for any language/tool without its own entry in 'lang'." },
+        "prompt":     { "$ref": "#/definitions/icon", "x-default": "⌂", "description": "Start of the input line." },
+        "lang": {
+          "description": "Per language/tool icons, keyed by Oh My Posh segment name (node, npm, yarn, python, java, dotnet, go, rust, dart, angular, nx, julia, ruby, azfunc, aws, kubectl...). Missing ones use 'language'.",
+          "type": "object",
+          "x-fallback": "language",
+          "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
+          "additionalProperties": { "$ref": "#/definitions/icon" }
+        },
+        "os": {
+          "description": "Per operating system icons. Missing ones use 'shell'.",
+          "type": "object",
+          "x-fallback": "shell",
+          "additionalProperties": false,
+          "properties": {
+            "linux":   { "$ref": "#/definitions/icon" },
+            "macos":   { "$ref": "#/definitions/icon" },
+            "windows": { "$ref": "#/definitions/icon" }
+          }
+        },
+        "pool": {
+          "description": "Other emoji that fit the month: spares to pick from when a new program or segment needs an icon.",
+          "type": "array",
+          "items": { "$ref": "#/definitions/icon" },
+          "uniqueItems": true
+        }
+      }
+    },
+
+    "targets": {
+      "description": "Per-program extras that don't belong to any shared role, keyed by target name (e.g. \"oh-my-posh\"). Templates read them as [[target.<key>|default]].",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z0-9-]+$" },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": { "type": ["string", "number", "boolean"] }
+      }
+    }
+  }
+}

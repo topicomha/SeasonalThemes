@@ -10,13 +10,13 @@
   <line x1="942" y1="10" x2="932" y2="20" stroke="#F7E1E8"/>
   <line x1="0" y1="30" x2="960" y2="30" stroke="#3A1422"/>
   <rect x="0" y="30" width="48" height="546" fill="#3A1422"/>
-  <rect x="0" y="40" width="2" height="28" fill="#FF007F"/>
+  <rect x="0" y="40" width="2" height="28" fill="#FF69B4"/>
   <rect x="14" y="44" width="20" height="20" rx="4" fill="none" stroke="#F7E1E8" stroke-width="2"/>
   <rect x="14" y="88" width="20" height="20" rx="4" fill="none" stroke="#B58A97" stroke-width="2"/>
   <rect x="14" y="132" width="20" height="20" rx="4" fill="none" stroke="#B58A97" stroke-width="2"/>
   <rect x="14" y="176" width="20" height="20" rx="4" fill="none" stroke="#B58A97" stroke-width="2"/>
-  <circle cx="34" cy="106" r="7" fill="#FF007F"/>
-  <text x="34" y="110" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">3</text>
+  <circle cx="34" cy="106" r="7" fill="#FF69B4"/>
+  <text x="34" y="110" text-anchor="middle" font-size="9" font-weight="bold" fill="#800020">3</text>
   <rect x="48" y="30" width="210" height="546" fill="#3A1422"/>
   <line x1="258" y1="30" x2="258" y2="576" stroke="#3A1422"/>
   <text x="62" y="52" font-size="11" fill="#F7E1E8">EXPLORER</text>
@@ -33,11 +33,11 @@
   <text x="64" y="237" fill="#B58A97">.cache</text>
   <rect x="60" y="260" width="186" height="24" rx="3" fill="#3A1422" stroke="#3A1422"/>
   <text x="68" y="276" fill="#B58A97">Search files</text>
-  <rect x="60" y="294" width="186" height="26" rx="3" fill="#800020"/>
+  <rect x="60" y="294" width="186" height="26" rx="3" fill="#FF007F"/>
   <text x="153" y="311" text-anchor="middle" fill="#FFFFFF">Commit</text>
   <rect x="258" y="30" width="702" height="34" fill="#3A1422"/>
   <rect x="258" y="30" width="140" height="34" fill="#240A14"/>
-  <rect x="258" y="30" width="140" height="2" fill="#FF007F"/>
+  <rect x="258" y="30" width="140" height="2" fill="#FF69B4"/>
   <text x="274" y="52" fill="#F7E1E8">greeting.ts</text>
   <rect x="398" y="30" width="140" height="34" fill="#3A1422"/>
   <text x="414" y="52" fill="#B58A97">season.jsonc</text>
@@ -52,7 +52,7 @@
   <text x="292" y="166" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#B58A97">5</text>
   <text x="292" y="186" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#B58A97">6</text>
   <text x="308" y="186" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#FF007F">export</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#FF007F">function</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#FF69B4">greet</tspan><tspan fill="#F2C66D">(</tspan><tspan fill="#F7E1E8">month</tspan><tspan fill="#F7E1E8">:</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">Season</tspan><tspan fill="#F7E1E8">,</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">count</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">=</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F2C66D">3</tspan><tspan fill="#F2C66D">)</tspan><tspan fill="#F7E1E8">:</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">string</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F2C66D">{</tspan></text>
-  <text x="292" y="206" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#FF007F">7</text>
+  <text x="292" y="206" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#FF69B4">7</text>
   <text x="308" y="206" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F7E1E8">  </tspan><tspan fill="#FF007F">const</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">colors</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">=</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">{</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">primary</tspan><tspan fill="#F7E1E8">:</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#FFB6C1">&quot;#800020&quot;</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">}</tspan><tspan fill="#F7E1E8">;</tspan></text>
   <text x="292" y="226" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#B58A97">8</text>
   <text x="308" y="226" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F7E1E8">  </tspan><tspan fill="#FF007F">if</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">(</tspan><tspan fill="#F7E1E8">count</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">&gt;</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F2C66D">0</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">&amp;&amp;</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#F7E1E8">month</tspan><tspan fill="#F7E1E8">.</tspan><tspan fill="#F7E1E8">name</tspan><tspan fill="#C990E8">)</tspan><tspan fill="#F7E1E8"> </tspan><tspan fill="#C990E8">{</tspan></text>
@@ -69,7 +69,7 @@
   <rect x="258" y="406" width="702" height="170" fill="#240A14"/>
   <line x1="258" y1="406" x2="960" y2="406" stroke="#3A1422"/>
   <text x="274" y="426" font-size="11" fill="#F7E1E8">TERMINAL</text>
-  <rect x="272" y="432" width="60" height="1.5" fill="#FF007F"/>
+  <rect x="272" y="432" width="60" height="1.5" fill="#FF69B4"/>
   <text x="354" y="426" font-size="11" fill="#B58A97">PROBLEMS</text>
   <text x="274" y="454" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#7FC98B">$ </tspan><tspan fill="#F7E1E8">npm test</tspan></text>
   <text x="274" y="472" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#7FC98B">  PASS </tspan><tspan fill="#F7E1E8">greeting.test.ts </tspan><tspan fill="#B58A97">(12 ms)</tspan></text>
@@ -92,9 +92,9 @@
   <rect x="612" y="550" width="22" height="16" rx="3" fill="#FF69B4"/>
   <rect x="638" y="550" width="22" height="16" rx="3" fill="#6FD1C9"/>
   <rect x="664" y="550" width="22" height="16" rx="3" fill="#FFFFFF"/>
-  <rect x="0" y="576" width="960" height="24" fill="#800020"/>
-  <rect x="0" y="576" width="70" height="24" fill="#FF007F"/>
-  <text x="35" y="592" text-anchor="middle" fill="#FFFFFF">&gt;&lt; WSL</text>
+  <rect x="0" y="576" width="960" height="24" fill="#FF007F"/>
+  <rect x="0" y="576" width="70" height="24" fill="#FF69B4"/>
+  <text x="35" y="592" text-anchor="middle" fill="#800020">&gt;&lt; WSL</text>
   <text x="84" y="592" fill="#FFFFFF">main*   0 errors   1 warning</text>
   <text x="948" y="592" text-anchor="end" fill="#FFFFFF">Ln 7, Col 15   UTF-8   TypeScript</text>
 </svg>

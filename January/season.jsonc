@@ -1,0 +1,146 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "January",
+  "name": "Winter Wonderland",
+  "tagline": "Crisp blue skies over fresh snow",
+  "description": [
+    "January captures the essence of winter with cool blues, whites and winter icons.",
+    "It should feel like a crisp winter day over snow-covered landscapes: navy night, steel-blue ice, evergreen and a pale winter sky."
+  ],
+  "mood": ["crisp", "calm", "cold", "fresh"],
+  "keywords": ["snow-covered mountains", "snowflakes", "snowman", "ski slope", "evergreen forest", "frozen lake", "hot tea"],
+  "holidays": [
+    { "name": "New Year's Day", "date": "01-01" },
+    { "name": "Martin Luther King Jr. Day", "date": "01-15", "note": "3rd Monday" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Winter", "url": "https://emojipedia.org/winter" }
+  ],
+  "ideas": [
+    "Lighter or darker blues depending on the terminal background",
+    "❄️ snowflakes in more segments for a consistent winter feel",
+    "A light blue battery segment for 'cold' winter energy"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "navy":      { "hex": "#000080", "name": "Winter night navy" },
+    "steel":     { "hex": "#4682B4", "name": "Steel blue ice" },
+    "evergreen": { "hex": "#2E8B57", "name": "Evergreen" },
+    "sky":       { "hex": "#87CEEB", "name": "Winter sky" },
+    "snow":      { "hex": "#FFFFFF", "name": "Snow white" },
+    "black":     { "hex": "#000000", "name": "Black" },
+    "ember":     { "hex": "#FF4500", "name": "Fireplace ember" },
+    "polar":     { "hex": "#0B1B2E", "name": "Polar night", "note": "Proposed: editor and terminal background" },
+    "drift":     { "hex": "#16304A", "name": "Snow drift shadow", "note": "Proposed: panels, borders, current line" },
+    "ice":       { "hex": "#E8F1F8", "name": "Ice", "note": "Proposed: editor text" },
+    "frost":     { "hex": "#8FA9C2", "name": "Frost", "note": "Proposed: comments, muted text" },
+    "holly":     { "hex": "#E06C6C", "name": "Holly berry", "note": "Proposed: terminal red, invalid code" },
+    "pine":      { "hex": "#6BC48A", "name": "Pine needle", "note": "Proposed: evergreen lightened (terminal green, strings)" },
+    "candle":    { "hex": "#F2D06B", "name": "Candlelight", "note": "Proposed: terminal yellow, numbers" },
+    "aurora":    { "hex": "#C49BE0", "name": "Aurora violet", "note": "Proposed: terminal magenta, types" },
+    "glacier":   { "hex": "#7FDBDA", "name": "Glacier", "note": "Proposed: terminal cyan" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "navy",
+      "secondary":   "steel",
+      "tertiary":    "evergreen",
+      "accent":      "sky",
+      "accent_alt":  "sky",
+      "highlight":   "navy",
+      "deep":        "navy",
+      "text_accent": "snow",
+      "line":        "sky"
+    },
+    "ui": {
+      "text_light":     "snow",
+      "text_dark":      "black",
+      "background":     "polar",
+      "foreground":     "ice",
+      "surface":        "drift",
+      "line_highlight": "drift",
+      "border":         "drift",
+      "muted":          "frost",
+      "selection":      "steel",
+      "cursor":         "sky"
+    },
+    "status": {
+      "success": "snow",
+      "warning": "candle",
+      "error":   "ember",
+      "info":    "sky"
+    },
+    "syntax": {
+      "comment":  { "color": "frost", "style": "italic" },
+      "keyword":  "sky",
+      "string":   "pine",
+      "number":   "candle",
+      "constant": "candle",
+      "function": "glacier",
+      "type":     "aurora",
+      "variable": "ice",
+      "invalid":  "holly"
+    },
+    "terminal": {
+      "black":         "drift",
+      "red":           "holly",
+      "green":         "pine",
+      "yellow":        "candle",
+      "blue":          "sky",
+      "magenta":       "aurora",
+      "cyan":          "glacier",
+      "white":         "ice",
+      "bright_black":  "frost",
+      "bright_red":    "ember",
+      "bright_white":  "snow"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "❄️",
+    "root":       "⛄",
+    "path":       "🎿",
+    "folder":     "🎿",
+    "home":       "🏔️",
+    "git":        "❄️",
+    "exec_time":  "🧤🧣",
+    "clock":      "❄️⛄",
+    "battery":    "❄️",
+    "status_ok":  "⛄",
+    "status_err": "🥶",
+    "language":   "🌬️",
+    "lang": {
+      "yarn":    "🌂",
+      "python":  "⛄",
+      "java":    "🎿",
+      "dotnet":  "❄️",
+      "rust":    "⛄",
+      "dart":    "🎿",
+      "angular": "❄️",
+      "julia":   "⛄",
+      "ruby":    "🎿",
+      "azfunc":  "❄️",
+      "kubectl": "⛄"
+    },
+    "os": {
+      "linux":   "❄️",
+      "macos":   "🍎",
+      "windows": "⛄"
+    },
+    "pool": ["☃️", "⛷️", "🏂", "🍵", "🛷", "🌨️", "🌁", "🌲", "🧥", "🧣", "🧤", "☔", "🏔️"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05 PM"
+    }
+  }
+}

@@ -37,7 +37,13 @@
     "forest":       { "hex": "#203C17", "name": "Deep forest green" },
     "navy":         { "hex": "#202A5B", "name": "Navy" },
     "white":        { "hex": "#FFFFFF", "name": "White" },
-    "tulip":        { "hex": "#E8505B", "name": "Tulip red", "note": "New: the old theme had no error colour" }
+    "tulip":        { "hex": "#E8505B", "name": "Tulip red", "note": "New: the old theme had no error colour" },
+    "night_garden": { "hex": "#1B2420", "name": "Night garden", "note": "Proposed: editor and terminal background" },
+    "hedge":        { "hex": "#27332D", "name": "Hedge", "note": "Proposed: panels, borders, current line" },
+    "eggshell":     { "hex": "#F4F1EA", "name": "Eggshell", "note": "Proposed: editor text" },
+    "lichen":       { "hex": "#9BAA9C", "name": "Lichen", "note": "Proposed: comments, muted text" },
+    "periwinkle":   { "hex": "#9DB4FF", "name": "Periwinkle", "note": "Proposed: terminal blue, info" },
+    "mint":         { "hex": "#7FD9C4", "name": "Mint", "note": "Proposed: functions" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -54,12 +60,46 @@
       "line":        "spring_green"
     },
     "ui": {
-      "text_light": "white",
-      "text_dark":  "forest"
+      "text_light":     "white",
+      "text_dark":      "forest",
+      "background":     "night_garden",
+      "foreground":     "eggshell",
+      "surface":        "hedge",
+      "line_highlight": "hedge",
+      "border":         "hedge",
+      "muted":          "lichen",
+      "selection":      "forest",
+      "cursor":         "butter"
     },
     "status": {
       "success": "spring_green",
-      "error":   "tulip"
+      "warning": "butter",
+      "error":   "tulip",
+      "info":    "periwinkle"
+    },
+    "syntax": {
+      "comment":  { "color": "lichen", "style": "italic" },
+      "keyword":  "salmon",
+      "string":   "spring_green",
+      "number":   "butter",
+      "constant": "butter",
+      "function": "mint",
+      "type":     "lavender",
+      "variable": "eggshell",
+      "invalid":  "salmon"
+    },
+    "terminal": {
+      "black":         "hedge",
+      "red":           "salmon",
+      "green":         "spring_green",
+      "yellow":        "butter",
+      "blue":          "periwinkle",
+      "magenta":       "lavender",
+      "cyan":          "rain_cyan",
+      "white":         "eggshell",
+      "bright_black":  "lichen",
+      "bright_green":  "mint",
+      "bright_white":  "white"
     }
   },
 

@@ -30,6 +30,12 @@ The icons are the garden waking up (seedlings, sunflowers, bees, butterflies and
 | `navy` | Navy | `#202A5B` |  |
 | `white` | White | `#FFFFFF` |  |
 | `tulip` | Tulip red | `#E8505B` | New: the old theme had no error colour |
+| `night_garden` | Night garden | `#1B2420` | Proposed: editor and terminal background |
+| `hedge` | Hedge | `#27332D` | Proposed: panels, borders, current line |
+| `eggshell` | Eggshell | `#F4F1EA` | Proposed: editor text |
+| `lichen` | Lichen | `#9BAA9C` | Proposed: comments, muted text |
+| `periwinkle` | Periwinkle | `#9DB4FF` | Proposed: terminal blue, info |
+| `mint` | Mint | `#7FD9C4` | Proposed: functions |
 
 ## Colour roles
 
@@ -59,14 +65,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | forest | `#203C17` |  |
-| `background` | rain_cyan | `#B0FFFD` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | rain_cyan | `#B0FFFD` | *inherits* `ui.background` |
-| `line_highlight` | rain_cyan | `#B0FFFD` | *inherits* `ui.surface` |
-| `border` | rain_cyan | `#B0FFFD` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | rain_cyan | `#B0FFFD` | *inherits* `brand.secondary` |
-| `cursor` | spring_green | `#B3E88F` | *inherits* `brand.primary` |
+| `background` | night_garden | `#1B2420` |  |
+| `foreground` | eggshell | `#F4F1EA` |  |
+| `surface` | hedge | `#27332D` |  |
+| `line_highlight` | hedge | `#27332D` |  |
+| `border` | hedge | `#27332D` |  |
+| `muted` | lichen | `#9BAA9C` |  |
+| `selection` | forest | `#203C17` |  |
+| `cursor` | butter | `#FFE4A2` |  |
 
 ### Status
 
@@ -76,8 +82,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | tulip | `#E8505B` |  |
 | `success` | spring_green | `#B3E88F` |  |
-| `warning` | butter | `#FFE4A2` | *inherits* `brand.accent` |
-| `info` | lavender | `#CDA0FF` | *inherits* `brand.highlight` |
+| `warning` | butter | `#FFE4A2` |  |
+| `info` | periwinkle | `#9DB4FF` |  |
 
 ### Syntax
 
@@ -85,22 +91,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | spring_green | `#B3E88F` | *inherits* `brand.primary` |
-| `string` | butter | `#FFE4A2` | *inherits* `brand.accent` |
-| `number` | salmon | `#EC9288` | *inherits* `brand.tertiary` |
-| `constant` | salmon | `#EC9288` | *inherits* `syntax.number` |
-| `function` | butter | `#FFE4A2` | *inherits* `brand.accent_alt` |
-| `type` | lavender | `#CDA0FF` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | spring_green | `#B3E88F` | *inherits* `syntax.keyword` |
-| `attribute` | butter | `#FFE4A2` | *inherits* `syntax.function` |
-| `regex` | butter | `#FFE4A2` | *inherits* `syntax.string` |
-| `invalid` | tulip | `#E8505B` | *inherits* `status.error` |
+| `comment` | lichen | `#9BAA9C` | italic |
+| `keyword` | salmon | `#EC9288` |  |
+| `string` | spring_green | `#B3E88F` |  |
+| `number` | butter | `#FFE4A2` |  |
+| `constant` | butter | `#FFE4A2` |  |
+| `function` | mint | `#7FD9C4` |  |
+| `type` | lavender | `#CDA0FF` |  |
+| `variable` | eggshell | `#F4F1EA` |  |
+| `parameter` | eggshell | `#F4F1EA` | *inherits* `syntax.variable` |
+| `property` | eggshell | `#F4F1EA` | *inherits* `syntax.variable` |
+| `operator` | eggshell | `#F4F1EA` | *inherits* `ui.foreground` |
+| `punctuation` | eggshell | `#F4F1EA` | *inherits* `ui.foreground` |
+| `tag` | salmon | `#EC9288` | *inherits* `syntax.keyword` |
+| `attribute` | mint | `#7FD9C4` | *inherits* `syntax.function` |
+| `regex` | spring_green | `#B3E88F` | *inherits* `syntax.string` |
+| `invalid` | salmon | `#EC9288` |  |
 
 ### Terminal
 
@@ -108,26 +114,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | rain_cyan | `#B0FFFD` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | spring_green | `#B3E88F` | *inherits* `ui.cursor` |
-| `selection` | rain_cyan | `#B0FFFD` | *inherits* `ui.selection` |
-| `black` | rain_cyan | `#B0FFFD` | *inherits* `ui.background` |
-| `red` | tulip | `#E8505B` | *inherits* `status.error` |
-| `green` | spring_green | `#B3E88F` | *inherits* `status.success` |
-| `yellow` | butter | `#FFE4A2` | *inherits* `status.warning` |
-| `blue` | lavender | `#CDA0FF` | *inherits* `status.info` |
-| `magenta` | lavender | `#CDA0FF` | *inherits* `brand.highlight` |
-| `cyan` | lavender | `#CDA0FF` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | tulip | `#E8505B` | *inherits* `terminal.red` |
-| `bright_green` | spring_green | `#B3E88F` | *inherits* `terminal.green` |
+| `background` | night_garden | `#1B2420` | *inherits* `ui.background` |
+| `foreground` | eggshell | `#F4F1EA` | *inherits* `ui.foreground` |
+| `cursor` | butter | `#FFE4A2` | *inherits* `ui.cursor` |
+| `selection` | forest | `#203C17` | *inherits* `ui.selection` |
+| `black` | hedge | `#27332D` |  |
+| `red` | salmon | `#EC9288` |  |
+| `green` | spring_green | `#B3E88F` |  |
+| `yellow` | butter | `#FFE4A2` |  |
+| `blue` | periwinkle | `#9DB4FF` |  |
+| `magenta` | lavender | `#CDA0FF` |  |
+| `cyan` | rain_cyan | `#B0FFFD` |  |
+| `white` | eggshell | `#F4F1EA` |  |
+| `bright_black` | lichen | `#9BAA9C` |  |
+| `bright_red` | salmon | `#EC9288` | *inherits* `terminal.red` |
+| `bright_green` | mint | `#7FD9C4` |  |
 | `bright_yellow` | butter | `#FFE4A2` | *inherits* `terminal.yellow` |
-| `bright_blue` | lavender | `#CDA0FF` | *inherits* `terminal.blue` |
+| `bright_blue` | periwinkle | `#9DB4FF` | *inherits* `terminal.blue` |
 | `bright_magenta` | lavender | `#CDA0FF` | *inherits* `terminal.magenta` |
-| `bright_cyan` | lavender | `#CDA0FF` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_cyan` | rain_cyan | `#B0FFFD` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

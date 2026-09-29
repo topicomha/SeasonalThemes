@@ -232,6 +232,10 @@
       "targets": {
         "oh-my-posh": {
           "time_format": "2006-01-02 3:04:05 PM"
+        },
+        "vscode": {
+          "status_bar": "brand.accent",
+          "accent":     "brand.secondary"
         }
       }
     }

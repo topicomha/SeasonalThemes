@@ -185,7 +185,7 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Variant | Dates | Changes | Files |
 |---|---|---|---|
-| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (9), colors.brand (7), colors.ui (7), colors.syntax (6), colors.terminal (6), colors.status (2), icons (12), targets (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg), [vscode-preview-new-years-eve.svg](vscode-preview-new-years-eve.svg), [../vscode/themes/december-new-years-eve.json](../vscode/themes/december-new-years-eve.json) |
+| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (9), colors.brand (7), colors.ui (7), colors.syntax (6), colors.terminal (6), colors.status (2), icons (12), targets (2) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg), [vscode-preview-new-years-eve.svg](vscode-preview-new-years-eve.svg), [../vscode/themes/december-new-years-eve.json](../vscode/themes/december-new-years-eve.json) |
 
 ## VS Code
 

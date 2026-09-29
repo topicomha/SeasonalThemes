@@ -53,9 +53,14 @@
         "path": "./themes/february-light.json"
       },
       {
-        "label": "Seasonal 03 · March — St. Patrick's Day ☘️",
+        "label": "Seasonal 03 · March — St. Patrick's Day · Dark ☘️",
         "uiTheme": "vs-dark",
         "path": "./themes/march-dark.json"
+      },
+      {
+        "label": "Seasonal 03 · March — St. Patrick's Day · Light ☘️",
+        "uiTheme": "vs",
+        "path": "./themes/march-light.json"
       },
       {
         "label": "Seasonal 04 · April — Spring Showers 🐰",
@@ -178,7 +183,12 @@
     {
       "month": 3,
       "mode": "dark",
-      "label": "Seasonal 03 · March — St. Patrick's Day ☘️"
+      "label": "Seasonal 03 · March — St. Patrick's Day · Dark ☘️"
+    },
+    {
+      "month": 3,
+      "mode": "light",
+      "label": "Seasonal 03 · March — St. Patrick's Day · Light ☘️"
     },
     {
       "month": 4,

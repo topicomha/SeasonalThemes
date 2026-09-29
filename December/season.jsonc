@@ -1,0 +1,239 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "December",
+  "name": "Holiday Season",
+  "tagline": "Christmas trees, wrapped gifts and cookies for Santa",
+  "description": [
+    "December captures the winter holiday spirit: Christmas red, evergreen and forest greens with star gold and snow white.",
+    "Trees, gifts, candles and Santa, with milk and cookies on the clock. After Christmas it turns into New Year's Eve: midnight black, fireworks blue, silver and champagne."
+  ],
+  "mood": ["festive", "cozy", "joyful", "sparkling"],
+  "keywords": ["Christmas tree", "wrapped presents", "candlelight", "snowy village", "stockings", "fireworks", "champagne"],
+  "holidays": [
+    { "name": "Winter solstice", "date": "12-21", "note": "around the 21st" },
+    { "name": "Christmas Eve", "date": "12-24" },
+    { "name": "Christmas Day", "date": "12-25" },
+    { "name": "New Year's Eve", "date": "12-31" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Christmas", "url": "https://emojipedia.org/christmas" },
+    { "title": "Emojipedia: New Year's Eve", "url": "https://emojipedia.org/new-years-eve" }
+  ],
+  "ideas": [
+    "More holiday icons: 🕯️ candle, 🦌 deer, 🧦 stocking",
+    "🎅 Santa as the admin indicator",
+    "Alternating red and green segments for a candy-cane effect",
+    "☃️ snowman for system monitoring"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "christmas_red": { "hex": "#CC231E", "name": "Christmas red" },
+    "evergreen":     { "hex": "#006400", "name": "Evergreen" },
+    "forest":        { "hex": "#228B22", "name": "Forest green" },
+    "gold":          { "hex": "#FFD700", "name": "Star gold" },
+    "cranberry":     { "hex": "#8B0000", "name": "Cranberry" },
+    "snow":          { "hex": "#FFFFFF", "name": "Snow white" },
+    "frost":         { "hex": "#E0F8FF", "name": "Frost" },
+    "charcoal":      { "hex": "#2D3436", "name": "Charcoal" },
+    "pine_night":    { "hex": "#12211A", "name": "Pine night", "note": "Proposed: editor and terminal background" },
+    "bough":         { "hex": "#1D3327", "name": "Pine bough", "note": "Proposed: panels, borders, current line" },
+    "eggnog":        { "hex": "#F5EFE4", "name": "Eggnog", "note": "Proposed: editor text" },
+    "tinsel":        { "hex": "#A7B8AE", "name": "Tinsel", "note": "Proposed: comments, muted text" },
+    "ornament":      { "hex": "#E65A55", "name": "Ornament red", "note": "Proposed: Christmas red lightened (terminal red, keywords, invalid code)" },
+    "holly":         { "hex": "#5FBF6A", "name": "Holly green", "note": "Proposed: terminal green, strings" },
+    "icicle":        { "hex": "#7FB2E5", "name": "Icicle blue", "note": "Proposed: terminal blue, info" },
+    "sugarplum":     { "hex": "#D08FD6", "name": "Sugarplum", "note": "Proposed: terminal magenta, types" },
+    "frost_teal":    { "hex": "#7FD7D0", "name": "Frosted teal", "note": "Proposed: terminal cyan" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "christmas_red",
+      "secondary":   "evergreen",
+      "tertiary":    "forest",
+      "accent":      "gold",
+      "accent_alt":  "gold",
+      "highlight":   "cranberry",
+      "deep":        "snow",
+      "text_accent": "gold"
+    },
+    "ui": {
+      "text_light":     "snow",
+      "text_dark":      "charcoal",
+      "background":     "pine_night",
+      "foreground":     "eggnog",
+      "surface":        "bough",
+      "line_highlight": "bough",
+      "border":         "bough",
+      "muted":          "tinsel",
+      "selection":      "evergreen",
+      "cursor":         "gold"
+    },
+    "status": {
+      "success": "frost",
+      "warning": "gold",
+      "error":   "evergreen",
+      "info":    "icicle"
+    },
+    "syntax": {
+      "comment":  { "color": "tinsel", "style": "italic" },
+      "keyword":  "ornament",
+      "string":   "holly",
+      "number":   "gold",
+      "constant": "gold",
+      "function": "frost_teal",
+      "type":     "sugarplum",
+      "variable": "eggnog",
+      "invalid":  "ornament"
+    },
+    "terminal": {
+      "black":         "bough",
+      "red":           "ornament",
+      "green":         "holly",
+      "yellow":        "gold",
+      "blue":          "icicle",
+      "magenta":       "sugarplum",
+      "cyan":          "frost_teal",
+      "white":         "eggnog",
+      "bright_black":  "tinsel",
+      "bright_white":  "snow"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🎄",
+    "root":       "🎅",
+    "path":       "🎁",
+    "folder":     "🎁",
+    "home":       "🌟",
+    "git":        "⭐",
+    "exec_time":  "🕯️",
+    "clock":      "🍪🥛",
+    "battery":    "❄️",
+    "status_ok":  "🧑‍🎄",
+    "status_err": "🧑‍🎄",
+    "language":   "🎄",
+    "lang": {
+      "yarn":    "🎅",
+      "python":  "🎅",
+      "java":    "🎁",
+      "dotnet":  "⭐",
+      "rust":    "🎅",
+      "dart":    "🎁",
+      "angular": "⭐",
+      "julia":   "🎅",
+      "ruby":    "🎁",
+      "azfunc":  "⭐",
+      "kubectl": "🎅"
+    },
+    "os": {
+      "linux":   "🎄",
+      "macos":   "🍎",
+      "windows": "🎅"
+    },
+    "pool": ["🔔", "🕯️", "👼", "🤶", "☃️", "⛄", "🦌", "🍪", "🥛", "🧝", "🧦", "🛷", "🌨️", "🎀", "🌲", "🔥"]
+  },
+
+  // ── Date variants ───────────────────────────────────────────────────────
+  "variants": [
+    {
+      "id": "new-years-eve",
+      "name": "New Year's Eve",
+      "from": "12-26",
+      "to": "12-31",
+      "tagline": "Midnight, fireworks and a champagne toast",
+      "palette": {
+        "midnight":  { "hex": "#000000", "name": "Midnight black" },
+        "fireworks": { "hex": "#1E90FF", "name": "Fireworks blue" },
+        "silver":    { "hex": "#808080", "name": "Silver" },
+        "sparkler":  { "hex": "#FF4500", "name": "Sparkler orange" },
+        "night_sky": { "hex": "#0B0D17", "name": "Midnight sky", "note": "Proposed: editor and terminal background" },
+        "starlight": { "hex": "#1A1D2E", "name": "Starlight", "note": "Proposed: panels, borders, current line" },
+        "platinum":  { "hex": "#C0C0C0", "name": "Platinum", "note": "Proposed: comments, muted text" },
+        "confetti":  { "hex": "#FF6FAE", "name": "Confetti pink", "note": "Proposed: terminal magenta, types" },
+        "fizz":      { "hex": "#8FD8FF", "name": "Champagne fizz", "note": "Proposed: terminal cyan, functions" }
+      },
+      "colors": {
+        "brand": {
+          "primary":   "midnight",
+          "secondary": "fireworks",
+          "tertiary":  "silver",
+          "highlight": "midnight",
+          "deep":      "gold",
+          "text_accent": "snow",
+          "line":      "gold"
+        },
+        "ui": {
+          "text_dark":      "midnight",
+          "background":     "night_sky",
+          "surface":        "starlight",
+          "line_highlight": "starlight",
+          "border":         "starlight",
+          "muted":          "platinum",
+          "selection":      "fireworks"
+        },
+        "syntax": {
+          "comment":  { "color": "platinum", "style": "italic" },
+          "keyword":  "gold",
+          "string":   "fizz",
+          "function": "fireworks",
+          "type":     "confetti",
+          "invalid":  "sparkler"
+        },
+        "terminal": {
+          "black":         "starlight",
+          "red":           "sparkler",
+          "blue":          "fireworks",
+          "magenta":       "confetti",
+          "cyan":          "fizz",
+          "bright_black":  "platinum"
+        },
+        "status": {
+          "success": "snow",
+          "error":   "sparkler"
+        }
+      },
+      "icons": {
+        "shell":      "🥳",
+        "root":       "🥂",
+        "path":       "🎇",
+        "folder":     "🎇",
+        "home":       "🥳",
+        "exec_time":  "⏱️",
+        "clock":      "🎉🥂",
+        "status_ok":  "🕺",
+        "status_err": "🕺",
+        "language":   "🎉",
+        "lang": {
+          "yarn":    "🥂",
+          "python":  "🥂",
+          "java":    "🎇",
+          "dotnet":  "⭐",
+          "rust":    "🥂",
+          "dart":    "🎇",
+          "angular": "⭐",
+          "julia":   "🥂",
+          "ruby":    "🎇",
+          "azfunc":  "⭐",
+          "kubectl": "🥂"
+        },
+        "os": {
+          "linux":   "🎉",
+          "macos":   "🍎",
+          "windows": "🍾"
+        }
+      },
+      "targets": {
+        "oh-my-posh": {
+          "time_format": "2006-01-02 3:04:05 PM"
+        }
+      }
+    }
+  ]
+}

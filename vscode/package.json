@@ -73,9 +73,14 @@
         "path": "./themes/april-light.json"
       },
       {
-        "label": "Seasonal 05 · May — May Flowers 🕊️",
+        "label": "Seasonal 05 · May — May Flowers · Dark 🕊️",
         "uiTheme": "vs-dark",
         "path": "./themes/may-dark.json"
+      },
+      {
+        "label": "Seasonal 05 · May — May Flowers · Light 🕊️",
+        "uiTheme": "vs",
+        "path": "./themes/may-light.json"
       },
       {
         "label": "Seasonal 06 · June — Summer Vacation 😎",
@@ -208,7 +213,12 @@
     {
       "month": 5,
       "mode": "dark",
-      "label": "Seasonal 05 · May — May Flowers 🕊️"
+      "label": "Seasonal 05 · May — May Flowers · Dark 🕊️"
+    },
+    {
+      "month": 5,
+      "mode": "light",
+      "label": "Seasonal 05 · May — May Flowers · Light 🕊️"
     },
     {
       "month": 6,

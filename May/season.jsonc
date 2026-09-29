@@ -145,5 +145,96 @@
     "oh-my-posh": {
       "time_format": "1/2 3:04 PM"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "meadow_ink": { "hex": "#358410", "name": "Meadow green (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#FFFDF1", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#262176", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#FFFAE6", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#FFFBE9", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#FEF5C8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#726E9E", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#8C8CC6", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "buttercup_ink": { "hex": "#887202", "name": "Buttercup yellow (light-mode ink)", "note": "Proposed: light mode" },
+        "lavender_ink": { "hex": "#9B50D0", "name": "Lavender (light-mode ink)", "note": "Proposed: light mode" },
+        "cornflower_ink": { "hex": "#2A6DE6", "name": "Cornflower blue (light-mode ink)", "note": "Proposed: light mode" },
+        "grill_ink": { "hex": "#BA570B", "name": "Grill ember (light-mode ink)", "note": "Proposed: light mode" },
+        "emerald_ink": { "hex": "#298347", "name": "Emerald (light-mode ink)", "note": "Proposed: light mode" },
+        "poppy_ink": { "hex": "#DF262F", "name": "Poppy red (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#8783AA", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#9390AE", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "robin_egg_ink": { "hex": "#227F87", "name": "Robin's egg (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "meadow_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "buttercup_ink",
+          "accent": "lavender_ink"
+        },
+        "status": {
+          "success": "cornflower_ink",
+          "warning": "buttercup_ink",
+          "error": "lavender_ink",
+          "info": "cornflower_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "grill_ink",
+          "string": "emerald_ink",
+          "number": "buttercup_ink",
+          "constant": "buttercup_ink",
+          "function": "cornflower_ink",
+          "type": "lavender_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "grill_ink",
+          "attribute": "cornflower_ink",
+          "regex": "emerald_ink",
+          "invalid": "poppy_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "buttercup_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "poppy_ink",
+          "bright_red": "grill_ink",
+          "green": "emerald_ink",
+          "bright_green": "meadow_ink",
+          "yellow": "buttercup_ink",
+          "bright_yellow": "buttercup_ink",
+          "blue": "cornflower_ink",
+          "bright_blue": "cornflower_ink",
+          "magenta": "lavender_ink",
+          "bright_magenta": "lavender_ink",
+          "cyan": "robin_egg_ink",
+          "bright_cyan": "robin_egg_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

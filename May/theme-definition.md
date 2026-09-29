@@ -184,13 +184,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🪇 🌽 🥩 🍔 💐 🎀 🎁 🌷 🌼 🐝 🦋 🇺🇸 🎖️ 👨‍🍳
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#4CBB17` | `#358410` meadow_ink |
+| `ui.background` | `#141C2B` | `#FFFDF1` light_page |
+| `ui.foreground` | `#F3F0E6` | `#262176` light_ink |
+| `ui.surface` | `#202A3D` | `#FFFAE6` light_panel |
+| `ui.line_highlight` | `#202A3D` | `#FFFBE9` light_current_line |
+| `ui.border` | `#202A3D` | `#FEF5C8` light_border |
+| `ui.muted` | `#9AA4B5` | `#726E9E` light_muted_text |
+| `ui.selection` | `#000080` | `#8C8CC6` light_selection |
+| `ui.cursor` | `#FCDC3B` | `#887202` buttercup_ink |
+| `ui.accent` | `#B57EDC` | `#9B50D0` lavender_ink |
+| `status.error` | `#B57EDC` | `#9B50D0` lavender_ink |
+| `status.success` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `status.warning` | `#FCDC3B` | `#887202` buttercup_ink |
+| `status.info` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `syntax.comment` | `#9AA4B5` | `#726E9E` light_muted_text |
+| `syntax.keyword` | `#F59E5B` | `#BA570B` grill_ink |
+| `syntax.string` | `#50C878` | `#298347` emerald_ink |
+| `syntax.number` | `#FCDC3B` | `#887202` buttercup_ink |
+| `syntax.constant` | `#FCDC3B` | `#887202` buttercup_ink |
+| `syntax.function` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `syntax.type` | `#B57EDC` | `#9B50D0` lavender_ink |
+| `syntax.variable` | `#F3F0E6` | `#262176` light_ink |
+| `syntax.parameter` | `#F3F0E6` | `#262176` light_ink |
+| `syntax.property` | `#F3F0E6` | `#262176` light_ink |
+| `syntax.operator` | `#F3F0E6` | `#262176` light_ink |
+| `syntax.punctuation` | `#F3F0E6` | `#262176` light_ink |
+| `syntax.tag` | `#F59E5B` | `#BA570B` grill_ink |
+| `syntax.attribute` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `syntax.regex` | `#50C878` | `#298347` emerald_ink |
+| `syntax.invalid` | `#E8646A` | `#DF262F` poppy_ink |
+| `terminal.background` | `#141C2B` | `#FFFDF1` light_page |
+| `terminal.foreground` | `#F3F0E6` | `#262176` light_ink |
+| `terminal.cursor` | `#FCDC3B` | `#887202` buttercup_ink |
+| `terminal.selection` | `#000080` | `#8C8CC6` light_selection |
+| `terminal.black` | `#202A3D` | `#262176` light_ink |
+| `terminal.red` | `#E8646A` | `#DF262F` poppy_ink |
+| `terminal.green` | `#50C878` | `#298347` emerald_ink |
+| `terminal.yellow` | `#FCDC3B` | `#887202` buttercup_ink |
+| `terminal.blue` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `terminal.magenta` | `#B57EDC` | `#9B50D0` lavender_ink |
+| `terminal.cyan` | `#6FD3DB` | `#227F87` robin_egg_ink |
+| `terminal.white` | `#F3F0E6` | `#8783AA` light_terminal_white |
+| `terminal.bright_black` | `#9AA4B5` | `#726E9E` light_muted_text |
+| `terminal.bright_red` | `#F59E5B` | `#BA570B` grill_ink |
+| `terminal.bright_green` | `#4CBB17` | `#358410` meadow_ink |
+| `terminal.bright_yellow` | `#FCDC3B` | `#887202` buttercup_ink |
+| `terminal.bright_blue` | `#6495ED` | `#2A6DE6` cornflower_ink |
+| `terminal.bright_magenta` | `#B57EDC` | `#9B50D0` lavender_ink |
+| `terminal.bright_cyan` | `#6FD3DB` | `#227F87` robin_egg_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#9390AE` light_terminal_bright_white |
+
+![May light palette](palette-light.svg)
+
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 05 · May — May Flowers](../vscode/themes/may-dark.json)
+- [Seasonal 05 · May — May Flowers · Dark](../vscode/themes/may-dark.json)
+- [Seasonal 05 · May — May Flowers · Light](../vscode/themes/may-light.json)
 
 ![May in VS Code, dark](vscode-preview-dark.svg)
+
+![May in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -206,5 +268,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-May.omp.json](davids-May.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/May/davids-May.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-May-light.omp.json](davids-May-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/may-light.json](../vscode/themes/may-light.json): vscode-theme, light mode.
 - [../vscode/themes/may-dark.json](../vscode/themes/may-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

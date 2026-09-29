@@ -43,7 +43,8 @@
     "midnight":   { "hex": "#2C3E50", "name": "Midnight slate", "note": "From the Fall VS Code theme's sidebar" },
     "smoke":      { "hex": "#444444", "name": "Smoke" },
     "ash":        { "hex": "#7C7C7C", "name": "Ash grey" },
-    "blood":      { "hex": "#C0392B", "name": "Blood red", "note": "Proposed: terminal red" },
+    "blood":      { "hex": "#E5534B", "name": "Blood red", "note": "Proposed: terminal red, invalid code" },
+    "wisp":       { "hex": "#B07CC6", "name": "Wisp purple", "note": "Proposed: witch purple lightened to read on charcoal (syntax types, terminal magenta)" },
     "slime":      { "hex": "#7DAA3B", "name": "Goblin green", "note": "Proposed: terminal green" },
     "moon":       { "hex": "#5DADE2", "name": "Moonlight blue", "note": "Proposed: terminal blue" },
     "potion":     { "hex": "#48C9B0", "name": "Potion teal", "note": "Proposed: terminal cyan" }
@@ -86,8 +87,9 @@
       "number":   "candy_corn",
       "constant": "candy_corn",
       "function": "pumpkin",
-      "type":     "witch",
-      "variable": "bone"
+      "type":     "wisp",
+      "variable": "bone",
+      "invalid":  "blood"
     },
     "terminal": {
       "black":          "charcoal",
@@ -95,7 +97,7 @@
       "green":          "slime",
       "yellow":         "candy_corn",
       "blue":           "moon",
-      "magenta":        "witch",
+      "magenta":        "wisp",
       "cyan":           "potion",
       "white":          "ghost",
       "bright_black":   "ash",

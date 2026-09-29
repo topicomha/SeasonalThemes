@@ -35,7 +35,8 @@ The icons mix the spooky (skulls, bones, ghosts, spiders) with the autumn harves
 | `midnight` | Midnight slate | `#2C3E50` | From the Fall VS Code theme's sidebar |
 | `smoke` | Smoke | `#444444` |  |
 | `ash` | Ash grey | `#7C7C7C` |  |
-| `blood` | Blood red | `#C0392B` | Proposed: terminal red |
+| `blood` | Blood red | `#E5534B` | Proposed: terminal red, invalid code |
+| `wisp` | Wisp purple | `#B07CC6` | Proposed: witch purple lightened to read on charcoal (syntax types, terminal magenta) |
 | `slime` | Goblin green | `#7DAA3B` | Proposed: terminal green |
 | `moon` | Moonlight blue | `#5DADE2` | Proposed: terminal blue |
 | `potion` | Potion teal | `#48C9B0` | Proposed: terminal cyan |
@@ -99,7 +100,7 @@ Code highlighting (editors, bat, delta...).
 | `number` | candy_corn | `#F1C40F` |  |
 | `constant` | candy_corn | `#F1C40F` |  |
 | `function` | pumpkin | `#D35400` |  |
-| `type` | witch | `#8E44AD` |  |
+| `type` | wisp | `#B07CC6` |  |
 | `variable` | bone | `#FFFFFF` |  |
 | `parameter` | bone | `#FFFFFF` | *inherits* `syntax.variable` |
 | `property` | bone | `#FFFFFF` | *inherits* `syntax.variable` |
@@ -108,7 +109,7 @@ Code highlighting (editors, bat, delta...).
 | `tag` | amber | `#F39C12` | *inherits* `syntax.keyword` |
 | `attribute` | pumpkin | `#D35400` | *inherits* `syntax.function` |
 | `regex` | carrot | `#E67E22` | *inherits* `syntax.string` |
-| `invalid` | burnt | `#A04000` | *inherits* `status.error` |
+| `invalid` | blood | `#E5534B` |  |
 
 ### Terminal
 
@@ -121,11 +122,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 | `cursor` | pumpkin | `#D35400` | *inherits* `ui.cursor` |
 | `selection` | burnt | `#A04000` | *inherits* `ui.selection` |
 | `black` | charcoal | `#2D3436` |  |
-| `red` | blood | `#C0392B` |  |
+| `red` | blood | `#E5534B` |  |
 | `green` | slime | `#7DAA3B` |  |
 | `yellow` | candy_corn | `#F1C40F` |  |
 | `blue` | moon | `#5DADE2` |  |
-| `magenta` | witch | `#8E44AD` |  |
+| `magenta` | wisp | `#B07CC6` |  |
 | `cyan` | potion | `#48C9B0` |  |
 | `white` | ghost | `#E0F8FF` |  |
 | `bright_black` | ash | `#7C7C7C` |  |
@@ -133,7 +134,7 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 | `bright_green` | slime | `#7DAA3B` | *inherits* `terminal.green` |
 | `bright_yellow` | lemon | `#FFFB38` |  |
 | `bright_blue` | moon | `#5DADE2` | *inherits* `terminal.blue` |
-| `bright_magenta` | witch | `#8E44AD` | *inherits* `terminal.magenta` |
+| `bright_magenta` | wisp | `#B07CC6` | *inherits* `terminal.magenta` |
 | `bright_cyan` | potion | `#48C9B0` | *inherits* `terminal.cyan` |
 | `bright_white` | bone | `#FFFFFF` |  |
 

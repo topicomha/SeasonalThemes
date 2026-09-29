@@ -147,5 +147,99 @@
     "oh-my-posh": {
       "time_format": "2006-01-02 3:04:05"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "pumpkin_ink": { "hex": "#B64800", "name": "Pumpkin orange (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#FCF3ED", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#46392E", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#F9E9DE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#FAECE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#F3CFB8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#746961", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#D4A98C", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "candy_corn_ink": { "hex": "#816808", "name": "Candy-corn gold (light-mode ink)", "note": "Proposed: light mode" },
+        "ghost_ink": { "hex": "#007496", "name": "Ghost white (light-mode ink)", "note": "Proposed: light mode" },
+        "moon_ink": { "hex": "#1E70A7", "name": "Moonlight blue (light-mode ink)", "note": "Proposed: light mode" },
+        "amber_ink": { "hex": "#965F08", "name": "Amber (light-mode ink)", "note": "Proposed: light mode" },
+        "carrot_ink": { "hex": "#A35712", "name": "Carrot orange (light-mode ink)", "note": "Proposed: light mode" },
+        "wisp_ink": { "hex": "#934DB1", "name": "Wisp purple (light-mode ink)", "note": "Proposed: light mode" },
+        "blood_ink": { "hex": "#CE271E", "name": "Blood red (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#8B8078", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#988B83", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "slime_ink": { "hex": "#567428", "name": "Goblin green (light-mode ink)", "note": "Proposed: light mode" },
+        "lemon_ink": { "hex": "#716E00", "name": "Lemon yellow (light-mode ink)", "note": "Proposed: light mode" },
+        "potion_ink": { "hex": "#237767", "name": "Potion teal (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "pumpkin_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "pumpkin_ink",
+          "accent": "candy_corn_ink"
+        },
+        "status": {
+          "success": "ghost_ink",
+          "warning": "candy_corn_ink",
+          "error": "burnt",
+          "info": "moon_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "amber_ink",
+          "string": "carrot_ink",
+          "number": "candy_corn_ink",
+          "constant": "candy_corn_ink",
+          "function": "pumpkin_ink",
+          "type": "wisp_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "amber_ink",
+          "attribute": "pumpkin_ink",
+          "regex": "carrot_ink",
+          "invalid": "blood_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "pumpkin_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "blood_ink",
+          "bright_red": "pumpkin_ink",
+          "green": "slime_ink",
+          "bright_green": "slime_ink",
+          "yellow": "candy_corn_ink",
+          "bright_yellow": "lemon_ink",
+          "blue": "moon_ink",
+          "bright_blue": "moon_ink",
+          "magenta": "wisp_ink",
+          "bright_magenta": "wisp_ink",
+          "cyan": "potion_ink",
+          "bright_cyan": "potion_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

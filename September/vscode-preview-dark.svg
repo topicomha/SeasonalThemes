@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+  <rect width="960" height="600" fill="#22302A"/>
+  <rect width="960" height="30" fill="#2E3F37"/>
+  <text x="14" y="19" fill="#F2EFE6" xml:space="preserve">File    Edit    Selection    View    …</text>
+  <rect x="315" y="5" width="330" height="20" rx="4" fill="#2E3F37" stroke="#2E3F37"/>
+  <text x="480" y="19" text-anchor="middle" font-size="11" fill="#F2EFE6">SeasonalThemes — Seasonal 09 · September — Back to School · Dark</text>
+  <line x1="840" y1="15.5" x2="850" y2="15.5" stroke="#F2EFE6"/>
+  <rect x="886.5" y="10.5" width="9" height="9" fill="none" stroke="#F2EFE6"/>
+  <line x1="932" y1="10" x2="942" y2="20" stroke="#F2EFE6"/>
+  <line x1="942" y1="10" x2="932" y2="20" stroke="#F2EFE6"/>
+  <line x1="0" y1="30" x2="960" y2="30" stroke="#2E3F37"/>
+  <rect x="0" y="30" width="48" height="546" fill="#2E3F37"/>
+  <rect x="0" y="40" width="2" height="28" fill="#CD853F"/>
+  <rect x="14" y="44" width="20" height="20" rx="4" fill="none" stroke="#F2EFE6" stroke-width="2"/>
+  <rect x="14" y="88" width="20" height="20" rx="4" fill="none" stroke="#9AA89F" stroke-width="2"/>
+  <rect x="14" y="132" width="20" height="20" rx="4" fill="none" stroke="#9AA89F" stroke-width="2"/>
+  <rect x="14" y="176" width="20" height="20" rx="4" fill="none" stroke="#9AA89F" stroke-width="2"/>
+  <circle cx="34" cy="106" r="7" fill="#CD853F"/>
+  <text x="34" y="110" text-anchor="middle" font-size="9" font-weight="bold" fill="#22302A">3</text>
+  <rect x="48" y="30" width="210" height="546" fill="#2E3F37"/>
+  <line x1="258" y1="30" x2="258" y2="576" stroke="#2E3F37"/>
+  <text x="62" y="52" font-size="11" fill="#F2EFE6">EXPLORER</text>
+  <rect x="48" y="62" width="210" height="22" fill="#22302A"/>
+  <text x="62" y="77" font-size="11" font-weight="bold" fill="#F2EFE6">SEASONALTHEMES</text>
+  <text x="64" y="105" fill="#F2EFE6">▾ September</text>
+  <rect x="48" y="112" width="210" height="22" fill="#A0522D"/>
+  <text x="78" y="127" fill="#FFFFFF">greeting.ts</text>
+  <text x="78" y="149" fill="#DAA520">season.jsonc</text>
+  <rect x="48" y="156" width="210" height="22" fill="#2E3F37"/>
+  <text x="78" y="171" fill="#8DB600">palette.svg</text>
+  <text x="78" y="193" fill="#E47474">old-theme.json</text>
+  <text x="78" y="215" fill="#F2EFE6">theme-definition.md</text>
+  <text x="64" y="237" fill="#9AA89F">.cache</text>
+  <rect x="60" y="260" width="186" height="24" rx="3" fill="#2E3F37" stroke="#2E3F37"/>
+  <text x="68" y="276" fill="#9AA89F">Search files</text>
+  <rect x="60" y="294" width="186" height="26" rx="3" fill="#B22222"/>
+  <text x="153" y="311" text-anchor="middle" fill="#FFFFFF">Commit</text>
+  <rect x="258" y="30" width="702" height="34" fill="#2E3F37"/>
+  <rect x="258" y="30" width="140" height="34" fill="#22302A"/>
+  <rect x="258" y="30" width="140" height="2" fill="#CD853F"/>
+  <text x="274" y="52" fill="#F2EFE6">greeting.ts</text>
+  <rect x="398" y="30" width="140" height="34" fill="#2E3F37"/>
+  <text x="414" y="52" fill="#9AA89F">season.jsonc</text>
+  <rect x="258" y="192" width="702" height="20" fill="#2E3F37"/>
+  <text x="292" y="86" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">1</text>
+  <text x="308" y="86" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#9AA89F" font-style="italic">// Seasonal greetings for September</tspan></text>
+  <text x="292" y="106" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">2</text>
+  <text x="308" y="106" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#E1782E">import</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">{</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">Season</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">}</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#E1782E">from</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#8DB600">&quot;./calendar&quot;</tspan><tspan fill="#F2EFE6">;</tspan></text>
+  <text x="292" y="126" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">3</text>
+  <text x="292" y="146" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">4</text>
+  <text x="308" y="146" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#E1782E">interface</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">Palette</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">{</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">primary</tspan><tspan fill="#F2EFE6">:</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">string</tspan><tspan fill="#F2EFE6">;</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">}</tspan></text>
+  <text x="292" y="166" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">5</text>
+  <text x="292" y="186" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">6</text>
+  <text x="308" y="186" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#E1782E">export</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#E1782E">function</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#DAA520">greet</tspan><tspan fill="#CD853F">(</tspan><tspan fill="#F2EFE6">month</tspan><tspan fill="#F2EFE6">:</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">Season</tspan><tspan fill="#F2EFE6">,</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">count</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">=</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">3</tspan><tspan fill="#CD853F">)</tspan><tspan fill="#F2EFE6">:</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">string</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">{</tspan></text>
+  <text x="292" y="206" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#CD853F">7</text>
+  <text x="308" y="206" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F2EFE6">  </tspan><tspan fill="#E1782E">const</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">colors</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">=</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">{</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">primary</tspan><tspan fill="#F2EFE6">:</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#8DB600">&quot;#8B4513&quot;</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">}</tspan><tspan fill="#F2EFE6">;</tspan></text>
+  <text x="292" y="226" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">8</text>
+  <text x="308" y="226" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F2EFE6">  </tspan><tspan fill="#E1782E">if</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">(</tspan><tspan fill="#F2EFE6">count</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">&gt;</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">0</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">&amp;&amp;</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">month</tspan><tspan fill="#F2EFE6">.</tspan><tspan fill="#F2EFE6">name</tspan><tspan fill="#5FC4B8">)</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#5FC4B8">{</tspan></text>
+  <text x="292" y="246" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">9</text>
+  <text x="308" y="246" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F2EFE6">    </tspan><tspan fill="#E1782E">return</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#8DB600">`Happy ${</tspan><tspan fill="#F2EFE6">month</tspan><tspan fill="#F2EFE6">.</tspan><tspan fill="#F2EFE6">name</tspan><tspan fill="#8DB600">}!`</tspan><tspan fill="#F2EFE6">.</tspan><tspan fill="#DAA520">repeat</tspan><tspan fill="#DAA520">(</tspan><tspan fill="#F2EFE6">count</tspan><tspan fill="#DAA520">)</tspan><tspan fill="#F2EFE6">;</tspan></text>
+  <text x="292" y="266" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">10</text>
+  <text x="308" y="266" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F2EFE6">  </tspan><tspan fill="#5FC4B8">}</tspan></text>
+  <text x="292" y="286" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">11</text>
+  <text x="308" y="286" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#F2EFE6">  </tspan><tspan fill="#E1782E">return</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#8DB600">/^[a-z]+$/</tspan><tspan fill="#F2EFE6">.</tspan><tspan fill="#DAA520">test</tspan><tspan fill="#5FC4B8">(</tspan><tspan fill="#F2EFE6">month</tspan><tspan fill="#F2EFE6">.</tspan><tspan fill="#F2EFE6">name</tspan><tspan fill="#5FC4B8">)</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">?</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">true</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#F2EFE6">:</tspan><tspan fill="#F2EFE6"> </tspan><tspan fill="#CD853F">null</tspan><tspan fill="#F2EFE6">;</tspan></text>
+  <text x="292" y="306" text-anchor="end" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" fill="#9AA89F">12</text>
+  <text x="308" y="306" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#CD853F">}</tspan></text>
+  <rect x="365.76" y="193" width="43.3" height="18" fill="#A0522D99"/>
+  <rect x="409.08" y="193" width="2" height="18" fill="#DAA520"/>
+  <rect x="258" y="406" width="702" height="170" fill="#22302A"/>
+  <line x1="258" y1="406" x2="960" y2="406" stroke="#2E3F37"/>
+  <text x="274" y="426" font-size="11" fill="#F2EFE6">TERMINAL</text>
+  <rect x="272" y="432" width="60" height="1.5" fill="#CD853F"/>
+  <text x="354" y="426" font-size="11" fill="#9AA89F">PROBLEMS</text>
+  <text x="274" y="454" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#8DB600">$ </tspan><tspan fill="#F2EFE6">npm test</tspan></text>
+  <text x="274" y="472" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#8DB600">  PASS </tspan><tspan fill="#F2EFE6">greeting.test.ts </tspan><tspan fill="#9AA89F">(12 ms)</tspan></text>
+  <text x="274" y="490" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#E47474">  FAIL </tspan><tspan fill="#F2EFE6">calendar.test.ts</tspan></text>
+  <text x="274" y="508" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#DAA520">  warn </tspan><tspan fill="#F2EFE6">deprecated </tspan><tspan fill="#5FC4B8">month.days</tspan><tspan fill="#9AA89F"> → </tspan><tspan fill="#C77DBA">season.length</tspan></text>
+  <text x="274" y="526" font-family="ui-monospace, 'Cascadia Code', Consolas, 'DejaVu Sans Mono', monospace" xml:space="preserve"><tspan fill="#6797D9">  info </tspan><tspan fill="#F2EFE6">Tests: 1 failed, 11 passed</tspan></text>
+  <rect x="274" y="550" width="22" height="16" rx="3" fill="#2E3F37"/>
+  <rect x="300" y="550" width="22" height="16" rx="3" fill="#E47474"/>
+  <rect x="326" y="550" width="22" height="16" rx="3" fill="#8DB600"/>
+  <rect x="352" y="550" width="22" height="16" rx="3" fill="#DAA520"/>
+  <rect x="378" y="550" width="22" height="16" rx="3" fill="#6797D9"/>
+  <rect x="404" y="550" width="22" height="16" rx="3" fill="#C77DBA"/>
+  <rect x="430" y="550" width="22" height="16" rx="3" fill="#5FC4B8"/>
+  <rect x="456" y="550" width="22" height="16" rx="3" fill="#F2EFE6"/>
+  <rect x="482" y="550" width="22" height="16" rx="3" fill="#9AA89F"/>
+  <rect x="508" y="550" width="22" height="16" rx="3" fill="#E1782E"/>
+  <rect x="534" y="550" width="22" height="16" rx="3" fill="#8DB600"/>
+  <rect x="560" y="550" width="22" height="16" rx="3" fill="#DAA520"/>
+  <rect x="586" y="550" width="22" height="16" rx="3" fill="#6797D9"/>
+  <rect x="612" y="550" width="22" height="16" rx="3" fill="#C77DBA"/>
+  <rect x="638" y="550" width="22" height="16" rx="3" fill="#5FC4B8"/>
+  <rect x="664" y="550" width="22" height="16" rx="3" fill="#FFFFFF"/>
+  <rect x="0" y="576" width="960" height="24" fill="#B22222"/>
+  <rect x="0" y="576" width="70" height="24" fill="#CD853F"/>
+  <text x="35" y="592" text-anchor="middle" fill="#22302A">&gt;&lt; WSL</text>
+  <text x="84" y="592" fill="#FFFFFF">main*   0 errors   1 warning</text>
+  <text x="948" y="592" text-anchor="end" fill="#FFFFFF">Ln 7, Col 15   UTF-8   TypeScript</text>
+</svg>

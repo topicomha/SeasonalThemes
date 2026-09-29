@@ -9,20 +9,21 @@ $manifest = Get-Content -Raw (Join-Path $Root 'templates' 'vscode-package.json')
 $manifest.contributes.themes = @(foreach ($entry in $Seasons) {
     $season = $entry.Season
     # Must match the vscode-theme target's output path in Generate-Themes.ps1.
-    $slug = $entry.Month.ToLower() + ($entry.Variant ? "-$($entry.Variant.id)" : '')
+    $slug = $entry.Month.ToLower() + ($entry.Variant ? "-$($entry.Variant.id)" : '') + "-$($entry.Mode)"
     [ordered]@{
         label   = "$($season.Title) $($season.Icons['shell'].Value)"
-        uiTheme = $season.Data.appearance -eq 'light' ? 'vs' : 'vs-dark'
+        uiTheme = $entry.Mode -eq 'light' ? 'vs' : 'vs-dark'
         path    = "./themes/$slug.json"
     }
 })
 
-# Which theme belongs to which dates, for extension.js's automatic switching.
+# Which theme belongs to which dates and mode, for extension.js's automatic switching.
 $months = 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
 $manifest.seasonalSchedule = @(for ($i = 0; $i -lt $Seasons.Count; $i++) {
     $entry = $Seasons[$i]
     $item = [ordered]@{
         month = [array]::IndexOf($months, $entry.Month) + 1
+        mode  = $entry.Mode
         label = $manifest.contributes.themes[$i].label
     }
     if ($entry.Variant) {

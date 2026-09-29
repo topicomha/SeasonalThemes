@@ -146,5 +146,94 @@
       "status_bar": "brand.secondary",
       "accent": "brand.accent_alt"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "gold_ink": { "hex": "#756200", "name": "Sparkler gold (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#EDEDF6", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#DEDEEE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#E3E3F1", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#B8B8DB", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#5A5AAD", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#A7A7BE", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "stars_ink": { "hex": "#636363", "name": "Stars white (light-mode ink)", "note": "Proposed: light mode" },
+        "liberty_ink": { "hex": "#3C62A8", "name": "Liberty blue (light-mode ink)", "note": "Proposed: light mode" },
+        "stripe_red_ink": { "hex": "#C31C21", "name": "Stripe red (light-mode ink)", "note": "Proposed: light mode" },
+        "picnic_ink": { "hex": "#297133", "name": "Picnic green (light-mode ink)", "note": "Proposed: light mode" },
+        "fountain_ink": { "hex": "#196D76", "name": "Fountain teal (light-mode ink)", "note": "Proposed: light mode" },
+        "roman_ink": { "hex": "#912AD6", "name": "Roman candle (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#7777BC", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#8383C1", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "gold_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "navy",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "navy",
+          "accent": "gold_ink"
+        },
+        "status": {
+          "success": "stars_ink",
+          "warning": "gold_ink",
+          "error": "firebrick",
+          "info": "liberty_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "stripe_red_ink",
+          "string": "picnic_ink",
+          "number": "gold_ink",
+          "constant": "gold_ink",
+          "function": "fountain_ink",
+          "type": "roman_ink",
+          "variable": "navy",
+          "parameter": "navy",
+          "property": "navy",
+          "operator": "navy",
+          "punctuation": "navy",
+          "tag": "stripe_red_ink",
+          "attribute": "fountain_ink",
+          "regex": "picnic_ink",
+          "invalid": "stripe_red_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "navy",
+          "cursor": "navy",
+          "selection": "light_selection",
+          "black": "navy",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "stripe_red_ink",
+          "bright_red": "stripe_red_ink",
+          "green": "picnic_ink",
+          "bright_green": "picnic_ink",
+          "yellow": "gold_ink",
+          "bright_yellow": "gold_ink",
+          "blue": "liberty_ink",
+          "bright_blue": "liberty_ink",
+          "magenta": "roman_ink",
+          "bright_magenta": "roman_ink",
+          "cyan": "fountain_ink",
+          "bright_cyan": "fountain_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

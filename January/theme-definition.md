@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | frost | `#8FA9C2` |  |
 | `selection` | steel | `#4682B4` |  |
 | `cursor` | sky | `#87CEEB` |  |
+| `accent` | sky | `#87CEEB` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -180,11 +181,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** ☃️ ⛷️ 🏂 🍵 🛷 🌨️ 🌁 🌲 🧥 🧣 🧤 ☔ 🏔️
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#87CEEB` | `#176A8C` sky_ink |
+| `ui.background` | `#0B1B2E` | `#EDEDF6` light_page |
+| `ui.foreground` | `#E8F1F8` | `#000013` light_ink |
+| `ui.surface` | `#16304A` | `#DEDEEE` light_panel |
+| `ui.line_highlight` | `#16304A` | `#E3E3F1` light_current_line |
+| `ui.border` | `#16304A` | `#B8B8DB` light_border |
+| `ui.muted` | `#8FA9C2` | `#62626E` light_muted_text |
+| `ui.selection` | `#4682B4` | `#ACC7DD` light_selection |
+| `ui.cursor` | `#87CEEB` | `#000080` navy |
+| `ui.accent` | `#87CEEB` | `#176A8C` sky_ink |
+| `status.error` | `#FF4500` | `#B83200` ember_ink |
+| `status.success` | `#FFFFFF` | `#636363` snow_ink |
+| `status.warning` | `#F2D06B` | `#7C5F0B` candle_ink |
+| `status.info` | `#87CEEB` | `#176A8C` sky_ink |
+| `syntax.comment` | `#8FA9C2` | `#62626E` light_muted_text |
+| `syntax.keyword` | `#87CEEB` | `#176A8C` sky_ink |
+| `syntax.string` | `#6BC48A` | `#2C7044` pine_ink |
+| `syntax.number` | `#F2D06B` | `#7C5F0B` candle_ink |
+| `syntax.constant` | `#F2D06B` | `#7C5F0B` candle_ink |
+| `syntax.function` | `#7FDBDA` | `#1F6D6D` glacier_ink |
+| `syntax.type` | `#C49BE0` | `#8B3CC0` aurora_ink |
+| `syntax.variable` | `#E8F1F8` | `#000013` light_ink |
+| `syntax.parameter` | `#E8F1F8` | `#000013` light_ink |
+| `syntax.property` | `#E8F1F8` | `#000013` light_ink |
+| `syntax.operator` | `#E8F1F8` | `#000013` light_ink |
+| `syntax.punctuation` | `#E8F1F8` | `#000013` light_ink |
+| `syntax.tag` | `#87CEEB` | `#176A8C` sky_ink |
+| `syntax.attribute` | `#7FDBDA` | `#1F6D6D` glacier_ink |
+| `syntax.regex` | `#6BC48A` | `#2C7044` pine_ink |
+| `syntax.invalid` | `#E06C6C` | `#BD2828` holly_ink |
+| `terminal.background` | `#0B1B2E` | `#EDEDF6` light_page |
+| `terminal.foreground` | `#E8F1F8` | `#000013` light_ink |
+| `terminal.cursor` | `#87CEEB` | `#000080` navy |
+| `terminal.selection` | `#4682B4` | `#ACC7DD` light_selection |
+| `terminal.black` | `#16304A` | `#000013` light_ink |
+| `terminal.red` | `#E06C6C` | `#BD2828` holly_ink |
+| `terminal.green` | `#6BC48A` | `#2C7044` pine_ink |
+| `terminal.yellow` | `#F2D06B` | `#7C5F0B` candle_ink |
+| `terminal.blue` | `#87CEEB` | `#176A8C` sky_ink |
+| `terminal.magenta` | `#C49BE0` | `#8B3CC0` aurora_ink |
+| `terminal.cyan` | `#7FDBDA` | `#1F6D6D` glacier_ink |
+| `terminal.white` | `#E8F1F8` | `#7C7C88` light_terminal_white |
+| `terminal.bright_black` | `#8FA9C2` | `#62626E` light_muted_text |
+| `terminal.bright_red` | `#FF4500` | `#B83200` ember_ink |
+| `terminal.bright_green` | `#6BC48A` | `#2C7044` pine_ink |
+| `terminal.bright_yellow` | `#F2D06B` | `#7C5F0B` candle_ink |
+| `terminal.bright_blue` | `#87CEEB` | `#176A8C` sky_ink |
+| `terminal.bright_magenta` | `#C49BE0` | `#8B3CC0` aurora_ink |
+| `terminal.bright_cyan` | `#7FDBDA` | `#1F6D6D` glacier_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#888894` light_terminal_bright_white |
+
+![January light palette](palette-light.svg)
+
 ## VS Code
 
-Theme: [Seasonal 01 · January — Winter Wonderland](../vscode/themes/january.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![January in VS Code](vscode-preview.svg)
+- [Seasonal 01 · January — Winter Wonderland · Dark](../vscode/themes/january-dark.json)
+- [Seasonal 01 · January — Winter Wonderland · Light](../vscode/themes/january-light.json)
+
+![January in VS Code, dark](vscode-preview-dark.svg)
+
+![January in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -201,5 +266,9 @@ Theme: [Seasonal 01 · January — Winter Wonderland](../vscode/themes/january.j
 - [davids-January.omp.json](davids-January.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/January/davids-January.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/january.json](../vscode/themes/january.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [davids-January-light.omp.json](davids-January-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/january-light.json](../vscode/themes/january-light.json): vscode-theme, light mode.
+- [../vscode/themes/january-dark.json](../vscode/themes/january-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

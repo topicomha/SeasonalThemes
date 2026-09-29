@@ -144,5 +144,96 @@
     "vscode": {
       "status_bar": "brand.accent_alt"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "goldenrod_ink": { "hex": "#846413", "name": "Goldenrod (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#F7F2EE", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#323327", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#F0E7E0", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#F2EBE5", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#DFCBBD", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#6B6962", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#D4B1A0", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "peru_ink": { "hex": "#945C27", "name": "Peru (light-mode ink)", "note": "Proposed: light mode" },
+        "green_apple_ink": { "hex": "#587200", "name": "Green apple (light-mode ink)", "note": "Proposed: light mode" },
+        "denim_ink": { "hex": "#2E68B9", "name": "Denim blue (light-mode ink)", "note": "Proposed: light mode" },
+        "maple_ink": { "hex": "#A55218", "name": "Maple orange (light-mode ink)", "note": "Proposed: light mode" },
+        "slate_ink": { "hex": "#2B746C", "name": "Slate teal (light-mode ink)", "note": "Proposed: light mode" },
+        "candy_apple_ink": { "hex": "#C92727", "name": "Candy apple (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#84807A", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#908C85", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "plum_ink": { "hex": "#A24691", "name": "Plum (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "goldenrod_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "bark",
+          "accent": "peru_ink"
+        },
+        "status": {
+          "success": "green_apple_ink",
+          "warning": "goldenrod_ink",
+          "error": "apple",
+          "info": "denim_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "maple_ink",
+          "string": "green_apple_ink",
+          "number": "peru_ink",
+          "constant": "peru_ink",
+          "function": "goldenrod_ink",
+          "type": "slate_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "maple_ink",
+          "attribute": "goldenrod_ink",
+          "regex": "green_apple_ink",
+          "invalid": "candy_apple_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "bark",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "candy_apple_ink",
+          "bright_red": "maple_ink",
+          "green": "green_apple_ink",
+          "bright_green": "green_apple_ink",
+          "yellow": "goldenrod_ink",
+          "bright_yellow": "goldenrod_ink",
+          "blue": "denim_ink",
+          "bright_blue": "denim_ink",
+          "magenta": "plum_ink",
+          "bright_magenta": "plum_ink",
+          "cyan": "slate_ink",
+          "bright_cyan": "slate_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

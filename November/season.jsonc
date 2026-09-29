@@ -145,5 +145,99 @@
     "vscode": {
       "status_bar": "brand.secondary"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "warm_orange_ink": { "hex": "#B34700", "name": "Warm orange (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#F8F2ED", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#3E362E", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#F3E6DE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#F5EAE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#E4CAB8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#6E6762", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#D4A98C", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "harvest_ink": { "hex": "#7E6607", "name": "Harvest gold (light-mode ink)", "note": "Proposed: light mode" },
+        "cream_ink": { "hex": "#007193", "name": "Cream (light-mode ink)", "note": "Proposed: light mode" },
+        "sky_ink": { "hex": "#3A6D97", "name": "November sky (light-mode ink)", "note": "Proposed: light mode" },
+        "amber_ink": { "hex": "#935D07", "name": "Amber (light-mode ink)", "note": "Proposed: light mode" },
+        "sage_ink": { "hex": "#626D41", "name": "Sage (light-mode ink)", "note": "Proposed: light mode" },
+        "pumpkin_ink": { "hex": "#A05512", "name": "Pumpkin orange (light-mode ink)", "note": "Proposed: light mode" },
+        "fig_ink": { "hex": "#9447B3", "name": "Fig (light-mode ink)", "note": "Proposed: light mode" },
+        "cranberry_ink": { "hex": "#C1352E", "name": "Cranberry (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#87807B", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#938B85", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "butter_ink": { "hex": "#6E6C00", "name": "Butter yellow (light-mode ink)", "note": "Proposed: light mode" },
+        "juniper_ink": { "hex": "#377368", "name": "Juniper (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "warm_orange_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "warm_orange_ink",
+          "accent": "harvest_ink"
+        },
+        "status": {
+          "success": "cream_ink",
+          "warning": "harvest_ink",
+          "error": "roast",
+          "info": "sky_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "amber_ink",
+          "string": "sage_ink",
+          "number": "harvest_ink",
+          "constant": "harvest_ink",
+          "function": "pumpkin_ink",
+          "type": "fig_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "amber_ink",
+          "attribute": "pumpkin_ink",
+          "regex": "sage_ink",
+          "invalid": "cranberry_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "warm_orange_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "cranberry_ink",
+          "bright_red": "pumpkin_ink",
+          "green": "sage_ink",
+          "bright_green": "sage_ink",
+          "yellow": "harvest_ink",
+          "bright_yellow": "butter_ink",
+          "blue": "sky_ink",
+          "bright_blue": "sky_ink",
+          "magenta": "fig_ink",
+          "bright_magenta": "fig_ink",
+          "cyan": "juniper_ink",
+          "bright_cyan": "juniper_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

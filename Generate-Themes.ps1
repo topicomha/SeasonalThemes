@@ -26,6 +26,7 @@
     ./Generate-Themes.ps1                  # every month that has a season.jsonc
     ./Generate-Themes.ps1 -Month October
     ./Generate-Themes.ps1 -Check           # exit 1 if any generated file is out of date
+    ./Generate-Themes.ps1 -Month May -Export   # resolved colours as JSON (used by tools/New-LightMode.ps1)
 #>
 #Requires -Version 7.4
 [CmdletBinding()]
@@ -34,7 +35,10 @@ param(
                  'July', 'August', 'September', 'October', 'November', 'December')]
     [string[]]$Month,
 
-    [switch]$Check
+    [switch]$Check,
+
+    # Print every selected month's resolved colours (per variant and mode) as JSON instead of generating.
+    [switch]$Export
 )
 
 $ErrorActionPreference = 'Stop'
@@ -48,41 +52,54 @@ $SchemaPath = Join-Path $PSScriptRoot 'schema' 'season.schema.json'
 # One entry per generated file type. Add a row here when a new program gets a template.
 #   Program: the key under season.jsonc "targets" that holds this program's extras and choices.
 #   PerVariant: also generate one file per date variant (output names get -<variant id>).
+#   PerMode: also generate one file per light/dark mode the month defines.
+#   Owns: a glob of the files this target generates; with -Check, any match it no longer generates is an orphan.
+#   Output: { param($month, $variantId, $mode, $isBaseMode) } -> path relative to the repository root.
 $Targets = @(
     @{
         Name       = 'oh-my-posh'
         Program    = 'oh-my-posh'
         Template   = 'templates/oh-my-posh.omp.json'
+        Owns       = '*/davids-*.omp.json'
         PerVariant = $true
         Check      = { param($Season, $Text) Test-OmpContrast $Season $Text }
-        Output     = { param($m, $v) if ($v) { "$m/davids-$m-$v.omp.json" } else { "$m/davids-$m.omp.json" } }
+        PerMode    = $true
+        # The base mode keeps the plain name (existing symlinks keep working); the other mode adds -light / -dark.
+        Output     = { param($m, $v, $mode, $isBase) "$m/davids-$m$($v ? "-$v" : '')$($isBase ? '' : "-$mode").omp.json" }
     }
     @{
         Name       = 'palette-svg'
         Renderer   = 'templates/palette.svg.ps1'
+        Owns       = '*/palette*.svg'
         PerVariant = $true
-        Output     = { param($m, $v) if ($v) { "$m/palette-$v.svg" } else { "$m/palette.svg" } }
+        PerMode    = $true
+        Output     = { param($m, $v, $mode, $isBase) "$m/palette$($v ? "-$v" : '')$($isBase ? '' : "-$mode").svg" }
     }
     @{
         Name       = 'theme-definition'
         Renderer   = 'templates/theme-definition.md.ps1'
+        Owns       = '*/theme-definition.md'
         PerVariant = $false
-        Output     = { param($m, $v) "$m/theme-definition.md" }
+        Output     = { param($m) "$m/theme-definition.md" }
     }
     @{
         Name       = 'vscode-theme'
         Program    = 'vscode'
         Template   = 'templates/vscode-color-theme.json'
+        Owns       = 'vscode/themes/*.json'
         PerVariant = $true
         Check      = { param($Season, $Text) Test-VsCodeContrast $Season $Text }
-        Output     = { param($m, $v) $slug = $m.ToLower(); if ($v) { "vscode/themes/$slug-$v.json" } else { "vscode/themes/$slug.json" } }
+        PerMode    = $true
+        Output     = { param($m, $v, $mode) "vscode/themes/$($m.ToLower())$($v ? "-$v" : '')-$mode.json" }
     }
     @{
         Name       = 'vscode-preview'
         Program    = 'vscode'
         Renderer   = 'templates/vscode-preview.svg.ps1'
+        Owns       = '*/vscode-preview*.svg'
         PerVariant = $true
-        Output     = { param($m, $v) if ($v) { "$m/vscode-preview-$v.svg" } else { "$m/vscode-preview.svg" } }
+        PerMode    = $true
+        Output     = { param($m, $v, $mode) "$m/vscode-preview$($v ? "-$v" : '')-$mode.svg" }
     }
     # Scope 'all': rendered once from every month, not once per month.
     @{
@@ -272,18 +289,36 @@ function Resolve-Icon($Ctx, [string]$Role) {
     $resolved
 }
 
+# The modes a month (or one of its variants) defines, e.g. @{ light = @{ colors = ... } }.
+function Get-Modes($Raw, $Variant) {
+    $modes = $Raw['modes'] ?? [ordered]@{}
+    if ($Variant -and $Variant['modes']) { $modes = Merge-Deep $modes $Variant.modes }
+    $modes
+}
+
 # Turns the raw document (plus an optional variant laid over it) into everything a target needs:
 # every colour role resolved to a hex with its best text colour, and every icon resolved.
-function Resolve-Season($Raw, $Variant) {
+function Resolve-Season($Raw, $Variant, [string]$Mode) {
     $data = $Raw
     $where = $Raw.month
     if ($Variant) {
         $overrides = [ordered]@{}
         foreach ($key in $Variant.Keys) {
-            if ($key -notin 'id', 'name', 'from', 'to') { $overrides[$key] = $Variant[$key] }
+            if ($key -notin 'id', 'name', 'from', 'to', 'modes') { $overrides[$key] = $Variant[$key] }
         }
         $data = Merge-Deep $Raw $overrides
         $where = "$($Raw.month) variant '$($Variant.id)'"
+    }
+
+    # The other appearance: the month's (and variant's) modes.<mode> laid over everything else.
+    $baseMode = $Raw.appearance
+    if (-not $Mode) { $Mode = $baseMode }
+    if ($Mode -ne $baseMode) {
+        $modes = Get-Modes $Raw $Variant
+        if (-not $modes.Contains($Mode)) { throw "$where has no modes.$Mode." }
+        $data = Merge-Deep $data $modes[$Mode]
+        $data.appearance = $Mode
+        $where += " ($Mode)"
     }
 
     $palette = [ordered]@{}
@@ -332,10 +367,13 @@ function Resolve-Season($Raw, $Variant) {
     # A display name that sorts by month in pickers, e.g. "Seasonal 10 · October — Halloween".
     $number = '{0:D2}' -f ([array]::IndexOf($Months, $Raw.month) + 1)
     $title = "Seasonal $number · $($Raw.month) — $($Variant ? $Variant.name : $Raw.name)"
+    if ((Get-Modes $Raw $Variant).Count) { $title += ' · ' + (Get-Culture).TextInfo.ToTitleCase($Mode) }
 
     @{
         Month       = $Raw.month
         Title       = $title
+        Mode        = $Mode
+        IsBaseMode  = $Mode -eq $baseMode
         VariantId   = $Variant ? $Variant.id : $null
         VariantName = $Variant ? $Variant.name : $null
         Where       = $where
@@ -496,8 +534,20 @@ function Invoke-Renderer($Season, $Target, [hashtable]$Files) {
 
 #endregion
 
+# Whether a target is generated for this month/variant/mode (PerVariant and PerMode opt in).
+function Test-TargetEntry($Target, $Entry) {
+    if ($Entry.Variant -and -not $Target['PerVariant']) { return $false }
+    if (-not $Entry.IsBase -and -not $Target['PerMode']) { return $false }
+    $true
+}
+
+function Get-OutputPath($Target, $Entry) {
+    & $Target.Output $Entry.Month ($Entry.Variant ? $Entry.Variant.id : $null) $Entry.Mode $Entry.IsBase
+}
+
 # Writes a generated file, or in -Check mode records it as stale, unless it's already up to date.
 function Save-Output([string]$Relative, [string]$Output) {
+    $null = $script:produced.Add(($Relative -replace '\\', '/'))
     $outPath = Join-Path $PSScriptRoot $Relative
     $current = (Test-Path $outPath) ? [IO.File]::ReadAllText($outPath, $utf8) : $null
     if ($current -ceq $Output) {
@@ -519,9 +569,18 @@ $resolved = @{}
 function Get-MonthSeasons([string]$MonthName) {
     if (-not $resolved.ContainsKey($MonthName)) {
         $raw = Read-Season $MonthName
-        $list = @(@{ Month = $MonthName; Variant = $null; Season = Resolve-Season $raw $null })
-        foreach ($v in @($raw['variants'] ?? @())) {
-            $list += @{ Month = $MonthName; Variant = $v; Season = Resolve-Season $raw $v }
+        $list = @()
+        foreach ($v in @($null) + @($raw['variants'] ?? @())) {
+            # The base appearance first, then each other mode the month (or variant) defines.
+            $modes = @($raw.appearance) + @((Get-Modes $raw $v).Keys | Where-Object { $_ -ne $raw.appearance })
+            $bySeason = @{}
+            foreach ($mode in $modes) {
+                $season = Resolve-Season $raw $v $mode
+                $bySeason[$mode] = $season
+                $list += @{ Month = $MonthName; Variant = $v; Mode = $mode; IsBase = $season.IsBaseMode; Season = $season }
+            }
+            # Renderers of the base mode (e.g. the docs page) can show the other modes too.
+            $bySeason[$raw.appearance].ModeSeasons = $bySeason
         }
         $resolved[$MonthName] = $list
     }
@@ -535,6 +594,30 @@ try {
 
     $utf8 = [Text.UTF8Encoding]::new($false)
     $stale = @()
+    $produced = [System.Collections.Generic.HashSet[string]]::new()
+    if ($Export) {
+        $exported = [ordered]@{}
+        foreach ($monthName in $selected) {
+            $exported[$monthName] = @(foreach ($entry in Get-MonthSeasons $monthName) {
+                $season = $entry.Season
+                [ordered]@{
+                    variant    = $entry.Variant ? $entry.Variant.id : $null
+                    mode       = $entry.Mode
+                    isBaseMode = $entry.IsBase
+                    palette    = $season.Palette
+                    colors     = & {
+                        $map = [ordered]@{}
+                        foreach ($role in $season.Colors.GetEnumerator()) { $map[$role.Key] = [ordered]@{ hex = $role.Value.Hex; ref = $role.Value.Ref; style = $role.Value.Style } }
+                        $map
+                    }
+                    targets    = $season.Data['targets'] ?? @{}
+                }
+            })
+        }
+        $exported | ConvertTo-Json -Depth 8 -EscapeHandling Default
+        exit 0
+    }
+
     $monthTargets = @($Targets | Where-Object { $_['Scope'] -ne 'all' })
     $allTargets = @($Targets | Where-Object { $_['Scope'] -eq 'all' })
 
@@ -544,24 +627,25 @@ try {
         # Every generated file for this month, relative to the month folder, so generated docs can link to them.
         $monthDir = Join-Path $PSScriptRoot $monthName
         $files = @{}
+        # Keys look like 'vscode-theme', 'vscode-theme:new-years-eve', 'vscode-theme@light', 'vscode-theme:new-years-eve@light'.
         foreach ($target in $monthTargets) {
             foreach ($entry in $seasons) {
-                if ($entry.Variant -and -not $target.PerVariant) { continue }
-                $key = $entry.Variant ? "$($target.Name):$($entry.Variant.id)" : $target.Name
-                $full = Join-Path $PSScriptRoot (& $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null))
+                if (-not (Test-TargetEntry $target $entry)) { continue }
+                $key = $target.Name + ($entry.Variant ? ":$($entry.Variant.id)" : '') + ($entry.IsBase ? '' : "@$($entry.Mode)")
+                $full = Join-Path $PSScriptRoot (Get-OutputPath $target $entry)
                 $files[$key] = [IO.Path]::GetRelativePath($monthDir, $full) -replace '\\', '/'
             }
         }
 
         foreach ($target in $monthTargets) {
             foreach ($entry in $seasons) {
-                if ($entry.Variant -and -not $target.PerVariant) { continue }
+                if (-not (Test-TargetEntry $target $entry)) { continue }
 
                 $output = if ($target['Template']) { Invoke-Template $entry.Season $target }
                           else { Invoke-Renderer $entry.Season $target $files }
                 if ($target['Check']) { & $target.Check $entry.Season $output }
 
-                Save-Output (& $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null)) $output
+                Save-Output (Get-OutputPath $target $entry) $output
             }
         }
     }
@@ -572,6 +656,23 @@ try {
         foreach ($target in $allTargets) {
             $output = & (Join-Path $PSScriptRoot $target.Renderer) -Seasons $everything -Root $PSScriptRoot
             Save-Output $target.Output $output
+        }
+    }
+
+    # Generated files that nothing generates any more (e.g. after a rename). Only meaningful for a full run.
+    if (-not $Month) {
+        foreach ($target in @($Targets | Where-Object { $_['Owns'] })) {
+            $parent, $leaf = ($target.Owns -split '/', 2)
+            $dirs = @(Resolve-Path -Path (Join-Path $PSScriptRoot $parent) -ErrorAction SilentlyContinue |
+                Where-Object { Test-Path -LiteralPath $_ -PathType Container })
+            $owned = foreach ($dir in $dirs) { Get-ChildItem -LiteralPath $dir -Filter $leaf -File }
+            foreach ($file in $owned) {
+                $relative = [IO.Path]::GetRelativePath($PSScriptRoot, $file.FullName) -replace '\\', '/'
+                if (-not $produced.Contains($relative)) {
+                    Write-Host "  ORPHAN      $relative (no longer generated; delete it)" -ForegroundColor Yellow
+                    if ($Check) { $stale += $relative }
+                }
+            }
         }
     }
 }

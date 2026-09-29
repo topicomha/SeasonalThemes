@@ -78,6 +78,7 @@ Surfaces and text of an application window.
 | `muted` | oatmeal | `#B5A48B` |  |
 | `selection` | roast | `#A04000` |  |
 | `cursor` | pumpkin | `#E67E22` |  |
+| `accent` | harvest | `#F1C40F` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -182,11 +183,74 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🍽️ 🍴 🌰 🍊 🥕 🥔 🥧 🍠 🌽 ☕ 🧣 🧤 🏈 🙏 🥂 🏡
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#D35400` | `#B34700` warm_orange_ink |
+| `ui.background` | `#2A1F1A` | `#F8F2ED` light_page |
+| `ui.foreground` | `#F5E6D3` | `#3E362E` light_ink |
+| `ui.surface` | `#3A2C24` | `#F3E6DE` light_panel |
+| `ui.line_highlight` | `#3A2C24` | `#F5EAE3` light_current_line |
+| `ui.border` | `#3A2C24` | `#E4CAB8` light_border |
+| `ui.muted` | `#B5A48B` | `#6E6762` light_muted_text |
+| `ui.selection` | `#A04000` | `#D4A98C` light_selection |
+| `ui.cursor` | `#E67E22` | `#B34700` warm_orange_ink |
+| `ui.accent` | `#F1C40F` | `#7E6607` harvest_ink |
+| `status.success` | `#E0F8FF` | `#007193` cream_ink |
+| `status.warning` | `#F1C40F` | `#7E6607` harvest_ink |
+| `status.info` | `#6FA0C8` | `#3A6D97` sky_ink |
+| `syntax.comment` | `#B5A48B` | `#6E6762` light_muted_text |
+| `syntax.keyword` | `#F39C12` | `#935D07` amber_ink |
+| `syntax.string` | `#8A9A5B` | `#626D41` sage_ink |
+| `syntax.number` | `#F1C40F` | `#7E6607` harvest_ink |
+| `syntax.constant` | `#F1C40F` | `#7E6607` harvest_ink |
+| `syntax.function` | `#E67E22` | `#A05512` pumpkin_ink |
+| `syntax.type` | `#AE71C7` | `#9447B3` fig_ink |
+| `syntax.variable` | `#F5E6D3` | `#3E362E` light_ink |
+| `syntax.parameter` | `#F5E6D3` | `#3E362E` light_ink |
+| `syntax.property` | `#F5E6D3` | `#3E362E` light_ink |
+| `syntax.operator` | `#F5E6D3` | `#3E362E` light_ink |
+| `syntax.punctuation` | `#F5E6D3` | `#3E362E` light_ink |
+| `syntax.tag` | `#F39C12` | `#935D07` amber_ink |
+| `syntax.attribute` | `#E67E22` | `#A05512` pumpkin_ink |
+| `syntax.regex` | `#8A9A5B` | `#626D41` sage_ink |
+| `syntax.invalid` | `#D9655F` | `#C1352E` cranberry_ink |
+| `terminal.background` | `#2A1F1A` | `#F8F2ED` light_page |
+| `terminal.foreground` | `#F5E6D3` | `#3E362E` light_ink |
+| `terminal.cursor` | `#E67E22` | `#B34700` warm_orange_ink |
+| `terminal.selection` | `#A04000` | `#D4A98C` light_selection |
+| `terminal.black` | `#3A2C24` | `#3E362E` light_ink |
+| `terminal.red` | `#D9655F` | `#C1352E` cranberry_ink |
+| `terminal.green` | `#8A9A5B` | `#626D41` sage_ink |
+| `terminal.yellow` | `#F1C40F` | `#7E6607` harvest_ink |
+| `terminal.blue` | `#6FA0C8` | `#3A6D97` sky_ink |
+| `terminal.magenta` | `#AE71C7` | `#9447B3` fig_ink |
+| `terminal.cyan` | `#5FB3A3` | `#377368` juniper_ink |
+| `terminal.white` | `#F5E6D3` | `#87807B` light_terminal_white |
+| `terminal.bright_black` | `#B5A48B` | `#6E6762` light_muted_text |
+| `terminal.bright_red` | `#E67E22` | `#A05512` pumpkin_ink |
+| `terminal.bright_green` | `#8A9A5B` | `#626D41` sage_ink |
+| `terminal.bright_yellow` | `#FFFB38` | `#6E6C00` butter_ink |
+| `terminal.bright_blue` | `#6FA0C8` | `#3A6D97` sky_ink |
+| `terminal.bright_magenta` | `#AE71C7` | `#9447B3` fig_ink |
+| `terminal.bright_cyan` | `#5FB3A3` | `#377368` juniper_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#938B85` light_terminal_bright_white |
+
+![November light palette](palette-light.svg)
+
 ## VS Code
 
-Theme: [Seasonal 11 · November — Thanksgiving](../vscode/themes/november.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![November in VS Code](vscode-preview.svg)
+- [Seasonal 11 · November — Thanksgiving · Dark](../vscode/themes/november-dark.json)
+- [Seasonal 11 · November — Thanksgiving · Light](../vscode/themes/november-light.json)
+
+![November in VS Code, dark](vscode-preview-dark.svg)
+
+![November in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -205,5 +269,9 @@ Theme: [Seasonal 11 · November — Thanksgiving](../vscode/themes/november.json
 - [davids-November.omp.json](davids-November.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/November/davids-November.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/november.json](../vscode/themes/november.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [davids-November-light.omp.json](davids-November-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/november-light.json](../vscode/themes/november-light.json): vscode-theme, light mode.
+- [../vscode/themes/november-dark.json](../vscode/themes/november-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

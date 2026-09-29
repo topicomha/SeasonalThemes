@@ -75,6 +75,7 @@ Surfaces and text of an application window.
 | `muted` | driftwood | `#8FA8A0` |  |
 | `selection` | sea_green | `#2E8B57` |  |
 | `cursor` | golden | `#FFD700` |  |
+| `accent` | sea_green | `#2E8B57` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -179,11 +180,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🐚 🏊 👡 😎 🏝️ 🕶️ 👙 🌞 🍹 🏄 🩱 🩴 🩳 🍨 🧢 🌄 🌡️ 🥥 🍇 🍑 🍓
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#FFD700` | `#877200` golden_ink |
+| `ui.background` | `#0F2E2E` | `#FFFCED` light_page |
+| `ui.foreground` | `#FFFFFF` | `#262000` light_ink |
+| `ui.surface` | `#1A4242` | `#FFFADE` light_panel |
+| `ui.line_highlight` | `#1A4242` | `#FFFBE3` light_current_line |
+| `ui.border` | `#1A4242` | `#FFF4B8` light_border |
+| `ui.muted` | `#8FA8A0` | `#77735F` light_muted_text |
+| `ui.selection` | `#2E8B57` | `#A1CBB3` light_selection |
+| `ui.cursor` | `#FFD700` | `#877200` golden_ink |
+| `ui.accent` | `#2E8B57` | `#158177` turquoise_ink |
+| `status.error` | `#FF0000` | `#E80000` sunburn_ink |
+| `status.success` | `#98FB98` | `#058605` seafoam_ink |
+| `status.warning` | `#FFDB58` | `#8E6F00` mustard_ink |
+| `status.info` | `#4AA3DF` | `#2078B4` ocean_ink |
+| `syntax.comment` | `#8FA8A0` | `#77735F` light_muted_text |
+| `syntax.keyword` | `#FF8C00` | `#AE5F00` sunset_ink |
+| `syntax.string` | `#F0E68C` | `#807411` khaki_ink |
+| `syntax.number` | `#40E0D0` | `#158177` turquoise_ink |
+| `syntax.constant` | `#40E0D0` | `#158177` turquoise_ink |
+| `syntax.function` | `#FFD700` | `#877200` golden_ink |
+| `syntax.type` | `#98FB98` | `#058605` seafoam_ink |
+| `syntax.variable` | `#FFFFFF` | `#262000` light_ink |
+| `syntax.parameter` | `#FFFFFF` | `#262000` light_ink |
+| `syntax.property` | `#FFFFFF` | `#262000` light_ink |
+| `syntax.operator` | `#FFFFFF` | `#262000` light_ink |
+| `syntax.punctuation` | `#FFFFFF` | `#262000` light_ink |
+| `syntax.tag` | `#FF8C00` | `#AE5F00` sunset_ink |
+| `syntax.attribute` | `#FFD700` | `#877200` golden_ink |
+| `syntax.regex` | `#F0E68C` | `#807411` khaki_ink |
+| `syntax.invalid` | `#FF6B5B` | `#E41600` coral_ink |
+| `terminal.background` | `#0F2E2E` | `#FFFCED` light_page |
+| `terminal.foreground` | `#FFFFFF` | `#262000` light_ink |
+| `terminal.cursor` | `#FFD700` | `#877200` golden_ink |
+| `terminal.selection` | `#2E8B57` | `#A1CBB3` light_selection |
+| `terminal.black` | `#1A4242` | `#262000` light_ink |
+| `terminal.red` | `#FF6B5B` | `#E41600` coral_ink |
+| `terminal.green` | `#98FB98` | `#058605` seafoam_ink |
+| `terminal.yellow` | `#FFD700` | `#877200` golden_ink |
+| `terminal.blue` | `#4AA3DF` | `#2078B4` ocean_ink |
+| `terminal.magenta` | `#E27AB3` | `#D12D87` hibiscus_ink |
+| `terminal.cyan` | `#40E0D0` | `#158177` turquoise_ink |
+| `terminal.white` | `#D8D2C0` | `#8C8773` light_terminal_white |
+| `terminal.bright_black` | `#8FA8A0` | `#77735F` light_muted_text |
+| `terminal.bright_red` | `#FF8C00` | `#AE5F00` sunset_ink |
+| `terminal.bright_green` | `#98FB98` | `#058605` seafoam_ink |
+| `terminal.bright_yellow` | `#FFDB58` | `#8E6F00` mustard_ink |
+| `terminal.bright_blue` | `#4AA3DF` | `#2078B4` ocean_ink |
+| `terminal.bright_magenta` | `#E27AB3` | `#D12D87` hibiscus_ink |
+| `terminal.bright_cyan` | `#40E0D0` | `#158177` turquoise_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#97937D` light_terminal_bright_white |
+
+![August light palette](palette-light.svg)
+
 ## VS Code
 
-Theme: [Seasonal 08 · August — Late Summer](../vscode/themes/august.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![August in VS Code](vscode-preview.svg)
+- [Seasonal 08 · August — Late Summer · Dark](../vscode/themes/august-dark.json)
+- [Seasonal 08 · August — Late Summer · Light](../vscode/themes/august-light.json)
+
+![August in VS Code, dark](vscode-preview-dark.svg)
+
+![August in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -201,5 +266,9 @@ Theme: [Seasonal 08 · August — Late Summer](../vscode/themes/august.json), pa
 - [davids-August.omp.json](davids-August.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/August/davids-August.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/august.json](../vscode/themes/august.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [davids-August-light.omp.json](davids-August-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/august-light.json](../vscode/themes/august-light.json): vscode-theme, light mode.
+- [../vscode/themes/august-dark.json](../vscode/themes/august-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | smoke | `#9AA3BE` |  |
 | `selection` | glory_blue | `#3C3B6E` |  |
 | `cursor` | gold | `#FFD700` |  |
+| `accent` | glory_red | `#B31942` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -184,11 +185,74 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🇺🇸 🗽 🎺 🍖 🎉 ⚾ ☀️ 🎈 🎠 🎡 🔔 🤠 📜 🎪
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#FFD700` | `#756200` gold_ink |
+| `ui.background` | `#0B1026` | `#EDEDF6` light_page |
+| `ui.foreground` | `#F4F4F8` | `#000080` navy |
+| `ui.surface` | `#1A2142` | `#DEDEEE` light_panel |
+| `ui.line_highlight` | `#1A2142` | `#E3E3F1` light_current_line |
+| `ui.border` | `#1A2142` | `#B8B8DB` light_border |
+| `ui.muted` | `#9AA3BE` | `#5A5AAD` light_muted_text |
+| `ui.selection` | `#3C3B6E` | `#A7A7BE` light_selection |
+| `ui.cursor` | `#FFD700` | `#000080` navy |
+| `ui.accent` | `#B31942` | `#756200` gold_ink |
+| `status.success` | `#FFFFFF` | `#636363` stars_ink |
+| `status.warning` | `#FFD700` | `#756200` gold_ink |
+| `status.info` | `#6E8FCB` | `#3C62A8` liberty_ink |
+| `syntax.comment` | `#9AA3BE` | `#5A5AAD` light_muted_text |
+| `syntax.keyword` | `#E5484D` | `#C31C21` stripe_red_ink |
+| `syntax.string` | `#7FD18B` | `#297133` picnic_ink |
+| `syntax.number` | `#FFD700` | `#756200` gold_ink |
+| `syntax.constant` | `#FFD700` | `#756200` gold_ink |
+| `syntax.function` | `#6FD6E0` | `#196D76` fountain_ink |
+| `syntax.type` | `#C792EA` | `#912AD6` roman_ink |
+| `syntax.variable` | `#F4F4F8` | `#000080` navy |
+| `syntax.parameter` | `#F4F4F8` | `#000080` navy |
+| `syntax.property` | `#F4F4F8` | `#000080` navy |
+| `syntax.operator` | `#F4F4F8` | `#000080` navy |
+| `syntax.punctuation` | `#F4F4F8` | `#000080` navy |
+| `syntax.tag` | `#E5484D` | `#C31C21` stripe_red_ink |
+| `syntax.attribute` | `#6FD6E0` | `#196D76` fountain_ink |
+| `syntax.regex` | `#7FD18B` | `#297133` picnic_ink |
+| `syntax.invalid` | `#E5484D` | `#C31C21` stripe_red_ink |
+| `terminal.background` | `#0B1026` | `#EDEDF6` light_page |
+| `terminal.foreground` | `#F4F4F8` | `#000080` navy |
+| `terminal.cursor` | `#FFD700` | `#000080` navy |
+| `terminal.selection` | `#3C3B6E` | `#A7A7BE` light_selection |
+| `terminal.black` | `#1A2142` | `#000080` navy |
+| `terminal.red` | `#E5484D` | `#C31C21` stripe_red_ink |
+| `terminal.green` | `#7FD18B` | `#297133` picnic_ink |
+| `terminal.yellow` | `#FFD700` | `#756200` gold_ink |
+| `terminal.blue` | `#6E8FCB` | `#3C62A8` liberty_ink |
+| `terminal.magenta` | `#C792EA` | `#912AD6` roman_ink |
+| `terminal.cyan` | `#6FD6E0` | `#196D76` fountain_ink |
+| `terminal.white` | `#F4F4F8` | `#7777BC` light_terminal_white |
+| `terminal.bright_black` | `#9AA3BE` | `#5A5AAD` light_muted_text |
+| `terminal.bright_red` | `#E5484D` | `#C31C21` stripe_red_ink |
+| `terminal.bright_green` | `#7FD18B` | `#297133` picnic_ink |
+| `terminal.bright_yellow` | `#FFD700` | `#756200` gold_ink |
+| `terminal.bright_blue` | `#6E8FCB` | `#3C62A8` liberty_ink |
+| `terminal.bright_magenta` | `#C792EA` | `#912AD6` roman_ink |
+| `terminal.bright_cyan` | `#6FD6E0` | `#196D76` fountain_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#8383C1` light_terminal_bright_white |
+
+![July light palette](palette-light.svg)
+
 ## VS Code
 
-Theme: [Seasonal 07 · July — Independence Day](../vscode/themes/july.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![July in VS Code](vscode-preview.svg)
+- [Seasonal 07 · July — Independence Day · Dark](../vscode/themes/july-dark.json)
+- [Seasonal 07 · July — Independence Day · Light](../vscode/themes/july-light.json)
+
+![July in VS Code, dark](vscode-preview-dark.svg)
+
+![July in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -206,5 +270,9 @@ Theme: [Seasonal 07 · July — Independence Day](../vscode/themes/july.json), p
 - [davids-July.omp.json](davids-July.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/July/davids-July.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/july.json](../vscode/themes/july.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [davids-July-light.omp.json](davids-July-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/july-light.json](../vscode/themes/july-light.json): vscode-theme, light mode.
+- [../vscode/themes/july-dark.json](../vscode/themes/july-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

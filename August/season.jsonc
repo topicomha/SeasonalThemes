@@ -139,5 +139,98 @@
     "vscode": {
       "accent": "brand.tertiary"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "golden_ink": { "hex": "#877200", "name": "Golden sun (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#FFFCED", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#262000", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#FFFADE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#FFFBE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#FFF4B8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#77735F", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#A1CBB3", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "turquoise_ink": { "hex": "#158177", "name": "Turquoise water (light-mode ink)", "note": "Proposed: light mode" },
+        "seafoam_ink": { "hex": "#058605", "name": "Seafoam (light-mode ink)", "note": "Proposed: light mode" },
+        "mustard_ink": { "hex": "#8E6F00", "name": "Mustard (light-mode ink)", "note": "Proposed: light mode" },
+        "sunburn_ink": { "hex": "#E80000", "name": "Sunburn red (light-mode ink)", "note": "Proposed: light mode" },
+        "ocean_ink": { "hex": "#2078B4", "name": "Ocean blue (light-mode ink)", "note": "Proposed: light mode" },
+        "sunset_ink": { "hex": "#AE5F00", "name": "Sunset orange (light-mode ink)", "note": "Proposed: light mode" },
+        "khaki_ink": { "hex": "#807411", "name": "Sand khaki (light-mode ink)", "note": "Proposed: light mode" },
+        "coral_ink": { "hex": "#E41600", "name": "Coral (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#8C8773", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#97937D", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "hibiscus_ink": { "hex": "#D12D87", "name": "Hibiscus pink (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "golden_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "golden_ink",
+          "accent": "turquoise_ink"
+        },
+        "status": {
+          "success": "seafoam_ink",
+          "warning": "mustard_ink",
+          "error": "sunburn_ink",
+          "info": "ocean_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "sunset_ink",
+          "string": "khaki_ink",
+          "number": "turquoise_ink",
+          "constant": "turquoise_ink",
+          "function": "golden_ink",
+          "type": "seafoam_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "sunset_ink",
+          "attribute": "golden_ink",
+          "regex": "khaki_ink",
+          "invalid": "coral_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "golden_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "coral_ink",
+          "bright_red": "sunset_ink",
+          "green": "seafoam_ink",
+          "bright_green": "seafoam_ink",
+          "yellow": "golden_ink",
+          "bright_yellow": "mustard_ink",
+          "blue": "ocean_ink",
+          "bright_blue": "ocean_ink",
+          "magenta": "hibiscus_ink",
+          "bright_magenta": "hibiscus_ink",
+          "cyan": "turquoise_ink",
+          "bright_cyan": "turquoise_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

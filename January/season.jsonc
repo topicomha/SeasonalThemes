@@ -145,5 +145,96 @@
     "oh-my-posh": {
       "time_format": "2006-01-02 3:04:05 PM"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "sky_ink": { "hex": "#176A8C", "name": "Winter sky (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#EDEDF6", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#000013", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#DEDEEE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#E3E3F1", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#B8B8DB", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#62626E", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#ACC7DD", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "snow_ink": { "hex": "#636363", "name": "Snow white (light-mode ink)", "note": "Proposed: light mode" },
+        "candle_ink": { "hex": "#7C5F0B", "name": "Candlelight (light-mode ink)", "note": "Proposed: light mode" },
+        "ember_ink": { "hex": "#B83200", "name": "Fireplace ember (light-mode ink)", "note": "Proposed: light mode" },
+        "pine_ink": { "hex": "#2C7044", "name": "Pine needle (light-mode ink)", "note": "Proposed: light mode" },
+        "glacier_ink": { "hex": "#1F6D6D", "name": "Glacier (light-mode ink)", "note": "Proposed: light mode" },
+        "aurora_ink": { "hex": "#8B3CC0", "name": "Aurora violet (light-mode ink)", "note": "Proposed: light mode" },
+        "holly_ink": { "hex": "#BD2828", "name": "Holly berry (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#7C7C88", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#888894", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "sky_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "navy",
+          "accent": "sky_ink"
+        },
+        "status": {
+          "success": "snow_ink",
+          "warning": "candle_ink",
+          "error": "ember_ink",
+          "info": "sky_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "sky_ink",
+          "string": "pine_ink",
+          "number": "candle_ink",
+          "constant": "candle_ink",
+          "function": "glacier_ink",
+          "type": "aurora_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "sky_ink",
+          "attribute": "glacier_ink",
+          "regex": "pine_ink",
+          "invalid": "holly_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "navy",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "holly_ink",
+          "bright_red": "ember_ink",
+          "green": "pine_ink",
+          "bright_green": "pine_ink",
+          "yellow": "candle_ink",
+          "bright_yellow": "candle_ink",
+          "blue": "sky_ink",
+          "bright_blue": "sky_ink",
+          "magenta": "aurora_ink",
+          "bright_magenta": "aurora_ink",
+          "cyan": "glacier_ink",
+          "bright_cyan": "glacier_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

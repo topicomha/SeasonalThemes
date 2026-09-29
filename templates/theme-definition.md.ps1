@@ -156,14 +156,50 @@ if ($Season.Variants.Count) {
     Add
 }
 
+# The other light/dark mode, if the month defines one: which roles it changes.
+$modeSeasons = $Season['ModeSeasons'] ?? @{}
+$otherModes = @($modeSeasons.Keys | Where-Object { $_ -ne $Season.Mode } | Sort-Object)
+foreach ($mode in $otherModes) {
+    $other = $modeSeasons[$mode]
+    $title = (Get-Culture).TextInfo.ToTitleCase($mode)
+    Add "## $title mode"
+    Add
+    Add "The month is $($Season.Mode) by default. In $mode mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same."
+    Add
+    Add "| Role | $((Get-Culture).TextInfo.ToTitleCase($Season.Mode)) | $title |"
+    Add '|---|---|---|'
+    foreach ($key in $Season.Roles.Colors.Keys) {
+        $a = $Season.Colors[$key]
+        $b = $other.Colors[$key]
+        if ($a.Hex -ne $b.Hex) {
+            $bName = $b.Ref -match '^#' ? '' : " $($b.Ref)"
+            Add "| ``$key`` | ``$($a.Hex.ToUpper())`` | ``$($b.Hex.ToUpper())``$bName |"
+        }
+    }
+    if ($Files["palette-svg@$mode"]) {
+        Add
+        Add "![$($Season.Month) $mode palette]($($Files["palette-svg@$mode"]))"
+    }
+    Add
+}
+
 if ($Files['vscode-theme']) {
     Add '## VS Code'
     Add
-    Add "Theme: [$($Season.Title)]($($Files['vscode-theme'])), part of the Seasonal Themes extension in ``vscode/``."
+    Add "Part of the Seasonal Themes extension in ``vscode/``."
     Add
-    if ($Files['vscode-preview']) {
-        Add "![$($Season.Month) in VS Code]($($Files['vscode-preview']))"
-        Add
+    foreach ($mode in @($Season.Mode) + $otherModes) {
+        $suffix = $mode -eq $Season.Mode ? '' : "@$mode"
+        $label = $mode -eq $Season.Mode ? $Season.Title : $modeSeasons[$mode].Title
+        if ($Files["vscode-theme$suffix"]) { Add "- [$label]($($Files["vscode-theme$suffix"]))" }
+    }
+    Add
+    foreach ($mode in @($Season.Mode) + $otherModes) {
+        $suffix = $mode -eq $Season.Mode ? '' : "@$mode"
+        if ($Files["vscode-preview$suffix"]) {
+            Add "![$($Season.Month) in VS Code, $mode]($($Files["vscode-preview$suffix"]))"
+            Add
+        }
     }
 }
 
@@ -188,7 +224,11 @@ if ($Files['oh-my-posh']) {
     Add "  Try it with ``oh-my-posh init pwsh --config <repo>/$($Season.Month)/$($Files['oh-my-posh']) | Invoke-Expression``."
 }
 if ($Files['palette-svg']) { Add "- [$($Files['palette-svg'])]($($Files['palette-svg'])): palette swatch sheet." }
-if ($Files['vscode-theme']) { Add "- [$($Files['vscode-theme'])]($($Files['vscode-theme'])): VS Code colour theme." }
-if ($Files['vscode-preview']) { Add "- [$($Files['vscode-preview'])]($($Files['vscode-preview'])): preview of the VS Code theme." }
+foreach ($key in @($Files.Keys | Where-Object { $_ -match '^(oh-my-posh|palette-svg|vscode-theme|vscode-preview)@' } | Sort-Object)) {
+    Add "- [$($Files[$key])]($($Files[$key])): $($key -replace '^([^@]+)@(.+)$', '$1, $2 mode')."
+}
+foreach ($key in @('vscode-theme', 'vscode-preview')) {
+    if ($Files[$key]) { Add "- [$($Files[$key])]($($Files[$key])): $($key -replace '-', ' ')." }
+}
 
 ($lines -join "`n") + "`n"

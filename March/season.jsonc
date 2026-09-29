@@ -145,5 +145,98 @@
     "oh-my-posh": {
       "time_format": "2006-01-02 3:04:05 PM"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "lime_ink": { "hex": "#1D781D", "name": "Lime green (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#EDF4ED", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#000F00", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#DEEBDE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#E3EEE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#B8D4B8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#616B61", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#8CB98C", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "gold_ink": { "hex": "#7B6700", "name": "Pot of gold (light-mode ink)", "note": "Proposed: light mode" },
+        "white_ink": { "hex": "#686868", "name": "White (light-mode ink)", "note": "Proposed: light mode" },
+        "orange_red_ink": { "hex": "#C23400", "name": "Orange red (light-mode ink)", "note": "Proposed: light mode" },
+        "harp_ink": { "hex": "#296BA8", "name": "Harp blue (light-mode ink)", "note": "Proposed: light mode" },
+        "ale_ink": { "hex": "#87612C", "name": "Amber ale (light-mode ink)", "note": "Proposed: light mode" },
+        "shamrock_ink": { "hex": "#007849", "name": "Shamrock green (light-mode ink)", "note": "Proposed: light mode" },
+        "heather_ink": { "hex": "#9842B4", "name": "Heather (light-mode ink)", "note": "Proposed: light mode" },
+        "ginger_ink": { "hex": "#C52D1C", "name": "Ginger red (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#7A837A", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#848F84", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "sea_ink": { "hex": "#1F7466", "name": "Atlantic teal (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "lime_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "dark_green",
+          "accent": "gold_ink"
+        },
+        "status": {
+          "success": "white_ink",
+          "warning": "gold_ink",
+          "error": "orange_red_ink",
+          "info": "harp_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "ale_ink",
+          "string": "lime_ink",
+          "number": "gold_ink",
+          "constant": "gold_ink",
+          "function": "shamrock_ink",
+          "type": "heather_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "ale_ink",
+          "attribute": "shamrock_ink",
+          "regex": "lime_ink",
+          "invalid": "ginger_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "dark_green",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "ginger_ink",
+          "bright_red": "orange_red_ink",
+          "green": "lime_ink",
+          "bright_green": "shamrock_ink",
+          "yellow": "gold_ink",
+          "bright_yellow": "gold_ink",
+          "blue": "harp_ink",
+          "bright_blue": "harp_ink",
+          "magenta": "heather_ink",
+          "bright_magenta": "heather_ink",
+          "cyan": "sea_ink",
+          "bright_cyan": "sea_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

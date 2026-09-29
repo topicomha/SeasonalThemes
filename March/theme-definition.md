@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | sage | `#8FAF98` |  |
 | `selection` | dark_green | `#006400` |  |
 | `cursor` | gold | `#FFD700` |  |
+| `accent` | gold | `#FFD700` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -180,11 +181,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🍀 🌈 🇮🇪 🌱 🤞 🍺 💚 🟢 🥬 🍏 🎩 🥗 📗 🪙
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#32CD32` | `#1D781D` lime_ink |
+| `ui.background` | `#0E1F16` | `#EDF4ED` light_page |
+| `ui.foreground` | `#E8F3EA` | `#000F00` light_ink |
+| `ui.surface` | `#1B3325` | `#DEEBDE` light_panel |
+| `ui.line_highlight` | `#1B3325` | `#E3EEE3` light_current_line |
+| `ui.border` | `#1B3325` | `#B8D4B8` light_border |
+| `ui.muted` | `#8FAF98` | `#616B61` light_muted_text |
+| `ui.selection` | `#006400` | `#8CB98C` light_selection |
+| `ui.cursor` | `#FFD700` | `#006400` dark_green |
+| `ui.accent` | `#FFD700` | `#7B6700` gold_ink |
+| `status.error` | `#FF4500` | `#C23400` orange_red_ink |
+| `status.success` | `#FFFFFF` | `#686868` white_ink |
+| `status.warning` | `#FFD700` | `#7B6700` gold_ink |
+| `status.info` | `#6FA8DC` | `#296BA8` harp_ink |
+| `syntax.comment` | `#8FAF98` | `#616B61` light_muted_text |
+| `syntax.keyword` | `#C08A3E` | `#87612C` ale_ink |
+| `syntax.string` | `#32CD32` | `#1D781D` lime_ink |
+| `syntax.number` | `#FFD700` | `#7B6700` gold_ink |
+| `syntax.constant` | `#FFD700` | `#7B6700` gold_ink |
+| `syntax.function` | `#009E60` | `#007849` shamrock_ink |
+| `syntax.type` | `#C58FD6` | `#9842B4` heather_ink |
+| `syntax.variable` | `#E8F3EA` | `#000F00` light_ink |
+| `syntax.parameter` | `#E8F3EA` | `#000F00` light_ink |
+| `syntax.property` | `#E8F3EA` | `#000F00` light_ink |
+| `syntax.operator` | `#E8F3EA` | `#000F00` light_ink |
+| `syntax.punctuation` | `#E8F3EA` | `#000F00` light_ink |
+| `syntax.tag` | `#C08A3E` | `#87612C` ale_ink |
+| `syntax.attribute` | `#009E60` | `#007849` shamrock_ink |
+| `syntax.regex` | `#32CD32` | `#1D781D` lime_ink |
+| `syntax.invalid` | `#E86A5C` | `#C52D1C` ginger_ink |
+| `terminal.background` | `#0E1F16` | `#EDF4ED` light_page |
+| `terminal.foreground` | `#E8F3EA` | `#000F00` light_ink |
+| `terminal.cursor` | `#FFD700` | `#006400` dark_green |
+| `terminal.selection` | `#006400` | `#8CB98C` light_selection |
+| `terminal.black` | `#1B3325` | `#000F00` light_ink |
+| `terminal.red` | `#E86A5C` | `#C52D1C` ginger_ink |
+| `terminal.green` | `#32CD32` | `#1D781D` lime_ink |
+| `terminal.yellow` | `#FFD700` | `#7B6700` gold_ink |
+| `terminal.blue` | `#6FA8DC` | `#296BA8` harp_ink |
+| `terminal.magenta` | `#C58FD6` | `#9842B4` heather_ink |
+| `terminal.cyan` | `#5FD4C0` | `#1F7466` sea_ink |
+| `terminal.white` | `#E8F3EA` | `#7A837A` light_terminal_white |
+| `terminal.bright_black` | `#8FAF98` | `#616B61` light_muted_text |
+| `terminal.bright_red` | `#FF4500` | `#C23400` orange_red_ink |
+| `terminal.bright_green` | `#009E60` | `#007849` shamrock_ink |
+| `terminal.bright_yellow` | `#FFD700` | `#7B6700` gold_ink |
+| `terminal.bright_blue` | `#6FA8DC` | `#296BA8` harp_ink |
+| `terminal.bright_magenta` | `#C58FD6` | `#9842B4` heather_ink |
+| `terminal.bright_cyan` | `#5FD4C0` | `#1F7466` sea_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#848F84` light_terminal_bright_white |
+
+![March light palette](palette-light.svg)
+
 ## VS Code
 
-Theme: [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![March in VS Code](vscode-preview.svg)
+- [Seasonal 03 · March — St. Patrick's Day · Dark](../vscode/themes/march-dark.json)
+- [Seasonal 03 · March — St. Patrick's Day · Light](../vscode/themes/march-light.json)
+
+![March in VS Code, dark](vscode-preview-dark.svg)
+
+![March in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -200,5 +265,9 @@ Theme: [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march.json)
 - [davids-March.omp.json](davids-March.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/March/davids-March.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/march.json](../vscode/themes/march.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [davids-March-light.omp.json](davids-March-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/march-light.json](../vscode/themes/march-light.json): vscode-theme, light mode.
+- [../vscode/themes/march-dark.json](../vscode/themes/march-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

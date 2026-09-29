@@ -58,7 +58,7 @@ The month's signature colours. Prompt segments, badges, status bars and accents.
 | `highlight` | harvest | `#B8860B` | `#22302A` 4.2:1 |  |
 | `deep` | chocolate | `#D2691E` | `#22302A` 3.8:1 |  |
 | `text_accent` | paper | `#FFFFFF` | `#22302A` 13.8:1 |  |
-| `line` | bark | `#8B4513` | `#FFFFFF` 7.1:1 | *inherits* `brand.primary` |
+| `line` | goldenrod | `#DAA520` | `#22302A` 6.2:1 |  |
 
 ### UI
 

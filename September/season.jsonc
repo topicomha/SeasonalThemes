@@ -59,7 +59,8 @@
       "accent_alt":  "apple",
       "highlight":   "harvest",
       "deep":        "chocolate",
-      "text_accent": "paper"
+      "text_accent": "paper",
+      "line":        "goldenrod"
     },
     "ui": {
       "text_light":     "paper",

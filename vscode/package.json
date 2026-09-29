@@ -33,9 +33,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Seasonal 01 · January — Winter Wonderland ❄️",
+        "label": "Seasonal 01 · January — Winter Wonderland · Dark ❄️",
         "uiTheme": "vs-dark",
         "path": "./themes/january-dark.json"
+      },
+      {
+        "label": "Seasonal 01 · January — Winter Wonderland · Light ❄️",
+        "uiTheme": "vs",
+        "path": "./themes/january-light.json"
       },
       {
         "label": "Seasonal 02 · February — Valentine's Day 🌹",
@@ -148,7 +153,12 @@
     {
       "month": 1,
       "mode": "dark",
-      "label": "Seasonal 01 · January — Winter Wonderland ❄️"
+      "label": "Seasonal 01 · January — Winter Wonderland · Dark ❄️"
+    },
+    {
+      "month": 1,
+      "mode": "light",
+      "label": "Seasonal 01 · January — Winter Wonderland · Light ❄️"
     },
     {
       "month": 2,

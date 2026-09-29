@@ -33,7 +33,7 @@
   <text x="64" y="237" fill="#B5A48B">.cache</text>
   <rect x="60" y="260" width="186" height="24" rx="3" fill="#3A2C24" stroke="#3A2C24"/>
   <text x="68" y="276" fill="#B5A48B">Search files</text>
-  <rect x="60" y="294" width="186" height="26" rx="3" fill="#D35400"/>
+  <rect x="60" y="294" width="186" height="26" rx="3" fill="#A04000"/>
   <text x="153" y="311" text-anchor="middle" fill="#FFFFFF">Commit</text>
   <rect x="258" y="30" width="702" height="34" fill="#3A2C24"/>
   <rect x="258" y="30" width="140" height="34" fill="#2A1F1A"/>
@@ -92,7 +92,7 @@
   <rect x="612" y="550" width="22" height="16" rx="3" fill="#AE71C7"/>
   <rect x="638" y="550" width="22" height="16" rx="3" fill="#5FB3A3"/>
   <rect x="664" y="550" width="22" height="16" rx="3" fill="#FFFFFF"/>
-  <rect x="0" y="576" width="960" height="24" fill="#D35400"/>
+  <rect x="0" y="576" width="960" height="24" fill="#A04000"/>
   <rect x="0" y="576" width="70" height="24" fill="#F1C40F"/>
   <text x="35" y="592" text-anchor="middle" fill="#2D3436">&gt;&lt; WSL</text>
   <text x="84" y="592" fill="#FFFFFF">main*   0 errors   1 warning</text>

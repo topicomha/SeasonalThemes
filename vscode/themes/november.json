@@ -155,9 +155,9 @@
     "checkbox.foreground": "#F5E6D3",
     "checkbox.border": "#3A2C24",
 
-    "button.background": "#D35400",
+    "button.background": "#A04000",
     "button.foreground": "#FFFFFF",
-    "button.hoverBackground": "#D35400CC",
+    "button.hoverBackground": "#A04000CC",
     "button.secondaryBackground": "#3A2C24",
     "button.secondaryForeground": "#F5E6D3",
     "badge.background": "#F1C40F",
@@ -174,9 +174,9 @@
     "panelTitle.inactiveForeground": "#B5A48B",
     "panelTitle.activeBorder": "#F1C40F",
 
-    "statusBar.background": "#D35400",
+    "statusBar.background": "#A04000",
     "statusBar.foreground": "#FFFFFF",
-    "statusBar.border": "#D35400",
+    "statusBar.border": "#A04000",
     "statusBar.debuggingBackground": "#8E44AD",
     "statusBar.debuggingForeground": "#FFFFFF",
     "statusBar.noFolderBackground": "#A04000",

@@ -1,0 +1,152 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "April",
+  "name": "Spring Showers",
+  "tagline": "Pastel blooms, bunnies and bugs after the rain",
+  "description": [
+    "April is spring in full pastel: light green, sky cyan, salmon, butter yellow and lavender.",
+    "The icons are the garden waking up (seedlings, sunflowers, bees, butterflies and ladybugs), with an Easter bunny and a rainbow after the April showers."
+  ],
+  "mood": ["fresh", "gentle", "playful", "blooming"],
+  "keywords": ["spring garden", "Easter eggs", "bunny", "tulips", "rain showers", "rainbow", "butterflies", "bees"],
+  "holidays": [
+    { "name": "April Fools' Day", "date": "04-01" },
+    { "name": "Easter", "date": "04-05", "note": "a Sunday between March 22 and April 25" },
+    { "name": "Earth Day", "date": "04-22" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Easter", "url": "https://emojipedia.org/easter" },
+    { "title": "Emojipedia: Spring", "url": "https://emojipedia.org/spring" }
+  ],
+  "ideas": [
+    "The old theme gave every pastel its own matching dark text (forest, navy, mahogany, golden brown, plum); the layout could support a text colour per role",
+    "A light editor theme would suit April's pastels",
+    "The battery segment used April's own pastels for charging / discharging / full"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "spring_green": { "hex": "#B3E88F", "name": "Spring green" },
+    "rain_cyan":    { "hex": "#B0FFFD", "name": "Rain cyan" },
+    "salmon":       { "hex": "#EC9288", "name": "Salmon" },
+    "butter":       { "hex": "#FFE4A2", "name": "Butter yellow" },
+    "lavender":     { "hex": "#CDA0FF", "name": "Lavender" },
+    "forest":       { "hex": "#203C17", "name": "Deep forest green" },
+    "navy":         { "hex": "#202A5B", "name": "Navy" },
+    "white":        { "hex": "#FFFFFF", "name": "White" },
+    "tulip":        { "hex": "#E8505B", "name": "Tulip red", "note": "New: the old theme had no error colour" },
+    "night_garden": { "hex": "#1B2420", "name": "Night garden", "note": "Proposed: editor and terminal background" },
+    "hedge":        { "hex": "#27332D", "name": "Hedge", "note": "Proposed: panels, borders, current line" },
+    "eggshell":     { "hex": "#F4F1EA", "name": "Eggshell", "note": "Proposed: editor text" },
+    "lichen":       { "hex": "#9BAA9C", "name": "Lichen", "note": "Proposed: comments, muted text" },
+    "periwinkle":   { "hex": "#9DB4FF", "name": "Periwinkle", "note": "Proposed: terminal blue, info" },
+    "mint":         { "hex": "#7FD9C4", "name": "Mint", "note": "Proposed: functions" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "spring_green",
+      "secondary":   "rain_cyan",
+      "tertiary":    "salmon",
+      "accent":      "butter",
+      "accent_alt":  "butter",
+      "highlight":   "lavender",
+      "deep":        "rain_cyan",
+      "text_accent": "navy",
+      "line":        "spring_green"
+    },
+    "ui": {
+      "text_light":     "white",
+      "text_dark":      "forest",
+      "background":     "night_garden",
+      "foreground":     "eggshell",
+      "surface":        "hedge",
+      "line_highlight": "hedge",
+      "border":         "hedge",
+      "muted":          "lichen",
+      "selection":      "forest",
+      "cursor":         "butter"
+    },
+    "status": {
+      "success": "spring_green",
+      "warning": "butter",
+      "error":   "tulip",
+      "info":    "periwinkle"
+    },
+    "syntax": {
+      "comment":  { "color": "lichen", "style": "italic" },
+      "keyword":  "salmon",
+      "string":   "spring_green",
+      "number":   "butter",
+      "constant": "butter",
+      "function": "mint",
+      "type":     "lavender",
+      "variable": "eggshell",
+      "invalid":  "salmon"
+    },
+    "terminal": {
+      "black":         "hedge",
+      "red":           "salmon",
+      "green":         "spring_green",
+      "yellow":        "butter",
+      "blue":          "periwinkle",
+      "magenta":       "lavender",
+      "cyan":          "rain_cyan",
+      "white":         "eggshell",
+      "bright_black":  "lichen",
+      "bright_green":  "mint",
+      "bright_white":  "white"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🐰",
+    "root":       "🌿",
+    "path":       "🌻",
+    "folder":     "🌻",
+    "home":       "🏡",
+    "git":        "🌞",
+    "exec_time":  "🌈",
+    "clock":      "🕰️",
+    "battery":    "📊",
+    "status_ok":  "🌱",
+    "status_err": "🥀",
+    "language":   "🌱",
+    "lang": {
+      "node":    "🐝",
+      "npm":     "🐝",
+      "yarn":    "🌈",
+      "python":  "🦋",
+      "java":    "🐌",
+      "dotnet":  "🐞",
+      "go":      "🐜",
+      "rust":    "🦗",
+      "dart":    "🕷️",
+      "angular": "🐢",
+      "nx":      "🐛",
+      "julia":   "🌸",
+      "ruby":    "🌼",
+      "azfunc":  "☂️",
+      "aws":     "⛅",
+      "kubectl": "🌧️"
+    },
+    "os": {
+      "linux":   "🌅",
+      "macos":   "🌅",
+      "windows": "🌅"
+    },
+    "pool": ["🌼", "☔", "🐣", "🥚", "🐇", "🌷", "🌳", "🍀", "🍃", "🦔", "🦢", "🐑", "🧺", "🐤", "🥕"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "1/2 3:04 PM"
+    }
+  }
+}

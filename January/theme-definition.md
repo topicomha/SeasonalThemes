@@ -56,7 +56,7 @@ The month's signature colours. Prompt segments, badges, status bars and accents.
 | `highlight` | navy | `#000080` | `#FFFFFF` 16.0:1 |  |
 | `deep` | navy | `#000080` | `#FFFFFF` 16.0:1 |  |
 | `text_accent` | snow | `#FFFFFF` | `#000000` 21.0:1 |  |
-| `line` | navy | `#000080` | `#FFFFFF` 16.0:1 | *inherits* `brand.primary` |
+| `line` | sky | `#87CEEB` | `#000000` 12.1:1 |  |
 
 ### UI
 

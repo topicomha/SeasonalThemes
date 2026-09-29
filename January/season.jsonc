@@ -55,7 +55,8 @@
       "accent_alt":  "sky",
       "highlight":   "navy",
       "deep":        "navy",
-      "text_accent": "snow"
+      "text_accent": "snow",
+      "line":        "sky"
     },
     "ui": {
       "text_light":     "snow",

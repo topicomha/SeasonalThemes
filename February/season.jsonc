@@ -1,0 +1,105 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "February",
+  "name": "Valentine's Day",
+  "tagline": "Roses, love letters and a box of chocolates",
+  "description": [
+    "February celebrates Valentine's Day with romantic burgundy, rose and deep pink, and hearts everywhere.",
+    "Rose-pink text on white 'Valentine card' segments sits next to deep burgundy ones, like a box of chocolates and a love letter."
+  ],
+  "mood": ["romantic", "sweet", "warm", "playful"],
+  "keywords": ["red roses", "love letter", "box of chocolates", "hearts", "teddy bear", "bouquet", "wax seal"],
+  "holidays": [
+    { "name": "Valentine's Day", "date": "02-14" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Valentine's Day", "url": "https://emojipedia.org/valentines-day" },
+    { "title": "Emojipedia: Hearts", "url": "https://emojipedia.org/hearts" }
+  ],
+  "ideas": [
+    "More heart variations: 💓 💗 💖 💕 for different segments",
+    "Darker red backgrounds with white text for readability",
+    "Light pink backgrounds with dark red text for contrast"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "burgundy":  { "hex": "#800020", "name": "Burgundy" },
+    "rose":      { "hex": "#FF007F", "name": "Rose" },
+    "deep_pink": { "hex": "#FF1493", "name": "Deep pink" },
+    "hot_pink":  { "hex": "#FF69B4", "name": "Hot pink" },
+    "blush":     { "hex": "#FFB6C1", "name": "Blush" },
+    "card":      { "hex": "#FFFFFF", "name": "Valentine card white" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "burgundy",
+      "secondary":   "rose",
+      "tertiary":    "burgundy",
+      "accent":      "rose",
+      "accent_alt":  "card",
+      "highlight":   "burgundy",
+      "deep":        "deep_pink",
+      "text_accent": "card",
+      "line":        "hot_pink"
+    },
+    "ui": {
+      "text_light": "card",
+      "text_dark":  "burgundy"
+    },
+    "status": {
+      "success": "card",
+      "error":   "deep_pink"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🌹",
+    "root":       "✨",
+    "path":       "💗",
+    "folder":     "💟",
+    "home":       "💒",
+    "git":        "💏",
+    "exec_time":  "😘",
+    "clock":      "💐🧸",
+    "battery":    "💗",
+    "status_ok":  "🫶",
+    "status_err": "💔",
+    "prompt":     "💌",
+    "language":   "💕",
+    "lang": {
+      "npm":     "💐",
+      "yarn":    "🧸",
+      "node":    "🤍",
+      "python":  "💗",
+      "dotnet":  "💘",
+      "go":      "🧸",
+      "rust":    "💖",
+      "dart":    "💗",
+      "nx":      "💘",
+      "julia":   "💝",
+      "ruby":    "💖",
+      "azfunc":  "💗",
+      "kubectl": "💘"
+    },
+    "os": {
+      "linux":   "💝",
+      "macos":   "🍎",
+      "windows": "💖"
+    },
+    "pool": ["❤️", "💞", "💓", "💮", "📮", "🎀", "🎁", "😍", "💋", "🌷", "💍", "🍫", "🥰", "💑", "🍓"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05 PM"
+    }
+  }
+}

@@ -8,7 +8,7 @@ function ConvertTo-Xml([string]$Text) {
 }
 
 $columns = 6
-$swatchWidth = 148
+$swatchWidth = 168
 $swatchHeight = 76
 $gap = 8
 $padding = 16
@@ -33,13 +33,16 @@ $null = $svg.AppendLine("  <text x=`"$padding`" y=`"$($padding + 22)`" font-size
 for ($i = 0; $i -lt $entries.Count; $i++) {
     $key = $entries[$i].Key
     $swatch = $entries[$i].Value
+    # Labels are plain black or white so they read on every swatch, whatever the month's text colours are.
+    # (Get-BestText comes from Generate-Themes.ps1, which runs this renderer.)
+    $label = (Get-BestText $swatch.Hex '#FFFFFF' '#000000').Hex
     $x = $padding + ($i % $columns) * ($swatchWidth + $gap)
     $y = $padding + $titleHeight + [math]::Floor($i / $columns) * ($swatchHeight + $gap)
     $null = $svg.AppendLine("  <g transform=`"translate($x $y)`">")
     $null = $svg.AppendLine("    <rect width=`"$swatchWidth`" height=`"$swatchHeight`" rx=`"8`" fill=`"$($swatch.Hex)`" stroke=`"$border`" stroke-opacity=`"0.4`"/>")
-    $null = $svg.AppendLine("    <text x=`"10`" y=`"24`" font-size=`"13`" font-weight=`"600`" fill=`"$($swatch.On)`">$(ConvertTo-Xml $swatch.Name)</text>")
-    $null = $svg.AppendLine("    <text x=`"10`" y=`"44`" font-size=`"11`" fill=`"$($swatch.On)`" fill-opacity=`"0.85`">$(ConvertTo-Xml $key)</text>")
-    $null = $svg.AppendLine("    <text x=`"10`" y=`"62`" font-size=`"11`" font-family=`"ui-monospace, Consolas, monospace`" fill=`"$($swatch.On)`" fill-opacity=`"0.85`">$($swatch.Hex.ToUpper())</text>")
+    $null = $svg.AppendLine("    <text x=`"10`" y=`"24`" font-size=`"13`" font-weight=`"600`" fill=`"$label`">$(ConvertTo-Xml $swatch.Name)</text>")
+    $null = $svg.AppendLine("    <text x=`"10`" y=`"44`" font-size=`"11`" fill=`"$label`" fill-opacity=`"0.85`">$(ConvertTo-Xml $key)</text>")
+    $null = $svg.AppendLine("    <text x=`"10`" y=`"62`" font-size=`"11`" font-family=`"ui-monospace, Consolas, monospace`" fill=`"$label`" fill-opacity=`"0.85`">$($swatch.Hex.ToUpper())</text>")
     $null = $svg.AppendLine("  </g>")
 }
 

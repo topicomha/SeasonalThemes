@@ -56,7 +56,7 @@ The month's signature colours. Prompt segments, badges, status bars and accents.
 | `accent_alt` | mustard | `#FFDB58` | `#000000` 15.5:1 |  |
 | `highlight` | khaki | `#F0E68C` | `#000000` 16.4:1 |  |
 | `deep` | teal | `#008080` | `#FFFFFF` 4.8:1 |  |
-| `text_accent` | cloud | `#FFFFFF` | `#000000` 21.0:1 |  |
+| `text_accent` | black | `#000000` | `#FFFFFF` 21.0:1 |  |
 | `line` | golden | `#FFD700` | `#000000` 15.0:1 | *inherits* `brand.primary` |
 
 ### UI

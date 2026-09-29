@@ -380,7 +380,8 @@ function Test-OmpContrast($Season, [string]$Text) {
     foreach ($block in $theme.blocks) {
         foreach ($segment in $block.segments) {
             $fg = $segment['foreground']
-            $bg = $segment['background']
+            # Segments without a background are drawn straight on the terminal.
+            $bg = $segment['background'] ?? $Season.Colors['terminal.background'].Hex
             if ($fg -notmatch '^#[0-9A-Fa-f]{6}$' -or $bg -notmatch '^#[0-9A-Fa-f]{6}$') { continue }
             $ratio = Get-ContrastRatio $fg $bg
             if ($ratio -lt $MinContrast) {

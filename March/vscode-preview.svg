@@ -33,8 +33,8 @@
   <text x="64" y="237" fill="#8FAF98">.cache</text>
   <rect x="60" y="260" width="186" height="24" rx="3" fill="#1B3325" stroke="#1B3325"/>
   <text x="68" y="276" fill="#8FAF98">Search files</text>
-  <rect x="60" y="294" width="186" height="26" rx="3" fill="#006400"/>
-  <text x="153" y="311" text-anchor="middle" fill="#FFFFFF">Commit</text>
+  <rect x="60" y="294" width="186" height="26" rx="3" fill="#009E60"/>
+  <text x="153" y="311" text-anchor="middle" fill="#000000">Commit</text>
   <rect x="258" y="30" width="702" height="34" fill="#1B3325"/>
   <rect x="258" y="30" width="140" height="34" fill="#0E1F16"/>
   <rect x="258" y="30" width="140" height="2" fill="#FFD700"/>
@@ -92,9 +92,9 @@
   <rect x="612" y="550" width="22" height="16" rx="3" fill="#C58FD6"/>
   <rect x="638" y="550" width="22" height="16" rx="3" fill="#5FD4C0"/>
   <rect x="664" y="550" width="22" height="16" rx="3" fill="#FFFFFF"/>
-  <rect x="0" y="576" width="960" height="24" fill="#006400"/>
+  <rect x="0" y="576" width="960" height="24" fill="#009E60"/>
   <rect x="0" y="576" width="70" height="24" fill="#FFD700"/>
   <text x="35" y="592" text-anchor="middle" fill="#000000">&gt;&lt; WSL</text>
-  <text x="84" y="592" fill="#FFFFFF">main*   0 errors   1 warning</text>
-  <text x="948" y="592" text-anchor="end" fill="#FFFFFF">Ln 7, Col 15   UTF-8   TypeScript</text>
+  <text x="84" y="592" fill="#000000">main*   0 errors   1 warning</text>
+  <text x="948" y="592" text-anchor="end" fill="#000000">Ln 7, Col 15   UTF-8   TypeScript</text>
 </svg>

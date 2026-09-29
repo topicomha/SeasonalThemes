@@ -1,0 +1,100 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "July",
+  "name": "Independence Day",
+  "tagline": "Stars, stripes and fireworks over a summer night",
+  "description": [
+    "July celebrates Independence Day with patriotic red, white and blue, stars, stripes and traditional American symbols.",
+    "Navy and firebrick red, the flag's own Old Glory blue and red, Air Force blue and white, with fireworks, sparklers and the eagle."
+  ],
+  "mood": ["patriotic", "festive", "proud", "summery"],
+  "keywords": ["fireworks", "American flag", "sparklers", "bald eagle", "Statue of Liberty", "backyard barbecue", "parade"],
+  "holidays": [
+    { "name": "Independence Day", "date": "07-04" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Independence Day", "url": "https://emojipedia.org/independence-day" }
+  ],
+  "ideas": [
+    "Alternate red, white and blue segments for a striped effect",
+    "🗽 Statue of Liberty as an alternative home icon",
+    "🍖 meat on the bone for barbecue references",
+    "The old theme coloured execution time yellow over 300 ms and red over 1 s; the shared layout could bring that back for every month"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "navy":        { "hex": "#000080", "name": "Navy blue" },
+    "firebrick":   { "hex": "#B22222", "name": "Firebrick red" },
+    "glory_blue":  { "hex": "#3C3B6E", "name": "Old Glory blue" },
+    "glory_red":   { "hex": "#B31942", "name": "Old Glory red" },
+    "air_force":   { "hex": "#0A3161", "name": "Air Force blue" },
+    "stars":       { "hex": "#FFFFFF", "name": "Stars white" },
+    "gold":        { "hex": "#FFD700", "name": "Sparkler gold" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "navy",
+      "secondary":   "firebrick",
+      "tertiary":    "glory_blue",
+      "accent":      "glory_red",
+      "accent_alt":  "gold",
+      "highlight":   "stars",
+      "deep":        "air_force",
+      "text_accent": "stars",
+      "line":        "gold"
+    },
+    "ui": {
+      "text_light": "stars",
+      "text_dark":  "navy"
+    },
+    "status": {
+      "success": "stars",
+      "error":   "firebrick"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🎆",
+    "root":       "🦅",
+    "path":       "🎇",
+    "folder":     "🎇",
+    "home":       "🏛️",
+    "git":        "🌟",
+    "exec_time":  "🎺",
+    "clock":      "🎉",
+    "battery":    "🔥",
+    "status_ok":  "🇺🇸",
+    "status_err": "🧨",
+    "language":   "⭐",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🥧",
+      "yarn":    "🎈",
+      "python":  "🗽",
+      "java":    "🍔",
+      "dotnet":  "🎺",
+      "go":      "🎈",
+      "rust":    "🌭",
+      "dart":    "🎯",
+      "angular": "🦅",
+      "nx":      "🎡",
+      "julia":   "🎠",
+      "ruby":    "🍒",
+      "aws":     "🎈",
+      "kubectl": "⚓"
+    },
+    "os": {
+      "linux":   "🦅",
+      "macos":   "🍎",
+      "windows": "🗽"
+    },
+    "pool": ["🇺🇸", "🗽", "🎺", "🍖", "🎉", "⚾", "☀️", "🎈", "🎠", "🎡", "🔔", "🤠", "📜", "🎪"]
+  }
+}

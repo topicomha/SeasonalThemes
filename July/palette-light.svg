@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="568" viewBox="0 0 1080 568" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="568" rx="12" fill="#EDEDF6"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#000080">July · Independence Day</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#000080" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Navy blue</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">navy</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#000080</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#B22222" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Firebrick red</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">firebrick</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#B22222</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#3C3B6E" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Old Glory blue</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">glory_blue</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#3C3B6E</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#B31942" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Old Glory red</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">glory_red</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#B31942</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#0A3161" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Air Force blue</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">air_force</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#0A3161</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Stars white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">stars</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#FFD700" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sparkler gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">gold</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFD700</text>
+  </g>
+  <g transform="translate(192 140)">
+    <rect width="168" height="76" rx="8" fill="#0B1026" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Summer night</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">summer_night</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#0B1026</text>
+  </g>
+  <g transform="translate(368 140)">
+    <rect width="168" height="76" rx="8" fill="#1A2142" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Bunting</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">bunting</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#1A2142</text>
+  </g>
+  <g transform="translate(544 140)">
+    <rect width="168" height="76" rx="8" fill="#F4F4F8" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Starlight</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">starlight</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F4F4F8</text>
+  </g>
+  <g transform="translate(720 140)">
+    <rect width="168" height="76" rx="8" fill="#9AA3BE" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Firework smoke</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">smoke</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#9AA3BE</text>
+  </g>
+  <g transform="translate(896 140)">
+    <rect width="168" height="76" rx="8" fill="#E5484D" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Stripe red</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">stripe_red</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E5484D</text>
+  </g>
+  <g transform="translate(16 224)">
+    <rect width="168" height="76" rx="8" fill="#6E8FCB" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Liberty blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">liberty</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#6E8FCB</text>
+  </g>
+  <g transform="translate(192 224)">
+    <rect width="168" height="76" rx="8" fill="#7FD18B" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Picnic green</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">picnic</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FD18B</text>
+  </g>
+  <g transform="translate(368 224)">
+    <rect width="168" height="76" rx="8" fill="#C792EA" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Roman candle</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">roman</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#C792EA</text>
+  </g>
+  <g transform="translate(544 224)">
+    <rect width="168" height="76" rx="8" fill="#6FD6E0" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Fountain teal</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">fountain</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#6FD6E0</text>
+  </g>
+  <g transform="translate(720 224)">
+    <rect width="168" height="76" rx="8" fill="#756200" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Sparkler gold (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">gold_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#756200</text>
+  </g>
+  <g transform="translate(896 224)">
+    <rect width="168" height="76" rx="8" fill="#EDEDF6" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode page</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_page</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#EDEDF6</text>
+  </g>
+  <g transform="translate(16 308)">
+    <rect width="168" height="76" rx="8" fill="#DEDEEE" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode panel</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_panel</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#DEDEEE</text>
+  </g>
+  <g transform="translate(192 308)">
+    <rect width="168" height="76" rx="8" fill="#E3E3F1" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode current line</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_current_line</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E3E3F1</text>
+  </g>
+  <g transform="translate(368 308)">
+    <rect width="168" height="76" rx="8" fill="#B8B8DB" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode border</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_border</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#B8B8DB</text>
+  </g>
+  <g transform="translate(544 308)">
+    <rect width="168" height="76" rx="8" fill="#5A5AAD" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Light-mode muted text</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">light_muted_text</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#5A5AAD</text>
+  </g>
+  <g transform="translate(720 308)">
+    <rect width="168" height="76" rx="8" fill="#A7A7BE" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode selection</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_selection</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#A7A7BE</text>
+  </g>
+  <g transform="translate(896 308)">
+    <rect width="168" height="76" rx="8" fill="#636363" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Stars white (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">stars_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#636363</text>
+  </g>
+  <g transform="translate(16 392)">
+    <rect width="168" height="76" rx="8" fill="#3C62A8" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Liberty blue (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">liberty_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#3C62A8</text>
+  </g>
+  <g transform="translate(192 392)">
+    <rect width="168" height="76" rx="8" fill="#C31C21" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Stripe red (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">stripe_red_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#C31C21</text>
+  </g>
+  <g transform="translate(368 392)">
+    <rect width="168" height="76" rx="8" fill="#297133" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Picnic green (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">picnic_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#297133</text>
+  </g>
+  <g transform="translate(544 392)">
+    <rect width="168" height="76" rx="8" fill="#196D76" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Fountain teal (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">fountain_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#196D76</text>
+  </g>
+  <g transform="translate(720 392)">
+    <rect width="168" height="76" rx="8" fill="#912AD6" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Roman candle (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">roman_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#912AD6</text>
+  </g>
+  <g transform="translate(896 392)">
+    <rect width="168" height="76" rx="8" fill="#7777BC" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode terminal white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_terminal_white</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7777BC</text>
+  </g>
+  <g transform="translate(16 476)">
+    <rect width="168" height="76" rx="8" fill="#8383C1" stroke="#5A5AAD" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode terminal bright white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_terminal_bright_white</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#8383C1</text>
+  </g>
+</svg>

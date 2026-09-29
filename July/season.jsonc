@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "July",
+  "name": "Independence Day",
+  "tagline": "Fireworks, stars and stripes and a backyard cookout",
+  "description": [
+    "July is Independence Day: the flag's blue, red and white with sparkler gold.",
+    "Fireworks and sparklers, the eagle and Lady Liberty, and a Fourth of July cookout with burgers, hot dogs, watermelon and apple pie."
+  ],
+  "mood": ["patriotic", "festive", "loud", "summery"],
+  "keywords": ["fireworks", "American flag", "sparklers", "bald eagle", "Statue of Liberty", "backyard cookout", "parade"],
+  "holidays": [
+    { "name": "Independence Day", "date": "07-04" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Independence Day", "url": "https://emojipedia.org/independence-day" },
+    { "title": "Emojipedia: Summer", "url": "https://emojipedia.org/summer" }
+  ],
+  "ideas": [
+    "A Fourth of July variant with extra fireworks for the week around the 4th"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "glory_blue":  { "hex": "#3C3B6E", "name": "Old Glory blue", "note": "The flag's blue; the July draft had navy #000080" },
+    "glory_red":   { "hex": "#B22234", "name": "Old Glory red", "note": "The flag's red; the July draft had red #FF0000" },
+    "stars":       { "hex": "#FFFFFF", "name": "Stars white", "note": "From the July draft" },
+    "sparkler":    { "hex": "#FFD700", "name": "Sparkler gold", "note": "From the July draft" },
+    "firecracker": { "hex": "#FF6B35", "name": "Firecracker orange" },
+    "liberty":     { "hex": "#6E8FCB", "name": "Liberty blue" },
+    "night":       { "hex": "#0A1128", "name": "Fireworks night" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "glory_blue",
+      "secondary":   "glory_red",
+      "tertiary":    "stars",
+      "accent":      "sparkler",
+      "accent_alt":  "firecracker",
+      "highlight":   "liberty",
+      "deep":        "night",
+      "text_accent": "sparkler",
+      "line":        "stars"
+    },
+    "ui": {
+      "text_light": "stars",
+      "text_dark":  "glory_blue"
+    },
+    "status": {
+      "success": "stars",
+      "error":   "firecracker"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🎆",
+    "root":       "🦅",
+    "path":       "🎇",
+    "folder":     "🎇",
+    "home":       "🏛️",
+    "git":        "🗽",
+    "exec_time":  "🧨",
+    "clock":      "🍔🌭",
+    "battery":    "🔥",
+    "status_ok":  "🎉",
+    "status_err": "💥",
+    "language":   "⭐",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🥧",
+      "yarn":    "🎈",
+      "python":  "🗽",
+      "java":    "🍔",
+      "dotnet":  "🎺",
+      "go":      "🎈",
+      "rust":    "🌭",
+      "dart":    "🎯",
+      "angular": "🦅",
+      "nx":      "🎡",
+      "julia":   "🎠",
+      "ruby":    "🍒",
+      "aws":     "🎈",
+      "kubectl": "⚓"
+    },
+    "os": {
+      "linux":   "🦅",
+      "macos":   "🍎",
+      "windows": "🗽"
+    },
+    "pool": ["🇺🇸", "🎆", "🎇", "🦅", "🗽", "⚾", "🔥", "☀️", "🎈", "🎉", "🎠", "🎡", "🎺", "🔔", "🤠", "📜", "🎪"]
+  }
+}

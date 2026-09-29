@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="232" viewBox="0 0 1080 232" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="232" rx="12" fill="#0A1128"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#FFFFFF">July · Independence Day</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#3C3B6E" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Old Glory blue</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">glory_blue</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#3C3B6E</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#B22234" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Old Glory red</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">glory_red</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#B22234</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Stars white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">stars</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#FFD700" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sparkler gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sparkler</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFD700</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#FF6B35" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Firecracker orange</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">firecracker</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF6B35</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#6E8FCB" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Liberty blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">liberty</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#6E8FCB</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#0A1128" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Fireworks night</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">night</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#0A1128</text>
+  </g>
+</svg>

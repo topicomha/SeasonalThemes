@@ -81,31 +81,28 @@ To add a program, add a template or renderer and a row in `$Targets`. Use `PerVa
 
 ```
 <Month>/
-  season.jsonc               THE month document (edit this)
-  davids-<Month>.omp.json    generated Oh My Posh theme (+ davids-<Month>-<variant>.omp.json)
-  theme-definition.md        generated readable page
-  davids-<Month>-light.omp.json   generated Oh My Posh theme for light terminals
-  palette.svg                generated palette swatch sheet (+ palette-light.svg)
-  vscode-preview-dark.svg    generated mock VS Code windows in the month's themes (+ -light.svg)
-vscode/                      the VS Code extension (Seasonal Themes)
-  themes/<month>-<mode>.json generated colour themes (+ <month>-<variant>-<mode>.json)
-  package.json               generated manifest (themes + the date/mode schedule extension.js reads)
-  extension.js               keeps VS Code on this month's theme, light or dark per seasonalThemes.mode
-Get-SeasonalTheme.ps1        prints today's Oh My Posh theme path (month, variant, light/dark), for shell profiles
-tools/New-LightMode.ps1      drafts a month's modes.light from its dark colours
+  season.jsonc                    THE month document (edit this)
+  davids-<Month>.omp.json         generated Oh My Posh theme (+ -<variant>, and -light for light terminals)
+  theme-definition.md             generated readable page
+  palette.svg                     generated palette swatch sheet (+ palette-light.svg)
+  vscode-preview-dark.svg         generated mock VS Code windows in the month's themes (+ -light.svg)
+vscode/                           the VS Code extension (Seasonal Themes)
+  themes/<month>-<mode>.json      generated colour themes (+ <month>-<variant>-<mode>.json)
+  package.json                    generated manifest (themes + the date/mode schedule extension.js reads)
+  LICENSE                         generated copy of the repo's LICENSE (the packager wants one here)
+  extension.js                    keeps VS Code on this month's theme, light or dark per seasonalThemes.mode
   README.md, CHANGELOG.md, icon.png, .vscodeignore
-schema/season.schema.json    the format of season.jsonc: roles, fallbacks, descriptions
-templates/                   one template or renderer per target
-Generate-Themes.ps1          season.jsonc + templates -> every generated file
-tools/Import-OmpTheme.ps1    drafts a season.jsonc from an old hand-written theme
-tools/Compare-OmpTheme.ps1   before/after render + field diff of two themes, as Markdown for a PR
-.github/                     CI check and the PR template
-Icons.md                     candidate emoji per month, plus emojipedia collections (move into each month's icons.pool)
-prompt-sections.md           list of the Oh My Posh segment types available
-ThemesDocumentation.md       old overview of all months (to be replaced)
-ThemeGenerator.md            earlier generator design, replaced by Generate-Themes.ps1
-test.omp.json, test-all.omp.json   scratch/debug themes (test-all labels each segment type)
-scripts.ipynb                snippets that symlink themes into the Oh My Posh themes folder
+schema/season.schema.json         the format of season.jsonc: roles, fallbacks, descriptions
+templates/                        one template or renderer per target
+Generate-Themes.ps1               season.jsonc + templates -> every generated file
+Get-SeasonalTheme.ps1             prints today's Oh My Posh theme path (month, variant, light/dark), for shell profiles
+tools/New-LightMode.ps1           drafts a month's modes.light from its dark colours
+tools/Import-OmpTheme.ps1         drafts a season.jsonc from a hand-written Oh My Posh theme
+tools/Compare-OmpTheme.ps1        before/after render + field diff of two themes, as Markdown for a PR
+docs/icons.md                     emoji collections per month and holiday (each month's icons.pool holds its picks)
+docs/oh-my-posh-segments.md       the Oh My Posh segment types available
+.github/                          CI, the release workflow, Dependabot and the PR template
+README.md, LICENSE                for people using the themes (MIT)
 ```
 
 ## VS Code theme standard
@@ -133,7 +130,7 @@ Pick the colours that say the month most clearly (e.g. September's apple-red sta
 
 **Light and dark:** every month has both, from `modes.light`. The extension's `seasonalThemes.mode` picks between them: `system` (default) follows the OS through VS Code's `window.autoDetectColorScheme` and preferred light/dark themes, `time` switches at `lightFrom` / `darkFrom`, and `light` / `dark` fix it. Light mode usually sets `targets.vscode.accent` to `ui.accent`, a darker shade of the month's accent that reads on light panels.
 
-**Building:** `cd vscode && npx @vscode/vsce package --skip-license` makes `seasonal-themes-<version>.vsix` (ignored by git). CI builds it on every PR and attaches it to the run. Bump `version` in `templates/vscode-package.json` and add a `vscode/CHANGELOG.md` entry for a release. There's no LICENSE yet, hence `--skip-license`.
+**Building:** `cd vscode && npx @vscode/vsce package` makes `seasonal-themes-<version>.vsix` (ignored by git). CI builds it on every PR and attaches it to the run. Bump `version` in `templates/vscode-package.json` and add a `vscode/CHANGELOG.md` entry for a release.
 
 ## Oh My Posh notes
 
@@ -141,12 +138,14 @@ Pick the colours that say the month most clearly (e.g. September's apple-red sta
   - left: shell, root, path, git, execution time
   - right: languages, cloud, os, battery, time
   - a new line with the `⌂──` connector and a status emoji.
-- Unconverted months' hand-written theme files are **JSONC**. Oh My Posh accepts `//` comments; generated files are plain JSON.
+- Oh My Posh accepts JSONC (`//` comments), so strict JSON tools may reject hand-written themes; generated files are plain JSON.
 - In the status segment, use `.Code`/`.Error`. There is no `.Status`, and using it shows "unable to create text based on template".
 - Test what a theme looks like:
   - `oh-my-posh print primary --config <file> --shell pwsh` (and `print right`)
   - `oh-my-posh debug --config <file>` for template errors
-- Install by symlinking the generated file into the Oh My Posh themes folder (`~/.oh-my-posh-themes/` on Linux, `%LOCALAPPDATA%\Programs\oh-my-posh\themes\` on Windows; see `scripts.ipynb`, whose paths are for my other machines).
+- Install by symlinking a generated file into the Oh My Posh themes folder (`~/.oh-my-posh-themes/` on Linux, `%LOCALAPPDATA%\Programs\oh-my-posh\themes\` on Windows):
+  - Linux: `ln -s <repo>/<Month>/davids-<Month>.omp.json ~/.oh-my-posh-themes/`
+  - Windows: `New-Item -ItemType SymbolicLink -Path <themes>\davids-<Month>.omp.json -Target <repo>\<Month>\davids-<Month>.omp.json`
 - Or let the profile pick today's theme, including the variant and light/dark:
   - PowerShell: `oh-my-posh init pwsh --config (& <repo>/Get-SeasonalTheme.ps1) | Invoke-Expression`
   - zsh / bash: `eval "$(oh-my-posh init zsh --config "$(pwsh -NoProfile -File <repo>/Get-SeasonalTheme.ps1)")"`
@@ -165,26 +164,23 @@ Pick the colours that say the month most clearly (e.g. September's apple-red sta
 2. Run `pwsh ./Generate-Themes.ps1 -Month <Month>`, fix any warnings, and review `<Month>/vscode-preview-light.svg` next to the dark one.
 3. Tune by hand. The drafted palette entries are marked "Proposed: light mode".
 
-## Converting a month (one PR each)
+## Importing a hand-written theme
 
-1. **Branch.** From an up-to-date `release-0.0.1`, run `git switch -c updating-<month>`.
-2. **Draft.** Run `pwsh ./tools/Import-OmpTheme.ps1 -Month <Month>`. It lines the old theme up with the template and writes `<Month>/season.jsonc`. It gives each role its most common old value, notes every conflicting value as an `// also:` comment, and lists at the top what it couldn't import (broken emoji, templates that didn't line up, missing segments, unused colours).
-3. **Finish the document.**
-   - Give each palette entry a proper name and key: `c_d35400` becomes `"pumpkin": { "hex": "#D35400", "name": "Pumpkin orange" }`.
-   - Resolve each `// also:` comment and each note, then delete them.
-   - Fill in the identity fields. Take the story and ideas from the old `theme-definition.md` / `*-Theme-Info.md`, and add spare emoji from that month's line in `Icons.md`.
+Every month has been converted to `season.jsonc` (issue #11). To bring in another hand-written Oh My Posh theme the same way:
 
-   The generator refuses the file while any `TODO` is left.
-4. **Generate.** Run `pwsh ./Generate-Themes.ps1 -Month <Month>`. Then delete the files it replaces (e.g. `<Month>-Theme-Info.md`), and delete the old theme file with `git rm` if its name changed (e.g. `davids-november.omp.json`).
-5. **Compare.** Run `pwsh ./tools/Compare-OmpTheme.ps1 -Before release-0.0.1:<Month>/<old file> -After <Month>/davids-<Month>.omp.json`. Expect text-colour changes, plus whatever the old theme was missing or had broken. Anything else that changed was probably mapped wrong.
-6. **Commit** the straight conversion as `<Month>: convert to season.jsonc`. Put any design refinements in a *separate* commit after it.
-7. **PR.** Push, then run `gh pr create --base release-0.0.1`. The PR template asks for the compare report, the decisions made, and the checklist. Add `Part of #11`.
+1. Run `pwsh ./tools/Import-OmpTheme.ps1 -Month <Month> -Theme <file>`. It lines the theme up with the shared template and drafts `season.jsonc`, giving each role its most common value. Conflicting values are noted as `// also:` comments, and anything it couldn't import is listed at the top.
+2. Name each palette entry, resolve the notes, and fill in the identity. The generator refuses the file while any `TODO` is left.
+3. Generate, then compare the result with `pwsh ./tools/Compare-OmpTheme.ps1 -Before <old> -After <Month>/davids-<Month>.omp.json`.
 
 ## Git workflow
 
 Hosted on **GitHub** (`topicomha/SeasonalThemes`). Use `gh` for PRs.
 
-- **Integration branch:** `release-0.0.1`. Every change goes in through a PR, merged with a merge commit (not squash), so each PR's commits survive.
+- **`main`** is the only long-lived branch, and it's protected:
+  - changes go in only through a PR, and the `check` CI job must pass
+  - no force-pushes and no deleting it.
+
+  PRs are merged with a merge commit (squash and rebase merges are turned off), so each PR's commits survive. Merged branches are deleted automatically.
 - **One branch and PR per unit of work:**
   - `updating-<month>` to convert or refine an existing month
   - `adding-<month>` for a new month
@@ -194,18 +190,26 @@ Hosted on **GitHub** (`topicomha/SeasonalThemes`). Use `gh` for PRs.
   - In a month PR, keep the *faithful conversion* commit (no visual change except best-contrast text) separate from any *design refinement* commit, so each can be reviewed on its own.
   - Schema or template changes that affect every month go in their own PR, with all months regenerated in the same commit.
 - **Commit messages:** `<Area>: <imperative summary>`, e.g. `August: convert to season.jsonc`, `Generator: add palette renderer`, `Schema: add ui.link role`.
-- **CI:** `.github/workflows/check-themes.yml` runs `-Check` on every PR.
+- **CI:** `.github/workflows/check-themes.yml` runs `-Check` and builds the `.vsix` on every PR and on every push to `main`. Dependabot keeps the Actions versions current.
 - **PR description:** what changed, and for a month the before/after `oh-my-posh print primary` output plus anything deliberately changed.
-- `vscode-extension-src` folders are local scratch space and must not be committed.
+
+## Releases
+
+Releases are version tags on `main`, published by `.github/workflows/release.yml`:
+
+1. In a PR, bump `version` in `templates/vscode-package.json` and regenerate. Add a `vscode/CHANGELOG.md` entry, then merge.
+2. Tag the merge commit and push the tag: `git tag -a v0.3.0 -m "Seasonal Themes v0.3.0" && git push origin v0.3.0`.
+3. The workflow checks that the tag matches the extension's version, builds `seasonal-themes-<tag>.vsix` and `oh-my-posh-themes-<tag>.zip`, and publishes them as a GitHub Release with generated notes. Edit the notes afterwards to summarise the release.
+
+Versions follow semver: a new month, target or mode is a minor bump, and colour or icon fixes are a patch.
 
 ## Backlog
 
-1. **Convert every month to `season.jsonc`**, tracked in issue #11. Only October is done. Still to do: Jan, Feb, Mar, Apr, May, Aug, Sep, Nov, Dec.
-   - December: make New Year's Eve a variant. That replaces `davids-NewYearTheme.omp.json` with `davids-December-new-years-eve.omp.json`, so update the symlink.
-   - August and September: converting them also fixes the broken `.Status` template and the old v2 layout.
-   - November: converting it fixes the four broken `�` emoji and renames `davids-november` → `davids-November`.
-2. **Create June and July.** `ThemesDocumentation.md` has draft palettes and icons for both.
-3. **Replace `ThemesDocumentation.md`** with a generated index of all months, and fold `Icons.md` into each month's `icons.pool`.
-4. **Refine October's proposed colours.** The terminal red, green, blue and cyan swatches are marked "Proposed" in the palette. `status.error` is currently the same as `brand.secondary`.
-5. **Remove the empty submodule pointers**: `Fall/vscode-extension-src` and `November/vscode-extension-src` (no `.gitmodules`), and widen the `.gitignore` rule to `vscode-extension-src/`.
-6. **VS Code:** pick a licence (the extension currently packages with `--skip-license`), decide whether to publish to the Marketplace, and consider light themes for the pastel months (April, May, June).
+1. **More targets from the same documents:** terminal emulators (Windows Terminal, GNOME Terminal, iTerm2) straight from the `terminal` roles; `bat` / `delta` from `syntax`.
+2. **Shared-layout ideas the conversions surfaced:**
+   - execution-time thresholds (the old August and September themes)
+   - path depth and branch-name length limits (old March)
+   - per-role text colours (old April).
+3. **Publish to the VS Code Marketplace** (needs a `topicomha` publisher account), or keep installing the `.vsix` from releases.
+4. **Archive the old [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme) repo**, now that the extension replaces it.
+5. **Wallpaper sync across OSes** (an idea only).

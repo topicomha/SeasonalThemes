@@ -1,0 +1,102 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "March",
+  "name": "St. Patrick's Day",
+  "tagline": "Shamrocks, gold coins and a pint at the end of the rainbow",
+  "description": [
+    "March is St. Patrick's Day: dark, shamrock and lime greens with a pot of gold.",
+    "Shamrocks, top hats, rainbows and a pint of beer, with the first hint of spring."
+  ],
+  "mood": ["lucky", "festive", "fresh", "cheerful"],
+  "keywords": ["shamrocks", "pot of gold", "rainbow", "top hat", "green hills", "Irish pub", "four-leaf clover"],
+  "holidays": [
+    { "name": "St. Patrick's Day", "date": "03-17" },
+    { "name": "Spring equinox", "date": "03-20", "note": "around the 20th" }
+  ],
+  "links": [
+    { "title": "Emojipedia: St. Patrick's Day", "url": "https://emojipedia.org/st-patricks-day" }
+  ],
+  "ideas": [
+    "The old theme shortened the path to the last 3 folders and cut branch names at 15 characters; the shared layout could offer both to every month",
+    "🪙 gold coins or 🌈 rainbows in more segments"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "dark_green": { "hex": "#006400", "name": "Dark green" },
+    "shamrock":   { "hex": "#009E60", "name": "Shamrock green" },
+    "lime":       { "hex": "#32CD32", "name": "Lime green" },
+    "gold":       { "hex": "#FFD700", "name": "Pot of gold" },
+    "white":      { "hex": "#FFFFFF", "name": "White" },
+    "black":      { "hex": "#000000", "name": "Black" },
+    "orange_red": { "hex": "#FF4500", "name": "Orange red" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "dark_green",
+      "secondary":   "shamrock",
+      "tertiary":    "lime",
+      "accent":      "gold",
+      "accent_alt":  "gold",
+      "highlight":   "dark_green",
+      "deep":        "shamrock",
+      "text_accent": "white",
+      "line":        "lime"
+    },
+    "ui": {
+      "text_light": "white",
+      "text_dark":  "black"
+    },
+    "status": {
+      "success": "white",
+      "error":   "orange_red"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "☘️",
+    "root":       "🎩",
+    "path":       "🍻",
+    "folder":     "🍻",
+    "home":       "🤞",
+    "git":        "☘️",
+    "exec_time":  "⌛",
+    "clock":      "🌈🪙",
+    "battery":    "☘️",
+    "status_ok":  "🍀🍺",
+    "status_err": "😫",
+    "language":   "☘️",
+    "lang": {
+      "yarn":    "🌈",
+      "python":  "🎩",
+      "java":    "🍺",
+      "go":      "🌈",
+      "rust":    "🎩",
+      "dart":    "🍺",
+      "nx":      "🌈",
+      "julia":   "🎩",
+      "ruby":    "🍺",
+      "aws":     "🌈",
+      "kubectl": "🎩"
+    },
+    "os": {
+      "linux":   "☘️",
+      "macos":   "🍏",
+      "windows": "🎩"
+    },
+    "pool": ["🍀", "🌈", "🇮🇪", "🌱", "🤞", "🍺", "💚", "🟢", "🥬", "🍏", "🎩", "🥗", "📗", "🪙"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05 PM"
+    }
+  }
+}

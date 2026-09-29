@@ -4,6 +4,7 @@
   "description": "A colour theme for every month of the year, generated from the same season documents as the matching Oh My Posh prompts.",
   "version": "0.2.0",
   "publisher": "topicomha",
+  "license": "MIT",
   "icon": "icon.png",
   "repository": {
     "type": "git",
@@ -48,7 +49,12 @@
         },
         "seasonalThemes.mode": {
           "type": "string",
-          "enum": ["system", "time", "light", "dark"],
+          "enum": [
+            "system",
+            "time",
+            "light",
+            "dark"
+          ],
           "enumDescriptions": [
             "Follow the operating system's light/dark setting (turns on window.autoDetectColorScheme and sets the preferred light and dark themes to this month's).",
             "Light between seasonalThemes.lightFrom and seasonalThemes.darkFrom, dark the rest of the day.",

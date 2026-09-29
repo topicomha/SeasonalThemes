@@ -1,0 +1,50 @@
+name: Release
+
+# Pushing a version tag (e.g. v0.2.0) publishes a GitHub Release with the VS Code extension and the
+# Oh My Posh themes attached. The tag must match vscode/package.json's version.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generated files are up to date
+        shell: pwsh
+        run: ./Generate-Themes.ps1 -Check
+
+      - name: Tag matches the extension version
+        shell: pwsh
+        run: |
+          $version = (Get-Content -Raw vscode/package.json | ConvertFrom-Json).version
+          if ("v$version" -ne $env:GITHUB_REF_NAME) {
+            throw "Tag $env:GITHUB_REF_NAME doesn't match vscode/package.json version $version. Bump the version in templates/vscode-package.json and regenerate."
+          }
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build the VS Code extension
+        working-directory: vscode
+        run: npx --yes @vscode/vsce package --out "../seasonal-themes-${GITHUB_REF_NAME}.vsix"
+
+      - name: Bundle the Oh My Posh themes
+        # Get-SeasonalTheme.ps1 reads each month's season.jsonc to find today's variant and mode, so they ship too.
+        run: zip -q "oh-my-posh-themes-${GITHUB_REF_NAME}.zip" LICENSE Get-SeasonalTheme.ps1 */davids-*.omp.json */season.jsonc
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "Seasonal Themes $GITHUB_REF_NAME" \
+            --generate-notes \
+            "seasonal-themes-${GITHUB_REF_NAME}.vsix" \
+            "oh-my-posh-themes-${GITHUB_REF_NAME}.zip"

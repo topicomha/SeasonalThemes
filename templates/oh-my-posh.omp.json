@@ -273,7 +273,7 @@
             "discharging_icon": "[[icon.battery]] "
           },
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
-          "foreground": "#262626",
+          "foreground": "[[on.brand.accent]]",
           "powerline_symbol": "",
           "background": "[[color.brand.accent]]",
           "type": "battery",
@@ -282,6 +282,9 @@
             "{{if eq \"Charging\" .State.String}}#b8e994{{end}}",
             "{{if eq \"Discharging\" .State.String}}#fff34e{{end}}",
             "{{if eq \"Full\" .State.String}}#33DD2D{{end}}"
+          ],
+          "foreground_templates": [
+            "{{if or (eq \"Charging\" .State.String) (eq \"Discharging\" .State.String) (eq \"Full\" .State.String)}}#262626{{end}}"
           ],
           "invert_powerline": true
         },

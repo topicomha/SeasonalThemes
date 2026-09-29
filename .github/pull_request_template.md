@@ -5,7 +5,7 @@
 ## Before / after
 
 <!-- For a month, paste the output of:
-     pwsh ./tools/Compare-OmpTheme.ps1 -Before release-0.0.1:<Month>/<old theme file> -After <Month>/davids-<Month>.omp.json
+     pwsh ./tools/Compare-OmpTheme.ps1 -Before origin/main:<Month>/<old theme file> -After <Month>/davids-<Month>.omp.json
      Then list the changes that were deliberate (best-contrast text, bug fixes, new icons...). -->
 
 ## Decisions to review

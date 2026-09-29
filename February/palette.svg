@@ -1,40 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="148" viewBox="0 0 1080 148" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
-  <rect width="1080" height="148" rx="12" fill="#FF1493"/>
-  <text x="16" y="38" font-size="18" font-weight="600" fill="#FFFFFF">February · Valentine&apos;s Day</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="316" viewBox="0 0 1080 316" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="316" rx="12" fill="#240A14"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#F7E1E8">February · Valentine&apos;s Day</text>
   <g transform="translate(16 56)">
-    <rect width="168" height="76" rx="8" fill="#800020" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#800020" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Burgundy</text>
     <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">burgundy</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#800020</text>
   </g>
   <g transform="translate(192 56)">
-    <rect width="168" height="76" rx="8" fill="#FF007F" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#FF007F" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Rose</text>
     <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">rose</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF007F</text>
   </g>
   <g transform="translate(368 56)">
-    <rect width="168" height="76" rx="8" fill="#FF1493" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#FF1493" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Deep pink</text>
     <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">deep_pink</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF1493</text>
   </g>
   <g transform="translate(544 56)">
-    <rect width="168" height="76" rx="8" fill="#FF69B4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#FF69B4" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Hot pink</text>
     <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">hot_pink</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF69B4</text>
   </g>
   <g transform="translate(720 56)">
-    <rect width="168" height="76" rx="8" fill="#FFB6C1" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#FFB6C1" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Blush</text>
     <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">blush</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFB6C1</text>
   </g>
   <g transform="translate(896 56)">
-    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#B58A97" stroke-opacity="0.4"/>
     <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Valentine card white</text>
     <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">card</text>
     <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#240A14" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Red wine</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">wine</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#240A14</text>
+  </g>
+  <g transform="translate(192 140)">
+    <rect width="168" height="76" rx="8" fill="#3A1422" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Velvet</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">velvet</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#3A1422</text>
+  </g>
+  <g transform="translate(368 140)">
+    <rect width="168" height="76" rx="8" fill="#F7E1E8" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Rose petal</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">petal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F7E1E8</text>
+  </g>
+  <g transform="translate(544 140)">
+    <rect width="168" height="76" rx="8" fill="#B58A97" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Dusty mauve</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">mauve</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#B58A97</text>
+  </g>
+  <g transform="translate(720 140)">
+    <rect width="168" height="76" rx="8" fill="#E05A6D" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Cherry</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">cherry</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E05A6D</text>
+  </g>
+  <g transform="translate(896 140)">
+    <rect width="168" height="76" rx="8" fill="#7FC98B" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Mint leaf</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">mint</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FC98B</text>
+  </g>
+  <g transform="translate(16 224)">
+    <rect width="168" height="76" rx="8" fill="#F2C66D" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Honey gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">honey</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F2C66D</text>
+  </g>
+  <g transform="translate(192 224)">
+    <rect width="168" height="76" rx="8" fill="#7FA7E8" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Cupid blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">cupid</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FA7E8</text>
+  </g>
+  <g transform="translate(368 224)">
+    <rect width="168" height="76" rx="8" fill="#C990E8" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Lilac</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">lilac</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#C990E8</text>
+  </g>
+  <g transform="translate(544 224)">
+    <rect width="168" height="76" rx="8" fill="#6FD1C9" stroke="#B58A97" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sea glass</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">aqua</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#6FD1C9</text>
   </g>
 </svg>

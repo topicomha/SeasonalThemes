@@ -32,7 +32,17 @@
     "deep_pink": { "hex": "#FF1493", "name": "Deep pink" },
     "hot_pink":  { "hex": "#FF69B4", "name": "Hot pink" },
     "blush":     { "hex": "#FFB6C1", "name": "Blush" },
-    "card":      { "hex": "#FFFFFF", "name": "Valentine card white" }
+    "card":      { "hex": "#FFFFFF", "name": "Valentine card white" },
+    "wine":      { "hex": "#240A14", "name": "Red wine", "note": "Proposed: editor and terminal background" },
+    "velvet":    { "hex": "#3A1422", "name": "Velvet", "note": "Proposed: panels, borders, current line" },
+    "petal":     { "hex": "#F7E1E8", "name": "Rose petal", "note": "Proposed: editor text" },
+    "mauve":     { "hex": "#B58A97", "name": "Dusty mauve", "note": "Proposed: comments, muted text" },
+    "cherry":    { "hex": "#E05A6D", "name": "Cherry", "note": "Proposed: terminal red, invalid code" },
+    "mint":      { "hex": "#7FC98B", "name": "Mint leaf", "note": "Proposed: terminal green" },
+    "honey":     { "hex": "#F2C66D", "name": "Honey gold", "note": "Proposed: terminal yellow, numbers" },
+    "cupid":     { "hex": "#7FA7E8", "name": "Cupid blue", "note": "Proposed: terminal blue, info" },
+    "lilac":     { "hex": "#C990E8", "name": "Lilac", "note": "Proposed: terminal magenta, types" },
+    "aqua":      { "hex": "#6FD1C9", "name": "Sea glass", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -49,12 +59,47 @@
       "line":        "hot_pink"
     },
     "ui": {
-      "text_light": "card",
-      "text_dark":  "burgundy"
+      "text_light":     "card",
+      "text_dark":      "burgundy",
+      "background":     "wine",
+      "foreground":     "petal",
+      "surface":        "velvet",
+      "line_highlight": "velvet",
+      "border":         "velvet",
+      "muted":          "mauve",
+      "selection":      "burgundy",
+      "cursor":         "rose"
     },
     "status": {
       "success": "card",
-      "error":   "deep_pink"
+      "warning": "honey",
+      "error":   "deep_pink",
+      "info":    "cupid"
+    },
+    "syntax": {
+      "comment":  { "color": "mauve", "style": "italic" },
+      "keyword":  "rose",
+      "string":   "blush",
+      "number":   "honey",
+      "constant": "honey",
+      "function": "hot_pink",
+      "type":     "lilac",
+      "variable": "petal",
+      "invalid":  "cherry"
+    },
+    "terminal": {
+      "black":         "velvet",
+      "red":           "cherry",
+      "green":         "mint",
+      "yellow":        "honey",
+      "blue":          "cupid",
+      "magenta":       "lilac",
+      "cyan":          "aqua",
+      "white":         "petal",
+      "bright_black":  "mauve",
+      "bright_red":    "deep_pink",
+      "bright_magenta": "hot_pink",
+      "bright_white":  "card"
     }
   },
 

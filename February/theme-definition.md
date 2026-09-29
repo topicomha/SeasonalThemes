@@ -27,6 +27,16 @@ Rose-pink text on white 'Valentine card' segments sits next to deep burgundy one
 | `hot_pink` | Hot pink | `#FF69B4` |  |
 | `blush` | Blush | `#FFB6C1` |  |
 | `card` | Valentine card white | `#FFFFFF` |  |
+| `wine` | Red wine | `#240A14` | Proposed: editor and terminal background |
+| `velvet` | Velvet | `#3A1422` | Proposed: panels, borders, current line |
+| `petal` | Rose petal | `#F7E1E8` | Proposed: editor text |
+| `mauve` | Dusty mauve | `#B58A97` | Proposed: comments, muted text |
+| `cherry` | Cherry | `#E05A6D` | Proposed: terminal red, invalid code |
+| `mint` | Mint leaf | `#7FC98B` | Proposed: terminal green |
+| `honey` | Honey gold | `#F2C66D` | Proposed: terminal yellow, numbers |
+| `cupid` | Cupid blue | `#7FA7E8` | Proposed: terminal blue, info |
+| `lilac` | Lilac | `#C990E8` | Proposed: terminal magenta, types |
+| `aqua` | Sea glass | `#6FD1C9` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -56,14 +66,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | card | `#FFFFFF` |  |
 | `text_dark` | burgundy | `#800020` |  |
-| `background` | deep_pink | `#FF1493` | *inherits* `brand.deep` |
-| `foreground` | card | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | deep_pink | `#FF1493` | *inherits* `ui.background` |
-| `line_highlight` | deep_pink | `#FF1493` | *inherits* `ui.surface` |
-| `border` | deep_pink | `#FF1493` | *inherits* `ui.surface` |
-| `muted` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | rose | `#FF007F` | *inherits* `brand.secondary` |
-| `cursor` | burgundy | `#800020` | *inherits* `brand.primary` |
+| `background` | wine | `#240A14` |  |
+| `foreground` | petal | `#F7E1E8` |  |
+| `surface` | velvet | `#3A1422` |  |
+| `line_highlight` | velvet | `#3A1422` |  |
+| `border` | velvet | `#3A1422` |  |
+| `muted` | mauve | `#B58A97` |  |
+| `selection` | burgundy | `#800020` |  |
+| `cursor` | rose | `#FF007F` |  |
 
 ### Status
 
@@ -73,8 +83,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | deep_pink | `#FF1493` |  |
 | `success` | card | `#FFFFFF` |  |
-| `warning` | rose | `#FF007F` | *inherits* `brand.accent` |
-| `info` | burgundy | `#800020` | *inherits* `brand.highlight` |
+| `warning` | honey | `#F2C66D` |  |
+| `info` | cupid | `#7FA7E8` |  |
 
 ### Syntax
 
@@ -82,22 +92,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | card | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | burgundy | `#800020` | *inherits* `brand.primary` |
-| `string` | rose | `#FF007F` | *inherits* `brand.accent` |
-| `number` | burgundy | `#800020` | *inherits* `brand.tertiary` |
-| `constant` | burgundy | `#800020` | *inherits* `syntax.number` |
-| `function` | card | `#FFFFFF` | *inherits* `brand.accent_alt` |
-| `type` | burgundy | `#800020` | *inherits* `brand.highlight` |
-| `variable` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | card | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | card | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | burgundy | `#800020` | *inherits* `syntax.keyword` |
-| `attribute` | card | `#FFFFFF` | *inherits* `syntax.function` |
-| `regex` | rose | `#FF007F` | *inherits* `syntax.string` |
-| `invalid` | deep_pink | `#FF1493` | *inherits* `status.error` |
+| `comment` | mauve | `#B58A97` | italic |
+| `keyword` | rose | `#FF007F` |  |
+| `string` | blush | `#FFB6C1` |  |
+| `number` | honey | `#F2C66D` |  |
+| `constant` | honey | `#F2C66D` |  |
+| `function` | hot_pink | `#FF69B4` |  |
+| `type` | lilac | `#C990E8` |  |
+| `variable` | petal | `#F7E1E8` |  |
+| `parameter` | petal | `#F7E1E8` | *inherits* `syntax.variable` |
+| `property` | petal | `#F7E1E8` | *inherits* `syntax.variable` |
+| `operator` | petal | `#F7E1E8` | *inherits* `ui.foreground` |
+| `punctuation` | petal | `#F7E1E8` | *inherits* `ui.foreground` |
+| `tag` | rose | `#FF007F` | *inherits* `syntax.keyword` |
+| `attribute` | hot_pink | `#FF69B4` | *inherits* `syntax.function` |
+| `regex` | blush | `#FFB6C1` | *inherits* `syntax.string` |
+| `invalid` | cherry | `#E05A6D` |  |
 
 ### Terminal
 
@@ -105,26 +115,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | deep_pink | `#FF1493` | *inherits* `ui.background` |
-| `foreground` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | burgundy | `#800020` | *inherits* `ui.cursor` |
-| `selection` | rose | `#FF007F` | *inherits* `ui.selection` |
-| `black` | deep_pink | `#FF1493` | *inherits* `ui.background` |
-| `red` | deep_pink | `#FF1493` | *inherits* `status.error` |
-| `green` | card | `#FFFFFF` | *inherits* `status.success` |
-| `yellow` | rose | `#FF007F` | *inherits* `status.warning` |
-| `blue` | burgundy | `#800020` | *inherits* `status.info` |
-| `magenta` | burgundy | `#800020` | *inherits* `brand.highlight` |
-| `cyan` | burgundy | `#800020` | *inherits* `status.info` |
-| `white` | card | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | card | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | deep_pink | `#FF1493` | *inherits* `terminal.red` |
-| `bright_green` | card | `#FFFFFF` | *inherits* `terminal.green` |
-| `bright_yellow` | rose | `#FF007F` | *inherits* `terminal.yellow` |
-| `bright_blue` | burgundy | `#800020` | *inherits* `terminal.blue` |
-| `bright_magenta` | burgundy | `#800020` | *inherits* `terminal.magenta` |
-| `bright_cyan` | burgundy | `#800020` | *inherits* `terminal.cyan` |
-| `bright_white` | card | `#FFFFFF` | *inherits* `terminal.white` |
+| `background` | wine | `#240A14` | *inherits* `ui.background` |
+| `foreground` | petal | `#F7E1E8` | *inherits* `ui.foreground` |
+| `cursor` | rose | `#FF007F` | *inherits* `ui.cursor` |
+| `selection` | burgundy | `#800020` | *inherits* `ui.selection` |
+| `black` | velvet | `#3A1422` |  |
+| `red` | cherry | `#E05A6D` |  |
+| `green` | mint | `#7FC98B` |  |
+| `yellow` | honey | `#F2C66D` |  |
+| `blue` | cupid | `#7FA7E8` |  |
+| `magenta` | lilac | `#C990E8` |  |
+| `cyan` | aqua | `#6FD1C9` |  |
+| `white` | petal | `#F7E1E8` |  |
+| `bright_black` | mauve | `#B58A97` |  |
+| `bright_red` | deep_pink | `#FF1493` |  |
+| `bright_green` | mint | `#7FC98B` | *inherits* `terminal.green` |
+| `bright_yellow` | honey | `#F2C66D` | *inherits* `terminal.yellow` |
+| `bright_blue` | cupid | `#7FA7E8` | *inherits* `terminal.blue` |
+| `bright_magenta` | hot_pink | `#FF69B4` |  |
+| `bright_cyan` | aqua | `#6FD1C9` | *inherits* `terminal.cyan` |
+| `bright_white` | card | `#FFFFFF` |  |
 
 ## Icons
 

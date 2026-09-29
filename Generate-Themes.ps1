@@ -26,6 +26,7 @@
     ./Generate-Themes.ps1                  # every month that has a season.jsonc
     ./Generate-Themes.ps1 -Month October
     ./Generate-Themes.ps1 -Check           # exit 1 if any generated file is out of date
+    ./Generate-Themes.ps1 -Month May -Export   # resolved colours as JSON (used by tools/New-LightMode.ps1)
 #>
 #Requires -Version 7.4
 [CmdletBinding()]
@@ -34,7 +35,10 @@ param(
                  'July', 'August', 'September', 'October', 'November', 'December')]
     [string[]]$Month,
 
-    [switch]$Check
+    [switch]$Check,
+
+    # Print every selected month's resolved colours (per variant and mode) as JSON instead of generating.
+    [switch]$Export
 )
 
 $ErrorActionPreference = 'Stop'
@@ -591,6 +595,29 @@ try {
     $utf8 = [Text.UTF8Encoding]::new($false)
     $stale = @()
     $produced = [System.Collections.Generic.HashSet[string]]::new()
+    if ($Export) {
+        $exported = [ordered]@{}
+        foreach ($monthName in $selected) {
+            $exported[$monthName] = @(foreach ($entry in Get-MonthSeasons $monthName) {
+                $season = $entry.Season
+                [ordered]@{
+                    variant    = $entry.Variant ? $entry.Variant.id : $null
+                    mode       = $entry.Mode
+                    isBaseMode = $entry.IsBase
+                    palette    = $season.Palette
+                    colors     = & {
+                        $map = [ordered]@{}
+                        foreach ($role in $season.Colors.GetEnumerator()) { $map[$role.Key] = [ordered]@{ hex = $role.Value.Hex; ref = $role.Value.Ref; style = $role.Value.Style } }
+                        $map
+                    }
+                    targets    = $season.Data['targets'] ?? @{}
+                }
+            })
+        }
+        $exported | ConvertTo-Json -Depth 8 -EscapeHandling Default
+        exit 0
+    }
+
     $monthTargets = @($Targets | Where-Object { $_['Scope'] -ne 'all' })
     $allTargets = @($Targets | Where-Object { $_['Scope'] -eq 'all' })
 

@@ -83,14 +83,24 @@
         "path": "./themes/may-light.json"
       },
       {
-        "label": "Seasonal 06 · June — Summer Vacation 😎",
+        "label": "Seasonal 06 · June — Summer Vacation · Dark 😎",
         "uiTheme": "vs-dark",
         "path": "./themes/june-dark.json"
       },
       {
-        "label": "Seasonal 07 · July — Independence Day 🎆",
+        "label": "Seasonal 06 · June — Summer Vacation · Light 😎",
+        "uiTheme": "vs",
+        "path": "./themes/june-light.json"
+      },
+      {
+        "label": "Seasonal 07 · July — Independence Day · Dark 🎆",
         "uiTheme": "vs-dark",
         "path": "./themes/july-dark.json"
+      },
+      {
+        "label": "Seasonal 07 · July — Independence Day · Light 🎆",
+        "uiTheme": "vs",
+        "path": "./themes/july-light.json"
       },
       {
         "label": "Seasonal 08 · August — Late Summer · Dark ☀️",
@@ -253,12 +263,22 @@
     {
       "month": 6,
       "mode": "dark",
-      "label": "Seasonal 06 · June — Summer Vacation 😎"
+      "label": "Seasonal 06 · June — Summer Vacation · Dark 😎"
+    },
+    {
+      "month": 6,
+      "mode": "light",
+      "label": "Seasonal 06 · June — Summer Vacation · Light 😎"
     },
     {
       "month": 7,
       "mode": "dark",
-      "label": "Seasonal 07 · July — Independence Day 🎆"
+      "label": "Seasonal 07 · July — Independence Day · Dark 🎆"
+    },
+    {
+      "month": 7,
+      "mode": "light",
+      "label": "Seasonal 07 · July — Independence Day · Light 🎆"
     },
     {
       "month": 8,

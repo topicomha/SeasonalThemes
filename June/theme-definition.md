@@ -180,13 +180,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🏊 ⛵ 🏐 🍦 🍹 👙 🩴 🎓 📜 🐬 🥥 🌺 🏖️ 🌊
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `ui.background` | `#0D1B2A` | `#F7FCFE` light_page |
+| `ui.foreground` | `#F1F5F9` | `#141F23` light_ink |
+| `ui.surface` | `#1B2E42` | `#EFF9FC` light_panel |
+| `ui.line_highlight` | `#1B2E42` | `#F2FAFD` light_current_line |
+| `ui.border` | `#1B2E42` | `#DDF1F9` light_border |
+| `ui.muted` | `#93A8BD` | `#6C7375` light_muted_text |
+| `ui.selection` | `#2A6F97` | `#9FBED0` light_selection |
+| `ui.cursor` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `ui.accent` | `#FFFFE0` | `#757500` lemonade_ink |
+| `status.error` | `#FF6F61` | `#E21400` coral_ink |
+| `status.success` | `#98FB98` | `#058405` mint_ink |
+| `status.warning` | `#FFE08A` | `#926B00` sand_ink |
+| `status.info` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `syntax.comment` | `#93A8BD` | `#6C7375` light_muted_text |
+| `syntax.keyword` | `#FFBCD9` | `#E00061` flamingo_ink |
+| `syntax.string` | `#98FB98` | `#058405` mint_ink |
+| `syntax.number` | `#FFE08A` | `#926B00` sand_ink |
+| `syntax.constant` | `#FFE08A` | `#926B00` sand_ink |
+| `syntax.function` | `#40E0D0` | `#157F75` turquoise_ink |
+| `syntax.type` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `syntax.variable` | `#F1F5F9` | `#141F23` light_ink |
+| `syntax.parameter` | `#F1F5F9` | `#141F23` light_ink |
+| `syntax.property` | `#F1F5F9` | `#141F23` light_ink |
+| `syntax.operator` | `#F1F5F9` | `#141F23` light_ink |
+| `syntax.punctuation` | `#F1F5F9` | `#141F23` light_ink |
+| `syntax.tag` | `#FFBCD9` | `#E00061` flamingo_ink |
+| `syntax.attribute` | `#40E0D0` | `#157F75` turquoise_ink |
+| `syntax.regex` | `#98FB98` | `#058405` mint_ink |
+| `syntax.invalid` | `#FF6F61` | `#E21400` coral_ink |
+| `terminal.background` | `#0D1B2A` | `#F7FCFE` light_page |
+| `terminal.foreground` | `#F1F5F9` | `#141F23` light_ink |
+| `terminal.cursor` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `terminal.selection` | `#2A6F97` | `#9FBED0` light_selection |
+| `terminal.black` | `#1B2E42` | `#141F23` light_ink |
+| `terminal.red` | `#FF6F61` | `#E21400` coral_ink |
+| `terminal.green` | `#98FB98` | `#058405` mint_ink |
+| `terminal.yellow` | `#FFE08A` | `#926B00` sand_ink |
+| `terminal.blue` | `#87CEEB` | `#1B7AA2` sky_ink |
+| `terminal.magenta` | `#C9A0DC` | `#9C51BF` orchid_ink |
+| `terminal.cyan` | `#40E0D0` | `#157F75` turquoise_ink |
+| `terminal.white` | `#F1F5F9` | `#81878A` light_terminal_white |
+| `terminal.bright_black` | `#93A8BD` | `#6C7375` light_muted_text |
+| `terminal.bright_red` | `#FFB6C1` | `#E50023` towel_ink |
+| `terminal.bright_green` | `#98FB98` | `#058405` mint_ink |
+| `terminal.bright_yellow` | `#FFFFE0` | `#757500` lemonade_ink |
+| `terminal.bright_blue` | `#87CEFA` | `#0876BB` shallows_ink |
+| `terminal.bright_magenta` | `#FFBCD9` | `#E00061` flamingo_ink |
+| `terminal.bright_cyan` | `#40E0D0` | `#157F75` turquoise_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#8C9396` light_terminal_bright_white |
+
+![June light palette](palette-light.svg)
+
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 06 · June — Summer Vacation](../vscode/themes/june-dark.json)
+- [Seasonal 06 · June — Summer Vacation · Dark](../vscode/themes/june-dark.json)
+- [Seasonal 06 · June — Summer Vacation · Light](../vscode/themes/june-light.json)
 
 ![June in VS Code, dark](vscode-preview-dark.svg)
+
+![June in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -206,5 +268,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-June.omp.json](davids-June.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/June/davids-June.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-June-light.omp.json](davids-June-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/june-light.json](../vscode/themes/june-light.json): vscode-theme, light mode.
 - [../vscode/themes/june-dark.json](../vscode/themes/june-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

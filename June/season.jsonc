@@ -140,5 +140,98 @@
       "windows": "🏄"
     },
     "pool": ["🏊", "⛵", "🏐", "🍦", "🍹", "👙", "🩴", "🎓", "📜", "🐬", "🥥", "🌺", "🏖️", "🌊"]
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "sky_ink": { "hex": "#1B7AA2", "name": "Sky blue (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#F7FCFE", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#141F23", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#EFF9FC", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#F2FAFD", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#DDF1F9", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#6C7375", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#9FBED0", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "lemonade_ink": { "hex": "#757500", "name": "Lemonade yellow (light-mode ink)", "note": "Proposed: light mode" },
+        "mint_ink": { "hex": "#058405", "name": "Mint green (light-mode ink)", "note": "Proposed: light mode" },
+        "sand_ink": { "hex": "#926B00", "name": "Warm sand (light-mode ink)", "note": "Proposed: light mode" },
+        "coral_ink": { "hex": "#E21400", "name": "Coral (light-mode ink)", "note": "Proposed: light mode" },
+        "flamingo_ink": { "hex": "#E00061", "name": "Flamingo pink (light-mode ink)", "note": "Proposed: light mode" },
+        "turquoise_ink": { "hex": "#157F75", "name": "Turquoise (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#81878A", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#8C9396", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "towel_ink": { "hex": "#E50023", "name": "Beach-towel pink (light-mode ink)", "note": "Proposed: light mode" },
+        "shallows_ink": { "hex": "#0876BB", "name": "Light blue shallows (light-mode ink)", "note": "Proposed: light mode" },
+        "orchid_ink": { "hex": "#9C51BF", "name": "Orchid (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "sky_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "sky_ink",
+          "accent": "lemonade_ink"
+        },
+        "status": {
+          "success": "mint_ink",
+          "warning": "sand_ink",
+          "error": "coral_ink",
+          "info": "sky_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "flamingo_ink",
+          "string": "mint_ink",
+          "number": "sand_ink",
+          "constant": "sand_ink",
+          "function": "turquoise_ink",
+          "type": "sky_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "flamingo_ink",
+          "attribute": "turquoise_ink",
+          "regex": "mint_ink",
+          "invalid": "coral_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "sky_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "coral_ink",
+          "bright_red": "towel_ink",
+          "green": "mint_ink",
+          "bright_green": "mint_ink",
+          "yellow": "sand_ink",
+          "bright_yellow": "lemonade_ink",
+          "blue": "sky_ink",
+          "bright_blue": "shallows_ink",
+          "magenta": "orchid_ink",
+          "bright_magenta": "flamingo_ink",
+          "cyan": "turquoise_ink",
+          "bright_cyan": "turquoise_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

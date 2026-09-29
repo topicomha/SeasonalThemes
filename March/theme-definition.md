@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | sage | `#8FAF98` |  |
 | `selection` | dark_green | `#006400` |  |
 | `cursor` | gold | `#FFD700` |  |
+| `accent` | gold | `#FFD700` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -182,9 +183,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![March in VS Code](vscode-preview.svg)
+- [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march-dark.json)
+
+![March in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -200,5 +203,5 @@ Theme: [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march.json)
 - [davids-March.omp.json](davids-March.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/March/davids-March.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/march.json](../vscode/themes/march.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/march-dark.json](../vscode/themes/march-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

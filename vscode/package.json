@@ -35,67 +35,67 @@
       {
         "label": "Seasonal 01 · January — Winter Wonderland ❄️",
         "uiTheme": "vs-dark",
-        "path": "./themes/january.json"
+        "path": "./themes/january-dark.json"
       },
       {
         "label": "Seasonal 02 · February — Valentine's Day 🌹",
         "uiTheme": "vs-dark",
-        "path": "./themes/february.json"
+        "path": "./themes/february-dark.json"
       },
       {
         "label": "Seasonal 03 · March — St. Patrick's Day ☘️",
         "uiTheme": "vs-dark",
-        "path": "./themes/march.json"
+        "path": "./themes/march-dark.json"
       },
       {
         "label": "Seasonal 04 · April — Spring Showers 🐰",
         "uiTheme": "vs-dark",
-        "path": "./themes/april.json"
+        "path": "./themes/april-dark.json"
       },
       {
         "label": "Seasonal 05 · May — May Flowers 🕊️",
         "uiTheme": "vs-dark",
-        "path": "./themes/may.json"
+        "path": "./themes/may-dark.json"
       },
       {
         "label": "Seasonal 06 · June — Summer Vacation 😎",
         "uiTheme": "vs-dark",
-        "path": "./themes/june.json"
+        "path": "./themes/june-dark.json"
       },
       {
         "label": "Seasonal 07 · July — Independence Day 🎆",
         "uiTheme": "vs-dark",
-        "path": "./themes/july.json"
+        "path": "./themes/july-dark.json"
       },
       {
         "label": "Seasonal 08 · August — Late Summer ☀️",
         "uiTheme": "vs-dark",
-        "path": "./themes/august.json"
+        "path": "./themes/august-dark.json"
       },
       {
         "label": "Seasonal 09 · September — Back to School 🍎",
         "uiTheme": "vs-dark",
-        "path": "./themes/september.json"
+        "path": "./themes/september-dark.json"
       },
       {
         "label": "Seasonal 10 · October — Halloween 🍂",
         "uiTheme": "vs-dark",
-        "path": "./themes/october.json"
+        "path": "./themes/october-dark.json"
       },
       {
         "label": "Seasonal 11 · November — Thanksgiving 🍂",
         "uiTheme": "vs-dark",
-        "path": "./themes/november.json"
+        "path": "./themes/november-dark.json"
       },
       {
         "label": "Seasonal 12 · December — Holiday Season 🎄",
         "uiTheme": "vs-dark",
-        "path": "./themes/december.json"
+        "path": "./themes/december-dark.json"
       },
       {
         "label": "Seasonal 12 · December — New Year's Eve 🥳",
         "uiTheme": "vs-dark",
-        "path": "./themes/december-new-years-eve.json"
+        "path": "./themes/december-new-years-eve-dark.json"
       }
     ],
     "commands": [
@@ -118,54 +118,67 @@
   "seasonalSchedule": [
     {
       "month": 1,
+      "mode": "dark",
       "label": "Seasonal 01 · January — Winter Wonderland ❄️"
     },
     {
       "month": 2,
+      "mode": "dark",
       "label": "Seasonal 02 · February — Valentine's Day 🌹"
     },
     {
       "month": 3,
+      "mode": "dark",
       "label": "Seasonal 03 · March — St. Patrick's Day ☘️"
     },
     {
       "month": 4,
+      "mode": "dark",
       "label": "Seasonal 04 · April — Spring Showers 🐰"
     },
     {
       "month": 5,
+      "mode": "dark",
       "label": "Seasonal 05 · May — May Flowers 🕊️"
     },
     {
       "month": 6,
+      "mode": "dark",
       "label": "Seasonal 06 · June — Summer Vacation 😎"
     },
     {
       "month": 7,
+      "mode": "dark",
       "label": "Seasonal 07 · July — Independence Day 🎆"
     },
     {
       "month": 8,
+      "mode": "dark",
       "label": "Seasonal 08 · August — Late Summer ☀️"
     },
     {
       "month": 9,
+      "mode": "dark",
       "label": "Seasonal 09 · September — Back to School 🍎"
     },
     {
       "month": 10,
+      "mode": "dark",
       "label": "Seasonal 10 · October — Halloween 🍂"
     },
     {
       "month": 11,
+      "mode": "dark",
       "label": "Seasonal 11 · November — Thanksgiving 🍂"
     },
     {
       "month": 12,
+      "mode": "dark",
       "label": "Seasonal 12 · December — Holiday Season 🎄"
     },
     {
       "month": 12,
+      "mode": "dark",
       "label": "Seasonal 12 · December — New Year's Eve 🥳",
       "from": "12-26",
       "to": "12-31"

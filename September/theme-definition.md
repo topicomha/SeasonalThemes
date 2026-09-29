@@ -76,6 +76,7 @@ Surfaces and text of an application window.
 | `muted` | chalk_dust | `#9AA89F` |  |
 | `selection` | sienna | `#A0522D` |  |
 | `cursor` | goldenrod | `#DAA520` |  |
+| `accent` | peru | `#CD853F` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -182,9 +183,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 09 · September — Back to School](../vscode/themes/september.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![September in VS Code](vscode-preview.svg)
+- [Seasonal 09 · September — Back to School](../vscode/themes/september-dark.json)
+
+![September in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -203,5 +206,5 @@ Theme: [Seasonal 09 · September — Back to School](../vscode/themes/september.
 - [davids-September.omp.json](davids-September.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/September/davids-September.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/september.json](../vscode/themes/september.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/september-dark.json](../vscode/themes/september-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

@@ -45,9 +45,10 @@
     "ideas": { "description": "Things to try next for this month.", "type": "array", "items": { "type": "string" } },
 
     "appearance": {
-      "description": "Whether the base look is dark or light. Programs that have a single dark/light switch (VS Code, terminals) use this.",
+      "description": "Whether the month's base look is dark or light. The other mode, if any, is defined under 'modes'.",
       "enum": ["dark", "light"]
     },
+    "modes": { "$ref": "#/definitions/modes" },
 
     "palette": { "$ref": "#/definitions/palette" },
     "colors": { "$ref": "#/definitions/colors" },
@@ -71,13 +72,33 @@
           "palette": { "$ref": "#/definitions/palette" },
           "colors": { "$ref": "#/definitions/colors" },
           "icons": { "$ref": "#/definitions/icons" },
-          "targets": { "$ref": "#/definitions/targets" }
+          "targets": { "$ref": "#/definitions/targets" },
+          "modes": { "$ref": "#/definitions/modes" }
         }
       }
     }
   },
 
   "definitions": {
+    "modes": {
+      "description": "The month in the other appearance (usually 'light', since months are dark by default). Anything set here is laid over the month (and its variant) for that mode only; everything else is inherited. Programs that follow the system's light/dark setting (VS Code, the Oh My Posh helper) switch between the two.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "light": { "$ref": "#/definitions/mode" },
+        "dark": { "$ref": "#/definitions/mode" }
+      }
+    },
+    "mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "palette": { "$ref": "#/definitions/palette" },
+        "colors": { "$ref": "#/definitions/colors" },
+        "icons": { "$ref": "#/definitions/icons" },
+        "targets": { "$ref": "#/definitions/targets" }
+      }
+    },
     "prose": {
       "oneOf": [
         { "type": "string" },
@@ -163,7 +184,8 @@
             "border":         { "$ref": "#/definitions/color", "x-fallback": "ui.surface", "description": "Dividers and outlines." },
             "muted":          { "$ref": "#/definitions/color", "x-fallback": "ui.foreground", "description": "Secondary text: line numbers, hints, placeholders." },
             "selection":      { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "Selected text background." },
-            "cursor":         { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "Text cursor." }
+            "cursor":         { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "Text cursor." },
+            "accent":         { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Accent drawn on the window background (active line number, list highlights, find matches). Set it in light mode when the brand accent is too pale to read there." }
           }
         },
         "status": {

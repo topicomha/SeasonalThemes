@@ -75,6 +75,7 @@ Surfaces and text of an application window.
 | `muted` | driftwood | `#93A8BD` |  |
 | `selection` | lagoon | `#2A6F97` |  |
 | `cursor` | sky | `#87CEEB` |  |
+| `accent` | lemonade | `#FFFFE0` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -181,9 +182,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 06 · June — Summer Vacation](../vscode/themes/june.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![June in VS Code](vscode-preview.svg)
+- [Seasonal 06 · June — Summer Vacation](../vscode/themes/june-dark.json)
+
+![June in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -203,5 +206,5 @@ Theme: [Seasonal 06 · June — Summer Vacation](../vscode/themes/june.json), pa
 - [davids-June.omp.json](davids-June.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/June/davids-June.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/june.json](../vscode/themes/june.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/june-dark.json](../vscode/themes/june-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

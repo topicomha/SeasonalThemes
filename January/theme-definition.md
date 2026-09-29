@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | frost | `#8FA9C2` |  |
 | `selection` | steel | `#4682B4` |  |
 | `cursor` | sky | `#87CEEB` |  |
+| `accent` | sky | `#87CEEB` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -182,9 +183,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 01 · January — Winter Wonderland](../vscode/themes/january.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![January in VS Code](vscode-preview.svg)
+- [Seasonal 01 · January — Winter Wonderland](../vscode/themes/january-dark.json)
+
+![January in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -201,5 +204,5 @@ Theme: [Seasonal 01 · January — Winter Wonderland](../vscode/themes/january.j
 - [davids-January.omp.json](davids-January.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/January/davids-January.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/january.json](../vscode/themes/january.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/january-dark.json](../vscode/themes/january-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

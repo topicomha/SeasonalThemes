@@ -75,6 +75,7 @@ Surfaces and text of an application window.
 | `muted` | driftwood | `#8FA8A0` |  |
 | `selection` | sea_green | `#2E8B57` |  |
 | `cursor` | golden | `#FFD700` |  |
+| `accent` | sea_green | `#2E8B57` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -181,9 +182,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 08 · August — Late Summer](../vscode/themes/august.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![August in VS Code](vscode-preview.svg)
+- [Seasonal 08 · August — Late Summer](../vscode/themes/august-dark.json)
+
+![August in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -201,5 +204,5 @@ Theme: [Seasonal 08 · August — Late Summer](../vscode/themes/august.json), pa
 - [davids-August.omp.json](davids-August.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/August/davids-August.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/august.json](../vscode/themes/august.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/august-dark.json](../vscode/themes/august-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

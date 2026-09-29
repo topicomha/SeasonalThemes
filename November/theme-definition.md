@@ -78,6 +78,7 @@ Surfaces and text of an application window.
 | `muted` | oatmeal | `#B5A48B` |  |
 | `selection` | roast | `#A04000` |  |
 | `cursor` | pumpkin | `#E67E22` |  |
+| `accent` | harvest | `#F1C40F` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -184,9 +185,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 11 · November — Thanksgiving](../vscode/themes/november.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![November in VS Code](vscode-preview.svg)
+- [Seasonal 11 · November — Thanksgiving](../vscode/themes/november-dark.json)
+
+![November in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -205,5 +208,5 @@ Theme: [Seasonal 11 · November — Thanksgiving](../vscode/themes/november.json
 - [davids-November.omp.json](davids-November.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/November/davids-November.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/november.json](../vscode/themes/november.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/november-dark.json](../vscode/themes/november-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

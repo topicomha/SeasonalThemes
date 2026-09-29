@@ -73,6 +73,7 @@ Surfaces and text of an application window.
 | `muted` | mist | `#9AA4B5` |  |
 | `selection` | navy | `#000080` |  |
 | `cursor` | buttercup | `#FCDC3B` |  |
+| `accent` | lavender | `#B57EDC` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -185,9 +186,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 05 · May — May Flowers](../vscode/themes/may.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![May in VS Code](vscode-preview.svg)
+- [Seasonal 05 · May — May Flowers](../vscode/themes/may-dark.json)
+
+![May in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -203,5 +206,5 @@ Theme: [Seasonal 05 · May — May Flowers](../vscode/themes/may.json), part of 
 - [davids-May.omp.json](davids-May.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/May/davids-May.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/may.json](../vscode/themes/may.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/may-dark.json](../vscode/themes/may-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

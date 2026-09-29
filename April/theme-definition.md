@@ -73,6 +73,7 @@ Surfaces and text of an application window.
 | `muted` | lichen | `#9BAA9C` |  |
 | `selection` | forest | `#203C17` |  |
 | `cursor` | butter | `#FFE4A2` |  |
+| `accent` | butter | `#FFE4A2` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -186,9 +187,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 04 · April — Spring Showers](../vscode/themes/april.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![April in VS Code](vscode-preview.svg)
+- [Seasonal 04 · April — Spring Showers](../vscode/themes/april-dark.json)
+
+![April in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -206,5 +209,5 @@ Theme: [Seasonal 04 · April — Spring Showers](../vscode/themes/april.json), p
 - [davids-April.omp.json](davids-April.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/April/davids-April.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/april.json](../vscode/themes/april.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/april-dark.json](../vscode/themes/april-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

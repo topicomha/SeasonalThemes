@@ -77,6 +77,7 @@ Surfaces and text of an application window.
 | `muted` | ash | `#939393` |  |
 | `selection` | burnt | `#A04000` |  |
 | `cursor` | pumpkin | `#D35400` |  |
+| `accent` | candy_corn | `#F1C40F` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -184,9 +185,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 10 · October — Halloween](../vscode/themes/october.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![October in VS Code](vscode-preview.svg)
+- [Seasonal 10 · October — Halloween](../vscode/themes/october-dark.json)
+
+![October in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -206,5 +209,5 @@ Theme: [Seasonal 10 · October — Halloween](../vscode/themes/october.json), pa
 - [davids-October.omp.json](davids-October.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/October/davids-October.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/october.json](../vscode/themes/october.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/october-dark.json](../vscode/themes/october-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

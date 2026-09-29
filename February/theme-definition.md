@@ -74,6 +74,7 @@ Surfaces and text of an application window.
 | `muted` | mauve | `#B58A97` |  |
 | `selection` | burgundy | `#800020` |  |
 | `cursor` | rose | `#FF007F` |  |
+| `accent` | rose | `#FF007F` | *inherits* `brand.accent` |
 
 ### Status
 
@@ -184,9 +185,11 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 ## VS Code
 
-Theme: [Seasonal 02 · February — Valentine's Day](../vscode/themes/february.json), part of the Seasonal Themes extension in `vscode/`.
+Part of the Seasonal Themes extension in `vscode/`.
 
-![February in VS Code](vscode-preview.svg)
+- [Seasonal 02 · February — Valentine's Day](../vscode/themes/february-dark.json)
+
+![February in VS Code, dark](vscode-preview-dark.svg)
 
 ## Ideas
 
@@ -204,5 +207,5 @@ Theme: [Seasonal 02 · February — Valentine's Day](../vscode/themes/february.j
 - [davids-February.omp.json](davids-February.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/February/davids-February.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
-- [../vscode/themes/february.json](../vscode/themes/february.json): VS Code colour theme.
-- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.
+- [../vscode/themes/february-dark.json](../vscode/themes/february-dark.json): vscode theme.
+- [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

@@ -1,0 +1,335 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "╭─",
+          "template": "[[icon.shell]] {{ .Name }} ",
+          "foreground": "[[on.brand.primary]]",
+          "background": "[[color.brand.primary]]",
+          "type": "shell",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<parentBackground>[[icon.root]]</>  ",
+          "foreground": "[[color.brand.text_accent]]",
+          "background": "[[color.brand.secondary]]",
+          "type": "root",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "folder_icon": " [[icon.folder]] ",
+            "home_icon": " [[icon.home]] ",
+            "style": "folder"
+          },
+          "template": " [[icon.path]] {{ .Path }} ",
+          "foreground": "[[on.brand.tertiary]]",
+          "powerline_symbol": "",
+          "background": "[[color.brand.tertiary]]",
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "branch_icon": "[[icon.git]] ",
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<[[color.brand.secondary]]> 📂 {{ .Staging.String }}</>{{ end }} ",
+          "foreground": "[[on.brand.accent]]",
+          "powerline_symbol": "",
+          "background": "[[color.brand.accent]]",
+          "type": "git",
+          "style": "powerline",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}[[color.brand.accent_alt]]{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}[[color.brand.accent]]{{ end }}",
+            "{{ if gt .Ahead 0 }}[[color.brand.accent_alt]]{{ end }}",
+            "{{ if gt .Behind 0 }}[[color.brand.accent_alt]]{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "trailing_diamond": "",
+          "template": " [[icon.exec_time]] {{ .FormattedMs }} ",
+          "foreground": "[[on.brand.deep]]",
+          "background": "[[color.brand.deep]]",
+          "type": "executiontime",
+          "style": "diamond"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_package_manager": true,
+            "npm_icon": " [[icon.lang.npm]] ",
+            "yarn_icon": " [[icon.lang.yarn]] "
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.node]] {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "foreground": "[[on.brand.highlight]]",
+          "background": "[[color.brand.highlight]]",
+          "type": "node",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.python]] {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.primary]]",
+          "background": "[[color.brand.primary]]",
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.java]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.tertiary]]",
+          "background": "[[color.brand.tertiary]]",
+          "type": "java",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.dotnet]] {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.secondary]]",
+          "background": "[[color.brand.secondary]]",
+          "type": "dotnet",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.go]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.accent_alt]]",
+          "background": "[[color.brand.accent_alt]]",
+          "type": "go",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.rust]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.primary]]",
+          "background": "[[color.brand.primary]]",
+          "type": "rust",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.dart]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.tertiary]]",
+          "background": "[[color.brand.tertiary]]",
+          "type": "dart",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.angular]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.accent]]",
+          "background": "[[color.brand.accent]]",
+          "type": "angular",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.nx]] {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.secondary]]",
+          "background": "[[color.brand.secondary]]",
+          "type": "nx",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.julia]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.highlight]]",
+          "background": "[[color.brand.highlight]]",
+          "type": "julia",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.ruby]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.accent_alt]]",
+          "background": "[[color.brand.accent_alt]]",
+          "type": "ruby",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.azfunc]] {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "[[on.brand.accent]]",
+          "background": "[[color.brand.accent]]",
+          "type": "azfunc",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "[[icon.lang.aws]] {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
+          "foreground": "[[on.brand.secondary]]",
+          "background": "[[color.brand.secondary]]",
+          "type": "aws",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": "[[icon.lang.kubectl]] {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
+          "foreground": "[[on.brand.primary]]",
+          "background": "[[color.brand.primary]]",
+          "type": "kubectl",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "linux": "[[icon.os.linux]]",
+            "macos": "[[icon.os.macos]]",
+            "windows": "[[icon.os.windows]]"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": "<transparent,background></>",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "foreground": "[[on.brand.highlight]]",
+          "background": "[[color.brand.highlight]]",
+          "type": "os",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "charged_icon": "🔋 ",
+            "charging_icon": "⚡️ ",
+            "discharging_icon": "[[icon.battery]] "
+          },
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
+          "foreground": "#262626",
+          "powerline_symbol": "",
+          "background": "[[color.brand.primary]]",
+          "type": "battery",
+          "style": "powerline",
+          "background_templates": [
+            "{{if eq \"Charging\" .State.String}}#b8e994{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#fff34e{{end}}",
+            "{{if eq \"Full\" .State.String}}#33DD2D{{end}}"
+          ],
+          "invert_powerline": true
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "time_format": "[[target.time_format|2006-01-02 3:04:05]]"
+          },
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " [[icon.clock]] {{ .CurrentDate | date .Format }} ",
+          "foreground": "[[color.brand.deep]]",
+          "background": "[[color.brand.accent]]",
+          "type": "time",
+          "style": "diamond",
+          "invert_powerline": true
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "[[icon.prompt]]──",
+          "foreground": "[[color.brand.primary]]",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "template": "{{ if gt .Code 0 }}[[icon.status_err]]{{ else }}[[icon.status_ok]]{{ end }}  ",
+          "foreground": "[[color.status.success]]",
+          "type": "status",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}[[color.status.error]]{{ end }}"
+          ]
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}

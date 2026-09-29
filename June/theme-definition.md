@@ -31,6 +31,15 @@ Summer sky, sunshine and lime set the tone, with ocean blue, watermelon and suns
 | `deep_sea` | Deep sea | `#0B4F6C` |  |
 | `shade` | Beach-umbrella shade | `#13293D` |  |
 | `sunburn` | Sunburn red | `#E63946` |  |
+| `night_surf` | Night surf | `#0D1B2A` | Proposed: editor and terminal background |
+| `boardwalk` | Boardwalk | `#1B2E42` | Proposed: panels, borders, current line |
+| `foam` | Sea foam | `#F1F5F9` | Proposed: editor text |
+| `driftwood` | Driftwood | `#93A8BD` | Proposed: comments, muted text |
+| `lagoon` | Lagoon blue | `#0087D8` | Proposed: ocean blue lightened (terminal blue, info) |
+| `coral` | Coral red | `#E84753` | Proposed: sunburn lightened (terminal red, invalid code) |
+| `orchid` | Orchid | `#C9A0DC` | Proposed: terminal magenta, types |
+| `tide` | Turquoise tide | `#48D1CC` | Proposed: terminal cyan, functions |
+| `sand` | Warm sand | `#FFE08A` | Proposed: strings |
 
 ## Colour roles
 
@@ -60,14 +69,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | shade | `#13293D` |  |
-| `background` | deep_sea | `#0B4F6C` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | deep_sea | `#0B4F6C` | *inherits* `ui.background` |
-| `line_highlight` | deep_sea | `#0B4F6C` | *inherits* `ui.surface` |
-| `border` | deep_sea | `#0B4F6C` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | lime | `#32CD32` | *inherits* `brand.secondary` |
-| `cursor` | sky | `#87CEEB` | *inherits* `brand.primary` |
+| `background` | night_surf | `#0D1B2A` |  |
+| `foreground` | foam | `#F1F5F9` |  |
+| `surface` | boardwalk | `#1B2E42` |  |
+| `line_highlight` | boardwalk | `#1B2E42` |  |
+| `border` | boardwalk | `#1B2E42` |  |
+| `muted` | driftwood | `#93A8BD` |  |
+| `selection` | ocean | `#0077BE` |  |
+| `cursor` | sunshine | `#FFFF00` |  |
 
 ### Status
 
@@ -77,8 +86,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | sunburn | `#E63946` |  |
 | `success` | lime | `#32CD32` |  |
-| `warning` | sunshine | `#FFFF00` | *inherits* `brand.accent` |
-| `info` | watermelon | `#FC6C85` | *inherits* `brand.highlight` |
+| `warning` | sunset | `#FF9F43` |  |
+| `info` | lagoon | `#0087D8` |  |
 
 ### Syntax
 
@@ -86,22 +95,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | sky | `#87CEEB` | *inherits* `brand.primary` |
-| `string` | sunshine | `#FFFF00` | *inherits* `brand.accent` |
-| `number` | ocean | `#0077BE` | *inherits* `brand.tertiary` |
-| `constant` | ocean | `#0077BE` | *inherits* `syntax.number` |
-| `function` | sunset | `#FF9F43` | *inherits* `brand.accent_alt` |
-| `type` | watermelon | `#FC6C85` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | sky | `#87CEEB` | *inherits* `syntax.keyword` |
-| `attribute` | sunset | `#FF9F43` | *inherits* `syntax.function` |
-| `regex` | sunshine | `#FFFF00` | *inherits* `syntax.string` |
-| `invalid` | sunburn | `#E63946` | *inherits* `status.error` |
+| `comment` | driftwood | `#93A8BD` | italic |
+| `keyword` | watermelon | `#FC6C85` |  |
+| `string` | sand | `#FFE08A` |  |
+| `number` | sunset | `#FF9F43` |  |
+| `constant` | sunset | `#FF9F43` |  |
+| `function` | tide | `#48D1CC` |  |
+| `type` | sky | `#87CEEB` |  |
+| `variable` | foam | `#F1F5F9` |  |
+| `parameter` | foam | `#F1F5F9` | *inherits* `syntax.variable` |
+| `property` | foam | `#F1F5F9` | *inherits* `syntax.variable` |
+| `operator` | foam | `#F1F5F9` | *inherits* `ui.foreground` |
+| `punctuation` | foam | `#F1F5F9` | *inherits* `ui.foreground` |
+| `tag` | watermelon | `#FC6C85` | *inherits* `syntax.keyword` |
+| `attribute` | tide | `#48D1CC` | *inherits* `syntax.function` |
+| `regex` | sand | `#FFE08A` | *inherits* `syntax.string` |
+| `invalid` | coral | `#E84753` |  |
 
 ### Terminal
 
@@ -109,26 +118,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | deep_sea | `#0B4F6C` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | sky | `#87CEEB` | *inherits* `ui.cursor` |
-| `selection` | lime | `#32CD32` | *inherits* `ui.selection` |
-| `black` | deep_sea | `#0B4F6C` | *inherits* `ui.background` |
-| `red` | sunburn | `#E63946` | *inherits* `status.error` |
-| `green` | lime | `#32CD32` | *inherits* `status.success` |
-| `yellow` | sunshine | `#FFFF00` | *inherits* `status.warning` |
-| `blue` | watermelon | `#FC6C85` | *inherits* `status.info` |
-| `magenta` | watermelon | `#FC6C85` | *inherits* `brand.highlight` |
-| `cyan` | watermelon | `#FC6C85` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | sunburn | `#E63946` | *inherits* `terminal.red` |
+| `background` | night_surf | `#0D1B2A` | *inherits* `ui.background` |
+| `foreground` | foam | `#F1F5F9` | *inherits* `ui.foreground` |
+| `cursor` | sunshine | `#FFFF00` | *inherits* `ui.cursor` |
+| `selection` | ocean | `#0077BE` | *inherits* `ui.selection` |
+| `black` | boardwalk | `#1B2E42` |  |
+| `red` | coral | `#E84753` |  |
+| `green` | lime | `#32CD32` |  |
+| `yellow` | sunshine | `#FFFF00` |  |
+| `blue` | lagoon | `#0087D8` |  |
+| `magenta` | orchid | `#C9A0DC` |  |
+| `cyan` | tide | `#48D1CC` |  |
+| `white` | foam | `#F1F5F9` |  |
+| `bright_black` | driftwood | `#93A8BD` |  |
+| `bright_red` | watermelon | `#FC6C85` |  |
 | `bright_green` | lime | `#32CD32` | *inherits* `terminal.green` |
 | `bright_yellow` | sunshine | `#FFFF00` | *inherits* `terminal.yellow` |
-| `bright_blue` | watermelon | `#FC6C85` | *inherits* `terminal.blue` |
-| `bright_magenta` | watermelon | `#FC6C85` | *inherits* `terminal.magenta` |
-| `bright_cyan` | watermelon | `#FC6C85` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_blue` | sky | `#87CEEB` |  |
+| `bright_magenta` | orchid | `#C9A0DC` | *inherits* `terminal.magenta` |
+| `bright_cyan` | tide | `#48D1CC` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

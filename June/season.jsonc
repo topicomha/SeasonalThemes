@@ -37,7 +37,16 @@
     "sunset":     { "hex": "#FF9F43", "name": "Sunset orange" },
     "deep_sea":   { "hex": "#0B4F6C", "name": "Deep sea" },
     "shade":      { "hex": "#13293D", "name": "Beach-umbrella shade" },
-    "sunburn":    { "hex": "#E63946", "name": "Sunburn red" }
+    "sunburn":    { "hex": "#E63946", "name": "Sunburn red" },
+    "night_surf": { "hex": "#0D1B2A", "name": "Night surf", "note": "Proposed: editor and terminal background" },
+    "boardwalk":  { "hex": "#1B2E42", "name": "Boardwalk", "note": "Proposed: panels, borders, current line" },
+    "foam":       { "hex": "#F1F5F9", "name": "Sea foam", "note": "Proposed: editor text" },
+    "driftwood":  { "hex": "#93A8BD", "name": "Driftwood", "note": "Proposed: comments, muted text" },
+    "lagoon":     { "hex": "#0087D8", "name": "Lagoon blue", "note": "Proposed: ocean blue lightened (terminal blue, info)" },
+    "coral":      { "hex": "#E84753", "name": "Coral red", "note": "Proposed: sunburn lightened (terminal red, invalid code)" },
+    "orchid":     { "hex": "#C9A0DC", "name": "Orchid", "note": "Proposed: terminal magenta, types" },
+    "tide":       { "hex": "#48D1CC", "name": "Turquoise tide", "note": "Proposed: terminal cyan, functions" },
+    "sand":       { "hex": "#FFE08A", "name": "Warm sand", "note": "Proposed: strings" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -54,12 +63,47 @@
       "line":        "sky"
     },
     "ui": {
-      "text_light": "white",
-      "text_dark":  "shade"
+      "text_light":     "white",
+      "text_dark":      "shade",
+      "background":     "night_surf",
+      "foreground":     "foam",
+      "surface":        "boardwalk",
+      "line_highlight": "boardwalk",
+      "border":         "boardwalk",
+      "muted":          "driftwood",
+      "selection":      "ocean",
+      "cursor":         "sunshine"
     },
     "status": {
       "success": "lime",
-      "error":   "sunburn"
+      "warning": "sunset",
+      "error":   "sunburn",
+      "info":    "lagoon"
+    },
+    "syntax": {
+      "comment":  { "color": "driftwood", "style": "italic" },
+      "keyword":  "watermelon",
+      "string":   "sand",
+      "number":   "sunset",
+      "constant": "sunset",
+      "function": "tide",
+      "type":     "sky",
+      "variable": "foam",
+      "invalid":  "coral"
+    },
+    "terminal": {
+      "black":         "boardwalk",
+      "red":           "coral",
+      "green":         "lime",
+      "yellow":        "sunshine",
+      "blue":          "lagoon",
+      "magenta":       "orchid",
+      "cyan":          "tide",
+      "white":         "foam",
+      "bright_black":  "driftwood",
+      "bright_red":    "watermelon",
+      "bright_blue":   "sky",
+      "bright_white":  "white"
     }
   },
 

@@ -38,7 +38,16 @@
     "cranberry":     { "hex": "#8B0000", "name": "Cranberry" },
     "snow":          { "hex": "#FFFFFF", "name": "Snow white" },
     "frost":         { "hex": "#E0F8FF", "name": "Frost" },
-    "charcoal":      { "hex": "#2D3436", "name": "Charcoal" }
+    "charcoal":      { "hex": "#2D3436", "name": "Charcoal" },
+    "pine_night":    { "hex": "#12211A", "name": "Pine night", "note": "Proposed: editor and terminal background" },
+    "bough":         { "hex": "#1D3327", "name": "Pine bough", "note": "Proposed: panels, borders, current line" },
+    "eggnog":        { "hex": "#F5EFE4", "name": "Eggnog", "note": "Proposed: editor text" },
+    "tinsel":        { "hex": "#A7B8AE", "name": "Tinsel", "note": "Proposed: comments, muted text" },
+    "ornament":      { "hex": "#E65A55", "name": "Ornament red", "note": "Proposed: Christmas red lightened (terminal red, keywords, invalid code)" },
+    "holly":         { "hex": "#5FBF6A", "name": "Holly green", "note": "Proposed: terminal green, strings" },
+    "icicle":        { "hex": "#7FB2E5", "name": "Icicle blue", "note": "Proposed: terminal blue, info" },
+    "sugarplum":     { "hex": "#D08FD6", "name": "Sugarplum", "note": "Proposed: terminal magenta, types" },
+    "frost_teal":    { "hex": "#7FD7D0", "name": "Frosted teal", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -54,12 +63,45 @@
       "text_accent": "gold"
     },
     "ui": {
-      "text_light": "snow",
-      "text_dark":  "charcoal"
+      "text_light":     "snow",
+      "text_dark":      "charcoal",
+      "background":     "pine_night",
+      "foreground":     "eggnog",
+      "surface":        "bough",
+      "line_highlight": "bough",
+      "border":         "bough",
+      "muted":          "tinsel",
+      "selection":      "evergreen",
+      "cursor":         "gold"
     },
     "status": {
       "success": "frost",
-      "error":   "evergreen"
+      "warning": "gold",
+      "error":   "evergreen",
+      "info":    "icicle"
+    },
+    "syntax": {
+      "comment":  { "color": "tinsel", "style": "italic" },
+      "keyword":  "ornament",
+      "string":   "holly",
+      "number":   "gold",
+      "constant": "gold",
+      "function": "frost_teal",
+      "type":     "sugarplum",
+      "variable": "eggnog",
+      "invalid":  "ornament"
+    },
+    "terminal": {
+      "black":         "bough",
+      "red":           "ornament",
+      "green":         "holly",
+      "yellow":        "gold",
+      "blue":          "icicle",
+      "magenta":       "sugarplum",
+      "cyan":          "frost_teal",
+      "white":         "eggnog",
+      "bright_black":  "tinsel",
+      "bright_white":  "snow"
     }
   },
 
@@ -110,7 +152,12 @@
         "midnight":  { "hex": "#000000", "name": "Midnight black" },
         "fireworks": { "hex": "#1E90FF", "name": "Fireworks blue" },
         "silver":    { "hex": "#808080", "name": "Silver" },
-        "sparkler":  { "hex": "#FF4500", "name": "Sparkler orange" }
+        "sparkler":  { "hex": "#FF4500", "name": "Sparkler orange" },
+        "night_sky": { "hex": "#0B0D17", "name": "Midnight sky", "note": "Proposed: editor and terminal background" },
+        "starlight": { "hex": "#1A1D2E", "name": "Starlight", "note": "Proposed: panels, borders, current line" },
+        "platinum":  { "hex": "#C0C0C0", "name": "Platinum", "note": "Proposed: comments, muted text" },
+        "confetti":  { "hex": "#FF6FAE", "name": "Confetti pink", "note": "Proposed: terminal magenta, types" },
+        "fizz":      { "hex": "#8FD8FF", "name": "Champagne fizz", "note": "Proposed: terminal cyan, functions" }
       },
       "colors": {
         "brand": {
@@ -123,7 +170,29 @@
           "line":      "gold"
         },
         "ui": {
-          "text_dark": "midnight"
+          "text_dark":      "midnight",
+          "background":     "night_sky",
+          "surface":        "starlight",
+          "line_highlight": "starlight",
+          "border":         "starlight",
+          "muted":          "platinum",
+          "selection":      "fireworks"
+        },
+        "syntax": {
+          "comment":  { "color": "platinum", "style": "italic" },
+          "keyword":  "gold",
+          "string":   "fizz",
+          "function": "fireworks",
+          "type":     "confetti",
+          "invalid":  "sparkler"
+        },
+        "terminal": {
+          "black":         "starlight",
+          "red":           "sparkler",
+          "blue":          "fireworks",
+          "magenta":       "confetti",
+          "cyan":          "fizz",
+          "bright_black":  "platinum"
         },
         "status": {
           "success": "snow",

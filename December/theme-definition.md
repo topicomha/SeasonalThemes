@@ -29,6 +29,15 @@ Trees, gifts, candles and Santa, with milk and cookies on the clock. After Chris
 | `snow` | Snow white | `#FFFFFF` |  |
 | `frost` | Frost | `#E0F8FF` |  |
 | `charcoal` | Charcoal | `#2D3436` |  |
+| `pine_night` | Pine night | `#12211A` | Proposed: editor and terminal background |
+| `bough` | Pine bough | `#1D3327` | Proposed: panels, borders, current line |
+| `eggnog` | Eggnog | `#F5EFE4` | Proposed: editor text |
+| `tinsel` | Tinsel | `#A7B8AE` | Proposed: comments, muted text |
+| `ornament` | Ornament red | `#E65A55` | Proposed: Christmas red lightened (terminal red, keywords, invalid code) |
+| `holly` | Holly green | `#5FBF6A` | Proposed: terminal green, strings |
+| `icicle` | Icicle blue | `#7FB2E5` | Proposed: terminal blue, info |
+| `sugarplum` | Sugarplum | `#D08FD6` | Proposed: terminal magenta, types |
+| `frost_teal` | Frosted teal | `#7FD7D0` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -58,14 +67,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | snow | `#FFFFFF` |  |
 | `text_dark` | charcoal | `#2D3436` |  |
-| `background` | snow | `#FFFFFF` | *inherits* `brand.deep` |
-| `foreground` | snow | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | snow | `#FFFFFF` | *inherits* `ui.background` |
-| `line_highlight` | snow | `#FFFFFF` | *inherits* `ui.surface` |
-| `border` | snow | `#FFFFFF` | *inherits* `ui.surface` |
-| `muted` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | evergreen | `#006400` | *inherits* `brand.secondary` |
-| `cursor` | christmas_red | `#CC231E` | *inherits* `brand.primary` |
+| `background` | pine_night | `#12211A` |  |
+| `foreground` | eggnog | `#F5EFE4` |  |
+| `surface` | bough | `#1D3327` |  |
+| `line_highlight` | bough | `#1D3327` |  |
+| `border` | bough | `#1D3327` |  |
+| `muted` | tinsel | `#A7B8AE` |  |
+| `selection` | evergreen | `#006400` |  |
+| `cursor` | gold | `#FFD700` |  |
 
 ### Status
 
@@ -75,8 +84,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | evergreen | `#006400` |  |
 | `success` | frost | `#E0F8FF` |  |
-| `warning` | gold | `#FFD700` | *inherits* `brand.accent` |
-| `info` | cranberry | `#8B0000` | *inherits* `brand.highlight` |
+| `warning` | gold | `#FFD700` |  |
+| `info` | icicle | `#7FB2E5` |  |
 
 ### Syntax
 
@@ -84,22 +93,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | snow | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | christmas_red | `#CC231E` | *inherits* `brand.primary` |
-| `string` | gold | `#FFD700` | *inherits* `brand.accent` |
-| `number` | forest | `#228B22` | *inherits* `brand.tertiary` |
-| `constant` | forest | `#228B22` | *inherits* `syntax.number` |
-| `function` | gold | `#FFD700` | *inherits* `brand.accent_alt` |
-| `type` | cranberry | `#8B0000` | *inherits* `brand.highlight` |
-| `variable` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | snow | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | snow | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | christmas_red | `#CC231E` | *inherits* `syntax.keyword` |
-| `attribute` | gold | `#FFD700` | *inherits* `syntax.function` |
-| `regex` | gold | `#FFD700` | *inherits* `syntax.string` |
-| `invalid` | evergreen | `#006400` | *inherits* `status.error` |
+| `comment` | tinsel | `#A7B8AE` | italic |
+| `keyword` | ornament | `#E65A55` |  |
+| `string` | holly | `#5FBF6A` |  |
+| `number` | gold | `#FFD700` |  |
+| `constant` | gold | `#FFD700` |  |
+| `function` | frost_teal | `#7FD7D0` |  |
+| `type` | sugarplum | `#D08FD6` |  |
+| `variable` | eggnog | `#F5EFE4` |  |
+| `parameter` | eggnog | `#F5EFE4` | *inherits* `syntax.variable` |
+| `property` | eggnog | `#F5EFE4` | *inherits* `syntax.variable` |
+| `operator` | eggnog | `#F5EFE4` | *inherits* `ui.foreground` |
+| `punctuation` | eggnog | `#F5EFE4` | *inherits* `ui.foreground` |
+| `tag` | ornament | `#E65A55` | *inherits* `syntax.keyword` |
+| `attribute` | frost_teal | `#7FD7D0` | *inherits* `syntax.function` |
+| `regex` | holly | `#5FBF6A` | *inherits* `syntax.string` |
+| `invalid` | ornament | `#E65A55` |  |
 
 ### Terminal
 
@@ -107,26 +116,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | snow | `#FFFFFF` | *inherits* `ui.background` |
-| `foreground` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | christmas_red | `#CC231E` | *inherits* `ui.cursor` |
+| `background` | pine_night | `#12211A` | *inherits* `ui.background` |
+| `foreground` | eggnog | `#F5EFE4` | *inherits* `ui.foreground` |
+| `cursor` | gold | `#FFD700` | *inherits* `ui.cursor` |
 | `selection` | evergreen | `#006400` | *inherits* `ui.selection` |
-| `black` | snow | `#FFFFFF` | *inherits* `ui.background` |
-| `red` | evergreen | `#006400` | *inherits* `status.error` |
-| `green` | frost | `#E0F8FF` | *inherits* `status.success` |
-| `yellow` | gold | `#FFD700` | *inherits* `status.warning` |
-| `blue` | cranberry | `#8B0000` | *inherits* `status.info` |
-| `magenta` | cranberry | `#8B0000` | *inherits* `brand.highlight` |
-| `cyan` | cranberry | `#8B0000` | *inherits* `status.info` |
-| `white` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | snow | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | evergreen | `#006400` | *inherits* `terminal.red` |
-| `bright_green` | frost | `#E0F8FF` | *inherits* `terminal.green` |
+| `black` | bough | `#1D3327` |  |
+| `red` | ornament | `#E65A55` |  |
+| `green` | holly | `#5FBF6A` |  |
+| `yellow` | gold | `#FFD700` |  |
+| `blue` | icicle | `#7FB2E5` |  |
+| `magenta` | sugarplum | `#D08FD6` |  |
+| `cyan` | frost_teal | `#7FD7D0` |  |
+| `white` | eggnog | `#F5EFE4` |  |
+| `bright_black` | tinsel | `#A7B8AE` |  |
+| `bright_red` | ornament | `#E65A55` | *inherits* `terminal.red` |
+| `bright_green` | holly | `#5FBF6A` | *inherits* `terminal.green` |
 | `bright_yellow` | gold | `#FFD700` | *inherits* `terminal.yellow` |
-| `bright_blue` | cranberry | `#8B0000` | *inherits* `terminal.blue` |
-| `bright_magenta` | cranberry | `#8B0000` | *inherits* `terminal.magenta` |
-| `bright_cyan` | cranberry | `#8B0000` | *inherits* `terminal.cyan` |
-| `bright_white` | snow | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_blue` | icicle | `#7FB2E5` | *inherits* `terminal.blue` |
+| `bright_magenta` | sugarplum | `#D08FD6` | *inherits* `terminal.magenta` |
+| `bright_cyan` | frost_teal | `#7FD7D0` | *inherits* `terminal.cyan` |
+| `bright_white` | snow | `#FFFFFF` |  |
 
 ## Icons
 
@@ -176,7 +185,7 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Variant | Dates | Changes | Files |
 |---|---|---|---|
-| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (4), colors.brand (7), colors.ui (1), colors.status (2), icons (12), targets (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg) |
+| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (9), colors.brand (7), colors.ui (7), colors.syntax (6), colors.terminal (6), colors.status (2), icons (12), targets (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg) |
 
 ## Ideas
 

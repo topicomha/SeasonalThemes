@@ -237,7 +237,188 @@
           "status_bar": "brand.accent",
           "accent":     "brand.secondary"
         }
+      },
+
+      "modes": {
+        // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+        "light": {
+          "palette": {
+            "gold_ink": { "hex": "#877200", "name": "Star gold (light-mode ink)", "note": "Proposed: light mode" },
+            "light_page": { "hex": "#FFFCED", "name": "Light-mode page", "note": "Proposed: light mode" },
+            "light_ink": { "hex": "#262000", "name": "Light-mode ink", "note": "Proposed: light mode" },
+            "light_panel": { "hex": "#FFFADE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+            "light_current_line": { "hex": "#FFFBE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+            "light_border": { "hex": "#FFF4B8", "name": "Light-mode border", "note": "Proposed: light mode" },
+            "light_muted_text": { "hex": "#77735F", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+            "light_selection": { "hex": "#9ACDFF", "name": "Light-mode selection", "note": "Proposed: light mode" },
+            "fireworks_ink": { "hex": "#0071E0", "name": "Fireworks blue (light-mode ink)", "note": "Proposed: light mode" },
+            "snow_ink": { "hex": "#737373", "name": "Snow white (light-mode ink)", "note": "Proposed: light mode" },
+            "sparkler_ink": { "hex": "#D53A00", "name": "Sparkler orange (light-mode ink)", "note": "Proposed: light mode" },
+            "icicle_ink": { "hex": "#2875C3", "name": "Icicle blue (light-mode ink)", "note": "Proposed: light mode" },
+            "fizz_ink": { "hex": "#0079B9", "name": "Champagne fizz (light-mode ink)", "note": "Proposed: light mode" },
+            "confetti_ink": { "hex": "#E20063", "name": "Confetti pink (light-mode ink)", "note": "Proposed: light mode" },
+            "light_terminal_white": { "hex": "#8C8773", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+            "light_terminal_bright_white": { "hex": "#97937D", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+            "holly_ink": { "hex": "#34823D", "name": "Holly green (light-mode ink)", "note": "Proposed: light mode" }
+          },
+          "colors": {
+            "brand": {
+              "line": "gold_ink"
+            },
+            "ui": {
+              "background": "light_page",
+              "foreground": "light_ink",
+              "surface": "light_panel",
+              "line_highlight": "light_current_line",
+              "border": "light_border",
+              "muted": "light_muted_text",
+              "selection": "light_selection",
+              "cursor": "midnight",
+              "accent": "fireworks_ink"
+            },
+            "status": {
+              "success": "snow_ink",
+              "warning": "gold_ink",
+              "error": "sparkler_ink",
+              "info": "icicle_ink"
+            },
+            "syntax": {
+              "comment": { "color": "light_muted_text", "style": "italic" },
+              "keyword": "gold_ink",
+              "string": "fizz_ink",
+              "number": "gold_ink",
+              "constant": "gold_ink",
+              "function": "fireworks_ink",
+              "type": "confetti_ink",
+              "variable": "light_ink",
+              "parameter": "light_ink",
+              "property": "light_ink",
+              "operator": "light_ink",
+              "punctuation": "light_ink",
+              "tag": "gold_ink",
+              "attribute": "fireworks_ink",
+              "regex": "fizz_ink",
+              "invalid": "sparkler_ink"
+            },
+            "terminal": {
+              "background": "light_page",
+              "foreground": "light_ink",
+              "cursor": "midnight",
+              "selection": "light_selection",
+              "black": "light_ink",
+              "bright_black": "light_muted_text",
+              "white": "light_terminal_white",
+              "bright_white": "light_terminal_bright_white",
+              "red": "sparkler_ink",
+              "bright_red": "sparkler_ink",
+              "green": "holly_ink",
+              "bright_green": "holly_ink",
+              "yellow": "gold_ink",
+              "bright_yellow": "gold_ink",
+              "blue": "fireworks_ink",
+              "bright_blue": "fireworks_ink",
+              "magenta": "confetti_ink",
+              "bright_magenta": "confetti_ink",
+              "cyan": "fizz_ink",
+              "bright_cyan": "fizz_ink"
+            }
+          },
+          "targets": {
+            "vscode": { "accent": "ui.accent" }
+          }
+        }
       }
     }
-  ]
+  ],
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "christmas_red_ink": { "hex": "#CA231E", "name": "Christmas red (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#EDF4ED", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#263B2E", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#DEEBDE", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#E3EEE3", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#B8D4B8", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#5F6B62", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#8CB98C", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "gold_ink": { "hex": "#7B6700", "name": "Star gold (light-mode ink)", "note": "Proposed: light mode" },
+        "frost_ink": { "hex": "#007193", "name": "Frost (light-mode ink)", "note": "Proposed: light mode" },
+        "icicle_ink": { "hex": "#246AB1", "name": "Icicle blue (light-mode ink)", "note": "Proposed: light mode" },
+        "ornament_ink": { "hex": "#CA241E", "name": "Ornament red (light-mode ink)", "note": "Proposed: light mode" },
+        "holly_ink": { "hex": "#2F7638", "name": "Holly green (light-mode ink)", "note": "Proposed: light mode" },
+        "frost_teal_ink": { "hex": "#24736D", "name": "Frosted teal (light-mode ink)", "note": "Proposed: light mode" },
+        "sugarplum_ink": { "hex": "#A13EAA", "name": "Sugarplum (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#79837C", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#848F86", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "christmas_red_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "christmas_red_ink",
+          "accent": "gold_ink"
+        },
+        "status": {
+          "success": "frost_ink",
+          "warning": "gold_ink",
+          "error": "evergreen",
+          "info": "icicle_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "ornament_ink",
+          "string": "holly_ink",
+          "number": "gold_ink",
+          "constant": "gold_ink",
+          "function": "frost_teal_ink",
+          "type": "sugarplum_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "ornament_ink",
+          "attribute": "frost_teal_ink",
+          "regex": "holly_ink",
+          "invalid": "ornament_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "christmas_red_ink",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "ornament_ink",
+          "bright_red": "ornament_ink",
+          "green": "holly_ink",
+          "bright_green": "holly_ink",
+          "yellow": "gold_ink",
+          "bright_yellow": "gold_ink",
+          "blue": "icicle_ink",
+          "bright_blue": "icicle_ink",
+          "magenta": "sugarplum_ink",
+          "bright_magenta": "sugarplum_ink",
+          "cyan": "frost_teal_ink",
+          "bright_cyan": "frost_teal_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
+  }
 }

@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="568" viewBox="0 0 1080 568" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="568" rx="12" fill="#EDF4ED"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#263B2E">December · Holiday Season</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#CC231E" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Christmas red</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">christmas_red</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#CC231E</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#006400" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Evergreen</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">evergreen</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#006400</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#228B22" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Forest green</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">forest</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#228B22</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#FFD700" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Star gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">gold</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFD700</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#8B0000" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Cranberry</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">cranberry</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#8B0000</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Snow white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">snow</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#E0F8FF" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Frost</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">frost</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E0F8FF</text>
+  </g>
+  <g transform="translate(192 140)">
+    <rect width="168" height="76" rx="8" fill="#2D3436" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Charcoal</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">charcoal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#2D3436</text>
+  </g>
+  <g transform="translate(368 140)">
+    <rect width="168" height="76" rx="8" fill="#12211A" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Pine night</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">pine_night</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#12211A</text>
+  </g>
+  <g transform="translate(544 140)">
+    <rect width="168" height="76" rx="8" fill="#1D3327" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Pine bough</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">bough</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#1D3327</text>
+  </g>
+  <g transform="translate(720 140)">
+    <rect width="168" height="76" rx="8" fill="#F5EFE4" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Eggnog</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">eggnog</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F5EFE4</text>
+  </g>
+  <g transform="translate(896 140)">
+    <rect width="168" height="76" rx="8" fill="#A7B8AE" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Tinsel</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">tinsel</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#A7B8AE</text>
+  </g>
+  <g transform="translate(16 224)">
+    <rect width="168" height="76" rx="8" fill="#E65A55" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Ornament red</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">ornament</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E65A55</text>
+  </g>
+  <g transform="translate(192 224)">
+    <rect width="168" height="76" rx="8" fill="#5FBF6A" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Holly green</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">holly</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#5FBF6A</text>
+  </g>
+  <g transform="translate(368 224)">
+    <rect width="168" height="76" rx="8" fill="#7FB2E5" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Icicle blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">icicle</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FB2E5</text>
+  </g>
+  <g transform="translate(544 224)">
+    <rect width="168" height="76" rx="8" fill="#D08FD6" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sugarplum</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sugarplum</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#D08FD6</text>
+  </g>
+  <g transform="translate(720 224)">
+    <rect width="168" height="76" rx="8" fill="#7FD7D0" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Frosted teal</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">frost_teal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FD7D0</text>
+  </g>
+  <g transform="translate(896 224)">
+    <rect width="168" height="76" rx="8" fill="#CA231E" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Christmas red (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">christmas_red_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#CA231E</text>
+  </g>
+  <g transform="translate(16 308)">
+    <rect width="168" height="76" rx="8" fill="#EDF4ED" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode page</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_page</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#EDF4ED</text>
+  </g>
+  <g transform="translate(192 308)">
+    <rect width="168" height="76" rx="8" fill="#263B2E" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Light-mode ink</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">light_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#263B2E</text>
+  </g>
+  <g transform="translate(368 308)">
+    <rect width="168" height="76" rx="8" fill="#DEEBDE" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode panel</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_panel</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#DEEBDE</text>
+  </g>
+  <g transform="translate(544 308)">
+    <rect width="168" height="76" rx="8" fill="#E3EEE3" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode current line</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_current_line</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E3EEE3</text>
+  </g>
+  <g transform="translate(720 308)">
+    <rect width="168" height="76" rx="8" fill="#B8D4B8" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode border</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_border</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#B8D4B8</text>
+  </g>
+  <g transform="translate(896 308)">
+    <rect width="168" height="76" rx="8" fill="#5F6B62" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Light-mode muted text</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">light_muted_text</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#5F6B62</text>
+  </g>
+  <g transform="translate(16 392)">
+    <rect width="168" height="76" rx="8" fill="#8CB98C" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode selection</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_selection</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#8CB98C</text>
+  </g>
+  <g transform="translate(192 392)">
+    <rect width="168" height="76" rx="8" fill="#7B6700" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Star gold (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">gold_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#7B6700</text>
+  </g>
+  <g transform="translate(368 392)">
+    <rect width="168" height="76" rx="8" fill="#007193" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Frost (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">frost_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#007193</text>
+  </g>
+  <g transform="translate(544 392)">
+    <rect width="168" height="76" rx="8" fill="#246AB1" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Icicle blue (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">icicle_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#246AB1</text>
+  </g>
+  <g transform="translate(720 392)">
+    <rect width="168" height="76" rx="8" fill="#CA241E" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Ornament red (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">ornament_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#CA241E</text>
+  </g>
+  <g transform="translate(896 392)">
+    <rect width="168" height="76" rx="8" fill="#2F7638" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Holly green (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">holly_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#2F7638</text>
+  </g>
+  <g transform="translate(16 476)">
+    <rect width="168" height="76" rx="8" fill="#24736D" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Frosted teal (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">frost_teal_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#24736D</text>
+  </g>
+  <g transform="translate(192 476)">
+    <rect width="168" height="76" rx="8" fill="#A13EAA" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Sugarplum (light-mode ink)</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">sugarplum_ink</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#A13EAA</text>
+  </g>
+  <g transform="translate(368 476)">
+    <rect width="168" height="76" rx="8" fill="#79837C" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode terminal white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_terminal_white</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#79837C</text>
+  </g>
+  <g transform="translate(544 476)">
+    <rect width="168" height="76" rx="8" fill="#848F86" stroke="#5F6B62" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Light-mode terminal bright white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">light_terminal_bright_white</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#848F86</text>
+  </g>
+</svg>

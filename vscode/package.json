@@ -133,14 +133,24 @@
         "path": "./themes/november-light.json"
       },
       {
-        "label": "Seasonal 12 · December — Holiday Season 🎄",
+        "label": "Seasonal 12 · December — Holiday Season · Dark 🎄",
         "uiTheme": "vs-dark",
         "path": "./themes/december-dark.json"
       },
       {
-        "label": "Seasonal 12 · December — New Year's Eve 🥳",
+        "label": "Seasonal 12 · December — Holiday Season · Light 🎄",
+        "uiTheme": "vs",
+        "path": "./themes/december-light.json"
+      },
+      {
+        "label": "Seasonal 12 · December — New Year's Eve · Dark 🥳",
         "uiTheme": "vs-dark",
         "path": "./themes/december-new-years-eve-dark.json"
+      },
+      {
+        "label": "Seasonal 12 · December — New Year's Eve · Light 🥳",
+        "uiTheme": "vs",
+        "path": "./themes/december-new-years-eve-light.json"
       }
     ],
     "commands": [
@@ -293,12 +303,24 @@
     {
       "month": 12,
       "mode": "dark",
-      "label": "Seasonal 12 · December — Holiday Season 🎄"
+      "label": "Seasonal 12 · December — Holiday Season · Dark 🎄"
+    },
+    {
+      "month": 12,
+      "mode": "light",
+      "label": "Seasonal 12 · December — Holiday Season · Light 🎄"
     },
     {
       "month": 12,
       "mode": "dark",
-      "label": "Seasonal 12 · December — New Year's Eve 🥳",
+      "label": "Seasonal 12 · December — New Year's Eve · Dark 🥳",
+      "from": "12-26",
+      "to": "12-31"
+    },
+    {
+      "month": 12,
+      "mode": "light",
+      "label": "Seasonal 12 · December — New Year's Eve · Light 🥳",
       "from": "12-26",
       "to": "12-31"
     }

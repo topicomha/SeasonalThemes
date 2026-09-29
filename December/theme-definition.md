@@ -186,15 +186,76 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Variant | Dates | Changes | Files |
 |---|---|---|---|
-| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (9), colors.brand (7), colors.ui (7), colors.syntax (6), colors.terminal (6), colors.status (2), icons (12), targets (2) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg), [vscode-preview-new-years-eve-dark.svg](vscode-preview-new-years-eve-dark.svg), [../vscode/themes/december-new-years-eve-dark.json](../vscode/themes/december-new-years-eve-dark.json) |
+| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (9), colors.brand (7), colors.ui (7), colors.syntax (6), colors.terminal (6), colors.status (2), icons (12), targets (2), modes (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg), [vscode-preview-new-years-eve-dark.svg](vscode-preview-new-years-eve-dark.svg), [../vscode/themes/december-new-years-eve-dark.json](../vscode/themes/december-new-years-eve-dark.json) |
+
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#CC231E` | `#CA231E` christmas_red_ink |
+| `ui.background` | `#12211A` | `#EDF4ED` light_page |
+| `ui.foreground` | `#F5EFE4` | `#263B2E` light_ink |
+| `ui.surface` | `#1D3327` | `#DEEBDE` light_panel |
+| `ui.line_highlight` | `#1D3327` | `#E3EEE3` light_current_line |
+| `ui.border` | `#1D3327` | `#B8D4B8` light_border |
+| `ui.muted` | `#A7B8AE` | `#5F6B62` light_muted_text |
+| `ui.selection` | `#006400` | `#8CB98C` light_selection |
+| `ui.cursor` | `#FFD700` | `#CA231E` christmas_red_ink |
+| `ui.accent` | `#FFD700` | `#7B6700` gold_ink |
+| `status.success` | `#E0F8FF` | `#007193` frost_ink |
+| `status.warning` | `#FFD700` | `#7B6700` gold_ink |
+| `status.info` | `#7FB2E5` | `#246AB1` icicle_ink |
+| `syntax.comment` | `#A7B8AE` | `#5F6B62` light_muted_text |
+| `syntax.keyword` | `#E65A55` | `#CA241E` ornament_ink |
+| `syntax.string` | `#5FBF6A` | `#2F7638` holly_ink |
+| `syntax.number` | `#FFD700` | `#7B6700` gold_ink |
+| `syntax.constant` | `#FFD700` | `#7B6700` gold_ink |
+| `syntax.function` | `#7FD7D0` | `#24736D` frost_teal_ink |
+| `syntax.type` | `#D08FD6` | `#A13EAA` sugarplum_ink |
+| `syntax.variable` | `#F5EFE4` | `#263B2E` light_ink |
+| `syntax.parameter` | `#F5EFE4` | `#263B2E` light_ink |
+| `syntax.property` | `#F5EFE4` | `#263B2E` light_ink |
+| `syntax.operator` | `#F5EFE4` | `#263B2E` light_ink |
+| `syntax.punctuation` | `#F5EFE4` | `#263B2E` light_ink |
+| `syntax.tag` | `#E65A55` | `#CA241E` ornament_ink |
+| `syntax.attribute` | `#7FD7D0` | `#24736D` frost_teal_ink |
+| `syntax.regex` | `#5FBF6A` | `#2F7638` holly_ink |
+| `syntax.invalid` | `#E65A55` | `#CA241E` ornament_ink |
+| `terminal.background` | `#12211A` | `#EDF4ED` light_page |
+| `terminal.foreground` | `#F5EFE4` | `#263B2E` light_ink |
+| `terminal.cursor` | `#FFD700` | `#CA231E` christmas_red_ink |
+| `terminal.selection` | `#006400` | `#8CB98C` light_selection |
+| `terminal.black` | `#1D3327` | `#263B2E` light_ink |
+| `terminal.red` | `#E65A55` | `#CA241E` ornament_ink |
+| `terminal.green` | `#5FBF6A` | `#2F7638` holly_ink |
+| `terminal.yellow` | `#FFD700` | `#7B6700` gold_ink |
+| `terminal.blue` | `#7FB2E5` | `#246AB1` icicle_ink |
+| `terminal.magenta` | `#D08FD6` | `#A13EAA` sugarplum_ink |
+| `terminal.cyan` | `#7FD7D0` | `#24736D` frost_teal_ink |
+| `terminal.white` | `#F5EFE4` | `#79837C` light_terminal_white |
+| `terminal.bright_black` | `#A7B8AE` | `#5F6B62` light_muted_text |
+| `terminal.bright_red` | `#E65A55` | `#CA241E` ornament_ink |
+| `terminal.bright_green` | `#5FBF6A` | `#2F7638` holly_ink |
+| `terminal.bright_yellow` | `#FFD700` | `#7B6700` gold_ink |
+| `terminal.bright_blue` | `#7FB2E5` | `#246AB1` icicle_ink |
+| `terminal.bright_magenta` | `#D08FD6` | `#A13EAA` sugarplum_ink |
+| `terminal.bright_cyan` | `#7FD7D0` | `#24736D` frost_teal_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#848F86` light_terminal_bright_white |
+
+![December light palette](palette-light.svg)
 
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 12 · December — Holiday Season](../vscode/themes/december-dark.json)
+- [Seasonal 12 · December — Holiday Season · Dark](../vscode/themes/december-dark.json)
+- [Seasonal 12 · December — Holiday Season · Light](../vscode/themes/december-light.json)
 
 ![December in VS Code, dark](vscode-preview-dark.svg)
+
+![December in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -213,5 +274,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-December.omp.json](davids-December.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/December/davids-December.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-December-light.omp.json](davids-December-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/december-light.json](../vscode/themes/december-light.json): vscode-theme, light mode.
 - [../vscode/themes/december-dark.json](../vscode/themes/december-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

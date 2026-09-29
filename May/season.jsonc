@@ -1,0 +1,107 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "May",
+  "name": "May Flowers",
+  "tagline": "Emerald meadows, Mother's Day bouquets and a Memorial Day cookout",
+  "description": [
+    "May brings three things together: spring in full bloom, Mother's Day and Memorial Day.",
+    "The palette is emerald (May's birthstone), buttercup yellow, cornflower blue, lavender and meadow green. The icons mix bees and butterflies, bouquets and ribbons, doves and medals, and a backyard BBQ."
+  ],
+  "mood": ["bright", "grateful", "blooming", "celebratory"],
+  "keywords": ["flower meadow", "bouquet", "emerald", "cornflowers", "backyard barbecue", "flags", "doves"],
+  "holidays": [
+    { "name": "Mother's Day", "date": "05-11", "note": "2nd Sunday" },
+    { "name": "Memorial Day", "date": "05-25", "note": "last Monday" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Spring", "url": "https://emojipedia.org/spring" }
+  ],
+  "ideas": [
+    "The old battery segment used May's own colours for charging / discharging / full",
+    "More Mother's Day icons: 💐 🎁 🎀 ❤️"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "buttercup":  { "hex": "#FCDC3B", "name": "Buttercup yellow" },
+    "cornflower": { "hex": "#6495ED", "name": "Cornflower blue" },
+    "meadow":     { "hex": "#4CBB17", "name": "Meadow green" },
+    "lavender":   { "hex": "#B57EDC", "name": "Lavender" },
+    "emerald":    { "hex": "#50C878", "name": "Emerald", "note": "May's birthstone" },
+    "navy":       { "hex": "#000080", "name": "Navy" },
+    "soil":       { "hex": "#5D4037", "name": "Rich soil" },
+    "white":      { "hex": "#FFFFFF", "name": "White" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "buttercup",
+      "secondary":   "cornflower",
+      "tertiary":    "meadow",
+      "accent":      "lavender",
+      "accent_alt":  "emerald",
+      "highlight":   "lavender",
+      "deep":        "cornflower",
+      "text_accent": "navy",
+      "line":        "meadow"
+    },
+    "ui": {
+      "text_light": "white",
+      "text_dark":  "navy"
+    },
+    "status": {
+      "success": "cornflower",
+      "error":   "lavender"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🕊️",
+    "root":       "🕊️",
+    "path":       "🎖️",
+    "folder":     "🎖️",
+    "home":       "🫡",
+    "git":        "☀️",
+    "exec_time":  "🌞",
+    "clock":      "🌭🍔🥩",
+    "battery":    "🍢",
+    "status_ok":  "🌻",
+    "status_err": "🐞",
+    "language":   "🌻",
+    "lang": {
+      "node":    "🐝",
+      "npm":     "🐝",
+      "yarn":    "🌈",
+      "python":  "🦋",
+      "java":    "🎁",
+      "dotnet":  "🎀",
+      "go":      "🇺🇸",
+      "rust":    "🍖",
+      "dart":    "❤️",
+      "angular": "🍔",
+      "julia":   "💐",
+      "ruby":    "🔥",
+      "azfunc":  "✨",
+      "aws":     "🌭",
+      "kubectl": "🫡"
+    },
+    "os": {
+      "linux":   "🐧",
+      "macos":   "🍎",
+      "windows": "🪟"
+    },
+    "pool": ["🪇", "🌽", "🥩", "🍔", "💐", "🎀", "🎁", "🌷", "🌼", "🐝", "🦋", "🇺🇸", "🎖️", "👨‍🍳"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "1/2 3:04 PM"
+    }
+  }
+}

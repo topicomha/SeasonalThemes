@@ -31,6 +31,13 @@ Bright summer colours (sun gold, sunset orange, turquoise water) sit next to the
 | `sunburn` | Sunburn red | `#FF0000` |  |
 | `cloud` | Cloud white | `#FFFFFF` |  |
 | `black` | Black | `#000000` |  |
+| `lagoon` | Night lagoon | `#0F2E2E` | Proposed: editor and terminal background |
+| `tide` | Tide pool | `#1A4242` | Proposed: panels, borders, current line |
+| `driftwood` | Driftwood | `#8FA8A0` | Proposed: comments, muted text |
+| `shell` | Seashell | `#D8D2C0` | Proposed: terminal white |
+| `ocean` | Ocean blue | `#4AA3DF` | Proposed: terminal blue, info |
+| `hibiscus` | Hibiscus pink | `#E27AB3` | Proposed: terminal magenta |
+| `coral` | Coral | `#FF6B5B` | Proposed: terminal red, invalid code |
 
 ## Colour roles
 
@@ -60,14 +67,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | cloud | `#FFFFFF` |  |
 | `text_dark` | black | `#000000` |  |
-| `background` | teal | `#008080` | *inherits* `brand.deep` |
-| `foreground` | cloud | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | teal | `#008080` | *inherits* `ui.background` |
-| `line_highlight` | teal | `#008080` | *inherits* `ui.surface` |
-| `border` | teal | `#008080` | *inherits* `ui.surface` |
-| `muted` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | sunset | `#FF8C00` | *inherits* `brand.secondary` |
-| `cursor` | golden | `#FFD700` | *inherits* `brand.primary` |
+| `background` | lagoon | `#0F2E2E` |  |
+| `foreground` | cloud | `#FFFFFF` |  |
+| `surface` | tide | `#1A4242` |  |
+| `line_highlight` | tide | `#1A4242` |  |
+| `border` | tide | `#1A4242` |  |
+| `muted` | driftwood | `#8FA8A0` |  |
+| `selection` | sea_green | `#2E8B57` |  |
+| `cursor` | golden | `#FFD700` |  |
 
 ### Status
 
@@ -77,8 +84,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | sunburn | `#FF0000` |  |
 | `success` | seafoam | `#98FB98` |  |
-| `warning` | sea_green | `#2E8B57` | *inherits* `brand.accent` |
-| `info` | khaki | `#F0E68C` | *inherits* `brand.highlight` |
+| `warning` | mustard | `#FFDB58` |  |
+| `info` | ocean | `#4AA3DF` |  |
 
 ### Syntax
 
@@ -86,22 +93,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | cloud | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | golden | `#FFD700` | *inherits* `brand.primary` |
-| `string` | sea_green | `#2E8B57` | *inherits* `brand.accent` |
-| `number` | turquoise | `#40E0D0` | *inherits* `brand.tertiary` |
-| `constant` | turquoise | `#40E0D0` | *inherits* `syntax.number` |
-| `function` | mustard | `#FFDB58` | *inherits* `brand.accent_alt` |
-| `type` | khaki | `#F0E68C` | *inherits* `brand.highlight` |
-| `variable` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
+| `comment` | driftwood | `#8FA8A0` | italic |
+| `keyword` | sunset | `#FF8C00` |  |
+| `string` | khaki | `#F0E68C` |  |
+| `number` | turquoise | `#40E0D0` |  |
+| `constant` | turquoise | `#40E0D0` |  |
+| `function` | golden | `#FFD700` |  |
+| `type` | seafoam | `#98FB98` |  |
+| `variable` | cloud | `#FFFFFF` |  |
 | `parameter` | cloud | `#FFFFFF` | *inherits* `syntax.variable` |
 | `property` | cloud | `#FFFFFF` | *inherits* `syntax.variable` |
 | `operator` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
 | `punctuation` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | golden | `#FFD700` | *inherits* `syntax.keyword` |
-| `attribute` | mustard | `#FFDB58` | *inherits* `syntax.function` |
-| `regex` | sea_green | `#2E8B57` | *inherits* `syntax.string` |
-| `invalid` | sunburn | `#FF0000` | *inherits* `status.error` |
+| `tag` | sunset | `#FF8C00` | *inherits* `syntax.keyword` |
+| `attribute` | golden | `#FFD700` | *inherits* `syntax.function` |
+| `regex` | khaki | `#F0E68C` | *inherits* `syntax.string` |
+| `invalid` | coral | `#FF6B5B` |  |
 
 ### Terminal
 
@@ -109,26 +116,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | teal | `#008080` | *inherits* `ui.background` |
+| `background` | lagoon | `#0F2E2E` | *inherits* `ui.background` |
 | `foreground` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
 | `cursor` | golden | `#FFD700` | *inherits* `ui.cursor` |
-| `selection` | sunset | `#FF8C00` | *inherits* `ui.selection` |
-| `black` | teal | `#008080` | *inherits* `ui.background` |
-| `red` | sunburn | `#FF0000` | *inherits* `status.error` |
-| `green` | seafoam | `#98FB98` | *inherits* `status.success` |
-| `yellow` | sea_green | `#2E8B57` | *inherits* `status.warning` |
-| `blue` | khaki | `#F0E68C` | *inherits* `status.info` |
-| `magenta` | khaki | `#F0E68C` | *inherits* `brand.highlight` |
-| `cyan` | khaki | `#F0E68C` | *inherits* `status.info` |
-| `white` | cloud | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | cloud | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | sunburn | `#FF0000` | *inherits* `terminal.red` |
+| `selection` | sea_green | `#2E8B57` | *inherits* `ui.selection` |
+| `black` | tide | `#1A4242` |  |
+| `red` | coral | `#FF6B5B` |  |
+| `green` | seafoam | `#98FB98` |  |
+| `yellow` | golden | `#FFD700` |  |
+| `blue` | ocean | `#4AA3DF` |  |
+| `magenta` | hibiscus | `#E27AB3` |  |
+| `cyan` | turquoise | `#40E0D0` |  |
+| `white` | shell | `#D8D2C0` |  |
+| `bright_black` | driftwood | `#8FA8A0` |  |
+| `bright_red` | sunset | `#FF8C00` |  |
 | `bright_green` | seafoam | `#98FB98` | *inherits* `terminal.green` |
-| `bright_yellow` | sea_green | `#2E8B57` | *inherits* `terminal.yellow` |
-| `bright_blue` | khaki | `#F0E68C` | *inherits* `terminal.blue` |
-| `bright_magenta` | khaki | `#F0E68C` | *inherits* `terminal.magenta` |
-| `bright_cyan` | khaki | `#F0E68C` | *inherits* `terminal.cyan` |
-| `bright_white` | cloud | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_yellow` | mustard | `#FFDB58` |  |
+| `bright_blue` | ocean | `#4AA3DF` | *inherits* `terminal.blue` |
+| `bright_magenta` | hibiscus | `#E27AB3` | *inherits* `terminal.magenta` |
+| `bright_cyan` | turquoise | `#40E0D0` | *inherits* `terminal.cyan` |
+| `bright_white` | cloud | `#FFFFFF` |  |
 
 ## Icons
 

@@ -156,6 +156,17 @@ if ($Season.Variants.Count) {
     Add
 }
 
+if ($Files['vscode-theme']) {
+    Add '## VS Code'
+    Add
+    Add "Theme: [$($Season.Title)]($($Files['vscode-theme'])), part of the Seasonal Themes extension in ``vscode/``."
+    Add
+    if ($Files['vscode-preview']) {
+        Add "![$($Season.Month) in VS Code]($($Files['vscode-preview']))"
+        Add
+    }
+}
+
 if ($data['ideas']) {
     Add '## Ideas'
     Add
@@ -177,5 +188,7 @@ if ($Files['oh-my-posh']) {
     Add "  Try it with ``oh-my-posh init pwsh --config <repo>/$($Season.Month)/$($Files['oh-my-posh']) | Invoke-Expression``."
 }
 if ($Files['palette-svg']) { Add "- [$($Files['palette-svg'])]($($Files['palette-svg'])): palette swatch sheet." }
+if ($Files['vscode-theme']) { Add "- [$($Files['vscode-theme'])]($($Files['vscode-theme'])): VS Code colour theme." }
+if ($Files['vscode-preview']) { Add "- [$($Files['vscode-preview'])]($($Files['vscode-preview'])): preview of the VS Code theme." }
 
 ($lines -join "`n") + "`n"

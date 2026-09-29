@@ -1,0 +1,24 @@
+{
+  "name": "seasonal-themes",
+  "displayName": "Seasonal Themes",
+  "description": "A colour theme for every month of the year, generated from the same season documents as the matching Oh My Posh prompts.",
+  "version": "0.1.0",
+  "publisher": "topicomha",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topicomha/SeasonalThemes"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["theme", "seasonal", "holiday", "monthly", "color theme"],
+  "galleryBanner": {
+    "color": "#2D3436",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": []
+  }
+}

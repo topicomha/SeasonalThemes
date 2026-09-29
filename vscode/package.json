@@ -1,0 +1,98 @@
+{
+  "name": "seasonal-themes",
+  "displayName": "Seasonal Themes",
+  "description": "A colour theme for every month of the year, generated from the same season documents as the matching Oh My Posh prompts.",
+  "version": "0.1.0",
+  "publisher": "topicomha",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topicomha/SeasonalThemes"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "seasonal",
+    "holiday",
+    "monthly",
+    "color theme"
+  ],
+  "galleryBanner": {
+    "color": "#2D3436",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Seasonal 01 · January — Winter Wonderland ❄️",
+        "uiTheme": "vs-dark",
+        "path": "./themes/january.json"
+      },
+      {
+        "label": "Seasonal 02 · February — Valentine's Day 🌹",
+        "uiTheme": "vs-dark",
+        "path": "./themes/february.json"
+      },
+      {
+        "label": "Seasonal 03 · March — St. Patrick's Day ☘️",
+        "uiTheme": "vs-dark",
+        "path": "./themes/march.json"
+      },
+      {
+        "label": "Seasonal 04 · April — Spring Showers 🐰",
+        "uiTheme": "vs-dark",
+        "path": "./themes/april.json"
+      },
+      {
+        "label": "Seasonal 05 · May — May Flowers 🕊️",
+        "uiTheme": "vs-dark",
+        "path": "./themes/may.json"
+      },
+      {
+        "label": "Seasonal 06 · June — Summer Vacation 😎",
+        "uiTheme": "vs-dark",
+        "path": "./themes/june.json"
+      },
+      {
+        "label": "Seasonal 07 · July — Independence Day 🎆",
+        "uiTheme": "vs-dark",
+        "path": "./themes/july.json"
+      },
+      {
+        "label": "Seasonal 08 · August — Late Summer ☀️",
+        "uiTheme": "vs-dark",
+        "path": "./themes/august.json"
+      },
+      {
+        "label": "Seasonal 09 · September — Back to School 🍎",
+        "uiTheme": "vs-dark",
+        "path": "./themes/september.json"
+      },
+      {
+        "label": "Seasonal 10 · October — Halloween 🍂",
+        "uiTheme": "vs-dark",
+        "path": "./themes/october.json"
+      },
+      {
+        "label": "Seasonal 11 · November — Thanksgiving 🍂",
+        "uiTheme": "vs-dark",
+        "path": "./themes/november.json"
+      },
+      {
+        "label": "Seasonal 12 · December — Holiday Season 🎄",
+        "uiTheme": "vs-dark",
+        "path": "./themes/december.json"
+      },
+      {
+        "label": "Seasonal 12 · December — New Year's Eve 🥳",
+        "uiTheme": "vs-dark",
+        "path": "./themes/december-new-years-eve.json"
+      }
+    ]
+  }
+}

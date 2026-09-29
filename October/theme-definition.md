@@ -182,6 +182,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** ☠️ 👺 👽 🕸️ 🥷 🧙‍♂️ 🩻 🪦 🏴‍☠️ 🧹 🦇 🧛 🔮 🕯️ ⚰️ 🌕 🍬 🍭 🥧
 
+## VS Code
+
+Theme: [Seasonal 10 · October — Halloween](../vscode/themes/october.json), part of the Seasonal Themes extension in `vscode/`.
+
+![October in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - More Halloween icons: 🧙 witch, 🧛 vampire, 🦇 bat
@@ -200,3 +206,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-October.omp.json](davids-October.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/October/davids-October.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/october.json](../vscode/themes/october.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

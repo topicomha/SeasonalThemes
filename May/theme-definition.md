@@ -183,6 +183,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🪇 🌽 🥩 🍔 💐 🎀 🎁 🌷 🌼 🐝 🦋 🇺🇸 🎖️ 👨‍🍳
 
+## VS Code
+
+Theme: [Seasonal 05 · May — May Flowers](../vscode/themes/may.json), part of the Seasonal Themes extension in `vscode/`.
+
+![May in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - The old battery segment used May's own colours for charging / discharging / full
@@ -197,3 +203,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-May.omp.json](davids-May.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/May/davids-May.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/may.json](../vscode/themes/may.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

@@ -180,6 +180,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🎒 🧑‍🏫 ✏️ 📏 📐 📝 📄 🎓 📜 🍊 🌰 ☕ 🥧 🌾
 
+## VS Code
+
+Theme: [Seasonal 09 · September — Back to School](../vscode/themes/september.json), part of the Seasonal Themes extension in `vscode/`.
+
+![September in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - More school supplies: ✏️ 📏 📐 for various segments
@@ -197,3 +203,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-September.omp.json](davids-September.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/September/davids-September.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/september.json](../vscode/themes/september.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

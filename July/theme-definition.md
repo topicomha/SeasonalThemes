@@ -184,6 +184,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🇺🇸 🗽 🎺 🍖 🎉 ⚾ ☀️ 🎈 🎠 🎡 🔔 🤠 📜 🎪
 
+## VS Code
+
+Theme: [Seasonal 07 · July — Independence Day](../vscode/themes/july.json), part of the Seasonal Themes extension in `vscode/`.
+
+![July in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - Alternate red, white and blue segments for a striped effect
@@ -200,3 +206,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-July.omp.json](davids-July.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/July/davids-July.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/july.json](../vscode/themes/july.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

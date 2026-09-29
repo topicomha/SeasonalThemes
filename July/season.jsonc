@@ -31,7 +31,15 @@
     "sparkler":    { "hex": "#FFD700", "name": "Sparkler gold", "note": "From the July draft" },
     "firecracker": { "hex": "#FF6B35", "name": "Firecracker orange" },
     "liberty":     { "hex": "#6E8FCB", "name": "Liberty blue" },
-    "night":       { "hex": "#0A1128", "name": "Fireworks night" }
+    "night":       { "hex": "#0A1128", "name": "Fireworks night" },
+    "summer_night":{ "hex": "#0B1026", "name": "Summer night", "note": "Proposed: editor and terminal background" },
+    "bunting":     { "hex": "#1A2142", "name": "Bunting", "note": "Proposed: panels, borders, current line" },
+    "starlight":   { "hex": "#F4F4F8", "name": "Starlight", "note": "Proposed: editor text" },
+    "smoke":       { "hex": "#9AA3BE", "name": "Firework smoke", "note": "Proposed: comments, muted text" },
+    "stripe_red":  { "hex": "#E5484D", "name": "Stripe red", "note": "Proposed: Old Glory red lightened (terminal red, keywords, invalid code)" },
+    "picnic":      { "hex": "#7FD18B", "name": "Picnic green", "note": "Proposed: terminal green, strings" },
+    "roman":       { "hex": "#C792EA", "name": "Roman candle", "note": "Proposed: terminal magenta, types" },
+    "fountain":    { "hex": "#6FD6E0", "name": "Fountain teal", "note": "Proposed: terminal cyan, functions" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -48,12 +56,46 @@
       "line":        "stars"
     },
     "ui": {
-      "text_light": "stars",
-      "text_dark":  "glory_blue"
+      "text_light":     "stars",
+      "text_dark":      "glory_blue",
+      "background":     "summer_night",
+      "foreground":     "starlight",
+      "surface":        "bunting",
+      "line_highlight": "bunting",
+      "border":         "bunting",
+      "muted":          "smoke",
+      "selection":      "glory_blue",
+      "cursor":         "sparkler"
     },
     "status": {
       "success": "stars",
-      "error":   "firecracker"
+      "warning": "sparkler",
+      "error":   "firecracker",
+      "info":    "liberty"
+    },
+    "syntax": {
+      "comment":  { "color": "smoke", "style": "italic" },
+      "keyword":  "stripe_red",
+      "string":   "picnic",
+      "number":   "sparkler",
+      "constant": "sparkler",
+      "function": "fountain",
+      "type":     "roman",
+      "variable": "starlight",
+      "invalid":  "stripe_red"
+    },
+    "terminal": {
+      "black":         "bunting",
+      "red":           "stripe_red",
+      "green":         "picnic",
+      "yellow":        "sparkler",
+      "blue":          "liberty",
+      "magenta":       "roman",
+      "cyan":          "fountain",
+      "white":         "starlight",
+      "bright_black":  "smoke",
+      "bright_red":    "firecracker",
+      "bright_white":  "stars"
     }
   },
 

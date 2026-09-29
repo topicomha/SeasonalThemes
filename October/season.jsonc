@@ -1,0 +1,149 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "October",
+  "name": "Halloween",
+  "tagline": "Pumpkins, bones and candy corn on a dark autumn night",
+  "description": [
+    "October embraces Halloween: pumpkin and carrot oranges, candy-corn gold and bark brown, with a witchy purple for contrast.",
+    "The icons mix the spooky (skulls, bones, ghosts, spiders) with the autumn harvest (fallen leaves, chestnuts, pie)."
+  ],
+  "mood": ["spooky", "playful", "cozy", "autumnal"],
+  "keywords": ["jack-o'-lantern", "pumpkin patch", "fallen leaves", "haunted house", "full moon", "bats", "fog", "candy corn"],
+  "holidays": [
+    { "name": "Halloween", "date": "10-31" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Halloween", "url": "https://emojipedia.org/halloween" },
+    { "title": "Emojipedia: Fall / Autumn", "url": "https://emojipedia.org/fall-autumn" }
+  ],
+  "ideas": [
+    "More Halloween icons: 🧙 witch, 🧛 vampire, 🦇 bat",
+    "👁️ eye for watching processes",
+    "🎭 theater masks for git changes",
+    "🔮 crystal ball for predictive / suggestion segments",
+    "🧠 brain for memory usage"
+  ],
+  "appearance": "dark",
+
+  // ── Palette: the only place hex codes live ──────────────────────────────
+  "palette": {
+    "pumpkin":    { "hex": "#D35400", "name": "Pumpkin orange" },
+    "burnt":      { "hex": "#A04000", "name": "Burnt orange" },
+    "carrot":     { "hex": "#E67E22", "name": "Carrot orange" },
+    "candy_corn": { "hex": "#F1C40F", "name": "Candy-corn gold" },
+    "amber":      { "hex": "#F39C12", "name": "Amber" },
+    "bark":       { "hex": "#523422", "name": "Bark brown" },
+    "witch":      { "hex": "#8E44AD", "name": "Witch purple" },
+    "lemon":      { "hex": "#FFFB38", "name": "Lemon yellow" },
+    "ghost":      { "hex": "#E0F8FF", "name": "Ghost white" },
+    "bone":       { "hex": "#FFFFFF", "name": "Bone white" },
+    "charcoal":   { "hex": "#2D3436", "name": "Charcoal" },
+    "midnight":   { "hex": "#2C3E50", "name": "Midnight slate", "note": "From the Fall VS Code theme's sidebar" },
+    "smoke":      { "hex": "#444444", "name": "Smoke" },
+    "ash":        { "hex": "#7C7C7C", "name": "Ash grey" },
+    "blood":      { "hex": "#C0392B", "name": "Blood red", "note": "Proposed: terminal red" },
+    "slime":      { "hex": "#7DAA3B", "name": "Goblin green", "note": "Proposed: terminal green" },
+    "moon":       { "hex": "#5DADE2", "name": "Moonlight blue", "note": "Proposed: terminal blue" },
+    "potion":     { "hex": "#48C9B0", "name": "Potion teal", "note": "Proposed: terminal cyan" }
+  },
+
+  // ── Colour roles: each points at a palette name ─────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "pumpkin",
+      "secondary":   "burnt",
+      "tertiary":    "carrot",
+      "accent":      "candy_corn",
+      "accent_alt":  "amber",
+      "highlight":   "witch",
+      "deep":        "bark",
+      "text_accent": "lemon"
+    },
+    "ui": {
+      "text_light":     "bone",
+      "text_dark":      "charcoal",
+      "background":     "charcoal",
+      "foreground":     "bone",
+      "surface":        "midnight",
+      "line_highlight": "smoke",
+      "border":         "smoke",
+      "muted":          "ash",
+      "selection":      "burnt",
+      "cursor":         "pumpkin"
+    },
+    "status": {
+      "success": "ghost",
+      "warning": "candy_corn",
+      "error":   "burnt",
+      "info":    "moon"
+    },
+    "syntax": {
+      "comment":  { "color": "ash", "style": "italic" },
+      "keyword":  "amber",
+      "string":   "carrot",
+      "number":   "candy_corn",
+      "constant": "candy_corn",
+      "function": "pumpkin",
+      "type":     "witch",
+      "variable": "bone"
+    },
+    "terminal": {
+      "black":          "charcoal",
+      "red":            "blood",
+      "green":          "slime",
+      "yellow":         "candy_corn",
+      "blue":           "moon",
+      "magenta":        "witch",
+      "cyan":           "potion",
+      "white":          "ghost",
+      "bright_black":   "ash",
+      "bright_red":     "pumpkin",
+      "bright_yellow":  "lemon",
+      "bright_white":   "bone"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🍂",
+    "root":       "🍂",
+    "path":       "💀",
+    "folder":     "💀",
+    "home":       "🦴",
+    "git":        "🌰",
+    "exec_time":  "🎃",
+    "clock":      "🕷️",
+    "battery":    "🍂",
+    "status_ok":  "👻",
+    "status_err": "👻",
+    "prompt":     "⌂",
+    "language":   "🍂",
+    "lang": {
+      "node":    "🎃",
+      "npm":     "🥧",
+      "yarn":    "🍁",
+      "java":    "🍁",
+      "go":      "🍁",
+      "dart":    "🍁",
+      "angular": "🎃",
+      "nx":      "🍁",
+      "ruby":    "🍁",
+      "kubectl": "🍁"
+    },
+    "os": {
+      "linux":   "☠️",
+      "macos":   "🍂",
+      "windows": "🎃"
+    },
+    "pool": ["☠️", "👺", "👽", "🕸️", "🥷", "🧙‍♂️", "🩻", "🪦", "🏴‍☠️", "🧹", "🦇", "🧛", "🔮", "🕯️", "⚰️", "🌕", "🍬", "🍭", "🥧"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05"
+    }
+  }
+}

@@ -32,7 +32,16 @@
     "gold":       { "hex": "#FFD700", "name": "Pot of gold" },
     "white":      { "hex": "#FFFFFF", "name": "White" },
     "black":      { "hex": "#000000", "name": "Black" },
-    "orange_red": { "hex": "#FF4500", "name": "Orange red" }
+    "orange_red": { "hex": "#FF4500", "name": "Orange red" },
+    "pub":        { "hex": "#0E1F16", "name": "Pub snug", "note": "Proposed: editor and terminal background" },
+    "moss":       { "hex": "#1B3325", "name": "Moss", "note": "Proposed: panels, borders, current line" },
+    "linen":      { "hex": "#E8F3EA", "name": "Irish linen", "note": "Proposed: editor text" },
+    "sage":       { "hex": "#8FAF98", "name": "Sage", "note": "Proposed: comments, muted text" },
+    "ale":        { "hex": "#C08A3E", "name": "Amber ale", "note": "Proposed: keywords" },
+    "ginger":     { "hex": "#E86A5C", "name": "Ginger red", "note": "Proposed: terminal red, invalid code" },
+    "harp":       { "hex": "#6FA8DC", "name": "Harp blue", "note": "Proposed: terminal blue, info" },
+    "heather":    { "hex": "#C58FD6", "name": "Heather", "note": "Proposed: terminal magenta, types" },
+    "sea":        { "hex": "#5FD4C0", "name": "Atlantic teal", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -49,12 +58,47 @@
       "line":        "lime"
     },
     "ui": {
-      "text_light": "white",
-      "text_dark":  "black"
+      "text_light":     "white",
+      "text_dark":      "black",
+      "background":     "pub",
+      "foreground":     "linen",
+      "surface":        "moss",
+      "line_highlight": "moss",
+      "border":         "moss",
+      "muted":          "sage",
+      "selection":      "dark_green",
+      "cursor":         "gold"
     },
     "status": {
       "success": "white",
-      "error":   "orange_red"
+      "warning": "gold",
+      "error":   "orange_red",
+      "info":    "harp"
+    },
+    "syntax": {
+      "comment":  { "color": "sage", "style": "italic" },
+      "keyword":  "ale",
+      "string":   "lime",
+      "number":   "gold",
+      "constant": "gold",
+      "function": "shamrock",
+      "type":     "heather",
+      "variable": "linen",
+      "invalid":  "ginger"
+    },
+    "terminal": {
+      "black":         "moss",
+      "red":           "ginger",
+      "green":         "lime",
+      "yellow":        "gold",
+      "blue":          "harp",
+      "magenta":       "heather",
+      "cyan":          "sea",
+      "white":         "linen",
+      "bright_black":  "sage",
+      "bright_red":    "orange_red",
+      "bright_green":  "shamrock",
+      "bright_white":  "white"
     }
   },
 

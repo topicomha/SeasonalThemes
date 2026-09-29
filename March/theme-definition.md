@@ -28,6 +28,15 @@ Shamrocks, top hats, rainbows and a pint of beer, with the first hint of spring.
 | `white` | White | `#FFFFFF` |  |
 | `black` | Black | `#000000` |  |
 | `orange_red` | Orange red | `#FF4500` |  |
+| `pub` | Pub snug | `#0E1F16` | Proposed: editor and terminal background |
+| `moss` | Moss | `#1B3325` | Proposed: panels, borders, current line |
+| `linen` | Irish linen | `#E8F3EA` | Proposed: editor text |
+| `sage` | Sage | `#8FAF98` | Proposed: comments, muted text |
+| `ale` | Amber ale | `#C08A3E` | Proposed: keywords |
+| `ginger` | Ginger red | `#E86A5C` | Proposed: terminal red, invalid code |
+| `harp` | Harp blue | `#6FA8DC` | Proposed: terminal blue, info |
+| `heather` | Heather | `#C58FD6` | Proposed: terminal magenta, types |
+| `sea` | Atlantic teal | `#5FD4C0` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -57,14 +66,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | black | `#000000` |  |
-| `background` | shamrock | `#009E60` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | shamrock | `#009E60` | *inherits* `ui.background` |
-| `line_highlight` | shamrock | `#009E60` | *inherits* `ui.surface` |
-| `border` | shamrock | `#009E60` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | shamrock | `#009E60` | *inherits* `brand.secondary` |
-| `cursor` | dark_green | `#006400` | *inherits* `brand.primary` |
+| `background` | pub | `#0E1F16` |  |
+| `foreground` | linen | `#E8F3EA` |  |
+| `surface` | moss | `#1B3325` |  |
+| `line_highlight` | moss | `#1B3325` |  |
+| `border` | moss | `#1B3325` |  |
+| `muted` | sage | `#8FAF98` |  |
+| `selection` | dark_green | `#006400` |  |
+| `cursor` | gold | `#FFD700` |  |
 
 ### Status
 
@@ -74,8 +83,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | orange_red | `#FF4500` |  |
 | `success` | white | `#FFFFFF` |  |
-| `warning` | gold | `#FFD700` | *inherits* `brand.accent` |
-| `info` | dark_green | `#006400` | *inherits* `brand.highlight` |
+| `warning` | gold | `#FFD700` |  |
+| `info` | harp | `#6FA8DC` |  |
 
 ### Syntax
 
@@ -83,22 +92,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | dark_green | `#006400` | *inherits* `brand.primary` |
-| `string` | gold | `#FFD700` | *inherits* `brand.accent` |
-| `number` | lime | `#32CD32` | *inherits* `brand.tertiary` |
-| `constant` | lime | `#32CD32` | *inherits* `syntax.number` |
-| `function` | gold | `#FFD700` | *inherits* `brand.accent_alt` |
-| `type` | dark_green | `#006400` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | dark_green | `#006400` | *inherits* `syntax.keyword` |
-| `attribute` | gold | `#FFD700` | *inherits* `syntax.function` |
-| `regex` | gold | `#FFD700` | *inherits* `syntax.string` |
-| `invalid` | orange_red | `#FF4500` | *inherits* `status.error` |
+| `comment` | sage | `#8FAF98` | italic |
+| `keyword` | ale | `#C08A3E` |  |
+| `string` | lime | `#32CD32` |  |
+| `number` | gold | `#FFD700` |  |
+| `constant` | gold | `#FFD700` |  |
+| `function` | shamrock | `#009E60` |  |
+| `type` | heather | `#C58FD6` |  |
+| `variable` | linen | `#E8F3EA` |  |
+| `parameter` | linen | `#E8F3EA` | *inherits* `syntax.variable` |
+| `property` | linen | `#E8F3EA` | *inherits* `syntax.variable` |
+| `operator` | linen | `#E8F3EA` | *inherits* `ui.foreground` |
+| `punctuation` | linen | `#E8F3EA` | *inherits* `ui.foreground` |
+| `tag` | ale | `#C08A3E` | *inherits* `syntax.keyword` |
+| `attribute` | shamrock | `#009E60` | *inherits* `syntax.function` |
+| `regex` | lime | `#32CD32` | *inherits* `syntax.string` |
+| `invalid` | ginger | `#E86A5C` |  |
 
 ### Terminal
 
@@ -106,26 +115,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | shamrock | `#009E60` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | dark_green | `#006400` | *inherits* `ui.cursor` |
-| `selection` | shamrock | `#009E60` | *inherits* `ui.selection` |
-| `black` | shamrock | `#009E60` | *inherits* `ui.background` |
-| `red` | orange_red | `#FF4500` | *inherits* `status.error` |
-| `green` | white | `#FFFFFF` | *inherits* `status.success` |
-| `yellow` | gold | `#FFD700` | *inherits* `status.warning` |
-| `blue` | dark_green | `#006400` | *inherits* `status.info` |
-| `magenta` | dark_green | `#006400` | *inherits* `brand.highlight` |
-| `cyan` | dark_green | `#006400` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | orange_red | `#FF4500` | *inherits* `terminal.red` |
-| `bright_green` | white | `#FFFFFF` | *inherits* `terminal.green` |
+| `background` | pub | `#0E1F16` | *inherits* `ui.background` |
+| `foreground` | linen | `#E8F3EA` | *inherits* `ui.foreground` |
+| `cursor` | gold | `#FFD700` | *inherits* `ui.cursor` |
+| `selection` | dark_green | `#006400` | *inherits* `ui.selection` |
+| `black` | moss | `#1B3325` |  |
+| `red` | ginger | `#E86A5C` |  |
+| `green` | lime | `#32CD32` |  |
+| `yellow` | gold | `#FFD700` |  |
+| `blue` | harp | `#6FA8DC` |  |
+| `magenta` | heather | `#C58FD6` |  |
+| `cyan` | sea | `#5FD4C0` |  |
+| `white` | linen | `#E8F3EA` |  |
+| `bright_black` | sage | `#8FAF98` |  |
+| `bright_red` | orange_red | `#FF4500` |  |
+| `bright_green` | shamrock | `#009E60` |  |
 | `bright_yellow` | gold | `#FFD700` | *inherits* `terminal.yellow` |
-| `bright_blue` | dark_green | `#006400` | *inherits* `terminal.blue` |
-| `bright_magenta` | dark_green | `#006400` | *inherits* `terminal.magenta` |
-| `bright_cyan` | dark_green | `#006400` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_blue` | harp | `#6FA8DC` | *inherits* `terminal.blue` |
+| `bright_magenta` | heather | `#C58FD6` | *inherits* `terminal.magenta` |
+| `bright_cyan` | sea | `#5FD4C0` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

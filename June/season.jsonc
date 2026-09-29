@@ -1,0 +1,100 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "June",
+  "name": "Summer Vacation",
+  "tagline": "Beach colours, sunglasses and the carefree first days of summer",
+  "description": [
+    "June celebrates the beginning of summer with bright beach colours, vacation vibes and outdoor activity icons.",
+    "It brings the carefree feeling of summer vacation with cool sky and turquoise blues, mint, sunny pale yellow and beach-towel pinks."
+  ],
+  "mood": ["carefree", "sunny", "cool", "playful"],
+  "keywords": ["beach umbrella", "sunglasses", "surfing", "desert island", "watermelon", "ocean waves", "graduation caps"],
+  "holidays": [
+    { "name": "Father's Day", "date": "06-15", "note": "3rd Sunday" },
+    { "name": "Juneteenth", "date": "06-19" },
+    { "name": "Summer solstice", "date": "06-21", "note": "around the 21st" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Summer", "url": "https://emojipedia.org/summer" },
+    { "title": "Emojipedia: Graduation", "url": "https://emojipedia.org/graduation" }
+  ],
+  "ideas": [
+    "More summer activities: 🏊 swimming, ⛵ sailboat, 🏐 volleyball",
+    "Summer treats: 🍦 ice cream, 🍹 tropical drink",
+    "👙 bikini or 🩴 flip-flops for summer vacation items",
+    "🎓 graduation caps for a graduation-week variant",
+    "The old theme coloured execution time yellow over 300 ms and red over 1 s; the shared layout could bring that back for every month"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "sky":       { "hex": "#87CEEB", "name": "Sky blue" },
+    "turquoise": { "hex": "#40E0D0", "name": "Turquoise" },
+    "mint":      { "hex": "#98FB98", "name": "Mint green" },
+    "lemonade":  { "hex": "#FFFFE0", "name": "Lemonade yellow" },
+    "flamingo":  { "hex": "#FFBCD9", "name": "Flamingo pink" },
+    "towel":     { "hex": "#FFB6C1", "name": "Beach-towel pink" },
+    "shallows":  { "hex": "#87CEFA", "name": "Light blue shallows" },
+    "black":     { "hex": "#000000", "name": "Black" },
+    "white":     { "hex": "#FFFFFF", "name": "White" },
+    "coral":     { "hex": "#FF6F61", "name": "Coral", "note": "New: the old theme had no error colour" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "sky",
+      "secondary":   "turquoise",
+      "tertiary":    "mint",
+      "accent":      "lemonade",
+      "accent_alt":  "towel",
+      "highlight":   "flamingo",
+      "deep":        "shallows",
+      "text_accent": "black"
+    },
+    "ui": {
+      "text_light": "white",
+      "text_dark":  "black"
+    },
+    "status": {
+      "success": "mint",
+      "error":   "coral"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "😎",
+    "root":       "🏄",
+    "path":       "🕶️",
+    "folder":     "🏖️",
+    "home":       "🏝️",
+    "git":        "🌞",
+    "exec_time":  "🏊",
+    "clock":      "⛱️",
+    "battery":    "🥵",
+    "status_ok":  "🍉",
+    "status_err": "🌋",
+    "language":   "🌊",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🍦",
+      "yarn":    "🍹",
+      "java":    "🏐",
+      "go":      "🐚",
+      "rust":    "🦀",
+      "dart":    "🐬",
+      "ruby":    "🍓",
+      "kubectl": "⛵"
+    },
+    "os": {
+      "linux":   "🐚",
+      "macos":   "🍍",
+      "windows": "🏄"
+    },
+    "pool": ["🏊", "⛵", "🏐", "🍦", "🍹", "👙", "🩴", "🎓", "📜", "🐬", "🥥", "🌺", "🏖️", "🌊"]
+  }
+}

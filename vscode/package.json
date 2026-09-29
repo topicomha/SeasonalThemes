@@ -123,9 +123,14 @@
         "path": "./themes/october-light.json"
       },
       {
-        "label": "Seasonal 11 · November — Thanksgiving 🍂",
+        "label": "Seasonal 11 · November — Thanksgiving · Dark 🍂",
         "uiTheme": "vs-dark",
         "path": "./themes/november-dark.json"
+      },
+      {
+        "label": "Seasonal 11 · November — Thanksgiving · Light 🍂",
+        "uiTheme": "vs",
+        "path": "./themes/november-light.json"
       },
       {
         "label": "Seasonal 12 · December — Holiday Season 🎄",
@@ -278,7 +283,12 @@
     {
       "month": 11,
       "mode": "dark",
-      "label": "Seasonal 11 · November — Thanksgiving 🍂"
+      "label": "Seasonal 11 · November — Thanksgiving · Dark 🍂"
+    },
+    {
+      "month": 11,
+      "mode": "light",
+      "label": "Seasonal 11 · November — Thanksgiving · Light 🍂"
     },
     {
       "month": 12,

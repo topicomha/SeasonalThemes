@@ -181,13 +181,74 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🎒 🧑‍🏫 ✏️ 📏 📐 📝 📄 🎓 📜 🍊 🌰 ☕ 🥧 🌾
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#DAA520` | `#846413` goldenrod_ink |
+| `ui.background` | `#22302A` | `#F7F2EE` light_page |
+| `ui.foreground` | `#F2EFE6` | `#323327` light_ink |
+| `ui.surface` | `#2E3F37` | `#F0E7E0` light_panel |
+| `ui.line_highlight` | `#2E3F37` | `#F2EBE5` light_current_line |
+| `ui.border` | `#2E3F37` | `#DFCBBD` light_border |
+| `ui.muted` | `#9AA89F` | `#6B6962` light_muted_text |
+| `ui.selection` | `#A0522D` | `#D4B1A0` light_selection |
+| `ui.cursor` | `#DAA520` | `#8B4513` bark |
+| `ui.accent` | `#CD853F` | `#945C27` peru_ink |
+| `status.success` | `#8DB600` | `#587200` green_apple_ink |
+| `status.warning` | `#DAA520` | `#846413` goldenrod_ink |
+| `status.info` | `#6797D9` | `#2E68B9` denim_ink |
+| `syntax.comment` | `#9AA89F` | `#6B6962` light_muted_text |
+| `syntax.keyword` | `#E1782E` | `#A55218` maple_ink |
+| `syntax.string` | `#8DB600` | `#587200` green_apple_ink |
+| `syntax.number` | `#CD853F` | `#945C27` peru_ink |
+| `syntax.constant` | `#CD853F` | `#945C27` peru_ink |
+| `syntax.function` | `#DAA520` | `#846413` goldenrod_ink |
+| `syntax.type` | `#5FC4B8` | `#2B746C` slate_ink |
+| `syntax.variable` | `#F2EFE6` | `#323327` light_ink |
+| `syntax.parameter` | `#F2EFE6` | `#323327` light_ink |
+| `syntax.property` | `#F2EFE6` | `#323327` light_ink |
+| `syntax.operator` | `#F2EFE6` | `#323327` light_ink |
+| `syntax.punctuation` | `#F2EFE6` | `#323327` light_ink |
+| `syntax.tag` | `#E1782E` | `#A55218` maple_ink |
+| `syntax.attribute` | `#DAA520` | `#846413` goldenrod_ink |
+| `syntax.regex` | `#8DB600` | `#587200` green_apple_ink |
+| `syntax.invalid` | `#E47474` | `#C92727` candy_apple_ink |
+| `terminal.background` | `#22302A` | `#F7F2EE` light_page |
+| `terminal.foreground` | `#F2EFE6` | `#323327` light_ink |
+| `terminal.cursor` | `#DAA520` | `#8B4513` bark |
+| `terminal.selection` | `#A0522D` | `#D4B1A0` light_selection |
+| `terminal.black` | `#2E3F37` | `#323327` light_ink |
+| `terminal.red` | `#E47474` | `#C92727` candy_apple_ink |
+| `terminal.green` | `#8DB600` | `#587200` green_apple_ink |
+| `terminal.yellow` | `#DAA520` | `#846413` goldenrod_ink |
+| `terminal.blue` | `#6797D9` | `#2E68B9` denim_ink |
+| `terminal.magenta` | `#C77DBA` | `#A24691` plum_ink |
+| `terminal.cyan` | `#5FC4B8` | `#2B746C` slate_ink |
+| `terminal.white` | `#F2EFE6` | `#84807A` light_terminal_white |
+| `terminal.bright_black` | `#9AA89F` | `#6B6962` light_muted_text |
+| `terminal.bright_red` | `#E1782E` | `#A55218` maple_ink |
+| `terminal.bright_green` | `#8DB600` | `#587200` green_apple_ink |
+| `terminal.bright_yellow` | `#DAA520` | `#846413` goldenrod_ink |
+| `terminal.bright_blue` | `#6797D9` | `#2E68B9` denim_ink |
+| `terminal.bright_magenta` | `#C77DBA` | `#A24691` plum_ink |
+| `terminal.bright_cyan` | `#5FC4B8` | `#2B746C` slate_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#908C85` light_terminal_bright_white |
+
+![September light palette](palette-light.svg)
+
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 09 · September — Back to School](../vscode/themes/september-dark.json)
+- [Seasonal 09 · September — Back to School · Dark](../vscode/themes/september-dark.json)
+- [Seasonal 09 · September — Back to School · Light](../vscode/themes/september-light.json)
 
 ![September in VS Code, dark](vscode-preview-dark.svg)
+
+![September in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -206,5 +267,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-September.omp.json](davids-September.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/September/davids-September.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-September-light.omp.json](davids-September-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/september-light.json](../vscode/themes/september-light.json): vscode-theme, light mode.
 - [../vscode/themes/september-dark.json](../vscode/themes/september-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

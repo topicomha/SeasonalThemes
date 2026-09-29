@@ -103,9 +103,14 @@
         "path": "./themes/august-light.json"
       },
       {
-        "label": "Seasonal 09 · September — Back to School 🍎",
+        "label": "Seasonal 09 · September — Back to School · Dark 🍎",
         "uiTheme": "vs-dark",
         "path": "./themes/september-dark.json"
+      },
+      {
+        "label": "Seasonal 09 · September — Back to School · Light 🍎",
+        "uiTheme": "vs",
+        "path": "./themes/september-light.json"
       },
       {
         "label": "Seasonal 10 · October — Halloween 🍂",
@@ -248,7 +253,12 @@
     {
       "month": 9,
       "mode": "dark",
-      "label": "Seasonal 09 · September — Back to School 🍎"
+      "label": "Seasonal 09 · September — Back to School · Dark 🍎"
+    },
+    {
+      "month": 9,
+      "mode": "light",
+      "label": "Seasonal 09 · September — Back to School · Light 🍎"
     },
     {
       "month": 10,

@@ -183,13 +183,75 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** ❤️ 💞 💓 💮 📮 🎀 🎁 😍 💋 🌷 💍 🍫 🥰 💑 🍓
 
+## Light mode
+
+The month is dark by default. In light mode (for programs that follow the system's light/dark setting), these roles change; everything else is the same.
+
+| Role | Dark | Light |
+|---|---|---|
+| `brand.line` | `#FF69B4` | `#C60063` hot_pink_ink |
+| `ui.background` | `#240A14` | `#F6EDEF` light_page |
+| `ui.foreground` | `#F7E1E8` | `#78001E` light_ink |
+| `ui.surface` | `#3A1422` | `#EEDEE2` light_panel |
+| `ui.line_highlight` | `#3A1422` | `#F1E3E6` light_current_line |
+| `ui.border` | `#3A1422` | `#DBB8C1` light_border |
+| `ui.muted` | `#B58A97` | `#964F61` light_muted_text |
+| `ui.selection` | `#800020` | `#CD9AA7` light_selection |
+| `ui.cursor` | `#FF007F` | `#800020` burgundy |
+| `ui.accent` | `#FF007F` | `#C60063` hot_pink_ink |
+| `status.error` | `#FF1493` | `#C5006B` deep_pink_ink |
+| `status.success` | `#FFFFFF` | `#646464` card_ink |
+| `status.warning` | `#F2C66D` | `#865D0C` honey_ink |
+| `status.info` | `#7FA7E8` | `#2361C5` cupid_ink |
+| `syntax.comment` | `#B58A97` | `#964F61` light_muted_text |
+| `syntax.keyword` | `#FF007F` | `#C60063` hot_pink_ink |
+| `syntax.string` | `#FFB6C1` | `#CC001F` blush_ink |
+| `syntax.number` | `#F2C66D` | `#865D0C` honey_ink |
+| `syntax.constant` | `#F2C66D` | `#865D0C` honey_ink |
+| `syntax.function` | `#FF69B4` | `#C60063` hot_pink_ink |
+| `syntax.type` | `#C990E8` | `#972BD2` lilac_ink |
+| `syntax.variable` | `#F7E1E8` | `#78001E` light_ink |
+| `syntax.parameter` | `#F7E1E8` | `#78001E` light_ink |
+| `syntax.property` | `#F7E1E8` | `#78001E` light_ink |
+| `syntax.operator` | `#F7E1E8` | `#78001E` light_ink |
+| `syntax.punctuation` | `#F7E1E8` | `#78001E` light_ink |
+| `syntax.tag` | `#FF007F` | `#C60063` hot_pink_ink |
+| `syntax.attribute` | `#FF69B4` | `#C60063` hot_pink_ink |
+| `syntax.regex` | `#FFB6C1` | `#CC001F` blush_ink |
+| `syntax.invalid` | `#E05A6D` | `#C1243B` cherry_ink |
+| `terminal.background` | `#240A14` | `#F6EDEF` light_page |
+| `terminal.foreground` | `#F7E1E8` | `#78001E` light_ink |
+| `terminal.cursor` | `#FF007F` | `#800020` burgundy |
+| `terminal.selection` | `#800020` | `#CD9AA7` light_selection |
+| `terminal.black` | `#3A1422` | `#78001E` light_ink |
+| `terminal.red` | `#E05A6D` | `#C1243B` cherry_ink |
+| `terminal.green` | `#7FC98B` | `#30723B` mint_ink |
+| `terminal.yellow` | `#F2C66D` | `#865D0C` honey_ink |
+| `terminal.blue` | `#7FA7E8` | `#2361C5` cupid_ink |
+| `terminal.magenta` | `#C990E8` | `#972BD2` lilac_ink |
+| `terminal.cyan` | `#6FD1C9` | `#246F69` aqua_ink |
+| `terminal.white` | `#F7E1E8` | `#A96E7D` light_terminal_white |
+| `terminal.bright_black` | `#B58A97` | `#964F61` light_muted_text |
+| `terminal.bright_red` | `#FF1493` | `#C5006B` deep_pink_ink |
+| `terminal.bright_green` | `#7FC98B` | `#30723B` mint_ink |
+| `terminal.bright_yellow` | `#F2C66D` | `#865D0C` honey_ink |
+| `terminal.bright_blue` | `#7FA7E8` | `#2361C5` cupid_ink |
+| `terminal.bright_magenta` | `#FF69B4` | `#C60063` hot_pink_ink |
+| `terminal.bright_cyan` | `#6FD1C9` | `#246F69` aqua_ink |
+| `terminal.bright_white` | `#FFFFFF` | `#B17B89` light_terminal_bright_white |
+
+![February light palette](palette-light.svg)
+
 ## VS Code
 
 Part of the Seasonal Themes extension in `vscode/`.
 
-- [Seasonal 02 · February — Valentine's Day](../vscode/themes/february-dark.json)
+- [Seasonal 02 · February — Valentine's Day · Dark](../vscode/themes/february-dark.json)
+- [Seasonal 02 · February — Valentine's Day · Light](../vscode/themes/february-light.json)
 
 ![February in VS Code, dark](vscode-preview-dark.svg)
+
+![February in VS Code, light](vscode-preview-light.svg)
 
 ## Ideas
 
@@ -207,5 +269,9 @@ Part of the Seasonal Themes extension in `vscode/`.
 - [davids-February.omp.json](davids-February.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/February/davids-February.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [davids-February-light.omp.json](davids-February-light.omp.json): oh-my-posh, light mode.
+- [palette-light.svg](palette-light.svg): palette-svg, light mode.
+- [vscode-preview-light.svg](vscode-preview-light.svg): vscode-preview, light mode.
+- [../vscode/themes/february-light.json](../vscode/themes/february-light.json): vscode-theme, light mode.
 - [../vscode/themes/february-dark.json](../vscode/themes/february-dark.json): vscode theme.
 - [vscode-preview-dark.svg](vscode-preview-dark.svg): vscode preview.

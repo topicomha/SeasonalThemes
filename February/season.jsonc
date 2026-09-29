@@ -150,5 +150,98 @@
     "oh-my-posh": {
       "time_format": "2006-01-02 3:04:05 PM"
     }
+  },
+
+  // ── Light mode ──────────────────────────────────────────────────────────
+  "modes": {
+    // Drafted by tools/New-LightMode.ps1 from the dark colours: tune freely.
+    "light": {
+      "palette": {
+        "hot_pink_ink": { "hex": "#C60063", "name": "Hot pink (light-mode ink)", "note": "Proposed: light mode" },
+        "light_page": { "hex": "#F6EDEF", "name": "Light-mode page", "note": "Proposed: light mode" },
+        "light_ink": { "hex": "#78001E", "name": "Light-mode ink", "note": "Proposed: light mode" },
+        "light_panel": { "hex": "#EEDEE2", "name": "Light-mode panel", "note": "Proposed: light mode" },
+        "light_current_line": { "hex": "#F1E3E6", "name": "Light-mode current line", "note": "Proposed: light mode" },
+        "light_border": { "hex": "#DBB8C1", "name": "Light-mode border", "note": "Proposed: light mode" },
+        "light_muted_text": { "hex": "#964F61", "name": "Light-mode muted text", "note": "Proposed: light mode" },
+        "light_selection": { "hex": "#CD9AA7", "name": "Light-mode selection", "note": "Proposed: light mode" },
+        "card_ink": { "hex": "#646464", "name": "Valentine card white (light-mode ink)", "note": "Proposed: light mode" },
+        "honey_ink": { "hex": "#865D0C", "name": "Honey gold (light-mode ink)", "note": "Proposed: light mode" },
+        "deep_pink_ink": { "hex": "#C5006B", "name": "Deep pink (light-mode ink)", "note": "Proposed: light mode" },
+        "cupid_ink": { "hex": "#2361C5", "name": "Cupid blue (light-mode ink)", "note": "Proposed: light mode" },
+        "blush_ink": { "hex": "#CC001F", "name": "Blush (light-mode ink)", "note": "Proposed: light mode" },
+        "lilac_ink": { "hex": "#972BD2", "name": "Lilac (light-mode ink)", "note": "Proposed: light mode" },
+        "cherry_ink": { "hex": "#C1243B", "name": "Cherry (light-mode ink)", "note": "Proposed: light mode" },
+        "light_terminal_white": { "hex": "#A96E7D", "name": "Light-mode terminal white", "note": "Proposed: light mode" },
+        "light_terminal_bright_white": { "hex": "#B17B89", "name": "Light-mode terminal bright white", "note": "Proposed: light mode" },
+        "mint_ink": { "hex": "#30723B", "name": "Mint leaf (light-mode ink)", "note": "Proposed: light mode" },
+        "aqua_ink": { "hex": "#246F69", "name": "Sea glass (light-mode ink)", "note": "Proposed: light mode" }
+      },
+      "colors": {
+        "brand": {
+          "line": "hot_pink_ink"
+        },
+        "ui": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "surface": "light_panel",
+          "line_highlight": "light_current_line",
+          "border": "light_border",
+          "muted": "light_muted_text",
+          "selection": "light_selection",
+          "cursor": "burgundy",
+          "accent": "hot_pink_ink"
+        },
+        "status": {
+          "success": "card_ink",
+          "warning": "honey_ink",
+          "error": "deep_pink_ink",
+          "info": "cupid_ink"
+        },
+        "syntax": {
+          "comment": { "color": "light_muted_text", "style": "italic" },
+          "keyword": "hot_pink_ink",
+          "string": "blush_ink",
+          "number": "honey_ink",
+          "constant": "honey_ink",
+          "function": "hot_pink_ink",
+          "type": "lilac_ink",
+          "variable": "light_ink",
+          "parameter": "light_ink",
+          "property": "light_ink",
+          "operator": "light_ink",
+          "punctuation": "light_ink",
+          "tag": "hot_pink_ink",
+          "attribute": "hot_pink_ink",
+          "regex": "blush_ink",
+          "invalid": "cherry_ink"
+        },
+        "terminal": {
+          "background": "light_page",
+          "foreground": "light_ink",
+          "cursor": "burgundy",
+          "selection": "light_selection",
+          "black": "light_ink",
+          "bright_black": "light_muted_text",
+          "white": "light_terminal_white",
+          "bright_white": "light_terminal_bright_white",
+          "red": "cherry_ink",
+          "bright_red": "deep_pink_ink",
+          "green": "mint_ink",
+          "bright_green": "mint_ink",
+          "yellow": "honey_ink",
+          "bright_yellow": "honey_ink",
+          "blue": "cupid_ink",
+          "bright_blue": "cupid_ink",
+          "magenta": "lilac_ink",
+          "bright_magenta": "hot_pink_ink",
+          "cyan": "aqua_ink",
+          "bright_cyan": "aqua_ink"
+        }
+      },
+      "targets": {
+        "vscode": { "accent": "ui.accent" }
+      }
+    }
   }
 }

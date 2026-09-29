@@ -43,9 +43,14 @@
         "path": "./themes/january-light.json"
       },
       {
-        "label": "Seasonal 02 · February — Valentine's Day 🌹",
+        "label": "Seasonal 02 · February — Valentine's Day · Dark 🌹",
         "uiTheme": "vs-dark",
         "path": "./themes/february-dark.json"
+      },
+      {
+        "label": "Seasonal 02 · February — Valentine's Day · Light 🌹",
+        "uiTheme": "vs",
+        "path": "./themes/february-light.json"
       },
       {
         "label": "Seasonal 03 · March — St. Patrick's Day ☘️",
@@ -163,7 +168,12 @@
     {
       "month": 2,
       "mode": "dark",
-      "label": "Seasonal 02 · February — Valentine's Day 🌹"
+      "label": "Seasonal 02 · February — Valentine's Day · Dark 🌹"
+    },
+    {
+      "month": 2,
+      "mode": "light",
+      "label": "Seasonal 02 · February — Valentine's Day · Light 🌹"
     },
     {
       "month": 3,

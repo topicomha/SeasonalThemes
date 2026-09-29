@@ -49,7 +49,7 @@ The themes are generated; don't edit `themes/*.json` or `package.json` by hand. 
 
 ```bash
 pwsh ./Generate-Themes.ps1            # regenerate every month's files, including these themes
-cd vscode && npx @vscode/vsce package --skip-license   # build seasonal-themes-<version>.vsix
+cd vscode && npx @vscode/vsce package   # build seasonal-themes-<version>.vsix
 ```
 
 Install the `.vsix` with **Extensions: Install from VSIX...**. CI also builds it for every pull request.

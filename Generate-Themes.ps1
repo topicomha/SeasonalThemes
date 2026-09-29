@@ -108,6 +108,12 @@ $Targets = @(
         Renderer = 'templates/vscode-package.json.ps1'
         Output   = 'vscode/package.json'
     }
+    @{
+        Name     = 'vscode-license'
+        Scope    = 'all'
+        Renderer = 'templates/vscode-license.ps1'
+        Output   = 'vscode/LICENSE'
+    }
 )
 
 # Minimum contrast before [[on.<role>]] warns: 3:1 is the WCAG floor for UI elements.

@@ -29,6 +29,13 @@ The palette is emerald (May's birthstone), buttercup yellow, cornflower blue, la
 | `navy` | Navy | `#000080` |  |
 | `soil` | Rich soil | `#5D4037` |  |
 | `white` | White | `#FFFFFF` |  |
+| `dusk` | May dusk | `#141C2B` | Proposed: editor and terminal background |
+| `twilight` | Twilight | `#202A3D` | Proposed: panels, borders, current line |
+| `petal` | Daisy petal | `#F3F0E6` | Proposed: editor text |
+| `mist` | Morning mist | `#9AA4B5` | Proposed: comments, muted text |
+| `poppy` | Poppy red | `#E8646A` | Proposed: terminal red, invalid code (poppies for Memorial Day) |
+| `grill` | Grill ember | `#F59E5B` | Proposed: keywords |
+| `robin_egg` | Robin's egg | `#6FD3DB` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -58,14 +65,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | navy | `#000080` |  |
-| `background` | cornflower | `#6495ED` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | cornflower | `#6495ED` | *inherits* `ui.background` |
-| `line_highlight` | cornflower | `#6495ED` | *inherits* `ui.surface` |
-| `border` | cornflower | `#6495ED` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | cornflower | `#6495ED` | *inherits* `brand.secondary` |
-| `cursor` | buttercup | `#FCDC3B` | *inherits* `brand.primary` |
+| `background` | dusk | `#141C2B` |  |
+| `foreground` | petal | `#F3F0E6` |  |
+| `surface` | twilight | `#202A3D` |  |
+| `line_highlight` | twilight | `#202A3D` |  |
+| `border` | twilight | `#202A3D` |  |
+| `muted` | mist | `#9AA4B5` |  |
+| `selection` | navy | `#000080` |  |
+| `cursor` | buttercup | `#FCDC3B` |  |
 
 ### Status
 
@@ -75,8 +82,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | lavender | `#B57EDC` |  |
 | `success` | cornflower | `#6495ED` |  |
-| `warning` | lavender | `#B57EDC` | *inherits* `brand.accent` |
-| `info` | lavender | `#B57EDC` | *inherits* `brand.highlight` |
+| `warning` | buttercup | `#FCDC3B` |  |
+| `info` | cornflower | `#6495ED` |  |
 
 ### Syntax
 
@@ -84,22 +91,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | buttercup | `#FCDC3B` | *inherits* `brand.primary` |
-| `string` | lavender | `#B57EDC` | *inherits* `brand.accent` |
-| `number` | meadow | `#4CBB17` | *inherits* `brand.tertiary` |
-| `constant` | meadow | `#4CBB17` | *inherits* `syntax.number` |
-| `function` | emerald | `#50C878` | *inherits* `brand.accent_alt` |
-| `type` | lavender | `#B57EDC` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | buttercup | `#FCDC3B` | *inherits* `syntax.keyword` |
-| `attribute` | emerald | `#50C878` | *inherits* `syntax.function` |
-| `regex` | lavender | `#B57EDC` | *inherits* `syntax.string` |
-| `invalid` | lavender | `#B57EDC` | *inherits* `status.error` |
+| `comment` | mist | `#9AA4B5` | italic |
+| `keyword` | grill | `#F59E5B` |  |
+| `string` | emerald | `#50C878` |  |
+| `number` | buttercup | `#FCDC3B` |  |
+| `constant` | buttercup | `#FCDC3B` |  |
+| `function` | cornflower | `#6495ED` |  |
+| `type` | lavender | `#B57EDC` |  |
+| `variable` | petal | `#F3F0E6` |  |
+| `parameter` | petal | `#F3F0E6` | *inherits* `syntax.variable` |
+| `property` | petal | `#F3F0E6` | *inherits* `syntax.variable` |
+| `operator` | petal | `#F3F0E6` | *inherits* `ui.foreground` |
+| `punctuation` | petal | `#F3F0E6` | *inherits* `ui.foreground` |
+| `tag` | grill | `#F59E5B` | *inherits* `syntax.keyword` |
+| `attribute` | cornflower | `#6495ED` | *inherits* `syntax.function` |
+| `regex` | emerald | `#50C878` | *inherits* `syntax.string` |
+| `invalid` | poppy | `#E8646A` |  |
 
 ### Terminal
 
@@ -107,26 +114,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | cornflower | `#6495ED` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
+| `background` | dusk | `#141C2B` | *inherits* `ui.background` |
+| `foreground` | petal | `#F3F0E6` | *inherits* `ui.foreground` |
 | `cursor` | buttercup | `#FCDC3B` | *inherits* `ui.cursor` |
-| `selection` | cornflower | `#6495ED` | *inherits* `ui.selection` |
-| `black` | cornflower | `#6495ED` | *inherits* `ui.background` |
-| `red` | lavender | `#B57EDC` | *inherits* `status.error` |
-| `green` | cornflower | `#6495ED` | *inherits* `status.success` |
-| `yellow` | lavender | `#B57EDC` | *inherits* `status.warning` |
-| `blue` | lavender | `#B57EDC` | *inherits* `status.info` |
-| `magenta` | lavender | `#B57EDC` | *inherits* `brand.highlight` |
-| `cyan` | lavender | `#B57EDC` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | lavender | `#B57EDC` | *inherits* `terminal.red` |
-| `bright_green` | cornflower | `#6495ED` | *inherits* `terminal.green` |
-| `bright_yellow` | lavender | `#B57EDC` | *inherits* `terminal.yellow` |
-| `bright_blue` | lavender | `#B57EDC` | *inherits* `terminal.blue` |
+| `selection` | navy | `#000080` | *inherits* `ui.selection` |
+| `black` | twilight | `#202A3D` |  |
+| `red` | poppy | `#E8646A` |  |
+| `green` | emerald | `#50C878` |  |
+| `yellow` | buttercup | `#FCDC3B` |  |
+| `blue` | cornflower | `#6495ED` |  |
+| `magenta` | lavender | `#B57EDC` |  |
+| `cyan` | robin_egg | `#6FD3DB` |  |
+| `white` | petal | `#F3F0E6` |  |
+| `bright_black` | mist | `#9AA4B5` |  |
+| `bright_red` | grill | `#F59E5B` |  |
+| `bright_green` | meadow | `#4CBB17` |  |
+| `bright_yellow` | buttercup | `#FCDC3B` | *inherits* `terminal.yellow` |
+| `bright_blue` | cornflower | `#6495ED` | *inherits* `terminal.blue` |
 | `bright_magenta` | lavender | `#B57EDC` | *inherits* `terminal.magenta` |
-| `bright_cyan` | lavender | `#B57EDC` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_cyan` | robin_egg | `#6FD3DB` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

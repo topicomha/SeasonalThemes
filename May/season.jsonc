@@ -33,7 +33,14 @@
     "emerald":    { "hex": "#50C878", "name": "Emerald", "note": "May's birthstone" },
     "navy":       { "hex": "#000080", "name": "Navy" },
     "soil":       { "hex": "#5D4037", "name": "Rich soil" },
-    "white":      { "hex": "#FFFFFF", "name": "White" }
+    "white":      { "hex": "#FFFFFF", "name": "White" },
+    "dusk":       { "hex": "#141C2B", "name": "May dusk", "note": "Proposed: editor and terminal background" },
+    "twilight":   { "hex": "#202A3D", "name": "Twilight", "note": "Proposed: panels, borders, current line" },
+    "petal":      { "hex": "#F3F0E6", "name": "Daisy petal", "note": "Proposed: editor text" },
+    "mist":       { "hex": "#9AA4B5", "name": "Morning mist", "note": "Proposed: comments, muted text" },
+    "poppy":      { "hex": "#E8646A", "name": "Poppy red", "note": "Proposed: terminal red, invalid code (poppies for Memorial Day)" },
+    "grill":      { "hex": "#F59E5B", "name": "Grill ember", "note": "Proposed: keywords" },
+    "robin_egg":  { "hex": "#6FD3DB", "name": "Robin's egg", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -50,12 +57,47 @@
       "line":        "meadow"
     },
     "ui": {
-      "text_light": "white",
-      "text_dark":  "navy"
+      "text_light":     "white",
+      "text_dark":      "navy",
+      "background":     "dusk",
+      "foreground":     "petal",
+      "surface":        "twilight",
+      "line_highlight": "twilight",
+      "border":         "twilight",
+      "muted":          "mist",
+      "selection":      "navy",
+      "cursor":         "buttercup"
     },
     "status": {
       "success": "cornflower",
-      "error":   "lavender"
+      "warning": "buttercup",
+      "error":   "lavender",
+      "info":    "cornflower"
+    },
+    "syntax": {
+      "comment":  { "color": "mist", "style": "italic" },
+      "keyword":  "grill",
+      "string":   "emerald",
+      "number":   "buttercup",
+      "constant": "buttercup",
+      "function": "cornflower",
+      "type":     "lavender",
+      "variable": "petal",
+      "invalid":  "poppy"
+    },
+    "terminal": {
+      "black":         "twilight",
+      "red":           "poppy",
+      "green":         "emerald",
+      "yellow":        "buttercup",
+      "blue":          "cornflower",
+      "magenta":       "lavender",
+      "cyan":          "robin_egg",
+      "white":         "petal",
+      "bright_black":  "mist",
+      "bright_red":    "grill",
+      "bright_green":  "meadow",
+      "bright_white":  "white"
     }
   },
 

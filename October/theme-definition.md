@@ -34,7 +34,7 @@ The icons mix the spooky (skulls, bones, ghosts, spiders) with the autumn harves
 | `charcoal` | Charcoal | `#2D3436` |  |
 | `midnight` | Midnight slate | `#2C3E50` | From the Fall VS Code theme's sidebar |
 | `smoke` | Smoke | `#444444` |  |
-| `ash` | Ash grey | `#7C7C7C` |  |
+| `ash` | Ash grey | `#939393` |  |
 | `blood` | Blood red | `#E5534B` | Proposed: terminal red, invalid code |
 | `wisp` | Wisp purple | `#B07CC6` | Proposed: witch purple lightened to read on charcoal (syntax types, terminal magenta) |
 | `slime` | Goblin green | `#7DAA3B` | Proposed: terminal green |
@@ -74,7 +74,7 @@ Surfaces and text of an application window.
 | `surface` | midnight | `#2C3E50` |  |
 | `line_highlight` | smoke | `#444444` |  |
 | `border` | smoke | `#444444` |  |
-| `muted` | ash | `#7C7C7C` |  |
+| `muted` | ash | `#939393` |  |
 | `selection` | burnt | `#A04000` |  |
 | `cursor` | pumpkin | `#D35400` |  |
 
@@ -95,7 +95,7 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | ash | `#7C7C7C` | italic |
+| `comment` | ash | `#939393` | italic |
 | `keyword` | amber | `#F39C12` |  |
 | `string` | carrot | `#E67E22` |  |
 | `number` | candy_corn | `#F1C40F` |  |
@@ -130,7 +130,7 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 | `magenta` | wisp | `#B07CC6` |  |
 | `cyan` | potion | `#48C9B0` |  |
 | `white` | ghost | `#E0F8FF` |  |
-| `bright_black` | ash | `#7C7C7C` |  |
+| `bright_black` | ash | `#939393` |  |
 | `bright_red` | pumpkin | `#D35400` |  |
 | `bright_green` | slime | `#7DAA3B` | *inherits* `terminal.green` |
 | `bright_yellow` | lemon | `#FFFB38` |  |
@@ -182,6 +182,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** ☠️ 👺 👽 🕸️ 🥷 🧙‍♂️ 🩻 🪦 🏴‍☠️ 🧹 🦇 🧛 🔮 🕯️ ⚰️ 🌕 🍬 🍭 🥧
 
+## VS Code
+
+Theme: [Seasonal 10 · October — Halloween](../vscode/themes/october.json), part of the Seasonal Themes extension in `vscode/`.
+
+![October in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - More Halloween icons: 🧙 witch, 🧛 vampire, 🦇 bat
@@ -200,3 +206,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-October.omp.json](davids-October.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/October/davids-October.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/october.json](../vscode/themes/october.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

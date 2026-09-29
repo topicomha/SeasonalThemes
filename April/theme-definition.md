@@ -184,6 +184,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🌼 ☔ 🐣 🥚 🐇 🌷 🌳 🍀 🍃 🦔 🦢 🐑 🧺 🐤 🥕
 
+## VS Code
+
+Theme: [Seasonal 04 · April — Spring Showers](../vscode/themes/april.json), part of the Seasonal Themes extension in `vscode/`.
+
+![April in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - The old theme gave every pastel its own matching dark text (forest, navy, mahogany, golden brown, plum); the layout could support a text colour per role
@@ -200,3 +206,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-April.omp.json](davids-April.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/April/davids-April.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/april.json](../vscode/themes/april.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

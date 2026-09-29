@@ -179,6 +179,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🏊 ⛵ 🏐 🍦 🍹 👙 🩴 🎓 📜 🐬 🥥 🌺 🏖️ 🌊
 
+## VS Code
+
+Theme: [Seasonal 06 · June — Summer Vacation](../vscode/themes/june.json), part of the Seasonal Themes extension in `vscode/`.
+
+![June in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - More summer activities: 🏊 swimming, ⛵ sailboat, 🏐 volleyball
@@ -197,3 +203,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-June.omp.json](davids-June.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/June/davids-June.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/june.json](../vscode/themes/june.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

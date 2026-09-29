@@ -10,7 +10,7 @@ The core idea: **each month is defined by one detailed document. Refine the docu
 |---|---|
 | Oh My Posh prompt | Active. The current focus is finishing all 12 months consistently. |
 | Theme page + palette image | Generated alongside each month (`theme-definition.md`, `palette.svg`). |
-| VS Code colour theme | Planned. A fall-only version exists in [topicomha/Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme). The plan is **one extension with 12 colour themes**, switched each month through `workbench.colorTheme`. |
+| VS Code colour theme | Active. One extension (`vscode/`) with a theme per month plus variants, which switches with the month. Replaces the fall-only [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme). |
 | Terminal colours / other CLI tools | Possible later. The document already defines the 16 standard terminal colours and the syntax colours. |
 | Wallpaper sync across OSes | An idea only. Out of scope for now. |
 
@@ -60,8 +60,9 @@ pwsh ./Generate-Themes.ps1 -Check           # exit 1 if any generated file is ou
 
 | Kind | File | How it works |
 |---|---|---|
-| Template | `oh-my-posh.omp.json` | The target's file with `[[token]]` placeholders |
-| Renderer | `theme-definition.md.ps1`, `palette.svg.ps1` | A script that receives the resolved season and returns the file's text. Use one when the output needs loops. |
+| Template | `oh-my-posh.omp.json`, `vscode-color-theme.json` | The target's file with `[[token]]` placeholders |
+| Renderer | `theme-definition.md.ps1`, `palette.svg.ps1`, `vscode-preview.svg.ps1` | A script that receives the resolved season and returns the file's text. Use one when the output needs loops. |
+| All-months renderer | `vscode-package.json.ps1` | `Scope = 'all'`: rendered once with every month's seasons (e.g. the extension manifest listing all themes) |
 
 Template tokens:
 - `[[color.<group>.<role>]]`
@@ -69,10 +70,11 @@ Template tokens:
 - `[[style.<group>.<role>]]`
 - `[[palette.<name>]]`
 - `[[icon.<role>]]`, `[[icon.lang.<x>]]`, `[[icon.os.<x>]]`
-- `[[meta.month|name|tagline|appearance|variant]]`
-- `[[target.<key>|default]]`
+- `[[meta.month|name|tagline|appearance|variant|title]]` (`title` is e.g. "Seasonal 10 · October — Halloween")
+- `[[target.<key>|default]]`: a per-program extra from `targets.<program>`
+- `[[choice.<key>|<role>]]` / `[[on-choice.<key>|<role>]]`: a colour role the month picks in `targets.<program>.<key>` (default `<role>`), and the best text on it
 
-To add a program, add a template or renderer and a row in `$Targets`. Use `PerVariant = $true` if each variant needs its own file.
+To add a program, add a template or renderer and a row in `$Targets`. Use `PerVariant = $true` if each variant needs its own file, and `Program = '<name>'` for the key it reads under `targets` in `season.jsonc`. An unknown program name under `targets` is an error. Run with `-Verbose` to see where a template or renderer failed.
 
 ## Repository layout
 
@@ -82,6 +84,12 @@ To add a program, add a template or renderer and a row in `$Targets`. Use `PerVa
   davids-<Month>.omp.json    generated Oh My Posh theme (+ davids-<Month>-<variant>.omp.json)
   theme-definition.md        generated readable page
   palette.svg                generated palette swatch sheet
+  vscode-preview.svg         generated mock VS Code window in the month's theme
+vscode/                      the VS Code extension (Seasonal Themes)
+  themes/<month>.json        generated colour themes (+ <month>-<variant>.json)
+  package.json               generated manifest (themes + the date schedule extension.js reads)
+  extension.js               switches to the current month's theme while a Seasonal theme is active
+  README.md, CHANGELOG.md, icon.png, .vscodeignore
 schema/season.schema.json    the format of season.jsonc: roles, fallbacks, descriptions
 templates/                   one template or renderer per target
 Generate-Themes.ps1          season.jsonc + templates -> every generated file
@@ -95,6 +103,31 @@ ThemeGenerator.md            earlier generator design, replaced by Generate-Them
 test.omp.json, test-all.omp.json   scratch/debug themes (test-all labels each segment type)
 scripts.ipynb                snippets that symlink themes into the Oh My Posh themes folder
 ```
+
+## VS Code theme standard
+
+Every month's theme comes from one template, `templates/vscode-color-theme.json`, so all months behave the same. Only their colours differ:
+
+| Part of the window | Role |
+|---|---|
+| Editor, gutter, tabs (active), panels | `ui.background`, `ui.foreground`, `ui.line_highlight`, `ui.selection`, `ui.cursor` |
+| Title bar, activity bar, sidebar, inactive tabs, widgets, inputs | `ui.surface`, `ui.border`, `ui.muted` |
+| Status bar, buttons | **choice** `status_bar` (default `brand.primary`) |
+| Badges, focus rings, active tab / panel borders, find matches, list highlights | **choice** `accent` (default `brand.accent`) |
+| Debugging / no-folder status bar | `brand.highlight` / `brand.secondary` |
+| Code | `syntax.*`, for both TextMate scopes and semantic tokens |
+| Bracket pairs (1–6) | `syntax.number`, `type`, `function`, `keyword`, `string`, `terminal.cyan` |
+| Terminal, git decorations, diff, errors / warnings | `terminal.*`, `syntax.invalid` |
+
+**What makes a month unique:** its palette and roles, plus two choices in `season.jsonc`:
+
+```jsonc
+"targets": { "vscode": { "status_bar": "brand.secondary", "accent": "brand.line" } }
+```
+
+Pick the colours that say the month most clearly (e.g. September's apple-red status bar, July's Old Glory red). Variants can make their own choices (New Year's Eve uses champagne gold). Check every month's `vscode-preview.svg` side by side after a change. The generator checks 31 text/background pairs in each theme (status bar, tabs, badges, buttons, selections, widgets, terminal) and warns below 3:1.
+
+**Building:** `cd vscode && npx @vscode/vsce package --skip-license` makes `seasonal-themes-<version>.vsix` (ignored by git). CI builds it on every PR and attaches it to the run. Bump `version` in `templates/vscode-package.json` and add a `vscode/CHANGELOG.md` entry for a release. There's no LICENSE yet, hence `--skip-license`.
 
 ## Oh My Posh notes
 
@@ -152,4 +185,4 @@ Hosted on **GitHub** (`topicomha/SeasonalThemes`). Use `gh` for PRs.
 3. **Replace `ThemesDocumentation.md`** with a generated index of all months, and fold `Icons.md` into each month's `icons.pool`.
 4. **Refine October's proposed colours.** The terminal red, green, blue and cyan swatches are marked "Proposed" in the palette. `status.error` is currently the same as `brand.secondary`.
 5. **Remove the empty submodule pointers**: `Fall/vscode-extension-src` and `November/vscode-extension-src` (no `.gitmodules`), and widen the `.gitignore` rule to `vscode-extension-src/`.
-6. **VS Code target** (after Oh My Posh is done): bring the extension into this repo, add a `templates/vscode-color-theme.json` template (it can use the `ui`, `syntax` and `terminal` roles directly), and generate 12 themes into one extension.
+6. **VS Code:** pick a licence (the extension currently packages with `--skip-license`), decide whether to publish to the Marketplace, and consider light themes for the pastel months (April, May, June).

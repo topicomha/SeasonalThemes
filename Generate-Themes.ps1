@@ -17,6 +17,8 @@
         [[icon.<role>]]            e.g. [[icon.git]], [[icon.lang.node]], [[icon.os.linux]]
         [[meta.<field>]]           month, name, tagline, appearance, variant
         [[target.<key>|default]]   a per-program extra from season.jsonc "targets"
+        [[choice.<key>|role]]      the colour role the month picks in targets.<program>.<key> (default: role)
+        [[on-choice.<key>|role]]   the best text colour on that choice
     - Renderer targets (templates/*.ps1) get the resolved season and return the file's text.
       Use these when the output needs loops (documentation, images).
 
@@ -44,10 +46,12 @@ $Months = 'January', 'February', 'March', 'April', 'May', 'June',
 $SchemaPath = Join-Path $PSScriptRoot 'schema' 'season.schema.json'
 
 # One entry per generated file type. Add a row here when a new program gets a template.
+#   Program: the key under season.jsonc "targets" that holds this program's extras and choices.
 #   PerVariant: also generate one file per date variant (output names get -<variant id>).
 $Targets = @(
     @{
         Name       = 'oh-my-posh'
+        Program    = 'oh-my-posh'
         Template   = 'templates/oh-my-posh.omp.json'
         PerVariant = $true
         Check      = { param($Season, $Text) Test-OmpContrast $Season $Text }
@@ -64,6 +68,28 @@ $Targets = @(
         Renderer   = 'templates/theme-definition.md.ps1'
         PerVariant = $false
         Output     = { param($m, $v) "$m/theme-definition.md" }
+    }
+    @{
+        Name       = 'vscode-theme'
+        Program    = 'vscode'
+        Template   = 'templates/vscode-color-theme.json'
+        PerVariant = $true
+        Check      = { param($Season, $Text) Test-VsCodeContrast $Season $Text }
+        Output     = { param($m, $v) $slug = $m.ToLower(); if ($v) { "vscode/themes/$slug-$v.json" } else { "vscode/themes/$slug.json" } }
+    }
+    @{
+        Name       = 'vscode-preview'
+        Program    = 'vscode'
+        Renderer   = 'templates/vscode-preview.svg.ps1'
+        PerVariant = $true
+        Output     = { param($m, $v) if ($v) { "$m/vscode-preview-$v.svg" } else { "$m/vscode-preview.svg" } }
+    }
+    # Scope 'all': rendered once from every month, not once per month.
+    @{
+        Name     = 'vscode-manifest'
+        Scope    = 'all'
+        Renderer = 'templates/vscode-package.json.ps1'
+        Output   = 'vscode/package.json'
     }
 )
 
@@ -173,6 +199,15 @@ function Read-Season([string]$MonthName) {
     if ($raw.month -ne $MonthName) {
         throw "$path says month '$($raw.month)' but lives in the $MonthName folder."
     }
+    $programs = @($Targets | ForEach-Object { $_['Program'] } | Where-Object { $_ } | Select-Object -Unique)
+    foreach ($source in @($raw) + @($raw['variants'] ?? @())) {
+        foreach ($program in @($source['targets'] ? $source.targets.Keys : @())) {
+            if ($program -notin $programs) {
+                throw "$path has targets.$program, but no target reads it (known: $($programs -join ', '))."
+            }
+        }
+    }
+
     $todos = @(Find-Todo $raw '')
     if ($todos) {
         throw "$path is still a draft; fill in: $($todos -join ', ')"
@@ -294,8 +329,13 @@ function Resolve-Season($Raw, $Variant) {
     $icons = [ordered]@{}
     foreach ($role in $IconRoles.Keys) { $icons[$role] = Resolve-Icon $ctx $role }
 
+    # A display name that sorts by month in pickers, e.g. "Seasonal 10 · October — Halloween".
+    $number = '{0:D2}' -f ([array]::IndexOf($Months, $Raw.month) + 1)
+    $title = "Seasonal $number · $($Raw.month) — $($Variant ? $Variant.name : $Raw.name)"
+
     @{
         Month       = $Raw.month
+        Title       = $title
         VariantId   = $Variant ? $Variant.id : $null
         VariantName = $Variant ? $Variant.name : $null
         Where       = $where
@@ -335,12 +375,23 @@ function Resolve-Token($Season, [string]$TargetName, [string]$Token, $Default) {
         'meta' {
             switch ($rest) {
                 'variant' { $Season.VariantName ?? '' }
+                'title' { $Season.Title }
                 { $_ -in 'month', 'name', 'tagline', 'appearance' } { $Season.Data[$rest] }
             }
         }
         'target' {
             $extras = $Season.Data['targets'] ? $Season.Data.targets[$TargetName] : $null
             $extras ? $extras[$rest] : $null
+        }
+        # A colour role the month picks for this program, e.g. [[choice.status_bar|brand.primary]]
+        # uses targets.<program>.status_bar when set, else brand.primary. on-choice gives its text colour.
+        { $_ -in 'choice', 'on-choice' } {
+            $extras = $Season.Data['targets'] ? $Season.Data.targets[$TargetName] : $null
+            $role = ($extras ? $extras[$rest] : $null) ?? $Default
+            if (-not $Season.Colors.Contains($role)) {
+                throw "$($Season.Where): targets.$TargetName.$rest is '$role', which isn't a colour role (e.g. brand.accent)."
+            }
+            $kind -eq 'choice' ? $Season.Colors[$role].Hex : $Season.Colors[$role].On
         }
     }
     if ($null -ne $value) { return [string]$value }
@@ -363,7 +414,7 @@ function Invoke-Template($Season, $Target) {
     foreach ($match in [regex]::Matches($text, $TokenPattern)) {
         if ($values.ContainsKey($match.Value)) { continue }
         $default = $match.Groups[2].Success ? $match.Groups[2].Value : $null
-        $value = Resolve-Token $Season $Target.Name $match.Groups[1].Value $default
+        $value = Resolve-Token $Season $Target.Program $match.Groups[1].Value $default
         # JSON templates put tokens inside strings, so escape anything that would end or break one.
         if ($isJson) { $value = $value -replace '\\', '\\' -replace '"', '\"' }
         $values[$match.Value] = $value
@@ -391,38 +442,118 @@ function Test-OmpContrast($Season, [string]$Text) {
     }
 }
 
+# Text/background pairs in a VS Code theme that must stay readable.
+$VsCodePairs = @(
+    @('editor.foreground', 'editor.background'),
+    @('editorLineNumber.foreground', 'editor.background'),
+    @('editorLineNumber.activeForeground', 'editor.lineHighlightBackground'),
+    @('titleBar.activeForeground', 'titleBar.activeBackground'),
+    @('activityBar.foreground', 'activityBar.background'),
+    @('activityBarBadge.foreground', 'activityBarBadge.background'),
+    @('sideBar.foreground', 'sideBar.background'),
+    @('sideBarSectionHeader.foreground', 'sideBarSectionHeader.background'),
+    @('list.activeSelectionForeground', 'list.activeSelectionBackground'),
+    @('list.inactiveSelectionForeground', 'list.inactiveSelectionBackground'),
+    @('list.highlightForeground', 'sideBar.background'),
+    @('tab.activeForeground', 'tab.activeBackground'),
+    @('tab.inactiveForeground', 'tab.inactiveBackground'),
+    @('breadcrumb.foreground', 'breadcrumb.background'),
+    @('input.foreground', 'input.background'),
+    @('input.placeholderForeground', 'input.background'),
+    @('button.foreground', 'button.background'),
+    @('button.secondaryForeground', 'button.secondaryBackground'),
+    @('badge.foreground', 'badge.background'),
+    @('panelTitle.activeForeground', 'panel.background'),
+    @('statusBar.foreground', 'statusBar.background'),
+    @('statusBar.debuggingForeground', 'statusBar.debuggingBackground'),
+    @('statusBar.noFolderForeground', 'statusBar.noFolderBackground'),
+    @('statusBarItem.remoteForeground', 'statusBarItem.remoteBackground'),
+    @('editorSuggestWidget.foreground', 'editorSuggestWidget.background'),
+    @('editorSuggestWidget.selectedForeground', 'editorSuggestWidget.selectedBackground'),
+    @('editorSuggestWidget.highlightForeground', 'editorSuggestWidget.background'),
+    @('quickInputList.focusForeground', 'quickInputList.focusBackground'),
+    @('menu.selectionForeground', 'menu.selectionBackground'),
+    @('notifications.foreground', 'notifications.background'),
+    @('terminal.foreground', 'terminal.background')
+)
+
+function Test-VsCodeContrast($Season, [string]$Text) {
+    $colors = ($Text | ConvertFrom-Json -AsHashtable).colors
+    foreach ($pair in $VsCodePairs) {
+        $fg = $colors[$pair[0]]
+        $bg = $colors[$pair[1]]
+        if ($fg -notmatch '^#[0-9A-Fa-f]{6}$' -or $bg -notmatch '^#[0-9A-Fa-f]{6}$') { continue }
+        $ratio = Get-ContrastRatio $fg $bg
+        if ($ratio -lt $MinContrast) {
+            Write-Warning ("{0}: VS Code {1} {2} is only {3:N1}:1 on {4} {5}" -f $Season.Where, $pair[0], $fg, $ratio, $pair[1], $bg)
+        }
+    }
+}
+
 function Invoke-Renderer($Season, $Target, [hashtable]$Files) {
     & (Join-Path $PSScriptRoot $Target.Renderer) -Season $Season -Files $Files
 }
 
 #endregion
 
+# Writes a generated file, or in -Check mode records it as stale, unless it's already up to date.
+function Save-Output([string]$Relative, [string]$Output) {
+    $outPath = Join-Path $PSScriptRoot $Relative
+    $current = (Test-Path $outPath) ? [IO.File]::ReadAllText($outPath, $utf8) : $null
+    if ($current -ceq $Output) {
+        Write-Host "  up to date  $Relative"
+    }
+    elseif ($Check) {
+        Write-Host "  STALE       $Relative" -ForegroundColor Yellow
+        $script:stale += $Relative
+    }
+    else {
+        $null = New-Item -ItemType Directory -Force -Path (Split-Path $outPath -Parent)
+        [IO.File]::WriteAllText($outPath, $Output, $utf8)
+        Write-Host "  generated   $Relative" -ForegroundColor Green
+    }
+}
+
+# Every month's seasons (the month itself, then each variant), resolved once and reused.
+$resolved = @{}
+function Get-MonthSeasons([string]$MonthName) {
+    if (-not $resolved.ContainsKey($MonthName)) {
+        $raw = Read-Season $MonthName
+        $list = @(@{ Month = $MonthName; Variant = $null; Season = Resolve-Season $raw $null })
+        foreach ($v in @($raw['variants'] ?? @())) {
+            $list += @{ Month = $MonthName; Variant = $v; Season = Resolve-Season $raw $v }
+        }
+        $resolved[$MonthName] = $list
+    }
+    $resolved[$MonthName]
+}
+
 # Problems in a season file are the normal failure here, so show just the message, not a stack trace.
 try {
-    $selected = if ($Month) { $Month } else {
-        $Months | Where-Object { Test-Path (Join-Path $PSScriptRoot $_ 'season.jsonc') }
-    }
+    $available = @($Months | Where-Object { Test-Path (Join-Path $PSScriptRoot $_ 'season.jsonc') })
+    $selected = if ($Month) { $Month } else { $available }
 
     $utf8 = [Text.UTF8Encoding]::new($false)
     $stale = @()
+    $monthTargets = @($Targets | Where-Object { $_['Scope'] -ne 'all' })
+    $allTargets = @($Targets | Where-Object { $_['Scope'] -eq 'all' })
 
     foreach ($monthName in $selected) {
-        $raw = Read-Season $monthName
-        $variants = @($raw['variants'] ?? @())
+        $seasons = Get-MonthSeasons $monthName
 
-        # File names relative to the month folder, so generated docs can link to them.
+        # Every generated file for this month, relative to the month folder, so generated docs can link to them.
+        $monthDir = Join-Path $PSScriptRoot $monthName
         $files = @{}
-        foreach ($target in $Targets) {
-            $files[$target.Name] = (& $target.Output $monthName $null) -replace "^$monthName/", ''
-            foreach ($v in $variants) {
-                if ($target.PerVariant) { $files["$($target.Name):$($v.id)"] = (& $target.Output $monthName $v.id) -replace "^$monthName/", '' }
+        foreach ($target in $monthTargets) {
+            foreach ($entry in $seasons) {
+                if ($entry.Variant -and -not $target.PerVariant) { continue }
+                $key = $entry.Variant ? "$($target.Name):$($entry.Variant.id)" : $target.Name
+                $full = Join-Path $PSScriptRoot (& $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null))
+                $files[$key] = [IO.Path]::GetRelativePath($monthDir, $full) -replace '\\', '/'
             }
         }
 
-        $seasons = @(@{ Variant = $null; Season = Resolve-Season $raw $null })
-        foreach ($v in $variants) { $seasons += @{ Variant = $v; Season = Resolve-Season $raw $v } }
-
-        foreach ($target in $Targets) {
+        foreach ($target in $monthTargets) {
             foreach ($entry in $seasons) {
                 if ($entry.Variant -and -not $target.PerVariant) { continue }
 
@@ -430,27 +561,23 @@ try {
                           else { Invoke-Renderer $entry.Season $target $files }
                 if ($target['Check']) { & $target.Check $entry.Season $output }
 
-                $relative = & $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null)
-                $outPath = Join-Path $PSScriptRoot $relative
-                $current = (Test-Path $outPath) ? [IO.File]::ReadAllText($outPath, $utf8) : $null
-
-                if ($current -ceq $output) {
-                    Write-Host "  up to date  $relative"
-                }
-                elseif ($Check) {
-                    Write-Host "  STALE       $relative" -ForegroundColor Yellow
-                    $stale += $relative
-                }
-                else {
-                    [IO.File]::WriteAllText($outPath, $output, $utf8)
-                    Write-Host "  generated   $relative" -ForegroundColor Green
-                }
+                Save-Output (& $target.Output $monthName ($entry.Variant ? $entry.Variant.id : $null)) $output
             }
+        }
+    }
+
+    # Targets that cover every month (e.g. the VS Code extension manifest) always see all of them.
+    if ($allTargets) {
+        $everything = @(foreach ($monthName in $available) { Get-MonthSeasons $monthName })
+        foreach ($target in $allTargets) {
+            $output = & (Join-Path $PSScriptRoot $target.Renderer) -Seasons $everything -Root $PSScriptRoot
+            Save-Output $target.Output $output
         }
     }
 }
 catch {
     Write-Host "error: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Verbose $_.ScriptStackTrace  # run with -Verbose to see where a template or renderer failed
     exit 1
 }
 

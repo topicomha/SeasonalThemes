@@ -180,6 +180,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🍀 🌈 🇮🇪 🌱 🤞 🍺 💚 🟢 🥬 🍏 🎩 🥗 📗 🪙
 
+## VS Code
+
+Theme: [Seasonal 03 · March — St. Patrick's Day](../vscode/themes/march.json), part of the Seasonal Themes extension in `vscode/`.
+
+![March in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - The old theme shortened the path to the last 3 folders and cut branch names at 15 characters; the shared layout could offer both to every month
@@ -194,3 +200,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-March.omp.json](davids-March.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/March/davids-March.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/march.json](../vscode/themes/march.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

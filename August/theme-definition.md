@@ -179,6 +179,12 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 **Spares:** 🐚 🏊 👡 😎 🏝️ 🕶️ 👙 🌞 🍹 🏄 🩱 🩴 🩳 🍨 🧢 🌄 🌡️ 🥥 🍇 🍑 🍓
 
+## VS Code
+
+Theme: [Seasonal 08 · August — Late Summer](../vscode/themes/august.json), part of the Seasonal Themes extension in `vscode/`.
+
+![August in VS Code](vscode-preview.svg)
+
 ## Ideas
 
 - More summer fruit for the harvest: 🍇 🍑 🍓
@@ -195,3 +201,5 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 - [davids-August.omp.json](davids-August.omp.json): Oh My Posh prompt.
   Try it with `oh-my-posh init pwsh --config <repo>/August/davids-August.omp.json | Invoke-Expression`.
 - [palette.svg](palette.svg): palette swatch sheet.
+- [../vscode/themes/august.json](../vscode/themes/august.json): VS Code colour theme.
+- [vscode-preview.svg](vscode-preview.svg): preview of the VS Code theme.

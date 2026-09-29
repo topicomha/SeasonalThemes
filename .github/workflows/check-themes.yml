@@ -1,7 +1,8 @@
 name: Check themes
 
 # Fails when a season.jsonc is invalid or a generated file doesn't match what Generate-Themes.ps1 produces
-# (a hand-edited generated file, or a season.jsonc change without regenerating).
+# (a hand-edited generated file, or a season.jsonc change without regenerating). Also builds the VS Code
+# extension and attaches the .vsix to the run, so any PR's themes can be installed and tried.
 on:
   pull_request:
   push:
@@ -17,3 +18,13 @@ jobs:
         run: |
           $PSVersionTable.PSVersion
           ./Generate-Themes.ps1 -Check
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the VS Code extension
+        working-directory: vscode
+        run: npx --yes @vscode/vsce package --skip-license
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seasonal-themes-vsix
+          path: vscode/*.vsix

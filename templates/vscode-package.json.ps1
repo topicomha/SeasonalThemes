@@ -17,4 +17,19 @@ $manifest.contributes.themes = @(foreach ($entry in $Seasons) {
     }
 })
 
+# Which theme belongs to which dates, for extension.js's automatic switching.
+$months = 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+$manifest.seasonalSchedule = @(for ($i = 0; $i -lt $Seasons.Count; $i++) {
+    $entry = $Seasons[$i]
+    $item = [ordered]@{
+        month = [array]::IndexOf($months, $entry.Month) + 1
+        label = $manifest.contributes.themes[$i].label
+    }
+    if ($entry.Variant) {
+        $item.from = $entry.Variant.from
+        $item.to = $entry.Variant.to
+    }
+    $item
+})
+
 ($manifest | ConvertTo-Json -Depth 10 -EscapeHandling Default) + "`n"

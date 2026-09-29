@@ -12,13 +12,41 @@
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Themes"],
-  "keywords": ["theme", "seasonal", "holiday", "monthly", "color theme"],
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "seasonal",
+    "holiday",
+    "monthly",
+    "color theme"
+  ],
   "galleryBanner": {
     "color": "#2D3436",
     "theme": "dark"
   },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
-    "themes": []
+    "themes": [],
+    "commands": [
+      {
+        "command": "seasonalThemes.useCurrentMonth",
+        "title": "Seasonal Themes: Use This Month's Theme"
+      }
+    ],
+    "configuration": {
+      "title": "Seasonal Themes",
+      "properties": {
+        "seasonalThemes.autoSwitch": {
+          "type": "boolean",
+          "default": true,
+          "description": "When a Seasonal theme is active, switch to the current month's theme (and date variants like New Year's Eve) automatically."
+        }
+      }
+    }
   }
 }

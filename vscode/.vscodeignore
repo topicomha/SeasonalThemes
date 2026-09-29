@@ -1,0 +1,3 @@
+# Only ship the extension itself.
+*.vsix
+node_modules/**

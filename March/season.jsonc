@@ -1,0 +1,146 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "March",
+  "name": "St. Patrick's Day",
+  "tagline": "Shamrocks, gold coins and a pint at the end of the rainbow",
+  "description": [
+    "March is St. Patrick's Day: dark, shamrock and lime greens with a pot of gold.",
+    "Shamrocks, top hats, rainbows and a pint of beer, with the first hint of spring."
+  ],
+  "mood": ["lucky", "festive", "fresh", "cheerful"],
+  "keywords": ["shamrocks", "pot of gold", "rainbow", "top hat", "green hills", "Irish pub", "four-leaf clover"],
+  "holidays": [
+    { "name": "St. Patrick's Day", "date": "03-17" },
+    { "name": "Spring equinox", "date": "03-20", "note": "around the 20th" }
+  ],
+  "links": [
+    { "title": "Emojipedia: St. Patrick's Day", "url": "https://emojipedia.org/st-patricks-day" }
+  ],
+  "ideas": [
+    "The old theme shortened the path to the last 3 folders and cut branch names at 15 characters; the shared layout could offer both to every month",
+    "🪙 gold coins or 🌈 rainbows in more segments"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "dark_green": { "hex": "#006400", "name": "Dark green" },
+    "shamrock":   { "hex": "#009E60", "name": "Shamrock green" },
+    "lime":       { "hex": "#32CD32", "name": "Lime green" },
+    "gold":       { "hex": "#FFD700", "name": "Pot of gold" },
+    "white":      { "hex": "#FFFFFF", "name": "White" },
+    "black":      { "hex": "#000000", "name": "Black" },
+    "orange_red": { "hex": "#FF4500", "name": "Orange red" },
+    "pub":        { "hex": "#0E1F16", "name": "Pub snug", "note": "Proposed: editor and terminal background" },
+    "moss":       { "hex": "#1B3325", "name": "Moss", "note": "Proposed: panels, borders, current line" },
+    "linen":      { "hex": "#E8F3EA", "name": "Irish linen", "note": "Proposed: editor text" },
+    "sage":       { "hex": "#8FAF98", "name": "Sage", "note": "Proposed: comments, muted text" },
+    "ale":        { "hex": "#C08A3E", "name": "Amber ale", "note": "Proposed: keywords" },
+    "ginger":     { "hex": "#E86A5C", "name": "Ginger red", "note": "Proposed: terminal red, invalid code" },
+    "harp":       { "hex": "#6FA8DC", "name": "Harp blue", "note": "Proposed: terminal blue, info" },
+    "heather":    { "hex": "#C58FD6", "name": "Heather", "note": "Proposed: terminal magenta, types" },
+    "sea":        { "hex": "#5FD4C0", "name": "Atlantic teal", "note": "Proposed: terminal cyan" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "dark_green",
+      "secondary":   "shamrock",
+      "tertiary":    "lime",
+      "accent":      "gold",
+      "accent_alt":  "gold",
+      "highlight":   "dark_green",
+      "deep":        "shamrock",
+      "text_accent": "white",
+      "line":        "lime"
+    },
+    "ui": {
+      "text_light":     "white",
+      "text_dark":      "black",
+      "background":     "pub",
+      "foreground":     "linen",
+      "surface":        "moss",
+      "line_highlight": "moss",
+      "border":         "moss",
+      "muted":          "sage",
+      "selection":      "dark_green",
+      "cursor":         "gold"
+    },
+    "status": {
+      "success": "white",
+      "warning": "gold",
+      "error":   "orange_red",
+      "info":    "harp"
+    },
+    "syntax": {
+      "comment":  { "color": "sage", "style": "italic" },
+      "keyword":  "ale",
+      "string":   "lime",
+      "number":   "gold",
+      "constant": "gold",
+      "function": "shamrock",
+      "type":     "heather",
+      "variable": "linen",
+      "invalid":  "ginger"
+    },
+    "terminal": {
+      "black":         "moss",
+      "red":           "ginger",
+      "green":         "lime",
+      "yellow":        "gold",
+      "blue":          "harp",
+      "magenta":       "heather",
+      "cyan":          "sea",
+      "white":         "linen",
+      "bright_black":  "sage",
+      "bright_red":    "orange_red",
+      "bright_green":  "shamrock",
+      "bright_white":  "white"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "☘️",
+    "root":       "🎩",
+    "path":       "🍻",
+    "folder":     "🍻",
+    "home":       "🤞",
+    "git":        "☘️",
+    "exec_time":  "⌛",
+    "clock":      "🌈🪙",
+    "battery":    "☘️",
+    "status_ok":  "🍀🍺",
+    "status_err": "😫",
+    "language":   "☘️",
+    "lang": {
+      "yarn":    "🌈",
+      "python":  "🎩",
+      "java":    "🍺",
+      "go":      "🌈",
+      "rust":    "🎩",
+      "dart":    "🍺",
+      "nx":      "🌈",
+      "julia":   "🎩",
+      "ruby":    "🍺",
+      "aws":     "🌈",
+      "kubectl": "🎩"
+    },
+    "os": {
+      "linux":   "☘️",
+      "macos":   "🍏",
+      "windows": "🎩"
+    },
+    "pool": ["🍀", "🌈", "🇮🇪", "🌱", "🤞", "🍺", "💚", "🟢", "🥬", "🍏", "🎩", "🥗", "📗", "🪙"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05 PM"
+    }
+  }
+}

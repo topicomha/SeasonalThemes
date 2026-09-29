@@ -38,7 +38,16 @@
     "butter":      { "hex": "#FFFB38", "name": "Butter yellow" },
     "cream":       { "hex": "#E0F8FF", "name": "Cream" },
     "white":       { "hex": "#FFFFFF", "name": "White" },
-    "charcoal":    { "hex": "#2D3436", "name": "Charcoal" }
+    "charcoal":    { "hex": "#2D3436", "name": "Charcoal" },
+    "hearth":      { "hex": "#2A1F1A", "name": "Hearth", "note": "Proposed: editor and terminal background" },
+    "oak":         { "hex": "#3A2C24", "name": "Oak table", "note": "Proposed: panels, borders, current line" },
+    "linen":       { "hex": "#F5E6D3", "name": "Linen", "note": "Proposed: editor text" },
+    "oatmeal":     { "hex": "#B5A48B", "name": "Oatmeal", "note": "Proposed: comments, muted text" },
+    "cranberry":   { "hex": "#D9655F", "name": "Cranberry", "note": "Proposed: terminal red, invalid code" },
+    "sage":        { "hex": "#8A9A5B", "name": "Sage", "note": "Proposed: terminal green, strings" },
+    "sky":         { "hex": "#6FA0C8", "name": "November sky", "note": "Proposed: terminal blue, info" },
+    "fig":         { "hex": "#AE71C7", "name": "Fig", "note": "Proposed: plum lightened (terminal magenta, types)" },
+    "juniper":     { "hex": "#5FB3A3", "name": "Juniper", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -54,12 +63,47 @@
       "text_accent": "butter"
     },
     "ui": {
-      "text_light": "white",
-      "text_dark":  "charcoal"
+      "text_light":     "white",
+      "text_dark":      "charcoal",
+      "background":     "hearth",
+      "foreground":     "linen",
+      "surface":        "oak",
+      "line_highlight": "oak",
+      "border":         "oak",
+      "muted":          "oatmeal",
+      "selection":      "roast",
+      "cursor":         "pumpkin"
     },
     "status": {
       "success": "cream",
-      "error":   "roast"
+      "warning": "harvest",
+      "error":   "roast",
+      "info":    "sky"
+    },
+    "syntax": {
+      "comment":  { "color": "oatmeal", "style": "italic" },
+      "keyword":  "amber",
+      "string":   "sage",
+      "number":   "harvest",
+      "constant": "harvest",
+      "function": "pumpkin",
+      "type":     "fig",
+      "variable": "linen",
+      "invalid":  "cranberry"
+    },
+    "terminal": {
+      "black":         "oak",
+      "red":           "cranberry",
+      "green":         "sage",
+      "yellow":        "harvest",
+      "blue":          "sky",
+      "magenta":       "fig",
+      "cyan":          "juniper",
+      "white":         "linen",
+      "bright_black":  "oatmeal",
+      "bright_red":    "pumpkin",
+      "bright_yellow": "butter",
+      "bright_white":  "white"
     }
   },
 

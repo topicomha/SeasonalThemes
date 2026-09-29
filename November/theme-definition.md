@@ -32,6 +32,15 @@ The colours are currently the same as October's; the turkeys, drumsticks and map
 | `cream` | Cream | `#E0F8FF` |  |
 | `white` | White | `#FFFFFF` |  |
 | `charcoal` | Charcoal | `#2D3436` |  |
+| `hearth` | Hearth | `#2A1F1A` | Proposed: editor and terminal background |
+| `oak` | Oak table | `#3A2C24` | Proposed: panels, borders, current line |
+| `linen` | Linen | `#F5E6D3` | Proposed: editor text |
+| `oatmeal` | Oatmeal | `#B5A48B` | Proposed: comments, muted text |
+| `cranberry` | Cranberry | `#D9655F` | Proposed: terminal red, invalid code |
+| `sage` | Sage | `#8A9A5B` | Proposed: terminal green, strings |
+| `sky` | November sky | `#6FA0C8` | Proposed: terminal blue, info |
+| `fig` | Fig | `#AE71C7` | Proposed: plum lightened (terminal magenta, types) |
+| `juniper` | Juniper | `#5FB3A3` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -61,14 +70,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | white | `#FFFFFF` |  |
 | `text_dark` | charcoal | `#2D3436` |  |
-| `background` | walnut | `#523422` | *inherits* `brand.deep` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | walnut | `#523422` | *inherits* `ui.background` |
-| `line_highlight` | walnut | `#523422` | *inherits* `ui.surface` |
-| `border` | walnut | `#523422` | *inherits* `ui.surface` |
-| `muted` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | roast | `#A04000` | *inherits* `brand.secondary` |
-| `cursor` | warm_orange | `#D35400` | *inherits* `brand.primary` |
+| `background` | hearth | `#2A1F1A` |  |
+| `foreground` | linen | `#F5E6D3` |  |
+| `surface` | oak | `#3A2C24` |  |
+| `line_highlight` | oak | `#3A2C24` |  |
+| `border` | oak | `#3A2C24` |  |
+| `muted` | oatmeal | `#B5A48B` |  |
+| `selection` | roast | `#A04000` |  |
+| `cursor` | pumpkin | `#E67E22` |  |
 
 ### Status
 
@@ -78,8 +87,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | roast | `#A04000` |  |
 | `success` | cream | `#E0F8FF` |  |
-| `warning` | harvest | `#F1C40F` | *inherits* `brand.accent` |
-| `info` | plum | `#8E44AD` | *inherits* `brand.highlight` |
+| `warning` | harvest | `#F1C40F` |  |
+| `info` | sky | `#6FA0C8` |  |
 
 ### Syntax
 
@@ -87,22 +96,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | warm_orange | `#D35400` | *inherits* `brand.primary` |
-| `string` | harvest | `#F1C40F` | *inherits* `brand.accent` |
-| `number` | pumpkin | `#E67E22` | *inherits* `brand.tertiary` |
-| `constant` | pumpkin | `#E67E22` | *inherits* `syntax.number` |
-| `function` | amber | `#F39C12` | *inherits* `brand.accent_alt` |
-| `type` | plum | `#8E44AD` | *inherits* `brand.highlight` |
-| `variable` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | white | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | warm_orange | `#D35400` | *inherits* `syntax.keyword` |
-| `attribute` | amber | `#F39C12` | *inherits* `syntax.function` |
-| `regex` | harvest | `#F1C40F` | *inherits* `syntax.string` |
-| `invalid` | roast | `#A04000` | *inherits* `status.error` |
+| `comment` | oatmeal | `#B5A48B` | italic |
+| `keyword` | amber | `#F39C12` |  |
+| `string` | sage | `#8A9A5B` |  |
+| `number` | harvest | `#F1C40F` |  |
+| `constant` | harvest | `#F1C40F` |  |
+| `function` | pumpkin | `#E67E22` |  |
+| `type` | fig | `#AE71C7` |  |
+| `variable` | linen | `#F5E6D3` |  |
+| `parameter` | linen | `#F5E6D3` | *inherits* `syntax.variable` |
+| `property` | linen | `#F5E6D3` | *inherits* `syntax.variable` |
+| `operator` | linen | `#F5E6D3` | *inherits* `ui.foreground` |
+| `punctuation` | linen | `#F5E6D3` | *inherits* `ui.foreground` |
+| `tag` | amber | `#F39C12` | *inherits* `syntax.keyword` |
+| `attribute` | pumpkin | `#E67E22` | *inherits* `syntax.function` |
+| `regex` | sage | `#8A9A5B` | *inherits* `syntax.string` |
+| `invalid` | cranberry | `#D9655F` |  |
 
 ### Terminal
 
@@ -110,26 +119,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | walnut | `#523422` | *inherits* `ui.background` |
-| `foreground` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | warm_orange | `#D35400` | *inherits* `ui.cursor` |
+| `background` | hearth | `#2A1F1A` | *inherits* `ui.background` |
+| `foreground` | linen | `#F5E6D3` | *inherits* `ui.foreground` |
+| `cursor` | pumpkin | `#E67E22` | *inherits* `ui.cursor` |
 | `selection` | roast | `#A04000` | *inherits* `ui.selection` |
-| `black` | walnut | `#523422` | *inherits* `ui.background` |
-| `red` | roast | `#A04000` | *inherits* `status.error` |
-| `green` | cream | `#E0F8FF` | *inherits* `status.success` |
-| `yellow` | harvest | `#F1C40F` | *inherits* `status.warning` |
-| `blue` | plum | `#8E44AD` | *inherits* `status.info` |
-| `magenta` | plum | `#8E44AD` | *inherits* `brand.highlight` |
-| `cyan` | plum | `#8E44AD` | *inherits* `status.info` |
-| `white` | white | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | white | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | roast | `#A04000` | *inherits* `terminal.red` |
-| `bright_green` | cream | `#E0F8FF` | *inherits* `terminal.green` |
-| `bright_yellow` | harvest | `#F1C40F` | *inherits* `terminal.yellow` |
-| `bright_blue` | plum | `#8E44AD` | *inherits* `terminal.blue` |
-| `bright_magenta` | plum | `#8E44AD` | *inherits* `terminal.magenta` |
-| `bright_cyan` | plum | `#8E44AD` | *inherits* `terminal.cyan` |
-| `bright_white` | white | `#FFFFFF` | *inherits* `terminal.white` |
+| `black` | oak | `#3A2C24` |  |
+| `red` | cranberry | `#D9655F` |  |
+| `green` | sage | `#8A9A5B` |  |
+| `yellow` | harvest | `#F1C40F` |  |
+| `blue` | sky | `#6FA0C8` |  |
+| `magenta` | fig | `#AE71C7` |  |
+| `cyan` | juniper | `#5FB3A3` |  |
+| `white` | linen | `#F5E6D3` |  |
+| `bright_black` | oatmeal | `#B5A48B` |  |
+| `bright_red` | pumpkin | `#E67E22` |  |
+| `bright_green` | sage | `#8A9A5B` | *inherits* `terminal.green` |
+| `bright_yellow` | butter | `#FFFB38` |  |
+| `bright_blue` | sky | `#6FA0C8` | *inherits* `terminal.blue` |
+| `bright_magenta` | fig | `#AE71C7` | *inherits* `terminal.magenta` |
+| `bright_cyan` | juniper | `#5FB3A3` | *inherits* `terminal.cyan` |
+| `bright_white` | white | `#FFFFFF` |  |
 
 ## Icons
 

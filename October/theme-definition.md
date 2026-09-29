@@ -59,6 +59,7 @@ The month's signature colours. Prompt segments, badges, status bars and accents.
 | `highlight` | witch | `#8E44AD` | `#FFFFFF` 5.9:1 |  |
 | `deep` | bark | `#523422` | `#FFFFFF` 11.2:1 |  |
 | `text_accent` | lemon | `#FFFB38` | `#2D3436` 11.5:1 |  |
+| `line` | pumpkin | `#D35400` | `#FFFFFF` 4.2:1 | *inherits* `brand.primary` |
 
 ### UI
 

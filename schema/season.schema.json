@@ -145,7 +145,8 @@
             "accent_alt":  { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Alternate accent, used for 'changed' states." },
             "highlight":   { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "A contrasting pop colour that stands apart from the rest." },
             "deep":        { "$ref": "#/definitions/color", "x-fallback": "brand.secondary", "description": "A deep, dark shade of the brand colours." },
-            "text_accent": { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Decorative text colour." }
+            "text_accent": { "$ref": "#/definitions/color", "x-fallback": "brand.accent", "description": "Decorative text colour." },
+            "line":        { "$ref": "#/definitions/color", "x-fallback": "brand.primary", "description": "Lines and connectors drawn straight on the terminal/window background (e.g. the prompt's ⌂── connector). Set it when primary is too dark to see there." }
           }
         },
         "ui": {

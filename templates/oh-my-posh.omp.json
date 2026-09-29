@@ -310,7 +310,7 @@
             "cache_duration": "none"
           },
           "template": "[[icon.prompt]]──",
-          "foreground": "[[color.brand.primary]]",
+          "foreground": "[[color.brand.line]]",
           "type": "text",
           "style": "plain"
         },

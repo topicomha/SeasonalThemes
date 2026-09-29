@@ -139,6 +139,9 @@
 
   // ── Per-program extras ──────────────────────────────────────────────────
   "targets": {
+    "vscode": {
+      "status_bar": "brand.secondary"
+    },
     "oh-my-posh": {
       "time_format": "2006-01-02 3:04:05 PM"
     }

@@ -1,0 +1,9 @@
+# LF everywhere, including Windows checkouts: Generate-Themes.ps1 -Check compares files byte for byte.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.vsix binary
+
+# Generated from each month's season.jsonc; collapsed in GitHub diffs so reviews focus on the source.
+*/theme-definition.md linguist-generated
+*/palette*.svg linguist-generated

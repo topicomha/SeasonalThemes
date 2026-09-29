@@ -28,6 +28,15 @@ Navy and firebrick red, the flag's own Old Glory blue and red, Air Force blue an
 | `air_force` | Air Force blue | `#0A3161` |  |
 | `stars` | Stars white | `#FFFFFF` |  |
 | `gold` | Sparkler gold | `#FFD700` |  |
+| `summer_night` | Summer night | `#0B1026` | Proposed: editor and terminal background |
+| `bunting` | Bunting | `#1A2142` | Proposed: panels, borders, current line |
+| `starlight` | Starlight | `#F4F4F8` | Proposed: editor text |
+| `smoke` | Firework smoke | `#9AA3BE` | Proposed: comments, muted text |
+| `stripe_red` | Stripe red | `#E5484D` | Proposed: Old Glory red lightened (terminal red, keywords, invalid code) |
+| `liberty` | Liberty blue | `#6E8FCB` | Proposed: terminal blue, info |
+| `picnic` | Picnic green | `#7FD18B` | Proposed: terminal green, strings |
+| `roman` | Roman candle | `#C792EA` | Proposed: terminal magenta, types |
+| `fountain` | Fountain teal | `#6FD6E0` | Proposed: terminal cyan, functions |
 
 ## Colour roles
 
@@ -57,14 +66,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | stars | `#FFFFFF` |  |
 | `text_dark` | navy | `#000080` |  |
-| `background` | air_force | `#0A3161` | *inherits* `brand.deep` |
-| `foreground` | stars | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | air_force | `#0A3161` | *inherits* `ui.background` |
-| `line_highlight` | air_force | `#0A3161` | *inherits* `ui.surface` |
-| `border` | air_force | `#0A3161` | *inherits* `ui.surface` |
-| `muted` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | firebrick | `#B22222` | *inherits* `brand.secondary` |
-| `cursor` | navy | `#000080` | *inherits* `brand.primary` |
+| `background` | summer_night | `#0B1026` |  |
+| `foreground` | starlight | `#F4F4F8` |  |
+| `surface` | bunting | `#1A2142` |  |
+| `line_highlight` | bunting | `#1A2142` |  |
+| `border` | bunting | `#1A2142` |  |
+| `muted` | smoke | `#9AA3BE` |  |
+| `selection` | glory_blue | `#3C3B6E` |  |
+| `cursor` | gold | `#FFD700` |  |
 
 ### Status
 
@@ -74,8 +83,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | firebrick | `#B22222` |  |
 | `success` | stars | `#FFFFFF` |  |
-| `warning` | glory_red | `#B31942` | *inherits* `brand.accent` |
-| `info` | stars | `#FFFFFF` | *inherits* `brand.highlight` |
+| `warning` | gold | `#FFD700` |  |
+| `info` | liberty | `#6E8FCB` |  |
 
 ### Syntax
 
@@ -83,22 +92,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | stars | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | navy | `#000080` | *inherits* `brand.primary` |
-| `string` | glory_red | `#B31942` | *inherits* `brand.accent` |
-| `number` | glory_blue | `#3C3B6E` | *inherits* `brand.tertiary` |
-| `constant` | glory_blue | `#3C3B6E` | *inherits* `syntax.number` |
-| `function` | gold | `#FFD700` | *inherits* `brand.accent_alt` |
-| `type` | stars | `#FFFFFF` | *inherits* `brand.highlight` |
-| `variable` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | stars | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | stars | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | navy | `#000080` | *inherits* `syntax.keyword` |
-| `attribute` | gold | `#FFD700` | *inherits* `syntax.function` |
-| `regex` | glory_red | `#B31942` | *inherits* `syntax.string` |
-| `invalid` | firebrick | `#B22222` | *inherits* `status.error` |
+| `comment` | smoke | `#9AA3BE` | italic |
+| `keyword` | stripe_red | `#E5484D` |  |
+| `string` | picnic | `#7FD18B` |  |
+| `number` | gold | `#FFD700` |  |
+| `constant` | gold | `#FFD700` |  |
+| `function` | fountain | `#6FD6E0` |  |
+| `type` | roman | `#C792EA` |  |
+| `variable` | starlight | `#F4F4F8` |  |
+| `parameter` | starlight | `#F4F4F8` | *inherits* `syntax.variable` |
+| `property` | starlight | `#F4F4F8` | *inherits* `syntax.variable` |
+| `operator` | starlight | `#F4F4F8` | *inherits* `ui.foreground` |
+| `punctuation` | starlight | `#F4F4F8` | *inherits* `ui.foreground` |
+| `tag` | stripe_red | `#E5484D` | *inherits* `syntax.keyword` |
+| `attribute` | fountain | `#6FD6E0` | *inherits* `syntax.function` |
+| `regex` | picnic | `#7FD18B` | *inherits* `syntax.string` |
+| `invalid` | stripe_red | `#E5484D` |  |
 
 ### Terminal
 
@@ -106,26 +115,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | air_force | `#0A3161` | *inherits* `ui.background` |
-| `foreground` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | navy | `#000080` | *inherits* `ui.cursor` |
-| `selection` | firebrick | `#B22222` | *inherits* `ui.selection` |
-| `black` | air_force | `#0A3161` | *inherits* `ui.background` |
-| `red` | firebrick | `#B22222` | *inherits* `status.error` |
-| `green` | stars | `#FFFFFF` | *inherits* `status.success` |
-| `yellow` | glory_red | `#B31942` | *inherits* `status.warning` |
-| `blue` | stars | `#FFFFFF` | *inherits* `status.info` |
-| `magenta` | stars | `#FFFFFF` | *inherits* `brand.highlight` |
-| `cyan` | stars | `#FFFFFF` | *inherits* `status.info` |
-| `white` | stars | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | stars | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | firebrick | `#B22222` | *inherits* `terminal.red` |
-| `bright_green` | stars | `#FFFFFF` | *inherits* `terminal.green` |
-| `bright_yellow` | glory_red | `#B31942` | *inherits* `terminal.yellow` |
-| `bright_blue` | stars | `#FFFFFF` | *inherits* `terminal.blue` |
-| `bright_magenta` | stars | `#FFFFFF` | *inherits* `terminal.magenta` |
-| `bright_cyan` | stars | `#FFFFFF` | *inherits* `terminal.cyan` |
-| `bright_white` | stars | `#FFFFFF` | *inherits* `terminal.white` |
+| `background` | summer_night | `#0B1026` | *inherits* `ui.background` |
+| `foreground` | starlight | `#F4F4F8` | *inherits* `ui.foreground` |
+| `cursor` | gold | `#FFD700` | *inherits* `ui.cursor` |
+| `selection` | glory_blue | `#3C3B6E` | *inherits* `ui.selection` |
+| `black` | bunting | `#1A2142` |  |
+| `red` | stripe_red | `#E5484D` |  |
+| `green` | picnic | `#7FD18B` |  |
+| `yellow` | gold | `#FFD700` |  |
+| `blue` | liberty | `#6E8FCB` |  |
+| `magenta` | roman | `#C792EA` |  |
+| `cyan` | fountain | `#6FD6E0` |  |
+| `white` | starlight | `#F4F4F8` |  |
+| `bright_black` | smoke | `#9AA3BE` |  |
+| `bright_red` | stripe_red | `#E5484D` | *inherits* `terminal.red` |
+| `bright_green` | picnic | `#7FD18B` | *inherits* `terminal.green` |
+| `bright_yellow` | gold | `#FFD700` | *inherits* `terminal.yellow` |
+| `bright_blue` | liberty | `#6E8FCB` | *inherits* `terminal.blue` |
+| `bright_magenta` | roman | `#C792EA` | *inherits* `terminal.magenta` |
+| `bright_cyan` | fountain | `#6FD6E0` | *inherits* `terminal.cyan` |
+| `bright_white` | stars | `#FFFFFF` |  |
 
 ## Icons
 

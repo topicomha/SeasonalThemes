@@ -5,10 +5,10 @@
 .DESCRIPTION
     Renders both themes with oh-my-posh (when it's installed) and lists every field that differs,
     segment by segment (segments are paired by type, in order). Either side can be a file path or a
-    git revision and path, e.g. release-0.0.1:August/davids-August.omp.json.
+    git revision and path, e.g. origin/main:August/davids-August.omp.json.
 
 .EXAMPLE
-    pwsh ./tools/Compare-OmpTheme.ps1 -Before release-0.0.1:August/davids-August.omp.json -After August/davids-August.omp.json
+    pwsh ./tools/Compare-OmpTheme.ps1 -Before origin/main:August/davids-August.omp.json -After August/davids-August.omp.json
 #>
 #Requires -Version 7.4
 [CmdletBinding()]
@@ -28,7 +28,8 @@ $temporary = [System.Collections.Generic.List[string]]::new()
 
 function Read-Theme([string]$Spec) {
     $path = [IO.Path]::IsPathRooted($Spec) ? $Spec : (Join-Path $Root $Spec)
-    if (-not (Test-Path $path) -and $Spec -match '^[^:\\/]+:.+') {
+    # <revision>:<path>, where the revision may contain slashes (origin/main:June/...), but not a Windows path (C:\...).
+    if (-not (Test-Path $path) -and $Spec -match '^[^:]+:.+' -and $Spec -notmatch '^[A-Za-z]:[\\/]') {
         # A git revision:path. Write it out so oh-my-posh can render it (it needs a .json extension).
         $text = (git -C $Root show $Spec) -join "`n"
         if ($LASTEXITCODE) { throw "git show $Spec failed." }

@@ -1,0 +1,102 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "January",
+  "name": "Winter Wonderland",
+  "tagline": "Crisp blue skies over fresh snow",
+  "description": [
+    "January captures the essence of winter with cool blues, whites and winter icons.",
+    "It should feel like a crisp winter day over snow-covered landscapes: navy night, steel-blue ice, evergreen and a pale winter sky."
+  ],
+  "mood": ["crisp", "calm", "cold", "fresh"],
+  "keywords": ["snow-covered mountains", "snowflakes", "snowman", "ski slope", "evergreen forest", "frozen lake", "hot tea"],
+  "holidays": [
+    { "name": "New Year's Day", "date": "01-01" },
+    { "name": "Martin Luther King Jr. Day", "date": "01-15", "note": "3rd Monday" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Winter", "url": "https://emojipedia.org/winter" }
+  ],
+  "ideas": [
+    "Lighter or darker blues depending on the terminal background",
+    "❄️ snowflakes in more segments for a consistent winter feel",
+    "A light blue battery segment for 'cold' winter energy"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "navy":      { "hex": "#000080", "name": "Winter night navy" },
+    "steel":     { "hex": "#4682B4", "name": "Steel blue ice" },
+    "evergreen": { "hex": "#2E8B57", "name": "Evergreen" },
+    "sky":       { "hex": "#87CEEB", "name": "Winter sky" },
+    "snow":      { "hex": "#FFFFFF", "name": "Snow white" },
+    "black":     { "hex": "#000000", "name": "Black" },
+    "ember":     { "hex": "#FF4500", "name": "Fireplace ember" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "navy",
+      "secondary":   "steel",
+      "tertiary":    "evergreen",
+      "accent":      "sky",
+      "accent_alt":  "sky",
+      "highlight":   "navy",
+      "deep":        "navy",
+      "text_accent": "snow"
+    },
+    "ui": {
+      "text_light": "snow",
+      "text_dark":  "black"
+    },
+    "status": {
+      "success": "snow",
+      "error":   "ember"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "❄️",
+    "root":       "⛄",
+    "path":       "🎿",
+    "folder":     "🎿",
+    "home":       "🏔️",
+    "git":        "❄️",
+    "exec_time":  "🧤🧣",
+    "clock":      "❄️⛄",
+    "battery":    "❄️",
+    "status_ok":  "⛄",
+    "status_err": "🥶",
+    "language":   "🌬️",
+    "lang": {
+      "yarn":    "🌂",
+      "python":  "⛄",
+      "java":    "🎿",
+      "dotnet":  "❄️",
+      "rust":    "⛄",
+      "dart":    "🎿",
+      "angular": "❄️",
+      "julia":   "⛄",
+      "ruby":    "🎿",
+      "azfunc":  "❄️",
+      "kubectl": "⛄"
+    },
+    "os": {
+      "linux":   "❄️",
+      "macos":   "🍎",
+      "windows": "⛄"
+    },
+    "pool": ["☃️", "⛷️", "🏂", "🍵", "🛷", "🌨️", "🌁", "🌲", "🧥", "🧣", "🧤", "☔", "🏔️"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "oh-my-posh": {
+      "time_format": "2006-01-02 3:04:05 PM"
+    }
+  }
+}

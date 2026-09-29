@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="232" viewBox="0 0 1080 232" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="232" rx="12" fill="#000080"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#FFFFFF">January · Winter Wonderland</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#000080" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Winter night navy</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">navy</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#000080</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#4682B4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Steel blue ice</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">steel</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#4682B4</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#2E8B57" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Evergreen</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">evergreen</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#2E8B57</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#87CEEB" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Winter sky</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sky</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#87CEEB</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Snow white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">snow</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#000000" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Black</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">black</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#000000</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#FF4500" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Fireplace ember</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">ember</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF4500</text>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="400" viewBox="0 0 1080 400" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="400" rx="12" fill="#2A1F1A"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#F5E6D3">November · Thanksgiving</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#D35400" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Warm orange</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">warm_orange</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#D35400</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#A04000" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Roast brown</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">roast</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#A04000</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#E67E22" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Pumpkin orange</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">pumpkin</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E67E22</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#F1C40F" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Harvest gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">harvest</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F1C40F</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#F39C12" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Amber</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">amber</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F39C12</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#523422" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Walnut</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">walnut</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#523422</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#8E44AD" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Plum</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">plum</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#8E44AD</text>
+  </g>
+  <g transform="translate(192 140)">
+    <rect width="168" height="76" rx="8" fill="#FFFB38" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Butter yellow</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">butter</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFB38</text>
+  </g>
+  <g transform="translate(368 140)">
+    <rect width="168" height="76" rx="8" fill="#E0F8FF" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Cream</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">cream</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E0F8FF</text>
+  </g>
+  <g transform="translate(544 140)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">White</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">white</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(720 140)">
+    <rect width="168" height="76" rx="8" fill="#2D3436" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Charcoal</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">charcoal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#2D3436</text>
+  </g>
+  <g transform="translate(896 140)">
+    <rect width="168" height="76" rx="8" fill="#2A1F1A" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Hearth</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">hearth</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#2A1F1A</text>
+  </g>
+  <g transform="translate(16 224)">
+    <rect width="168" height="76" rx="8" fill="#3A2C24" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Oak table</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">oak</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#3A2C24</text>
+  </g>
+  <g transform="translate(192 224)">
+    <rect width="168" height="76" rx="8" fill="#F5E6D3" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Linen</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">linen</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F5E6D3</text>
+  </g>
+  <g transform="translate(368 224)">
+    <rect width="168" height="76" rx="8" fill="#B5A48B" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Oatmeal</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">oatmeal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#B5A48B</text>
+  </g>
+  <g transform="translate(544 224)">
+    <rect width="168" height="76" rx="8" fill="#D9655F" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Cranberry</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">cranberry</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#D9655F</text>
+  </g>
+  <g transform="translate(720 224)">
+    <rect width="168" height="76" rx="8" fill="#8A9A5B" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sage</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sage</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#8A9A5B</text>
+  </g>
+  <g transform="translate(896 224)">
+    <rect width="168" height="76" rx="8" fill="#6FA0C8" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">November sky</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sky</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#6FA0C8</text>
+  </g>
+  <g transform="translate(16 308)">
+    <rect width="168" height="76" rx="8" fill="#AE71C7" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Fig</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">fig</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#AE71C7</text>
+  </g>
+  <g transform="translate(192 308)">
+    <rect width="168" height="76" rx="8" fill="#5FB3A3" stroke="#B5A48B" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Juniper</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">juniper</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#5FB3A3</text>
+  </g>
+</svg>

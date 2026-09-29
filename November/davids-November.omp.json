@@ -9,10 +9,10 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\u256d\u2500\ue0b6",
+          "leading_diamond": "╭─",
           "template": "🍂 {{ .Name }} ",
           "foreground": "#FFFFFF",
-          "background": "#D35400",  // Warm Orange
+          "background": "#D35400",
           "type": "shell",
           "style": "diamond"
         },
@@ -20,9 +20,9 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<parentBackground>🍂</> \uf292 ",
+          "template": "<parentBackground>🍂</>  ",
           "foreground": "#FFFB38",
-          "background": "#A04000",  // Darker Orange/Brown
+          "background": "#A04000",
           "type": "root",
           "style": "diamond"
         },
@@ -34,28 +34,28 @@
             "style": "folder"
           },
           "template": " 🍗🍗🍗 {{ .Path }} ",
-          "foreground": "#2d3436",
-          "powerline_symbol": "\ue0b0",
-          "background": "#E67E22",  // Pumpkin Orange
+          "foreground": "#2D3436",
+          "powerline_symbol": "",
+          "background": "#E67E22",
           "type": "path",
           "style": "powerline"
         },
         {
           "properties": {
-            "branch_icon": "� ",
+            "branch_icon": "🌽 ",
             "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#A04000> 📂 {{ .Staging.String }}</>{{ end }} ",
-          "foreground": "#011627",
-          "powerline_symbol": "\ue0b0",
-          "background": "#F1C40F",  // Mustard Yellow
+          "foreground": "#2D3436",
+          "powerline_symbol": "",
+          "background": "#F1C40F",
           "type": "git",
           "style": "powerline",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#f39c12{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f1c40f{{ end }}",
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#F39C12{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#F1C40F{{ end }}",
             "{{ if gt .Ahead 0 }}#F39C12{{ end }}",
             "{{ if gt .Behind 0 }}#F39C12{{ end }}"
           ]
@@ -66,10 +66,10 @@
             "style": "roundrock",
             "threshold": 0
           },
-          "trailing_diamond": "\ue0b4",
-          "template": " � {{ .FormattedMs }} ",
-          "foreground": "#ffffff",
-          "background": "#523422",  // Pumpkin Brown
+          "trailing_diamond": "",
+          "template": " 🍽️ {{ .FormattedMs }} ",
+          "foreground": "#FFFFFF",
+          "background": "#523422",
           "type": "executiontime",
           "style": "diamond"
         }
@@ -86,11 +86,11 @@
             "npm_icon": " 🥧 ",
             "yarn_icon": " 🍁 "
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
-          "template": "� {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "foreground": "#FFD700",  // Gold
-          "background": "#8E44AD",  // Pumpkin Purple
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "🦃 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "foreground": "#FFFFFF",
+          "background": "#8E44AD",
           "type": "node",
           "style": "diamond"
         },
@@ -98,11 +98,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
-          "foreground": "#FFE873",  // Soft Yellow
-          "background": "#D35400",  // Warm Orange
+          "foreground": "#FFFFFF",
+          "background": "#D35400",
           "type": "python",
           "style": "diamond"
         },
@@ -110,11 +110,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#ffffff",
-          "background": "#E67E22",  // Pumpkin Orange
+          "foreground": "#2D3436",
+          "background": "#E67E22",
           "type": "java",
           "style": "diamond"
         },
@@ -122,11 +122,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
-          "template": "🍂 {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "🍂 {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }}",
           "foreground": "#FFFFFF",
-          "background": "#A04000",  // Darker Orange/Brown
+          "background": "#A04000",
           "type": "dotnet",
           "style": "diamond"
         },
@@ -134,11 +134,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#2E4053",
-          "background": "#F39C12",  // Bright Orange
+          "foreground": "#2D3436",
+          "background": "#F39C12",
           "type": "go",
           "style": "diamond"
         },
@@ -146,11 +146,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#925837",
-          "background": "#D35400",  // Warm Orange
+          "foreground": "#FFFFFF",
+          "background": "#D35400",
           "type": "rust",
           "style": "diamond"
         },
@@ -158,11 +158,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#055b9c",
-          "background": "#E67E22",  // Pumpkin Orange
+          "foreground": "#2D3436",
+          "background": "#E67E22",
           "type": "dart",
           "style": "diamond"
         },
@@ -170,11 +170,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
-          "template": "� {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#CE092F",
-          "background": "#F1C40F",  // Mustard Yellow
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
+          "template": "🍠 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#2D3436",
+          "background": "#F1C40F",
           "type": "angular",
           "style": "diamond"
         },
@@ -182,11 +182,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
           "foreground": "#FFFFFF",
-          "background": "#A04000",  // Darker Orange/Brown
+          "background": "#A04000",
           "type": "nx",
           "style": "diamond"
         },
@@ -194,11 +194,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#359a25",
-          "background": "#8E44AD",  // Pumpkin Purple
+          "foreground": "#FFFFFF",
+          "background": "#8E44AD",
           "type": "julia",
           "style": "diamond"
         },
@@ -206,11 +206,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍁 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#9c1006",
-          "background": "#F39C12",  // Bright Orange
+          "foreground": "#2D3436",
+          "background": "#F39C12",
           "type": "ruby",
           "style": "diamond"
         },
@@ -218,11 +218,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍂 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#5398c2",
-          "background": "#F1C40F",  // Mustard Yellow
+          "foreground": "#2D3436",
+          "background": "#F1C40F",
           "type": "azfunc",
           "style": "diamond"
         },
@@ -230,11 +230,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍂 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "foreground": "#faa029",
-          "background": "#A04000",  // Darker Orange/Brown
+          "foreground": "#FFFFFF",
+          "background": "#A04000",
           "type": "aws",
           "style": "diamond"
         },
@@ -242,11 +242,11 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "template": "🍁 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
-          "foreground": "#ffffff",
-          "background": "#D35400",  // Warm Orange
+          "foreground": "#FFFFFF",
+          "background": "#D35400",
           "type": "kubectl",
           "style": "diamond"
         },
@@ -257,11 +257,11 @@
             "macos": "🍂",
             "windows": "🦃"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "leading_diamond": "",
+          "trailing_diamond": "<transparent,background></>",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
-          "foreground": "#222222",
-          "background": "#8E44AD",  // Pumpkin Purple
+          "foreground": "#FFFFFF",
+          "background": "#8E44AD",
           "type": "os",
           "style": "diamond"
         },
@@ -274,8 +274,8 @@
           },
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
           "foreground": "#262626",
-          "powerline_symbol": "\ue0b2",
-          "background": "#D35400",  // Warm Orange
+          "powerline_symbol": "",
+          "background": "#F1C40F",
           "type": "battery",
           "style": "powerline",
           "background_templates": [
@@ -290,11 +290,11 @@
             "cache_duration": "none",
             "time_format": "2006-01-02 3:04:05"
           },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "template": " 🦃 {{ .CurrentDate | date .Format }} ",
-          "foreground": "#523422",  // Pumpkin Brown
-          "background": "#F1C40F",  // Mustard Yellow
+          "foreground": "#2D3436",
+          "background": "#F1C40F",
           "type": "time",
           "style": "diamond",
           "invert_powerline": true
@@ -309,8 +309,8 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\u2302\u2500\u2500",
-          "foreground": "#D35400",  // Warm Orange
+          "template": "⌂──",
+          "foreground": "#D35400",
           "type": "text",
           "style": "plain"
         },
@@ -319,12 +319,12 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "🍁  ",
+          "template": "{{ if gt .Code 0 }}🍁{{ else }}🍁{{ end }}  ",
           "foreground": "#E0F8FF",
           "type": "status",
           "style": "plain",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}#A04000{{ end }}"  // Darker Orange/Brown on error
+            "{{ if gt .Code 0 }}#A04000{{ end }}"
           ]
         }
       ],

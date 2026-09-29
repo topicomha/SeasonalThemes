@@ -1,4 +1,4 @@
 /.vscode
-/vscode-extension-src
+vscode-extension-src/
 *.vsix
 node_modules/

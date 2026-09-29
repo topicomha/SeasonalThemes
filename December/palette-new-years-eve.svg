@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="484" viewBox="0 0 1080 484" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1080" height="484" rx="12" fill="#0B0D17"/>
+  <text x="16" y="38" font-size="18" font-weight="600" fill="#F5EFE4">December · Holiday Season · New Year&apos;s Eve</text>
+  <g transform="translate(16 56)">
+    <rect width="168" height="76" rx="8" fill="#CC231E" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Christmas red</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">christmas_red</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#CC231E</text>
+  </g>
+  <g transform="translate(192 56)">
+    <rect width="168" height="76" rx="8" fill="#006400" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Evergreen</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">evergreen</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#006400</text>
+  </g>
+  <g transform="translate(368 56)">
+    <rect width="168" height="76" rx="8" fill="#228B22" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Forest green</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">forest</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#228B22</text>
+  </g>
+  <g transform="translate(544 56)">
+    <rect width="168" height="76" rx="8" fill="#FFD700" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Star gold</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">gold</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFD700</text>
+  </g>
+  <g transform="translate(720 56)">
+    <rect width="168" height="76" rx="8" fill="#8B0000" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Cranberry</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">cranberry</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#8B0000</text>
+  </g>
+  <g transform="translate(896 56)">
+    <rect width="168" height="76" rx="8" fill="#FFFFFF" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Snow white</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">snow</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FFFFFF</text>
+  </g>
+  <g transform="translate(16 140)">
+    <rect width="168" height="76" rx="8" fill="#E0F8FF" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Frost</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">frost</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E0F8FF</text>
+  </g>
+  <g transform="translate(192 140)">
+    <rect width="168" height="76" rx="8" fill="#2D3436" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Charcoal</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">charcoal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#2D3436</text>
+  </g>
+  <g transform="translate(368 140)">
+    <rect width="168" height="76" rx="8" fill="#12211A" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Pine night</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">pine_night</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#12211A</text>
+  </g>
+  <g transform="translate(544 140)">
+    <rect width="168" height="76" rx="8" fill="#1D3327" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Pine bough</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">bough</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#1D3327</text>
+  </g>
+  <g transform="translate(720 140)">
+    <rect width="168" height="76" rx="8" fill="#F5EFE4" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Eggnog</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">eggnog</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#F5EFE4</text>
+  </g>
+  <g transform="translate(896 140)">
+    <rect width="168" height="76" rx="8" fill="#A7B8AE" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Tinsel</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">tinsel</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#A7B8AE</text>
+  </g>
+  <g transform="translate(16 224)">
+    <rect width="168" height="76" rx="8" fill="#E65A55" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Ornament red</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">ornament</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#E65A55</text>
+  </g>
+  <g transform="translate(192 224)">
+    <rect width="168" height="76" rx="8" fill="#5FBF6A" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Holly green</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">holly</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#5FBF6A</text>
+  </g>
+  <g transform="translate(368 224)">
+    <rect width="168" height="76" rx="8" fill="#7FB2E5" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Icicle blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">icicle</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FB2E5</text>
+  </g>
+  <g transform="translate(544 224)">
+    <rect width="168" height="76" rx="8" fill="#D08FD6" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sugarplum</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sugarplum</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#D08FD6</text>
+  </g>
+  <g transform="translate(720 224)">
+    <rect width="168" height="76" rx="8" fill="#7FD7D0" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Frosted teal</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">frost_teal</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#7FD7D0</text>
+  </g>
+  <g transform="translate(896 224)">
+    <rect width="168" height="76" rx="8" fill="#000000" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Midnight black</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">midnight</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#000000</text>
+  </g>
+  <g transform="translate(16 308)">
+    <rect width="168" height="76" rx="8" fill="#1E90FF" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Fireworks blue</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">fireworks</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#1E90FF</text>
+  </g>
+  <g transform="translate(192 308)">
+    <rect width="168" height="76" rx="8" fill="#808080" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Silver</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">silver</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#808080</text>
+  </g>
+  <g transform="translate(368 308)">
+    <rect width="168" height="76" rx="8" fill="#FF4500" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Sparkler orange</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">sparkler</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF4500</text>
+  </g>
+  <g transform="translate(544 308)">
+    <rect width="168" height="76" rx="8" fill="#0B0D17" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Midnight sky</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">night_sky</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#0B0D17</text>
+  </g>
+  <g transform="translate(720 308)">
+    <rect width="168" height="76" rx="8" fill="#1A1D2E" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#FFFFFF">Starlight</text>
+    <text x="10" y="44" font-size="11" fill="#FFFFFF" fill-opacity="0.85">starlight</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#FFFFFF" fill-opacity="0.85">#1A1D2E</text>
+  </g>
+  <g transform="translate(896 308)">
+    <rect width="168" height="76" rx="8" fill="#C0C0C0" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Platinum</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">platinum</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#C0C0C0</text>
+  </g>
+  <g transform="translate(16 392)">
+    <rect width="168" height="76" rx="8" fill="#FF6FAE" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Confetti pink</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">confetti</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#FF6FAE</text>
+  </g>
+  <g transform="translate(192 392)">
+    <rect width="168" height="76" rx="8" fill="#8FD8FF" stroke="#C0C0C0" stroke-opacity="0.4"/>
+    <text x="10" y="24" font-size="13" font-weight="600" fill="#000000">Champagne fizz</text>
+    <text x="10" y="44" font-size="11" fill="#000000" fill-opacity="0.85">fizz</text>
+    <text x="10" y="62" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#000000" fill-opacity="0.85">#8FD8FF</text>
+  </g>
+</svg>

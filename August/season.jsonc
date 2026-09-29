@@ -1,0 +1,94 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "August",
+  "name": "Late Summer",
+  "tagline": "Golden sun, turquoise water and the first of the harvest",
+  "description": [
+    "August captures late summer: warm golden tones, beach vibes and the first hints of harvest.",
+    "Bright summer colours (sun gold, sunset orange, turquoise water) sit next to the sea greens and wheat of the coming harvest season."
+  ],
+  "mood": ["sunny", "relaxed", "warm", "golden"],
+  "keywords": ["sunflower field", "beach umbrella", "palm trees", "turquoise water", "wheat field", "sunset", "watermelon"],
+  "links": [
+    { "title": "Emojipedia: Summer", "url": "https://emojipedia.org/summer" }
+  ],
+  "ideas": [
+    "More summer fruit for the harvest: 🍇 🍑 🍓",
+    "Sunset gradient colours for a late summer evening feel",
+    "🏊 swimming icons for a summer recreation theme",
+    "The old theme coloured execution time yellow over 300 ms and red over 1 s; the shared layout could bring that back for every month"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "golden":    { "hex": "#FFD700", "name": "Golden sun" },
+    "sunset":    { "hex": "#FF8C00", "name": "Sunset orange" },
+    "turquoise": { "hex": "#40E0D0", "name": "Turquoise water" },
+    "sea_green": { "hex": "#2E8B57", "name": "Sea green" },
+    "khaki":     { "hex": "#F0E68C", "name": "Sand khaki" },
+    "mustard":   { "hex": "#FFDB58", "name": "Mustard" },
+    "teal":      { "hex": "#008080", "name": "Deep teal" },
+    "seafoam":   { "hex": "#98FB98", "name": "Seafoam" },
+    "sunburn":   { "hex": "#FF0000", "name": "Sunburn red" },
+    "cloud":     { "hex": "#FFFFFF", "name": "Cloud white" },
+    "black":     { "hex": "#000000", "name": "Black" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "golden",
+      "secondary":   "sunset",
+      "tertiary":    "turquoise",
+      "accent":      "sea_green",
+      "accent_alt":  "mustard",
+      "highlight":   "khaki",
+      "deep":        "teal",
+      "text_accent": "cloud"
+    },
+    "ui": {
+      "text_light": "cloud",
+      "text_dark":  "black"
+    },
+    "status": {
+      "success": "seafoam",
+      "error":   "sunburn"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "☀️",
+    "root":       "🏖️",
+    "path":       "🌻",
+    "folder":     "🌴",
+    "home":       "🏡",
+    "git":        "🌾",
+    "exec_time":  "🍦",
+    "clock":      "🌅",
+    "battery":    "🥵",
+    "status_ok":  "🍉",
+    "status_err": "🔥",
+    "language":   "🌊",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🍦",
+      "yarn":    "🍑",
+      "java":    "🌻",
+      "go":      "🌻",
+      "dart":    "🌻",
+      "nx":      "🌻",
+      "ruby":    "🌻",
+      "kubectl": "🌻"
+    },
+    "os": {
+      "linux":   "🐚",
+      "macos":   "🌴",
+      "windows": "🏄"
+    },
+    "pool": ["🐚", "🏊", "👡", "😎", "🏝️", "🕶️", "👙", "🌞", "🍹", "🏄", "🩱", "🩴", "🩳", "🍨", "🧢", "🌄", "🌡️", "🥥", "🍇", "🍑", "🍓"]
+  }
+}

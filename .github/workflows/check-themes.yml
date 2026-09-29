@@ -1,0 +1,19 @@
+name: Check themes
+
+# Fails when a season.jsonc is invalid or a generated file doesn't match what Generate-Themes.ps1 produces
+# (a hand-edited generated file, or a season.jsonc change without regenerating).
+on:
+  pull_request:
+  push:
+    branches: [release-0.0.1]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generated files are up to date
+        shell: pwsh
+        run: |
+          $PSVersionTable.PSVersion
+          ./Generate-Themes.ps1 -Check

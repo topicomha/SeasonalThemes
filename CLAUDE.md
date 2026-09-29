@@ -85,6 +85,9 @@ To add a program, add a template or renderer and a row in `$Targets`. Use `PerVa
 schema/season.schema.json    the format of season.jsonc: roles, fallbacks, descriptions
 templates/                   one template or renderer per target
 Generate-Themes.ps1          season.jsonc + templates -> every generated file
+tools/Import-OmpTheme.ps1    drafts a season.jsonc from an old hand-written theme
+tools/Compare-OmpTheme.ps1   before/after render + field diff of two themes, as Markdown for a PR
+.github/                     CI check and the PR template
 Icons.md                     candidate emoji per month, plus emojipedia collections (move into each month's icons.pool)
 prompt-sections.md           list of the Oh My Posh segment types available
 ThemesDocumentation.md       old overview of all months (to be replaced)
@@ -106,16 +109,20 @@ scripts.ipynb                snippets that symlink themes into the Oh My Posh th
   - `oh-my-posh debug --config <file>` for template errors
 - Install by symlinking the generated file into the Oh My Posh themes folder (`~/.oh-my-posh-themes/` on Linux, `%LOCALAPPDATA%\Programs\oh-my-posh\themes\` on Windows; see `scripts.ipynb`, whose paths are for my other machines).
 
-## Converting a month
+## Converting a month (one PR each)
 
-1. Save the current render: `oh-my-posh print primary --config <old file> --shell pwsh > before.txt`.
-2. Write `<Month>/season.jsonc`:
-   - build the palette from the old theme's colours and give each one a name
-   - map each colour to roles
-   - copy the icons
-   - take the story and ideas from the old `theme-definition.md` / `*-Theme-Info.md` and that month's line in `Icons.md`.
-3. Run `pwsh ./Generate-Themes.ps1 -Month <Month>`, then render and compare against `before.txt`. Expect text colours to change to the best-contrast choice. Anything else that changed was probably mapped wrong.
-4. Delete the files the generator replaces (e.g. `<Month>-Theme-Info.md`).
+1. **Branch.** From an up-to-date `release-0.0.1`, run `git switch -c updating-<month>`.
+2. **Draft.** Run `pwsh ./tools/Import-OmpTheme.ps1 -Month <Month>`. It lines the old theme up with the template and writes `<Month>/season.jsonc`. It gives each role its most common old value, notes every conflicting value as an `// also:` comment, and lists at the top what it couldn't import (broken emoji, templates that didn't line up, missing segments, unused colours).
+3. **Finish the document.**
+   - Give each palette entry a proper name and key: `c_d35400` becomes `"pumpkin": { "hex": "#D35400", "name": "Pumpkin orange" }`.
+   - Resolve each `// also:` comment and each note, then delete them.
+   - Fill in the identity fields. Take the story and ideas from the old `theme-definition.md` / `*-Theme-Info.md`, and add spare emoji from that month's line in `Icons.md`.
+
+   The generator refuses the file while any `TODO` is left.
+4. **Generate.** Run `pwsh ./Generate-Themes.ps1 -Month <Month>`. Then delete the files it replaces (e.g. `<Month>-Theme-Info.md`), and delete the old theme file with `git rm` if its name changed (e.g. `davids-november.omp.json`).
+5. **Compare.** Run `pwsh ./tools/Compare-OmpTheme.ps1 -Before release-0.0.1:<Month>/<old file> -After <Month>/davids-<Month>.omp.json`. Expect text-colour changes, plus whatever the old theme was missing or had broken. Anything else that changed was probably mapped wrong.
+6. **Commit** the straight conversion as `<Month>: convert to season.jsonc`. Put any design refinements in a *separate* commit after it.
+7. **PR.** Push, then run `gh pr create --base release-0.0.1`. The PR template asks for the compare report, the decisions made, and the checklist. Add `Part of #11`.
 
 ## Git workflow
 
@@ -137,7 +144,7 @@ Hosted on **GitHub** (`topicomha/SeasonalThemes`). Use `gh` for PRs.
 
 ## Backlog
 
-1. **Convert every month to `season.jsonc`.** Only October is done. Still to do: Jan, Feb, Mar, Apr, May, Aug, Sep, Nov, Dec.
+1. **Convert every month to `season.jsonc`**, tracked in issue #11. Only October is done. Still to do: Jan, Feb, Mar, Apr, May, Aug, Sep, Nov, Dec.
    - December: make New Year's Eve a variant. That replaces `davids-NewYearTheme.omp.json` with `davids-December-new-years-eve.omp.json`, so update the symlink.
    - August and September: converting them also fixes the broken `.Status` template and the old v2 layout.
    - November: converting it fixes the four broken `�` emoji and renames `davids-november` → `davids-November`.

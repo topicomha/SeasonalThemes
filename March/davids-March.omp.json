@@ -2,64 +2,55 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      // Left-aligned prompt block
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          // Shell segment with a shamrock icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\u256d\u2500\ue0b6",
+          "leading_diamond": "╭─",
           "template": "☘️ {{ .Name }} ",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "shell",
           "style": "diamond"
         },
         {
-          // Root segment with a hat icon
           "properties": {
             "cache_duration": "none"
           },
-          "template": "<parentBackground>🎩</> \uf292 ",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "template": "<parentBackground>🎩</>  ",
+          "foreground": "#FFFFFF",
+          "background": "#009E60",
           "type": "root",
           "style": "diamond"
         },
         {
-          // Path segment with a beer icon
           "properties": {
             "cache_duration": "none",
             "folder_icon": " 🍻 ",
             "home_icon": " 🤞 ",
-            "max_depth": 3,
             "style": "folder"
           },
           "template": " 🍻 {{ .Path }} ",
-          "foreground": "#FFFFFF",  // White
-          "powerline_symbol": "\ue0b0",
-          "background": "#32CD32",  // Lime Green
+          "foreground": "#000000",
+          "powerline_symbol": "",
+          "background": "#32CD32",
           "type": "path",
           "style": "powerline"
         },
         {
-          // Git segment with branch status and icons
           "properties": {
             "branch_icon": "☘️ ",
-            "max_length": 15,
-            "display_status": true,
-            "display_upstream_icon": true,
             "cache_duration": "none",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#32CD32> 📂 {{ .Staging.String }}</>{{ end }} ",
-          "foreground": "#000000",  // Black
-          "powerline_symbol": "\ue0b0",
-          "background": "#FFD700",  // Gold
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} ✏️ {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#009E60> 📂 {{ .Staging.String }}</>{{ end }} ",
+          "foreground": "#000000",
+          "powerline_symbol": "",
+          "background": "#FFD700",
           "type": "git",
           "style": "powerline",
           "background_templates": [
@@ -70,229 +61,211 @@
           ]
         },
         {
-          // Execution time segment with a coin icon
           "properties": {
             "cache_duration": "none",
             "style": "roundrock",
             "threshold": 0
           },
-          "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "",
           "template": " ⌛ {{ .FormattedMs }} ",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "foreground": "#000000",
+          "background": "#009E60",
           "type": "executiontime",
           "style": "diamond"
         }
       ]
     },
     {
-      // Right-aligned prompt block
       "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          // Node.js segment with shamrock icons
           "properties": {
             "cache_duration": "none",
             "fetch_package_manager": true,
             "npm_icon": " ☘️ ",
             "yarn_icon": " 🌈 "
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "☘️ {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "node",
           "style": "diamond"
         },
         {
-          // Python segment with a hat icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🎩 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "python",
           "style": "diamond"
         },
         {
-          // Java segment with a beer icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍺 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#32CD32",  // Lime Green
+          "foreground": "#000000",
+          "background": "#32CD32",
           "type": "java",
           "style": "diamond"
         },
         {
-          // .NET segment with a shamrock icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
-          "template": "☘️ {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "leading_diamond": "",
+          "trailing_diamond": " ",
+          "template": "☘️ {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }}",
+          "foreground": "#000000",
+          "background": "#009E60",
           "type": "dotnet",
           "style": "diamond"
         },
         {
-          // Go segment with a rainbow icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🌈 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#000000",  // Black
-          "background": "#FFD700",  // Gold
+          "foreground": "#000000",
+          "background": "#FFD700",
           "type": "go",
           "style": "diamond"
         },
         {
-          // Rust segment with a hat icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🎩 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "rust",
           "style": "diamond"
         },
         {
-          // Dart segment with a beer icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🍺 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#32CD32",  // Lime Green
+          "foreground": "#000000",
+          "background": "#32CD32",
           "type": "dart",
           "style": "diamond"
         },
         {
-          // Angular segment with a shamrock icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "☘️ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#000000",  // Black
-          "background": "#FFD700",  // Gold
+          "foreground": "#000000",
+          "background": "#FFD700",
           "type": "angular",
           "style": "diamond"
         },
         {
-          // Nx segment with a rainbow icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🌈 {{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#000000",
+          "background": "#009E60",
           "type": "nx",
           "style": "diamond"
         },
         {
-          // Julia segment with a hat icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": " ",
+          "trailing_diamond": " ",
           "template": "🎩 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "julia",
           "style": "diamond"
         },
         {
-          // Ruby segment with a beer icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🍺 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#000000",  // Black
-          "background": "#FFD700",  // Gold
+          "foreground": "#000000",
+          "background": "#FFD700",
           "type": "ruby",
           "style": "diamond"
         },
         {
-          // Azure Functions segment with a shamrock icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "☘️ {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "foreground": "#000000",  // Black
-          "background": "#FFD700",  // Gold
+          "foreground": "#000000",
+          "background": "#FFD700",
           "type": "azfunc",
           "style": "diamond"
         },
         {
-          // AWS segment with a rainbow icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4 ",
+          "leading_diamond": "",
+          "trailing_diamond": " ",
           "template": "🌈 {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#000000",
+          "background": "#009E60",
           "type": "aws",
           "style": "diamond"
         },
         {
-          // Kubernetes segment with a hat icon
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "template": "🎩 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
-          "foreground": "#FFFFFF",  // White
-          "background": "#009E60",  // Shamrock Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "kubectl",
           "style": "diamond"
         },
         {
-          // OS segment with shamrock icons for different OSes
           "properties": {
             "cache_duration": "none",
             "linux": "☘️",
             "macos": "🍏",
             "windows": "🎩"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "leading_diamond": "",
+          "trailing_diamond": "<transparent,background></>",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#FFFFFF",
+          "background": "#006400",
           "type": "os",
           "style": "diamond"
         },
         {
-          // Battery segment with icons for different states
           "properties": {
             "cache_duration": "none",
             "charged_icon": "🔋 ",
@@ -300,9 +273,9 @@
             "discharging_icon": "☘️ "
           },
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
-          "foreground": "#FFFFFF",  // White
-          "powerline_symbol": "\ue0b2",
-          "background": "#006400",  // Dark Green
+          "foreground": "#262626",
+          "powerline_symbol": "",
+          "background": "#FFD700",
           "type": "battery",
           "style": "powerline",
           "background_templates": [
@@ -313,16 +286,15 @@
           "invert_powerline": true
         },
         {
-          // Time segment with shamrock icons
           "properties": {
             "cache_duration": "none",
             "time_format": "2006-01-02 3:04:05 PM"
           },
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "template": " 🌈🪙 {{ .CurrentDate | date .Format }} ",
-          "foreground": "#FFFFFF",  // White
-          "background": "#006400",  // Dark Green
+          "foreground": "#000000",
+          "background": "#FFD700",
           "type": "time",
           "style": "diamond",
           "invert_powerline": true
@@ -330,32 +302,29 @@
       ]
     },
     {
-      // Left-aligned prompt block for additional information
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          // Home segment with a house icon
           "properties": {
             "cache_duration": "none"
           },
-          "template": "⌂──🍀",
-          "foreground": "#32CD32",  // Lime Green
+          "template": "⌂──",
+          "foreground": "#32CD32",
           "type": "text",
           "style": "plain"
         },
         {
-          // Status segment with a shamrock icon
           "properties": {
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "template": "🍺  ",
-          "foreground": "#FFFFFF",  // White
+          "template": "{{ if gt .Code 0 }}😫{{ else }}🍀🍺{{ end }}  ",
+          "foreground": "#FFFFFF",
           "type": "status",
           "style": "plain",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}#FF4500{{ end }}"  // Orange Red on error
+            "{{ if gt .Code 0 }}#FF4500{{ end }}"
           ]
         }
       ],

@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "September",
+  "name": "Back to School",
+  "tagline": "Apples, notebooks and the first falling leaves",
+  "description": [
+    "September is the turn from summer to fall: early autumn browns, sienna and goldenrod, paired with back-to-school icons.",
+    "Apples, books and notebooks sit alongside the first fallen leaves; the dark text is chalkboard green."
+  ],
+  "mood": ["studious", "crisp", "warm", "nostalgic"],
+  "keywords": ["red apple", "chalkboard", "stack of books", "school bus", "first fallen leaves", "goldenrod", "pencils"],
+  "holidays": [
+    { "name": "Labor Day", "date": "09-01", "note": "first Monday" },
+    { "name": "Autumn equinox", "date": "09-22", "note": "around the 22nd" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Fall / Autumn", "url": "https://emojipedia.org/fall-autumn" },
+    { "title": "Emojipedia: Graduation", "url": "https://emojipedia.org/graduation" }
+  ],
+  "ideas": [
+    "More school supplies: ✏️ 📏 📐 for various segments",
+    "🎒 backpack as an alternative home icon",
+    "📝 memo or 📄 document icons for file-related segments",
+    "The old theme coloured execution time yellow over 300 ms and red over 1 s; the shared layout could bring that back for every month"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "bark":        { "hex": "#8B4513", "name": "Bark brown" },
+    "sienna":      { "hex": "#A0522D", "name": "Burnt sienna" },
+    "goldenrod":   { "hex": "#DAA520", "name": "Goldenrod" },
+    "peru":        { "hex": "#CD853F", "name": "Peru" },
+    "harvest":     { "hex": "#B8860B", "name": "Harvest gold" },
+    "chocolate":   { "hex": "#D2691E", "name": "Chocolate" },
+    "apple":       { "hex": "#B22222", "name": "Apple red" },
+    "green_apple": { "hex": "#8DB600", "name": "Green apple", "note": "Status success, to match the 🍏" },
+    "paper":       { "hex": "#FFFFFF", "name": "Paper white" },
+    "chalkboard":  { "hex": "#22302A", "name": "Chalkboard", "note": "Dark text on the light segments" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "bark",
+      "secondary":   "sienna",
+      "tertiary":    "goldenrod",
+      "accent":      "peru",
+      "accent_alt":  "apple",
+      "highlight":   "harvest",
+      "deep":        "chocolate",
+      "text_accent": "paper"
+    },
+    "ui": {
+      "text_light": "paper",
+      "text_dark":  "chalkboard"
+    },
+    "status": {
+      "success": "green_apple",
+      "error":   "apple"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🍎",
+    "root":       "📚",
+    "path":       "🍂",
+    "folder":     "📓",
+    "home":       "🏫",
+    "git":        "🍁",
+    "exec_time":  "🚌",
+    "clock":      "🔔",
+    "battery":    "🧃",
+    "status_ok":  "🍏",
+    "status_err": "🍎",
+    "language":   "🍂",
+    "lang": {
+      "node":    "🍏",
+      "npm":     "🥧",
+      "yarn":    "🍁",
+      "java":    "📚",
+      "go":      "📚",
+      "dart":    "📚",
+      "nx":      "📚",
+      "ruby":    "🍎",
+      "kubectl": "📚"
+    },
+    "os": {
+      "linux":   "🍂",
+      "macos":   "🍏",
+      "windows": "📐"
+    },
+    "pool": ["🎒", "🧑‍🏫", "✏️", "📏", "📐", "📝", "📄", "🎓", "📜", "🍊", "🌰", "☕", "🥧", "🌾"]
+  }
+}

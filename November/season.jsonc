@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "November",
+  "name": "Thanksgiving",
+  "tagline": "Falling leaves, a full table and a whole lot of gratitude",
+  "description": [
+    "November is the height of fall: deep oranges, browns and golden tones with fall foliage and Thanksgiving feast imagery.",
+    "The colours are currently the same as October's; the turkeys, drumsticks and maple leaves are what set it apart."
+  ],
+  "mood": ["cozy", "grateful", "warm", "abundant"],
+  "keywords": ["Thanksgiving table", "roast turkey", "pumpkin pie", "maple leaves", "corn harvest", "cornucopia", "fireplace"],
+  "holidays": [
+    { "name": "Thanksgiving (US)", "date": "11-22", "note": "4th Thursday, between the 22nd and 28th" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Thanksgiving", "url": "https://emojipedia.org/thanksgiving" },
+    { "title": "Emojipedia: Fall / Autumn", "url": "https://emojipedia.org/fall-autumn" }
+  ],
+  "ideas": [
+    "More Thanksgiving food: 🥧 pie, 🌽 corn, 🍠 sweet potato",
+    "Use 🦃 turkey more prominently throughout the theme",
+    "🍊 tangerine for autumn fruit",
+    "Give November its own harvest palette so it doesn't share October's colours"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "warm_orange": { "hex": "#D35400", "name": "Warm orange" },
+    "roast":       { "hex": "#A04000", "name": "Roast brown" },
+    "pumpkin":     { "hex": "#E67E22", "name": "Pumpkin orange" },
+    "harvest":     { "hex": "#F1C40F", "name": "Harvest gold" },
+    "amber":       { "hex": "#F39C12", "name": "Amber" },
+    "walnut":      { "hex": "#523422", "name": "Walnut" },
+    "plum":        { "hex": "#8E44AD", "name": "Plum" },
+    "butter":      { "hex": "#FFFB38", "name": "Butter yellow" },
+    "cream":       { "hex": "#E0F8FF", "name": "Cream" },
+    "white":       { "hex": "#FFFFFF", "name": "White" },
+    "charcoal":    { "hex": "#2D3436", "name": "Charcoal" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "warm_orange",
+      "secondary":   "roast",
+      "tertiary":    "pumpkin",
+      "accent":      "harvest",
+      "accent_alt":  "amber",
+      "highlight":   "plum",
+      "deep":        "walnut",
+      "text_accent": "butter"
+    },
+    "ui": {
+      "text_light": "white",
+      "text_dark":  "charcoal"
+    },
+    "status": {
+      "success": "cream",
+      "error":   "roast"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🍂",
+    "root":       "🍂",
+    "path":       "🍗🍗🍗",
+    "folder":     "🦃",
+    "home":       "🍁",
+    "git":        "🌽",
+    "exec_time":  "🍽️",
+    "clock":      "🦃",
+    "battery":    "🍂",
+    "status_ok":  "🍁",
+    "status_err": "🍁",
+    "language":   "🍁",
+    "lang": {
+      "node":    "🦃",
+      "npm":     "🥧",
+      "python":  "🍂",
+      "dotnet":  "🍂",
+      "rust":    "🍂",
+      "angular": "🍠",
+      "julia":   "🍂",
+      "azfunc":  "🍂",
+      "aws":     "🍂"
+    },
+    "os": {
+      "linux":   "🍁",
+      "macos":   "🍂",
+      "windows": "🦃"
+    },
+    "pool": ["🍽️", "🍴", "🌰", "🍊", "🥕", "🥔", "🥧", "🍠", "🌽", "☕", "🧣", "🧤", "🏈", "🙏", "🥂", "🏡"]
+  }
+}

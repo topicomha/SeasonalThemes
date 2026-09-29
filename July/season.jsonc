@@ -138,5 +138,13 @@
       "windows": "🗽"
     },
     "pool": ["🇺🇸", "🗽", "🎺", "🍖", "🎉", "⚾", "☀️", "🎈", "🎠", "🎡", "🔔", "🤠", "📜", "🎪"]
+  },
+
+  // ── Per-program extras ──────────────────────────────────────────────────
+  "targets": {
+    "vscode": {
+      "status_bar": "brand.secondary",
+      "accent": "brand.accent_alt"
+    }
   }
 }

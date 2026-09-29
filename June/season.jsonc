@@ -1,0 +1,98 @@
+{
+  "$schema": "../schema/season.schema.json",
+
+  // ── Identity ────────────────────────────────────────────────────────────
+  "month": "June",
+  "name": "Summer Break",
+  "tagline": "Sunshine, sunglasses and the first day of summer",
+  "description": [
+    "June celebrates the start of summer with bright, sunny colours and beach and vacation icons.",
+    "Summer sky, sunshine and lime set the tone, with ocean blue, watermelon and sunset orange around them. Graduation caps and Father's Day fit in too."
+  ],
+  "mood": ["sunny", "carefree", "bright", "celebratory"],
+  "keywords": ["beach umbrella", "sunglasses", "surfboard", "ocean waves", "palm island", "graduation caps", "watermelon"],
+  "holidays": [
+    { "name": "Father's Day", "date": "06-15", "note": "3rd Sunday" },
+    { "name": "Juneteenth", "date": "06-19" },
+    { "name": "Summer solstice", "date": "06-21", "note": "around the 21st" }
+  ],
+  "links": [
+    { "title": "Emojipedia: Summer", "url": "https://emojipedia.org/summer" },
+    { "title": "Emojipedia: Graduation", "url": "https://emojipedia.org/graduation" }
+  ],
+  "ideas": [
+    "🎓 graduation caps for a graduation-week variant",
+    "A Father's Day variant around the 3rd Sunday"
+  ],
+  "appearance": "dark",
+
+  // ── Palette ─────────────────────────────────────────────────────────────
+  "palette": {
+    "sky":        { "hex": "#87CEEB", "name": "Summer sky", "note": "From the June draft in ThemesDocumentation.md" },
+    "lime":       { "hex": "#32CD32", "name": "Lime", "note": "From the June draft" },
+    "sunshine":   { "hex": "#FFFF00", "name": "Sunshine yellow", "note": "From the June draft" },
+    "white":      { "hex": "#FFFFFF", "name": "White", "note": "From the June draft" },
+    "ocean":      { "hex": "#0077BE", "name": "Ocean blue" },
+    "watermelon": { "hex": "#FC6C85", "name": "Watermelon" },
+    "sunset":     { "hex": "#FF9F43", "name": "Sunset orange" },
+    "deep_sea":   { "hex": "#0B4F6C", "name": "Deep sea" },
+    "shade":      { "hex": "#13293D", "name": "Beach-umbrella shade" },
+    "sunburn":    { "hex": "#E63946", "name": "Sunburn red" }
+  },
+
+  // ── Colour roles ────────────────────────────────────────────────────────
+  "colors": {
+    "brand": {
+      "primary":     "sky",
+      "secondary":   "lime",
+      "tertiary":    "ocean",
+      "accent":      "sunshine",
+      "accent_alt":  "sunset",
+      "highlight":   "watermelon",
+      "deep":        "deep_sea",
+      "text_accent": "shade",
+      "line":        "sky"
+    },
+    "ui": {
+      "text_light": "white",
+      "text_dark":  "shade"
+    },
+    "status": {
+      "success": "lime",
+      "error":   "sunburn"
+    }
+  },
+
+  // ── Icons ───────────────────────────────────────────────────────────────
+  "icons": {
+    "shell":      "🌞",
+    "root":       "🏖️",
+    "path":       "🕶️",
+    "folder":     "🕶️",
+    "home":       "🏝️",
+    "git":        "🏄",
+    "exec_time":  "🛹",
+    "clock":      "⛱️",
+    "battery":    "🍹",
+    "status_ok":  "😎",
+    "status_err": "🥵",
+    "language":   "🌊",
+    "lang": {
+      "node":    "🍉",
+      "npm":     "🍦",
+      "yarn":    "🍋",
+      "rust":    "🦀",
+      "go":      "🐚",
+      "dart":    "🐬",
+      "julia":   "🐠",
+      "ruby":    "🍓",
+      "kubectl": "⛵"
+    },
+    "os": {
+      "linux":   "🐚",
+      "macos":   "🍍",
+      "windows": "🏄"
+    },
+    "pool": ["😎", "🎓", "🍉", "🛹", "🏖️", "🏝️", "⛱️", "🌊", "🕶️", "🏄", "📜", "🩴", "🥥", "🍹", "🐬"]
+  }
+}

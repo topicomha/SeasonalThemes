@@ -119,6 +119,7 @@
           "tertiary":  "silver",
           "highlight": "midnight",
           "deep":      "gold",
+          "text_accent": "snow",
           "line":      "gold"
         },
         "ui": {

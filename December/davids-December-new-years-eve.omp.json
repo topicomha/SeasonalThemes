@@ -21,7 +21,7 @@
             "cache_duration": "none"
           },
           "template": "<parentBackground>🥂</>  ",
-          "foreground": "#FFD700",
+          "foreground": "#FFFFFF",
           "background": "#1E90FF",
           "type": "root",
           "style": "diamond"

@@ -176,7 +176,7 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Variant | Dates | Changes | Files |
 |---|---|---|---|
-| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (4), colors.brand (6), colors.ui (1), colors.status (2), icons (12), targets (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg) |
+| New Year's Eve | Dec 26 to Dec 31 | tagline, palette (4), colors.brand (7), colors.ui (1), colors.status (2), icons (12), targets (1) | [davids-December-new-years-eve.omp.json](davids-December-new-years-eve.omp.json), [palette-new-years-eve.svg](palette-new-years-eve.svg) |
 
 ## Ideas
 

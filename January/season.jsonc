@@ -33,7 +33,16 @@
     "sky":       { "hex": "#87CEEB", "name": "Winter sky" },
     "snow":      { "hex": "#FFFFFF", "name": "Snow white" },
     "black":     { "hex": "#000000", "name": "Black" },
-    "ember":     { "hex": "#FF4500", "name": "Fireplace ember" }
+    "ember":     { "hex": "#FF4500", "name": "Fireplace ember" },
+    "polar":     { "hex": "#0B1B2E", "name": "Polar night", "note": "Proposed: editor and terminal background" },
+    "drift":     { "hex": "#16304A", "name": "Snow drift shadow", "note": "Proposed: panels, borders, current line" },
+    "ice":       { "hex": "#E8F1F8", "name": "Ice", "note": "Proposed: editor text" },
+    "frost":     { "hex": "#8FA9C2", "name": "Frost", "note": "Proposed: comments, muted text" },
+    "holly":     { "hex": "#E06C6C", "name": "Holly berry", "note": "Proposed: terminal red, invalid code" },
+    "pine":      { "hex": "#6BC48A", "name": "Pine needle", "note": "Proposed: evergreen lightened (terminal green, strings)" },
+    "candle":    { "hex": "#F2D06B", "name": "Candlelight", "note": "Proposed: terminal yellow, numbers" },
+    "aurora":    { "hex": "#C49BE0", "name": "Aurora violet", "note": "Proposed: terminal magenta, types" },
+    "glacier":   { "hex": "#7FDBDA", "name": "Glacier", "note": "Proposed: terminal cyan" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -49,12 +58,46 @@
       "text_accent": "snow"
     },
     "ui": {
-      "text_light": "snow",
-      "text_dark":  "black"
+      "text_light":     "snow",
+      "text_dark":      "black",
+      "background":     "polar",
+      "foreground":     "ice",
+      "surface":        "drift",
+      "line_highlight": "drift",
+      "border":         "drift",
+      "muted":          "frost",
+      "selection":      "steel",
+      "cursor":         "sky"
     },
     "status": {
       "success": "snow",
-      "error":   "ember"
+      "warning": "candle",
+      "error":   "ember",
+      "info":    "sky"
+    },
+    "syntax": {
+      "comment":  { "color": "frost", "style": "italic" },
+      "keyword":  "sky",
+      "string":   "pine",
+      "number":   "candle",
+      "constant": "candle",
+      "function": "glacier",
+      "type":     "aurora",
+      "variable": "ice",
+      "invalid":  "holly"
+    },
+    "terminal": {
+      "black":         "drift",
+      "red":           "holly",
+      "green":         "pine",
+      "yellow":        "candle",
+      "blue":          "sky",
+      "magenta":       "aurora",
+      "cyan":          "glacier",
+      "white":         "ice",
+      "bright_black":  "frost",
+      "bright_red":    "ember",
+      "bright_white":  "snow"
     }
   },
 

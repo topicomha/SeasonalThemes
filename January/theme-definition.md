@@ -28,6 +28,15 @@ It should feel like a crisp winter day over snow-covered landscapes: navy night,
 | `snow` | Snow white | `#FFFFFF` |  |
 | `black` | Black | `#000000` |  |
 | `ember` | Fireplace ember | `#FF4500` |  |
+| `polar` | Polar night | `#0B1B2E` | Proposed: editor and terminal background |
+| `drift` | Snow drift shadow | `#16304A` | Proposed: panels, borders, current line |
+| `ice` | Ice | `#E8F1F8` | Proposed: editor text |
+| `frost` | Frost | `#8FA9C2` | Proposed: comments, muted text |
+| `holly` | Holly berry | `#E06C6C` | Proposed: terminal red, invalid code |
+| `pine` | Pine needle | `#6BC48A` | Proposed: evergreen lightened (terminal green, strings) |
+| `candle` | Candlelight | `#F2D06B` | Proposed: terminal yellow, numbers |
+| `aurora` | Aurora violet | `#C49BE0` | Proposed: terminal magenta, types |
+| `glacier` | Glacier | `#7FDBDA` | Proposed: terminal cyan |
 
 ## Colour roles
 
@@ -57,14 +66,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | snow | `#FFFFFF` |  |
 | `text_dark` | black | `#000000` |  |
-| `background` | navy | `#000080` | *inherits* `brand.deep` |
-| `foreground` | snow | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | navy | `#000080` | *inherits* `ui.background` |
-| `line_highlight` | navy | `#000080` | *inherits* `ui.surface` |
-| `border` | navy | `#000080` | *inherits* `ui.surface` |
-| `muted` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | steel | `#4682B4` | *inherits* `brand.secondary` |
-| `cursor` | navy | `#000080` | *inherits* `brand.primary` |
+| `background` | polar | `#0B1B2E` |  |
+| `foreground` | ice | `#E8F1F8` |  |
+| `surface` | drift | `#16304A` |  |
+| `line_highlight` | drift | `#16304A` |  |
+| `border` | drift | `#16304A` |  |
+| `muted` | frost | `#8FA9C2` |  |
+| `selection` | steel | `#4682B4` |  |
+| `cursor` | sky | `#87CEEB` |  |
 
 ### Status
 
@@ -74,8 +83,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | ember | `#FF4500` |  |
 | `success` | snow | `#FFFFFF` |  |
-| `warning` | sky | `#87CEEB` | *inherits* `brand.accent` |
-| `info` | navy | `#000080` | *inherits* `brand.highlight` |
+| `warning` | candle | `#F2D06B` |  |
+| `info` | sky | `#87CEEB` |  |
 
 ### Syntax
 
@@ -83,22 +92,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | snow | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | navy | `#000080` | *inherits* `brand.primary` |
-| `string` | sky | `#87CEEB` | *inherits* `brand.accent` |
-| `number` | evergreen | `#2E8B57` | *inherits* `brand.tertiary` |
-| `constant` | evergreen | `#2E8B57` | *inherits* `syntax.number` |
-| `function` | sky | `#87CEEB` | *inherits* `brand.accent_alt` |
-| `type` | navy | `#000080` | *inherits* `brand.highlight` |
-| `variable` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | snow | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | snow | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | navy | `#000080` | *inherits* `syntax.keyword` |
-| `attribute` | sky | `#87CEEB` | *inherits* `syntax.function` |
-| `regex` | sky | `#87CEEB` | *inherits* `syntax.string` |
-| `invalid` | ember | `#FF4500` | *inherits* `status.error` |
+| `comment` | frost | `#8FA9C2` | italic |
+| `keyword` | sky | `#87CEEB` |  |
+| `string` | pine | `#6BC48A` |  |
+| `number` | candle | `#F2D06B` |  |
+| `constant` | candle | `#F2D06B` |  |
+| `function` | glacier | `#7FDBDA` |  |
+| `type` | aurora | `#C49BE0` |  |
+| `variable` | ice | `#E8F1F8` |  |
+| `parameter` | ice | `#E8F1F8` | *inherits* `syntax.variable` |
+| `property` | ice | `#E8F1F8` | *inherits* `syntax.variable` |
+| `operator` | ice | `#E8F1F8` | *inherits* `ui.foreground` |
+| `punctuation` | ice | `#E8F1F8` | *inherits* `ui.foreground` |
+| `tag` | sky | `#87CEEB` | *inherits* `syntax.keyword` |
+| `attribute` | glacier | `#7FDBDA` | *inherits* `syntax.function` |
+| `regex` | pine | `#6BC48A` | *inherits* `syntax.string` |
+| `invalid` | holly | `#E06C6C` |  |
 
 ### Terminal
 
@@ -106,26 +115,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | navy | `#000080` | *inherits* `ui.background` |
-| `foreground` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | navy | `#000080` | *inherits* `ui.cursor` |
+| `background` | polar | `#0B1B2E` | *inherits* `ui.background` |
+| `foreground` | ice | `#E8F1F8` | *inherits* `ui.foreground` |
+| `cursor` | sky | `#87CEEB` | *inherits* `ui.cursor` |
 | `selection` | steel | `#4682B4` | *inherits* `ui.selection` |
-| `black` | navy | `#000080` | *inherits* `ui.background` |
-| `red` | ember | `#FF4500` | *inherits* `status.error` |
-| `green` | snow | `#FFFFFF` | *inherits* `status.success` |
-| `yellow` | sky | `#87CEEB` | *inherits* `status.warning` |
-| `blue` | navy | `#000080` | *inherits* `status.info` |
-| `magenta` | navy | `#000080` | *inherits* `brand.highlight` |
-| `cyan` | navy | `#000080` | *inherits* `status.info` |
-| `white` | snow | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | snow | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | ember | `#FF4500` | *inherits* `terminal.red` |
-| `bright_green` | snow | `#FFFFFF` | *inherits* `terminal.green` |
-| `bright_yellow` | sky | `#87CEEB` | *inherits* `terminal.yellow` |
-| `bright_blue` | navy | `#000080` | *inherits* `terminal.blue` |
-| `bright_magenta` | navy | `#000080` | *inherits* `terminal.magenta` |
-| `bright_cyan` | navy | `#000080` | *inherits* `terminal.cyan` |
-| `bright_white` | snow | `#FFFFFF` | *inherits* `terminal.white` |
+| `black` | drift | `#16304A` |  |
+| `red` | holly | `#E06C6C` |  |
+| `green` | pine | `#6BC48A` |  |
+| `yellow` | candle | `#F2D06B` |  |
+| `blue` | sky | `#87CEEB` |  |
+| `magenta` | aurora | `#C49BE0` |  |
+| `cyan` | glacier | `#7FDBDA` |  |
+| `white` | ice | `#E8F1F8` |  |
+| `bright_black` | frost | `#8FA9C2` |  |
+| `bright_red` | ember | `#FF4500` |  |
+| `bright_green` | pine | `#6BC48A` | *inherits* `terminal.green` |
+| `bright_yellow` | candle | `#F2D06B` | *inherits* `terminal.yellow` |
+| `bright_blue` | sky | `#87CEEB` | *inherits* `terminal.blue` |
+| `bright_magenta` | aurora | `#C49BE0` | *inherits* `terminal.magenta` |
+| `bright_cyan` | glacier | `#7FDBDA` | *inherits* `terminal.cyan` |
+| `bright_white` | snow | `#FFFFFF` |  |
 
 ## Icons
 

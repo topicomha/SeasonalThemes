@@ -275,7 +275,7 @@
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}🔋 ",
           "foreground": "#262626",
           "powerline_symbol": "",
-          "background": "[[color.brand.primary]]",
+          "background": "[[color.brand.accent]]",
           "type": "battery",
           "style": "powerline",
           "background_templates": [
@@ -293,7 +293,7 @@
           "leading_diamond": "",
           "trailing_diamond": "",
           "template": " [[icon.clock]] {{ .CurrentDate | date .Format }} ",
-          "foreground": "[[color.brand.deep]]",
+          "foreground": "[[on.brand.accent]]",
           "background": "[[color.brand.accent]]",
           "type": "time",
           "style": "diamond",

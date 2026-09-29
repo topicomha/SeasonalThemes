@@ -269,6 +269,19 @@ function Resolve-Season($Raw, $Variant) {
     $colors = [ordered]@{}
     foreach ($key in $ColorRoles.Keys) { $colors[$key] = Resolve-Color $ctx $key }
 
+    # Colours that are drawn as text must stay readable on the background they're drawn on.
+    $readableOn = [ordered]@{ 'ui.foreground' = 'ui.background'; 'ui.muted' = 'ui.background' }
+    foreach ($key in $colors.Keys) {
+        if ($key -like 'syntax.*') { $readableOn[$key] = 'ui.background' }
+        elseif ($key -like 'terminal.*' -and $key -notmatch '\.(background|cursor|selection|black|bright_black)$') { $readableOn[$key] = 'terminal.background' }
+    }
+    foreach ($key in $readableOn.Keys) {
+        $ratio = Get-ContrastRatio $colors[$key].Hex $colors[$readableOn[$key]].Hex
+        if ($ratio -lt $MinContrast) {
+            Write-Warning ("{0}: {1} ({2}) is only {3:N1}:1 on {4} ({5})" -f $where, $key, $colors[$key].Hex, $ratio, $readableOn[$key], $colors[$readableOn[$key]].Hex)
+        }
+    }
+
     $light = $colors['ui.text_light'].Hex
     $dark = $colors['ui.text_dark'].Hex
     foreach ($entry in @($colors.Values) + @($palette.Values)) {

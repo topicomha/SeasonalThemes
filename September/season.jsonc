@@ -38,7 +38,15 @@
     "apple":       { "hex": "#B22222", "name": "Apple red" },
     "green_apple": { "hex": "#8DB600", "name": "Green apple", "note": "Status success, to match the 🍏" },
     "paper":       { "hex": "#FFFFFF", "name": "Paper white" },
-    "chalkboard":  { "hex": "#22302A", "name": "Chalkboard", "note": "Dark text on the light segments" }
+    "chalkboard":  { "hex": "#22302A", "name": "Chalkboard", "note": "Dark text on the light segments; also the editor background" },
+    "board_edge":  { "hex": "#2E3F37", "name": "Board edge", "note": "Proposed: panels, borders, current line" },
+    "chalk_dust":  { "hex": "#9AA89F", "name": "Chalk dust", "note": "Proposed: comments, muted text" },
+    "chalk":       { "hex": "#F2EFE6", "name": "Chalk", "note": "Proposed: editor text" },
+    "maple":       { "hex": "#E1782E", "name": "Maple orange", "note": "Proposed: chocolate lightened to read on chalkboard (keywords)" },
+    "candy_apple": { "hex": "#E47474", "name": "Candy apple", "note": "Proposed: apple red lightened (terminal red, invalid code)" },
+    "denim":       { "hex": "#6797D9", "name": "Denim blue", "note": "Proposed: terminal blue, info" },
+    "plum":        { "hex": "#C77DBA", "name": "Plum", "note": "Proposed: terminal magenta" },
+    "slate":       { "hex": "#5FC4B8", "name": "Slate teal", "note": "Proposed: terminal cyan, types" }
   },
 
   // ── Colour roles ────────────────────────────────────────────────────────
@@ -54,12 +62,46 @@
       "text_accent": "paper"
     },
     "ui": {
-      "text_light": "paper",
-      "text_dark":  "chalkboard"
+      "text_light":     "paper",
+      "text_dark":      "chalkboard",
+      "background":     "chalkboard",
+      "foreground":     "chalk",
+      "surface":        "board_edge",
+      "line_highlight": "board_edge",
+      "border":         "board_edge",
+      "muted":          "chalk_dust",
+      "selection":      "sienna",
+      "cursor":         "goldenrod"
     },
     "status": {
       "success": "green_apple",
-      "error":   "apple"
+      "warning": "goldenrod",
+      "error":   "apple",
+      "info":    "denim"
+    },
+    "syntax": {
+      "comment":  { "color": "chalk_dust", "style": "italic" },
+      "keyword":  "maple",
+      "string":   "green_apple",
+      "number":   "peru",
+      "constant": "peru",
+      "function": "goldenrod",
+      "type":     "slate",
+      "variable": "chalk",
+      "invalid":  "candy_apple"
+    },
+    "terminal": {
+      "black":         "board_edge",
+      "red":           "candy_apple",
+      "green":         "green_apple",
+      "yellow":        "goldenrod",
+      "blue":          "denim",
+      "magenta":       "plum",
+      "cyan":          "slate",
+      "white":         "chalk",
+      "bright_black":  "chalk_dust",
+      "bright_red":    "maple",
+      "bright_white":  "paper"
     }
   },
 

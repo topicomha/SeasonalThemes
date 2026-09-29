@@ -30,7 +30,15 @@ Apples, books and notebooks sit alongside the first fallen leaves; the dark text
 | `apple` | Apple red | `#B22222` |  |
 | `green_apple` | Green apple | `#8DB600` | Status success, to match the 🍏 |
 | `paper` | Paper white | `#FFFFFF` |  |
-| `chalkboard` | Chalkboard | `#22302A` | Dark text on the light segments |
+| `chalkboard` | Chalkboard | `#22302A` | Dark text on the light segments; also the editor background |
+| `board_edge` | Board edge | `#2E3F37` | Proposed: panels, borders, current line |
+| `chalk_dust` | Chalk dust | `#9AA89F` | Proposed: comments, muted text |
+| `chalk` | Chalk | `#F2EFE6` | Proposed: editor text |
+| `maple` | Maple orange | `#E1782E` | Proposed: chocolate lightened to read on chalkboard (keywords) |
+| `candy_apple` | Candy apple | `#E47474` | Proposed: apple red lightened (terminal red, invalid code) |
+| `denim` | Denim blue | `#6797D9` | Proposed: terminal blue, info |
+| `plum` | Plum | `#C77DBA` | Proposed: terminal magenta |
+| `slate` | Slate teal | `#5FC4B8` | Proposed: terminal cyan, types |
 
 ## Colour roles
 
@@ -60,14 +68,14 @@ Surfaces and text of an application window.
 |---|---|---|---|
 | `text_light` | paper | `#FFFFFF` |  |
 | `text_dark` | chalkboard | `#22302A` |  |
-| `background` | chocolate | `#D2691E` | *inherits* `brand.deep` |
-| `foreground` | paper | `#FFFFFF` | *inherits* `ui.text_light` |
-| `surface` | chocolate | `#D2691E` | *inherits* `ui.background` |
-| `line_highlight` | chocolate | `#D2691E` | *inherits* `ui.surface` |
-| `border` | chocolate | `#D2691E` | *inherits* `ui.surface` |
-| `muted` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `selection` | sienna | `#A0522D` | *inherits* `brand.secondary` |
-| `cursor` | bark | `#8B4513` | *inherits* `brand.primary` |
+| `background` | chalkboard | `#22302A` |  |
+| `foreground` | chalk | `#F2EFE6` |  |
+| `surface` | board_edge | `#2E3F37` |  |
+| `line_highlight` | board_edge | `#2E3F37` |  |
+| `border` | board_edge | `#2E3F37` |  |
+| `muted` | chalk_dust | `#9AA89F` |  |
+| `selection` | sienna | `#A0522D` |  |
+| `cursor` | goldenrod | `#DAA520` |  |
 
 ### Status
 
@@ -77,8 +85,8 @@ Meaningful states.
 |---|---|---|---|
 | `error` | apple | `#B22222` |  |
 | `success` | green_apple | `#8DB600` |  |
-| `warning` | peru | `#CD853F` | *inherits* `brand.accent` |
-| `info` | harvest | `#B8860B` | *inherits* `brand.highlight` |
+| `warning` | goldenrod | `#DAA520` |  |
+| `info` | denim | `#6797D9` |  |
 
 ### Syntax
 
@@ -86,22 +94,22 @@ Code highlighting (editors, bat, delta...).
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `comment` | paper | `#FFFFFF` | *inherits* `ui.muted` |
-| `keyword` | bark | `#8B4513` | *inherits* `brand.primary` |
-| `string` | peru | `#CD853F` | *inherits* `brand.accent` |
-| `number` | goldenrod | `#DAA520` | *inherits* `brand.tertiary` |
-| `constant` | goldenrod | `#DAA520` | *inherits* `syntax.number` |
-| `function` | apple | `#B22222` | *inherits* `brand.accent_alt` |
-| `type` | harvest | `#B8860B` | *inherits* `brand.highlight` |
-| `variable` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `parameter` | paper | `#FFFFFF` | *inherits* `syntax.variable` |
-| `property` | paper | `#FFFFFF` | *inherits* `syntax.variable` |
-| `operator` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `punctuation` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `tag` | bark | `#8B4513` | *inherits* `syntax.keyword` |
-| `attribute` | apple | `#B22222` | *inherits* `syntax.function` |
-| `regex` | peru | `#CD853F` | *inherits* `syntax.string` |
-| `invalid` | apple | `#B22222` | *inherits* `status.error` |
+| `comment` | chalk_dust | `#9AA89F` | italic |
+| `keyword` | maple | `#E1782E` |  |
+| `string` | green_apple | `#8DB600` |  |
+| `number` | peru | `#CD853F` |  |
+| `constant` | peru | `#CD853F` |  |
+| `function` | goldenrod | `#DAA520` |  |
+| `type` | slate | `#5FC4B8` |  |
+| `variable` | chalk | `#F2EFE6` |  |
+| `parameter` | chalk | `#F2EFE6` | *inherits* `syntax.variable` |
+| `property` | chalk | `#F2EFE6` | *inherits* `syntax.variable` |
+| `operator` | chalk | `#F2EFE6` | *inherits* `ui.foreground` |
+| `punctuation` | chalk | `#F2EFE6` | *inherits* `ui.foreground` |
+| `tag` | maple | `#E1782E` | *inherits* `syntax.keyword` |
+| `attribute` | goldenrod | `#DAA520` | *inherits* `syntax.function` |
+| `regex` | green_apple | `#8DB600` | *inherits* `syntax.string` |
+| `invalid` | candy_apple | `#E47474` |  |
 
 ### Terminal
 
@@ -109,26 +117,26 @@ The 16 ANSI colours plus terminal chrome. Used by terminal emulators and every C
 
 | Role | Colour | Hex | Notes |
 |---|---|---|---|
-| `background` | chocolate | `#D2691E` | *inherits* `ui.background` |
-| `foreground` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `cursor` | bark | `#8B4513` | *inherits* `ui.cursor` |
+| `background` | chalkboard | `#22302A` | *inherits* `ui.background` |
+| `foreground` | chalk | `#F2EFE6` | *inherits* `ui.foreground` |
+| `cursor` | goldenrod | `#DAA520` | *inherits* `ui.cursor` |
 | `selection` | sienna | `#A0522D` | *inherits* `ui.selection` |
-| `black` | chocolate | `#D2691E` | *inherits* `ui.background` |
-| `red` | apple | `#B22222` | *inherits* `status.error` |
-| `green` | green_apple | `#8DB600` | *inherits* `status.success` |
-| `yellow` | peru | `#CD853F` | *inherits* `status.warning` |
-| `blue` | harvest | `#B8860B` | *inherits* `status.info` |
-| `magenta` | harvest | `#B8860B` | *inherits* `brand.highlight` |
-| `cyan` | harvest | `#B8860B` | *inherits* `status.info` |
-| `white` | paper | `#FFFFFF` | *inherits* `ui.foreground` |
-| `bright_black` | paper | `#FFFFFF` | *inherits* `ui.muted` |
-| `bright_red` | apple | `#B22222` | *inherits* `terminal.red` |
+| `black` | board_edge | `#2E3F37` |  |
+| `red` | candy_apple | `#E47474` |  |
+| `green` | green_apple | `#8DB600` |  |
+| `yellow` | goldenrod | `#DAA520` |  |
+| `blue` | denim | `#6797D9` |  |
+| `magenta` | plum | `#C77DBA` |  |
+| `cyan` | slate | `#5FC4B8` |  |
+| `white` | chalk | `#F2EFE6` |  |
+| `bright_black` | chalk_dust | `#9AA89F` |  |
+| `bright_red` | maple | `#E1782E` |  |
 | `bright_green` | green_apple | `#8DB600` | *inherits* `terminal.green` |
-| `bright_yellow` | peru | `#CD853F` | *inherits* `terminal.yellow` |
-| `bright_blue` | harvest | `#B8860B` | *inherits* `terminal.blue` |
-| `bright_magenta` | harvest | `#B8860B` | *inherits* `terminal.magenta` |
-| `bright_cyan` | harvest | `#B8860B` | *inherits* `terminal.cyan` |
-| `bright_white` | paper | `#FFFFFF` | *inherits* `terminal.white` |
+| `bright_yellow` | goldenrod | `#DAA520` | *inherits* `terminal.yellow` |
+| `bright_blue` | denim | `#6797D9` | *inherits* `terminal.blue` |
+| `bright_magenta` | plum | `#C77DBA` | *inherits* `terminal.magenta` |
+| `bright_cyan` | slate | `#5FC4B8` | *inherits* `terminal.cyan` |
+| `bright_white` | paper | `#FFFFFF` |  |
 
 ## Icons
 

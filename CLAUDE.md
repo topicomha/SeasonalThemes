@@ -31,6 +31,7 @@ Sections:
 4. **`icons`**: role icons (shell, path, git, exec_time, clock, status_ok...), `lang.<segment>`, `os.<linux|macos|windows>`, and `pool` (spare emoji).
 5. **`variants`**: date ranges that override parts of the month (e.g. New Year's Eve in late December). Each variant gets its own generated files.
 6. **`targets`**: per-program extras that don't fit a shared role (e.g. `"oh-my-posh": { "time_format": ... }`).
+7. **`modes`**: the month in its other appearance, usually `modes.light` for a dark month (a variant can have its own `modes` too). It's laid over the month like a variant, but only for that mode. It keeps the brand colours and icons, so the prompt segments look the same, and re-colours what's drawn on the window background: `ui`, `syntax`, `terminal`, `status`, `brand.line`, and `ui.accent` for VS Code's accent. Every program that supports it gets a file per mode.
 
 **Required vs optional:** in the schema, any colour or icon role with an `x-fallback` is optional and takes the named role's value when left out. Roles without one are required. So a new month can start with about 6 colours and 6 icons and fill in detail over time. The generated `theme-definition.md` marks every inherited role, which shows what hasn't been decided yet.
 
@@ -83,12 +84,15 @@ To add a program, add a template or renderer and a row in `$Targets`. Use `PerVa
   season.jsonc               THE month document (edit this)
   davids-<Month>.omp.json    generated Oh My Posh theme (+ davids-<Month>-<variant>.omp.json)
   theme-definition.md        generated readable page
-  palette.svg                generated palette swatch sheet
-  vscode-preview.svg         generated mock VS Code window in the month's theme
+  davids-<Month>-light.omp.json   generated Oh My Posh theme for light terminals
+  palette.svg                generated palette swatch sheet (+ palette-light.svg)
+  vscode-preview-dark.svg    generated mock VS Code windows in the month's themes (+ -light.svg)
 vscode/                      the VS Code extension (Seasonal Themes)
-  themes/<month>.json        generated colour themes (+ <month>-<variant>.json)
-  package.json               generated manifest (themes + the date schedule extension.js reads)
-  extension.js               switches to the current month's theme while a Seasonal theme is active
+  themes/<month>-<mode>.json generated colour themes (+ <month>-<variant>-<mode>.json)
+  package.json               generated manifest (themes + the date/mode schedule extension.js reads)
+  extension.js               keeps VS Code on this month's theme, light or dark per seasonalThemes.mode
+Get-SeasonalTheme.ps1        prints today's Oh My Posh theme path (month, variant, light/dark), for shell profiles
+tools/New-LightMode.ps1      drafts a month's modes.light from its dark colours
   README.md, CHANGELOG.md, icon.png, .vscodeignore
 schema/season.schema.json    the format of season.jsonc: roles, fallbacks, descriptions
 templates/                   one template or renderer per target
@@ -127,6 +131,8 @@ Every month's theme comes from one template, `templates/vscode-color-theme.json`
 
 Pick the colours that say the month most clearly (e.g. September's apple-red status bar, July's Old Glory red). Variants can make their own choices (New Year's Eve uses champagne gold). Check every month's `vscode-preview.svg` side by side after a change. The generator checks 31 text/background pairs in each theme (status bar, tabs, badges, buttons, selections, widgets, terminal) and warns below 3:1.
 
+**Light and dark:** every month has both, from `modes.light`. The extension's `seasonalThemes.mode` picks between them: `system` (default) follows the OS through VS Code's `window.autoDetectColorScheme` and preferred light/dark themes, `time` switches at `lightFrom` / `darkFrom`, and `light` / `dark` fix it. Light mode usually sets `targets.vscode.accent` to `ui.accent`, a darker shade of the month's accent that reads on light panels.
+
 **Building:** `cd vscode && npx @vscode/vsce package --skip-license` makes `seasonal-themes-<version>.vsix` (ignored by git). CI builds it on every PR and attaches it to the run. Bump `version` in `templates/vscode-package.json` and add a `vscode/CHANGELOG.md` entry for a release. There's no LICENSE yet, hence `--skip-license`.
 
 ## Oh My Posh notes
@@ -141,6 +147,23 @@ Pick the colours that say the month most clearly (e.g. September's apple-red sta
   - `oh-my-posh print primary --config <file> --shell pwsh` (and `print right`)
   - `oh-my-posh debug --config <file>` for template errors
 - Install by symlinking the generated file into the Oh My Posh themes folder (`~/.oh-my-posh-themes/` on Linux, `%LOCALAPPDATA%\Programs\oh-my-posh\themes\` on Windows; see `scripts.ipynb`, whose paths are for my other machines).
+- Or let the profile pick today's theme, including the variant and light/dark:
+  - PowerShell: `oh-my-posh init pwsh --config (& <repo>/Get-SeasonalTheme.ps1) | Invoke-Expression`
+  - zsh / bash: `eval "$(oh-my-posh init zsh --config "$(pwsh -NoProfile -File <repo>/Get-SeasonalTheme.ps1)")"`
+
+  `-Mode system` (the default) reads Windows' "apps use light theme", macOS dark mode or GNOME's colour scheme, and falls back to `-LightFrom` / `-DarkFrom` (07:00 / 19:00). The choice is made when the shell starts.
+- Light-mode prompts (`davids-<Month>-light.omp.json`) keep every segment's colours and change only what's drawn on the terminal background: the `⌂──` connector and the status icon.
+
+## Adding a light mode to a month
+
+1. Run `pwsh ./tools/New-LightMode.ps1 -Month <Month>` (add `-Variant <id>` for a variant). It writes a `modes.light` block into the month's `season.jsonc`:
+   - page, panels and borders are tints of the month's primary colour
+   - text is the month's dark text colour
+   - code, terminal and status colours keep their dark-mode hues, darkened until they read on the light page.
+
+   If the primary gives the wrong feel, tint from another role with `-Tint <role>`. December uses `brand.secondary` (evergreen, not the pink a red tint gives), November uses its roast brown so it doesn't match October, and New Year's Eve uses `brand.accent` (champagne gold).
+2. Run `pwsh ./Generate-Themes.ps1 -Month <Month>`, fix any warnings, and review `<Month>/vscode-preview-light.svg` next to the dark one.
+3. Tune by hand. The drafted palette entries are marked "Proposed: light mode".
 
 ## Converting a month (one PR each)
 

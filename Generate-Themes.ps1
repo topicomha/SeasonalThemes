@@ -238,7 +238,7 @@ function Read-Season([string]$MonthName) {
     $raw
 }
 
-# tools/Import-OmpTheme.ps1 marks everything it couldn't decide as TODO (or "todo" for colour roles).
+# A draft marks anything still undecided as TODO (or "todo" for colour roles); refuse to generate until it's filled in.
 function Find-Todo($Node, [string]$Where) {
     if ($Node -is [System.Collections.IDictionary]) {
         foreach ($key in $Node.Keys) { Find-Todo $Node[$key] ($Where ? "$Where.$key" : $key) }

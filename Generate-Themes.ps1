@@ -83,6 +83,13 @@ $Targets = @(
         Output     = { param($m) "$m/theme-definition.md" }
     }
     @{
+        Name       = 'month-readme'
+        Renderer   = 'templates/month-readme.md.ps1'
+        # No Owns: '*/README.md' would also match the hand-written vscode/README.md.
+        PerVariant = $false
+        Output     = { param($m) "$m/README.md" }
+    }
+    @{
         Name       = 'vscode-theme'
         Program    = 'vscode'
         Template   = 'templates/vscode-color-theme.json'

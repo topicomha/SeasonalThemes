@@ -9,7 +9,7 @@ The core idea: **each month is defined by one detailed document. Refine the docu
 | Target | Status |
 |---|---|
 | Oh My Posh prompt | Done: all 12 months and New Year's Eve, in light and dark. |
-| Theme page + palette image | Generated alongside each month (`theme-definition.md`, `palette.svg`, VS Code previews). |
+| Month pages + images | Generated alongside each month: `README.md` (the summary GitHub shows when you open the folder), `theme-definition.md` (full detail), `palette.svg` and the VS Code previews. |
 | VS Code colour theme | Done: one extension (`vscode/`) with 26 themes, following the month and the system's light/dark setting. It replaced the fall-only [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme), which is archived. |
 | Terminal colours / other CLI tools | Possible later. The document already defines the 16 standard terminal colours and the syntax colours. |
 | Wallpaper sync across OSes | An idea only. Out of scope for now. |
@@ -80,7 +80,7 @@ pwsh ./Generate-Themes.ps1 -Check           # exit 1 if any generated file is ou
 | Kind | File | How it works |
 |---|---|---|
 | Template | `oh-my-posh.omp.json`, `vscode-color-theme.json` | The target's file with `[[token]]` placeholders |
-| Renderer | `theme-definition.md.ps1`, `palette.svg.ps1`, `vscode-preview.svg.ps1` | A script that receives the resolved season and returns the file's text. Use one when the output needs loops. |
+| Renderer | `month-readme.md.ps1`, `theme-definition.md.ps1`, `palette.svg.ps1`, `vscode-preview.svg.ps1` | A script that receives the resolved season and returns the file's text. Use one when the output needs loops. |
 | All-months renderer | `vscode-package.json.ps1` | `Scope = 'all'`: rendered once with every month's seasons (e.g. the extension manifest listing all themes) |
 
 Template tokens:
@@ -101,7 +101,8 @@ To add a program, add a template or renderer and a row in `$Targets`. Use `PerVa
 <Month>/
   season.jsonc                    THE month document (edit this)
   davids-<Month>.omp.json         generated Oh My Posh theme (+ -<variant>, and -light for light terminals)
-  theme-definition.md             generated readable page
+  README.md                       generated summary: previews, signature colours, icons, how to use (GitHub shows it in the folder)
+  theme-definition.md             generated full detail: every colour role, the light-mode changes, all files
   palette.svg                     generated palette swatch sheet (+ palette-light.svg)
   vscode-preview-dark.svg         generated mock VS Code windows in the month's themes (+ -light.svg)
 vscode/                           the VS Code extension (Seasonal Themes)

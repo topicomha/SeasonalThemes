@@ -16,7 +16,9 @@ A theme for every month of the year, the same everywhere I work. January is a wi
 | **VS Code** | The *Seasonal Themes* extension: 26 colour themes (every month and New Year's Eve, light and dark). It switches with the month, and with the system's light/dark mode. |
 | **Oh My Posh** | A prompt for every month in both modes, plus `Get-SeasonalTheme.ps1` to pick today's prompt in your shell profile. |
 
-Every month is defined by one document, `<Month>/season.jsonc` (palette, colour roles, icons, holidays, variants and light mode), and everything else is generated from it. Each month folder has a `theme-definition.md` page with its palette, roles and previews.
+Every month is defined by one document, `<Month>/season.jsonc` (palette, colour roles, icons, holidays, variants and light mode), and everything else is generated from it. Open a month's folder to see its summary: previews, colours and icons, generated from that document so it's always in sync. The full detail is in each month's `theme-definition.md`.
+
+**Months:** [January](January) · [February](February) · [March](March) · [April](April) · [May](May) · [June](June) · [July](July) · [August](August) · [September](September) · [October](October) · [November](November) · [December](December)
 
 ## Install
 

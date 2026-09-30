@@ -8,11 +8,29 @@ The core idea: **each month is defined by one detailed document. Refine the docu
 
 | Target | Status |
 |---|---|
-| Oh My Posh prompt | Active. The current focus is finishing all 12 months consistently. |
-| Theme page + palette image | Generated alongside each month (`theme-definition.md`, `palette.svg`). |
-| VS Code colour theme | Active. One extension (`vscode/`) with a theme per month plus variants, which switches with the month. Replaces the fall-only [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme). |
+| Oh My Posh prompt | Done: all 12 months and New Year's Eve, in light and dark. |
+| Theme page + palette image | Generated alongside each month (`theme-definition.md`, `palette.svg`, VS Code previews). |
+| VS Code colour theme | Done: one extension (`vscode/`) with 26 themes, following the month and the system's light/dark setting. It replaced the fall-only [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme), which is archived. |
 | Terminal colours / other CLI tools | Possible later. The document already defines the 16 standard terminal colours and the syntax colours. |
 | Wallpaper sync across OSes | An idea only. Out of scope for now. |
+
+## How this project is developed
+
+This project is developed with AI. Claude Code makes the changes, working from this file; David reviews and merges them. In practice:
+
+- **Every change is a branch and a pull request.** `main` is protected, so there's no other way in. A PR description says what changed and why, shows before/after (previews, `tools/Compare-OmpTheme.ps1`), and lists the decisions that are David's to review.
+- **Ask before deciding something that's David's call:**
+  - a month's look (palette or icons)
+  - replacing existing work
+  - anything outward-facing, such as publishing or deleting.
+
+  Look through all branches and tags for David's own existing work before designing something new. The original June and July were found on an unmerged branch only after new ones had been made.
+- **Verify, don't assume.**
+  - Run `pwsh ./Generate-Themes.ps1 -Check` on every commit.
+  - Render the previews and look at them.
+  - Report warnings and failures as they are.
+- **Keep this file current.** When a convention, a target or the workflow changes, update CLAUDE.md in the same PR, so the next session starts from the truth.
+- **Commits carry a `Co-Authored-By: Claude` trailer**, so the history shows which changes were AI-written.
 
 ## The month document: `<Month>/season.jsonc`
 
@@ -97,10 +115,7 @@ templates/                        one template or renderer per target
 Generate-Themes.ps1               season.jsonc + templates -> every generated file
 Get-SeasonalTheme.ps1             prints today's Oh My Posh theme path (month, variant, light/dark), for shell profiles
 tools/New-LightMode.ps1           drafts a month's modes.light from its dark colours
-tools/Import-OmpTheme.ps1         drafts a season.jsonc from a hand-written Oh My Posh theme
 tools/Compare-OmpTheme.ps1        before/after render + field diff of two themes, as Markdown for a PR
-docs/icons.md                     emoji collections per month and holiday (each month's icons.pool holds its picks)
-docs/oh-my-posh-segments.md       the Oh My Posh segment types available
 .github/                          CI, the release workflow, Dependabot and the PR template
 README.md, LICENSE                for people using the themes (MIT)
 ```
@@ -164,13 +179,17 @@ Pick the colours that say the month most clearly (e.g. September's apple-red sta
 2. Run `pwsh ./Generate-Themes.ps1 -Month <Month>`, fix any warnings, and review `<Month>/vscode-preview-light.svg` next to the dark one.
 3. Tune by hand. The drafted palette entries are marked "Proposed: light mode".
 
-## Importing a hand-written theme
+## Archive
 
-Every month has been converted to `season.jsonc` (issue #11). To bring in another hand-written Oh My Posh theme the same way:
+Files that are no longer used are removed from `main`, but kept under `archive/*` tags so nothing is lost. Restore one with `git checkout <tag> -- <path>`.
 
-1. Run `pwsh ./tools/Import-OmpTheme.ps1 -Month <Month> -Theme <file>`. It lines the theme up with the shared template and drafts `season.jsonc`, giving each role its most common value. Conflicting values are noted as `// also:` comments, and anything it couldn't import is listed at the top.
-2. Name each palette entry, resolve the notes, and fill in the identity. The generator refuses the file while any `TODO` is left.
-3. Generate, then compare the result with `pwsh ./tools/Compare-OmpTheme.ps1 -Before <old> -After <Month>/davids-<Month>.omp.json`.
+| Tag | Holds |
+|---|---|
+| `archive/retired-tools-and-docs` | the original 2048 px `icon.png` (the extension uses a 256 px copy in `vscode/`), `docs/icons.md` (emoji collections per month and holiday), `docs/oh-my-posh-segments.md`, and `tools/Import-OmpTheme.ps1` (converted the hand-made themes to `season.jsonc`) |
+| `archive/adding-better-documentation` | the original hand-made June and July (now converted in `main`), the old `*-Theme-Info.md` docs, and "clean" March/April themes |
+| `archive/first-june-july-designs` | the first June and July designs, made from the old drafts before the originals were found |
+
+The files replaced during the move to `season.jsonc` (`ThemesDocumentation.md`, `ThemeGenerator.md`, `scripts.ipynb`, the old hand-written themes) are in the history before `v0.2.0`.
 
 ## Git workflow
 
@@ -182,12 +201,11 @@ Hosted on **GitHub** (`topicomha/SeasonalThemes`). Use `gh` for PRs.
 
   PRs are merged with a merge commit (squash and rebase merges are turned off), so each PR's commits survive. Merged branches are deleted automatically.
 - **One branch and PR per unit of work:**
-  - `updating-<month>` to convert or refine an existing month
-  - `adding-<month>` for a new month
-  - `adding-<thing>` / `updating-<thing>` for generator, schema or template work.
+  - `updating-<month>` to change a month
+  - `adding-<thing>` / `updating-<thing>` for new programs, and for generator, schema or template work.
 - **Small, logical commits:**
   - Every commit leaves `pwsh ./Generate-Themes.ps1 -Check` passing, so the source and its generated files are always committed together.
-  - In a month PR, keep the *faithful conversion* commit (no visual change except best-contrast text) separate from any *design refinement* commit, so each can be reviewed on its own.
+  - Keep fixes separate from design changes, e.g. a readability fix in one commit and a new palette in another, so each can be reviewed on its own.
   - Schema or template changes that affect every month go in their own PR, with all months regenerated in the same commit.
 - **Commit messages:** `<Area>: <imperative summary>`, e.g. `August: convert to season.jsonc`, `Generator: add palette renderer`, `Schema: add ui.link role`.
 - **CI:** `.github/workflows/check-themes.yml` runs `-Check` and builds the `.vsix` on every PR and on every push to `main`. Dependabot keeps the Actions versions current.
@@ -211,5 +229,4 @@ Versions follow semver: a new month, target or mode is a minor bump, and colour 
    - path depth and branch-name length limits (old March)
    - per-role text colours (old April).
 3. **Publish to the VS Code Marketplace** (needs a `topicomha` publisher account), or keep installing the `.vsix` from releases.
-4. **Archive the old [Fall-VSCode-Theme](https://github.com/topicomha/Fall-VSCode-Theme) repo**, now that the extension replaces it.
-5. **Wallpaper sync across OSes** (an idea only).
+4. **Wallpaper sync across OSes** (an idea only).
